@@ -10,7 +10,7 @@ interface SpotifyArtist {
 
 interface SpotifyTrack {
     album: any;
-    artists: any[];
+    artists: SpotifyArtist[];
     disc_number: number;
     duration_ms: number;
     explicit: boolean;

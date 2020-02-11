@@ -1,0 +1,11 @@
+<h2 style="text-align: center;">Your personal {{festivalName}} lineup</h2>
+<ul style="list-style: none; max-width: 33%;">
+    {{#each acts}}
+        <li>{{this.name}}</li>
+        <ul style="list-style: none;">
+            {{#each this.tracks}}
+            <li>{{this.name}}</li>
+            {{/each}}
+        </ul>
+    {{/each}}
+</ul>
