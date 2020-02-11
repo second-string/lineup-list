@@ -1,1 +1,14 @@
+# transpiled files
+dist/
+
+# duh
 node_modules/
+
+# duh
+.DS_STORE
+
+# env
+setup_env.sh
+
+# lineup text files
+*.txt

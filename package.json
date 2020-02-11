@@ -2,13 +2,26 @@
   "name": "lineup-list",
   "version": "1.0.0",
   "description": "Playlist builder for festival lineups",
-  "main": "index.js",
+  "main": "dist/create-playlist.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@types/form-urlencoded": "^2.0.1",
+    "@types/node": "^13.7.0",
+    "@types/node-fetch": "^2.5.4",
+    "form-urlencoded": "^4.1.1",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2",
+    "tslint": "^6.0.0",
     "typescript": "^3.7.5"
   }
 }
