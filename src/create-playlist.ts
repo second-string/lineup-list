@@ -7,11 +7,11 @@ async function main(): Promise<void> {
     const artistNames = file.split('\n');
 
     // const spotifyToken = await getSpotifyToken();
-    const spotifyToken: string = "BQDb08aKEUP28H2SvJ27CJ2qNW7PF3ILObugxgcVOamL6gi1xWz8QPDx2QFOsj2ADEZB84VicKPThCxlcz4xKxbXl54N0X5oaRn6tQF7fmp3cJdNoFJtUJum2ZR9VrHIy2Cf6nh5QQOTqw5EHfjWQ5u6JsvPRuKY9p5RGsFSttZa2qU4Qdm3Q3JVz3Qipjhmt4AenQenPmsHm3h0w_tQQrCzrxrH-ca9PX8Py_UCsxgoa94whGw";
-    const spotifyArtists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(spotifyToken, artistNames);
-    const artistSongs: SpotifyTrack[] = await spotifyHelper.getAllTracksToAdd(spotifyToken, spotifyArtists);
+    const spotifyToken: string = "BQBbCPrb8xdeIWpe8Gt_xmuPdXLwD3Mx9ddZjxwvfAl5ylsoTm7cwq1NsuEOnQEoseiOoKFRcOZ4V";
+    const spotifyArtists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistNames);
+    const artistSongs: SpotifyTrack[] = await spotifyHelper.getAllTracksToAdd(spotifyArtists, 3);
     const songUrisToAdd: string[] = artistSongs.map(x => x.uri);
-    const playlist = await spotifyHelper.getOrCreatePlaylist(spotifyToken, null);
+    const playlist = await spotifyHelper.getOrCreatePlaylist(spotifyToken, "Coachella 2020 - Lineup List", null);
     await spotifyHelper.addTracksToPlaylist(spotifyToken, playlist, songUrisToAdd);
 }
 

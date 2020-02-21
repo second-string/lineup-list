@@ -10,7 +10,8 @@
         "max-line-length": false,
         "no-console": false,
         "interface-name": [true, "never-prefix"],
-        "no-switch-case-fall-through": true
+        "no-switch-case-fall-through": true,
+        "variable-name": [true, "check-format", "allow-snake-case"]
     },
     "rulesDirectory": []
 }

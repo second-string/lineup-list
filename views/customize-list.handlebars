@@ -1,0 +1,132 @@
+<h2>Customize your {{festival.name}} {{festival.year}} lineup</h2>
+<form id="listOptionsForm" action="/generate" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
+    <div id="formContent" style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div id="filters" style="max-width: 40%;">
+            <u>Filters</u>
+            <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
+            <p style="margin-bottom: 0;">Number of songs per artist</p>
+            <input type="number" name="songsPerArtist" value="3">
+
+            <div style="display: flex; flex-direction: column; margin-top: 2rem;">
+                <div style="margin-bottom: 1rem;">
+                    <u>Main Genres</u>
+                    <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
+                    {{#each mainGenres}}
+                    <div>
+                        <input class="mainGenreCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
+                        <p style="display: inline-block; margin: 0;">{{this}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <u>Misc. Genres</u>
+                    <p style="font-size: smaller; margin-top: 0;">Uncommon genres not easily grouped into a main genre. These might be specific to certain artists and can be used to fine-tune the results.</p>
+                    <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" style="display: inline-block;" checked>
+                    <p style="display: inline-block; margin: 0 0 1rem;">Check/Uncheck all misc. genres</p>
+                    
+                    {{#each specificGenres}}
+                    <div>
+                        <input class="specificGenreCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
+                        <p style="display: inline-block; margin: 0;">{{this}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div id="includedArtists" style="max-width: 40%;">
+            <u style="margin-bottom: 0;">Artists</u>
+            <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
+            <div style="display: flex; flex-direction: column;">
+                {{#each artists}}
+                <div id={{this.id}}>
+                    <input class="artistCheckbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" style="display: inline-block;" checked>
+                    <p style="display: inline-block; margin: 0;">{{this.name}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="excludedArtists" name="excludedArtists">
+    <input type="hidden" name="festivalName" value="{{festival.name}}">
+    <input type="hidden" name="festivalYear" value="{{festival.year}}">
+    <input style="margin: 1rem; align-self: center;" type="submit">
+</form>
+
+<script>
+var form = document.getElementById("listOptionsForm");
+form.addEventListener("submit", function() {
+    var artists = document.getElementsByClassName("artistCheckbox");
+
+    var excludedArtists = [];
+    for (var i = 0; i < artists.length; i++) {
+
+            // Need to check if parent div is hidden since genre filtering hides checkbox/p div wrapper
+            var parentDiv = artists[i].parentElement;
+            if (!artists[i].checked || parentDiv.style.display === "none") {
+                excludedArtists.push(artists[i].value);
+            }
+        }
+
+        var excludedArtistsInput = document.getElementById("excludedArtists");
+        if (excludedArtists.length === 0) {
+            // Don't send the empty query param
+            excludedArtistsInput.name = '';
+        } else {
+            // Reset the name in case we came back and unchecked an artist(s)
+            excludedArtistsInput.name = 'excludedArtists';
+            excludedArtistsInput.value = excludedArtists.join(',');
+        }
+    });
+</script>
+<script>
+function refreshArtistList() {
+    var artists = document.getElementsByClassName("artistCheckbox");
+    var mainGenres = document.getElementsByClassName("mainGenreCheckbox");
+    var specificGenres = document.getElementsByClassName("specificGenreCheckbox");
+    var allGenres = [];
+    allGenres = Array.prototype.concat.apply(allGenres, mainGenres);
+    allGenres = Array.prototype.concat.apply(allGenres, specificGenres);
+
+    var selectedGenres = Array.prototype.slice.call(allGenres)
+    .filter(x => x.checked)
+    .map(x => x.value);
+
+    for (var i = 0; i < artists.length; i++) {
+        var artistGenres = JSON.parse(artists[i].getAttribute("data-genres"));
+        
+        // make sure we hide or show the whole div containing checkbox and name
+        var artistDiv = document.getElementById(artists[i].value);
+        artistDiv.style.opacity = getArtistOpacity(selectedGenres, artistGenres);
+        if (!artistGenres.some(x => selectedGenres.includes(x))) {
+            artistDiv.style.display = "none";
+        } else {
+            artistDiv.style.display = "block";
+        }
+    }
+}
+
+function getArtistOpacity(selectedGenres, artistGenres) {
+    var artistGenresCount = artistGenres.length;
+    var selectedArtistGenresCount = artistGenres.reduce((total, currentGenre) => {
+        if (selectedGenres.includes(currentGenre)) {
+            total++;
+        }
+        return total;
+    }, 0);
+
+    return selectedArtistGenresCount / artistGenresCount;
+}
+
+function uncheckAllSpecificGenresChanged() {
+    var checkbox = document.getElementById("uncheckAllSpecificGenres");
+    var specificGenres = document.getElementsByClassName("specificGenreCheckbox");
+    var isChecked = checkbox.checked;
+    for (var i = 0; i < specificGenres.length; i++) {
+        specificGenres[i].checked = isChecked;
+    }
+
+    refreshArtistList();
+}
+</script>
