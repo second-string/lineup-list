@@ -201,6 +201,6 @@ export async function getSessionData(redisClient: redis.RedisClient, sessionUid:
             })
         });
 
-    let playlistData: PlaylistData = await sessionDataPromise;
+    const playlistData: PlaylistData = await sessionDataPromise;
     return playlistData;
 }
