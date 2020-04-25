@@ -1,0 +1,14 @@
+<h2 style="text-align: center;">Your personal {{festivalName}} lineup</h2>
+<form id="generatePlaylistForm" action="/generate-spotify-playlist", method="POST">
+    <input type="submit">Click here to generate a Spotify playlist</input>
+</form>
+<ul style="list-style: none; max-width: 33%;">
+    {{#each acts}}
+    <li class="artist" id="{{this.id}}">{{this.name}} - <a href="{{this.external_urls.spotify}}">Spotify</a></li>
+    <ul style="list-style: none;">
+        {{#each this.tracks}}
+        <li class="track" id="{{this.id}}">{{this.name}}</li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</ul>

@@ -2,26 +2,40 @@
   "name": "lineup-list",
   "version": "1.0.0",
   "description": "Playlist builder for festival lineups",
-  "main": "dist/create-playlist.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "prebuild": "npm run lint",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node ."
+    "start": "nodemon ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express": "^4.17.2",
+    "@types/express-handlebars": "^3.1.0",
     "@types/form-urlencoded": "^2.0.1",
     "@types/node": "^13.7.0",
     "@types/node-fetch": "^2.5.4",
+    "@types/redis": "^2.8.15",
+    "@types/uuid": "^3.4.7",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "form-urlencoded": "^4.1.1",
     "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
+    "redis": "^3.0.2",
     "tslint": "^6.0.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "uuid": "^3.4.0"
   }
 }

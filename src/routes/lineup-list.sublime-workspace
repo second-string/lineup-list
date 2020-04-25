@@ -1,0 +1,544 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"specif",
+				"specificGenres"
+			],
+			[
+				"match",
+				"matchedOneMain\tlet"
+			],
+			[
+				"post",
+				"postOptions\tconst"
+			],
+			[
+				"spotify",
+				"spotifyToken\tlet"
+			],
+			[
+				"get",
+				"getAccessTokenFromCallback\tfunction"
+			],
+			[
+				"del",
+				"DEL\tproperty"
+			],
+			[
+				"session",
+				"sessionUid\tconst"
+			],
+			[
+				"redi",
+				"redisClient\tconst"
+			],
+			[
+				"tracki",
+				"trackIds\tconst"
+			],
+			[
+				"topTrack",
+				"topTracksFromSpotify\tconst"
+			],
+			[
+				"topT",
+				"topTracksFromRedis\tconst"
+			],
+			[
+				"topTa",
+				"topTracksFromSpotify\tconst"
+			],
+			[
+				"selec",
+				"selectedArtistGenresCount"
+			],
+			[
+				"ari",
+				"artists"
+			],
+			[
+				"spot",
+				"spotifyTrack\tconst"
+			],
+			[
+				"spoti",
+				"spotify_url\tconst"
+			],
+			[
+				"extern",
+				"external_urls\tproperty"
+			],
+			[
+				"Spto",
+				"SpotifyTrack\tinterface"
+			],
+			[
+				"redis",
+				"redisToSpotifyTrack\tfunction"
+			],
+			[
+				"SPot",
+				"SpotifyTrack\tinterface"
+			],
+			[
+				"Spo",
+				"SpotifyArtist\tinterface"
+			],
+			[
+				"redisArt",
+				"redisArtistPromises\tconst"
+			],
+			[
+				"artist",
+				"artistIdsString\tconst"
+			],
+			[
+				"rpu",
+				"RPUSH\tproperty"
+			],
+			[
+				"Clei",
+				"RedisClient\tconst"
+			],
+			[
+				"exclu",
+				"excludedArtists"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"getElemen",
+				"getElementById"
+			],
+			[
+				"getElement",
+				"getElementsByClassName"
+			],
+			[
+				"fil",
+				"filteredArtists\tconst"
+			],
+			[
+				"getsp",
+				"getSpotifyToken\tfunction"
+			],
+			[
+				"Spot",
+				"SpotifyPlaylist\tinterface"
+			],
+			[
+				"trackU",
+				"trackUriList\tparameter"
+			],
+			[
+				"Spotify",
+				"SpotifyTrack\tinterface"
+			],
+			[
+				"Spotif",
+				"SpotifyTrack\tinterface"
+			],
+			[
+				"encodeURI",
+				"encodeURIComponent\tfunction"
+			],
+			[
+				"Numb",
+				"number\tkeyword"
+			],
+			[
+				"getSpot",
+				"getSpotifyArtist\tfunction"
+			],
+			[
+				"GetGG",
+				"GetGGIssuesSyncArgsSchema"
+			],
+			[
+				"validate",
+				"validate_project_access"
+			],
+			[
+				"projet",
+				"project_uid"
+			],
+			[
+				"transac",
+				"transactionName"
+			],
+			[
+				"webh",
+				"webhooksAuthToken"
+			],
+			[
+				"shows",
+				"showsByDate"
+			],
+			[
+				"show",
+				"showVenueSearch"
+			],
+			[
+				"emailpromi",
+				"emailPromises"
+			],
+			[
+				"selectedVenu",
+				"selectedVenueIds"
+			],
+			[
+				"selecte",
+				"selectedLocation"
+			],
+			[
+				"new",
+				"new-search-button"
+			],
+			[
+				"username",
+				"userNameStateChange"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"type",
+				"TypeScript: Signature Info"
+			],
+			[
+				"types",
+				"TypeScript: Signature Info"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"package",
+				"Install Package Control"
+			],
+			[
+				"markdow",
+				"Set Syntax: Markdown"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/bteam/Developer/lineup-list/src/spotify-helper.ts",
+		"/Users/bteam/Developer/lineup-list/src/redis-helper.ts",
+		"/Users/bteam/Developer/lineup-list/src/constants.ts",
+		"/Users/bteam/Developer/lineup-list/src/server.ts",
+		"/Users/bteam/Developer/lineup-list/src/combine-genres.ts",
+		"/Users/bteam/Developer/lineup-list/dist/spotify-helper.js",
+		"/Users/bteam/Developer/lineup-list/types/types.d.ts",
+		"/Users/bteam/Developer/lineup-list/src/create-playlist.ts",
+		"/Users/bteam/Developer/lineup-list/src/warm-cache-for-festival.ts",
+		"/Users/bteam/Developer/lineup-list/src/helpers.ts",
+		"/Users/bteam/Developer/lineup-list/views/personalized-lineup.handlebars",
+		"/Users/bteam/Developer/lineup-list/views/customize-list.handlebars",
+		"/Users/bteam/Developer/lineup-list/dist/helpers.js",
+		"/Users/bteam/Developer/lineup-list/dist/constants.js",
+		"/Users/bteam/Developer/lineup-list/views/layouts/generate-playlist-success.handlebars",
+		"/Users/bteam/Developer/lineup-list/setup_env.sh",
+		"/Users/bteam/Developer/lineup-list/Coachella_2020.txt",
+		"/Users/bteam/Developer/lineup-list/Bottlerock_2020.txt",
+		"/Users/bteam/Developer/lineup-list/tslint.json",
+		"/Users/bteam/Developer/lineup-list/src/routes/api.ts",
+		"/Users/bteam/Developer/lineup-list/src/routes/warm-cache-for-festival.ts",
+		"/Users/bteam/Developer/lineup-list/views/festivals.handlebars",
+		"/Users/bteam/Developer/lineup-list/views/layouts/main.handlebars",
+		"/Users/bteam/Developer/lineup-list/package.json",
+		"/Users/bteam/Developer/lineup-list/views/list-options.handlebars",
+		"/Users/bteam/Developer/lineup-list/tsconfig.json",
+		"/Users/bteam/Developer/lineup-list/views/generate-success.handlebars",
+		"/Users/bteam/Developer/lineup-list/src/api.ts",
+		"/Users/bteam/Developer/lineup-list/src/Coachella_2020.txt",
+		"/Users/bteam/Developer/lineup-list/coachella_2020.txt",
+		"/Users/bteam/Developer/lineup-list/create-playlist.ts",
+		"/Users/bteam/Developer/Show-Finder/routes/auth-handler.js",
+		"/Users/bteam/Developer/Show-Finder/client/src/App.js",
+		"/Users/bteam/Developer/Show-Finder/venue-show-finder.js",
+		"/Users/bteam/Developer/Show-Finder/server.js",
+		"/Users/bteam/Developer/Show-Finder/scripts/sync-venues.js",
+		"/Users/bteam/Developer/tasks-backend/tests/api_tests/test_health.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/data_access/issues.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/validators/issue.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/server/handlers/adskproxy/issues.py",
+		"/Users/bteam/Developer/tasks-backend/.flake8",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/main.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/server/app_init.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/server/handlers/adskproxy/register_all_handlers.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/server/rebar.py",
+		"/Users/bteam/Developer/tasks-backend/server/rebar.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/adskproxy/issues.py",
+		"/Users/bteam/Developer/tasks-backend/tests/api_tests/base.py",
+		"/Users/bteam/Developer/tasks-backend/tests/api_tests/test_issues_sync.py",
+		"/Users/bteam/Developer/tasks-backend/server/app_init.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/adskproxy/register_all_handlers.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/v0/register_all_handlers.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/versionless/issues.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/versionless/register_all_handlers.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/v0/issues.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/bus_logic/issues.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/utils.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/v1/issues.py",
+		"/Users/bteam/Developer/tasks-backend/tests/api_tests/gg_issues_sync_test.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/models/issue.py",
+		"/Users/bteam/Developer/tasks-backend/Makefile",
+		"/Users/bteam/Developer/tasks-backend/tests/data_access_tests/data_base.py",
+		"/Users/bteam/Developer/tasks-backend/docker-compose.yml",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/models/mixins/label.py",
+		"/Users/bteam/Developer/tasks-backend/docker-compose.test.yml",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/config.py",
+		"/Users/bteam/Developer/tasks-backend/tasks_backend/models/postgresql/replication.py",
+		"/Users/bteam/Developer/tasks-backend/server/handlers/v1/register_all_handlers.py",
+		"/Users/bteam/Developer/customer_api_dispatcher/server.js",
+		"/Users/bteam/Developer/customer_api/customer_api/app/handlers/decorators/rfi_decorator.py",
+		"/Users/bteam/Developer/customer_api/customer_api/app/helpers/gg_issues_client_helper.py",
+		"/Users/bteam/Developer/customer_api/customer_api/app/handlers/helpers/rfi_helper.py",
+		"/Users/bteam/Developer/customer_api/customer_api/app/handlers/authentication_token_basic_handler.py",
+		"/Users/bteam/Developer/customer_api/customer_api/app/handlers/helpers/auth_helper.py",
+		"/Users/bteam/Developer/cacahuete/app/handlers/v0/session_handlers.py",
+		"/Users/bteam/Desktop/untitled.html",
+		"/Users/bteam/Developer/Show-Finder/client/node_modules/@babel/parser/lib/index.js",
+		"/Users/bteam/Developer/Show-Finder/emails/test/html.pug",
+		"/Users/bteam/Developer/Show-Finder/show-emailer.js",
+		"/Users/bteam/Developer/Show-Finder/email-all-users.js",
+		"/Users/bteam/Developer/Show-Finder/response-parsers.js",
+		"/Users/bteam/Developer/Show-Finder/helpers.js",
+		"/Users/bteam/Developer/Show-Finder/emails/test/subject.pug",
+		"/Users/bteam/Developer/plangrid-windows/PlanGrid.Localization/Resources.resx",
+		"/Users/bteam/Developer/submittals_json.json",
+		"/Users/bteam/Developer/Show-Finder/client/config/paths.js",
+		"/Users/bteam/Developer/Show-Finder/client/config/webpack.config.js",
+		"/Users/bteam/Developer/Show-Finder/client/public/index.html",
+		"/Users/bteam/Developer/Show-Finder/client/src/SpotifySearch.js",
+		"/Users/bteam/Developer/PGFoundation/.idea/workspace.xml",
+		"/Users/bteam/Developer/Show-Finder/client/node_modules/react-scripts/scripts/start.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"<current file>",
+			"",
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"this.genre",
+			"function",
+			"funk",
+			"spotifytoken",
+			"spotifyhel",
+			"spotifytoken",
+			"artistIdsStr",
+			"getalltracks",
+			"gettracksfor",
+			"available",
+			"console.l",
+			"console.log",
+			"top_track_id",
+			"spotifyto",
+			"redis",
+			"received",
+			"artist",
+			"fetch",
+			"basespot",
+			"base",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "lineup-list.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"spotif",
+				"src/spotify-helper.ts"
+			],
+			[
+				"spotify",
+				"dist/spotify-helper.js"
+			],
+			[
+				"helpers",
+				"src/helpers.ts"
+			],
+			[
+				"helper",
+				"dist/helpers.js"
+			],
+			[
+				"consta",
+				"dist/constants.js"
+			],
+			[
+				"auth-h",
+				"routes/auth-handler.js"
+			],
+			[
+				"reba",
+				"server/rebar.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 284.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

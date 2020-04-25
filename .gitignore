@@ -10,5 +10,9 @@ node_modules/
 # env
 setup_env.sh
 
-# lineup text files
-*.txt
+# redis
+*.rdb
+
+# temp 
+*.un*
+*~
