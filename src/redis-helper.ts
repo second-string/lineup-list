@@ -189,3 +189,18 @@ function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
 
     return redisArtist;
 }
+
+export async function getSessionData(redisClient: redis.RedisClient, sessionUid: string): Promise<PlaylistData> {
+    const sessionDataPromise: Promise<PlaylistData> = new Promise((resolve, reject) => {
+            redisClient.hgetall(`playlistData:${sessionUid}`, (err: Error, obj: any) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(obj as PlaylistData);
+                }
+            })
+        });
+
+    let playlistData: PlaylistData = await sessionDataPromise;
+    return playlistData;
+}

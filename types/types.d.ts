@@ -1,7 +1,6 @@
 declare namespace Express {
   export interface Request {
-    songsPerArtist: number,
-    excludedArtists: string[]
+    sessionUid: string;
   }
 }
 
@@ -112,6 +111,7 @@ interface User {
 
 interface PlaylistData {
     festivalName: string;
+    festivalYear?: number;
     tracksPerArtist: number;
     artistIdsStr: string;
     trackIdsStr: string;

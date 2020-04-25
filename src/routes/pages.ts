@@ -22,6 +22,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     });
 
     router.get("/customize", async (req: express.Request, res: express.Response) => {
+        if (!req.query.festival) {
+            res.status(400).send("You need to choose a festival first.");
+        }
+
         const festival: Festival =  {
             name: req.query.festival,
             year: 2020

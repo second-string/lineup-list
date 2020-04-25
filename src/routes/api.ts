@@ -6,12 +6,13 @@ import uuid from "uuid/v4";
 
 import * as helpers from "../helpers";
 import * as spotifyHelper from "../spotify-helper";
+import * as redisHelper from "../redis-helper";
 import * as constants from "../constants";
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
     const router = Router();
 
-    router.post("/generate", async (req: express.Request, res: express.Response) => {
+    router.post("/generate-lineup-list", async (req: express.Request, res: express.Response) => {
         // Hacky to set a cookie and then clear it before it gets back to the user but it works
         res.cookie("songsPerArtist", req.body.songsPerArtist);
         res.cookie("excludedArtists", req.body.excludedArtists);
@@ -20,7 +21,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         res.redirect("/personalized-lineup");
     });
 
-    router.post("/generate-playlist", async (req: express.Request, res: express.Response) => {
+    router.post("/generate-spotify-playlist", async (req: express.Request, res: express.Response) => {
         const festivalName: string = req.body.festivalName;
         const tracksPerArtist: string = req.body.tracksPerArtist;
         const artistIdsStr: string = req.body.artistIds;
@@ -54,27 +55,13 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     router.get("/spotify-auth-callback", async (req: express.Request, res: express.Response) => {
         // Check we came from spotify auth callback with a previously-set session uid for retrieving data
-        if (req.query.state !== "kush" || req.cookies.sessionUid) {
+        if (req.query.state !== "kush" || req.sessionUid) {
             return res.status(403).send("This url only accessible after authorizing with Spotify");
         }
 
-        const sessionUid: string = req.cookies["lineup-list-session"];
-        const sessionDataPromise: Promise<PlaylistData> = new Promise((resolve, reject) => {
-            redisClient.hgetall(`playlistData:${sessionUid}`, (err: Error, obj: any) => {
-                if (err || obj === null) {
-                    reject(err);
-                } else {
-                    resolve(obj as PlaylistData);
-                }
-            })
-        });
-
-        let playlistData: PlaylistData;
-        try {
-            playlistData = await sessionDataPromise;
-        } catch (e) {
-            console.log(`Error retrieving session playlist data for key playlistData:${sessionUid}`);
-            return res.status(500).send("Server error, please try again.");
+        const playlistData: PlaylistData = await redisHelper.getSessionData(redisClient, req.sessionUid);
+        if (playlistData === null) {
+            return res.status(400).send("This url only accessible after authorizing with Spotify, please restart playlist generation.");
         }
 
         const { access, refresh, ...accessTokenResponse } = await spotifyHelper.getAccessTokenFromCallback(req.query.code, req.query.error);
@@ -100,7 +87,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         }
 
         res.clearCookie("lineup-list-session");
-        redisClient.DEL(`playlistData:${sessionUid}`);
+        redisClient.DEL(`playlistData:${req.sessionUid}`);
 
         res.redirect("/generate-playlist-success");
     });
