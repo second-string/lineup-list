@@ -14,6 +14,11 @@ const redisClient = redis.createClient();
 redisClient.on("error", (err: Error) => console.log(err));
 
 const app = express();
+if (!process.env.DEPLOY_STAGE || process.env.DEPLOY_STAGE === '') {
+    console.log("Need to source setup_env.sh to set env variables");
+    process.exit(1);
+}
+const port = process.env.DEPLOY_STAGE == 'PROD' ? 7443 : 80;
 
 app.engine("handlebars", handlebars());
 app.set("view engine", "handlebars");
@@ -36,4 +41,5 @@ app.use(apiRouter(redisClient))
 app.use(pageRouter(redisClient));
 
 const httpServer = http.createServer(app);
-httpServer.listen(80);
+console.log(`Starting server listening at ${port}`);
+httpServer.listen(port);
