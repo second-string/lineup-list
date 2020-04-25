@@ -62,46 +62,56 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     });
 
     router.get("/personalized-lineup", async (req: express.Request, res: express.Response) => {
-        const songsPerArtist: number = req.cookies.songsPerArtist;
-        const excludedArtistIds: string[] = req.cookies.excludedArtists;
-        const festival: Festival = {
-            name: req.cookies.festivalName,
-            year: req.cookies.festivalYear
-        };
-
-        res.clearCookie("songsPerArtist");
-        res.clearCookie("excludedArtists");
-        res.clearCookie("festivalName");
-        res.clearCookie("festivalYear");
-
-        if (!songsPerArtist) {
-            return res.send("You must generate a lineup from the customize page.");
+        // make sure they didn't just navigate straight to this URL
+        const sessionData: SessionData = await redisHelper.getSessionData(redisClient, req.sessionUid);
+        if (sessionData === null) {
+            return res.status(400).send("This url only accessible after generating a lineup from the customize page.");
         }
 
-        const artists: SpotifyArtist[] = await redisHelper.getArtistsForFestival(redisClient, festival.name, festival.year);
-        const filteredArtists: SpotifyArtist[] = (excludedArtistIds && excludedArtistIds.length > 0) ? artists.filter(x => !excludedArtistIds.includes(x.id)) : artists;
+        const artists: SpotifyArtist[] = await redisHelper.getArtistsForFestival(redisClient, sessionData.festivalName, sessionData.festivalYear);
+
+        const chosenArtistIds = sessionData.artistIdsStr.split(",")
+        const filteredArtists: SpotifyArtist[] = (chosenArtistIds && chosenArtistIds.length > 0) ? artists.filter(x => chosenArtistIds.includes(x.id)) : [];
 
         const artistsWithTracks: any = []
+        let trackIds: string[] = []
         for (const artist of filteredArtists) {
-            const tracksForArtist = await redisHelper.getTopTracksForArtist(redisClient, artist, songsPerArtist);
+            const tracksForArtist = await redisHelper.getTopTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
             const artistWithTracks = {
                 ...artist,
                 tracks: tracksForArtist
             }
+
             artistsWithTracks.push(artistWithTracks);
+            if (tracksForArtist && tracksForArtist.length > 0) {
+                trackIds = trackIds.concat(tracksForArtist.map(x => x.id))
+            }
         }
+
+        // Update our session data with track IDs
+        redisClient.hmset(`sessionData:${req.sessionUid}`, { trackIdsStr: trackIds.join(","), ...sessionData });
 
         res.render("personalized-lineup", {
             festivalName: "Coachella 2020",
             acts: artistsWithTracks,
-            tracksPerArtist: songsPerArtist
+            tracksPerArtist: sessionData.tracksPerArtist
         })
     });
 
-    router.get("/generate-playlist-success", (req: express.Request, res: express.Response) => {
+    router.get("/generate-playlist-success", async (req: express.Request, res: express.Response) => {
+        const sessionData: SessionData = await redisHelper.getSessionData(redisClient, req.sessionUid);
+        if (sessionData === null) {
+            return res.status(403).send("This url only accessible after generating Spotify playlist.");
+        }
+
+        const festival: Festival = {
+            name: sessionData.festivalName,
+            year: sessionData.festivalYear
+        }
+
         res.render("generate-playlist-success", {
-            festival: { name: "festival", year: 9999 },
-            playlistName: "playlist name"
+            festival,
+            playlistName: sessionData.playlistName
         });
     });
 

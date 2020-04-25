@@ -49,7 +49,7 @@ interface RedisTrack {
     track_number: number;
     type: string;
     uri: string;
-    spotify_url: string;   // parsed out of the external_urls for a SpotifyTrack 
+    spotify_url: string;   // parsed out of the external_urls for a SpotifyTrack
 }
 
 interface SpotifyTrack {
@@ -109,12 +109,13 @@ interface User {
   uri: string;
 }
 
-interface PlaylistData {
+interface SessionData {
     festivalName: string;
     festivalYear?: number;
     tracksPerArtist: number;
     artistIdsStr: string;
     trackIdsStr: string;
+    playlistName?: string;
 }
 
 

@@ -5,7 +5,7 @@
             <u>Filters</u>
             <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
             <p style="margin-bottom: 0;">Number of songs per artist</p>
-            <input type="number" name="songsPerArtist" value="3">
+            <input type="number" name="tracksPerArtist" value="3">
 
             <div style="display: flex; flex-direction: column; margin-top: 2rem;">
                 <div style="margin-bottom: 1rem;">
@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    <input type="hidden" id="excludedArtists" name="excludedArtists">
+    <input type="hidden" id="artistIds" name="artistIds">
     <input type="hidden" name="festivalName" value="{{festival.name}}">
     <input type="hidden" name="festivalYear" value="{{festival.year}}">
     <input style="margin: 1rem; align-self: center;" type="submit">
@@ -59,26 +59,25 @@ var form = document.getElementById("listOptionsForm");
 form.addEventListener("submit", function() {
     var artists = document.getElementsByClassName("artistCheckbox");
 
-    var excludedArtists = [];
+    var artistIds = [];
     for (var i = 0; i < artists.length; i++) {
-
-            // Need to check if parent div is hidden since genre filtering hides checkbox/p div wrapper
-            var parentDiv = artists[i].parentElement;
-            if (!artists[i].checked || parentDiv.style.display === "none") {
-                excludedArtists.push(artists[i].value);
-            }
+        // Need to check if parent div is hidden since genre filtering hides checkbox/p div wrapper
+        var parentDiv = artists[i].parentElement;
+        if (artists[i].checked && parentDiv.style.display !== "none") {
+            artistIds.push(artists[i].value);
         }
+    }
 
-        var excludedArtistsInput = document.getElementById("excludedArtists");
-        if (excludedArtists.length === 0) {
-            // Don't send the empty query param
-            excludedArtistsInput.name = '';
-        } else {
-            // Reset the name in case we came back and unchecked an artist(s)
-            excludedArtistsInput.name = 'excludedArtists';
-            excludedArtistsInput.value = excludedArtists.join(',');
-        }
-    });
+    var artistIdsInput = document.getElementById("artistIds");
+    if (artistIds.length === 0) {
+        // Don't send the empty query param
+        artistIdsInput.name = '';
+    } else {
+        // Reset the name in case we came back and unchecked an artist(s)
+        artistIdsInput.name = 'artistIds';
+        artistIdsInput.value = artistIds.join(',');
+    }
+});
 </script>
 <script>
 function refreshArtistList() {

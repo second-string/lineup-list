@@ -1,9 +1,5 @@
 <h2 style="text-align: center;">Your personal {{festivalName}} lineup</h2>
 <form id="generatePlaylistForm" action="/generate-spotify-playlist", method="POST">
-    <input type="hidden" name="festivalName" value="{{festivalName}}" />
-    <input type="hidden" name="tracksPerArtist" value="{{tracksPerArtist}}" />
-    <input type="hidden" name="artistIds" />
-    <input type="hidden" name="trackIds" />
     <input type="submit">Click here to generate a Spotify playlist</input>
 </form>
 <ul style="list-style: none; max-width: 33%;">
@@ -16,26 +12,3 @@
     </ul>
     {{/each}}
 </ul>
-
-<script>
-var form = document.getElementById("generatePlaylistForm");
-form.addEventListener("submit", function() {
-    var artists = document.getElementsByClassName("artist");
-    var artistIds = [];
-    for (const artist of artists) {
-        artistIds.push(artist.id);
-    }
-
-    var artistIdsElement = document.getElementsByName("artistIds")[0];
-    artistIdsElement.value = artistIds.join(",");
-
-    var tracks = document.getElementsByClassName("track");
-    var trackIds = [];
-    for (const track of tracks) {
-        trackIds.push(track.id);
-    }
-
-    var trackIdsElement = document.getElementsByName("trackIds")[0];
-    trackIdsElement.value = trackIds.join(",");
-});
-</script>

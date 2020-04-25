@@ -13,34 +13,28 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     const router = Router();
 
     router.post("/generate-lineup-list", async (req: express.Request, res: express.Response) => {
-        // Hacky to set a cookie and then clear it before it gets back to the user but it works
-        res.cookie("songsPerArtist", req.body.songsPerArtist);
-        res.cookie("excludedArtists", req.body.excludedArtists);
-        res.cookie("festivalName", req.body.festivalName);
-        res.cookie("festivalYear", req.body.festivalYear);
+        const festivalName: string = req.body.festivalName;
+        const festivalYear: string = req.body.festivalYear;
+        const tracksPerArtist: string = req.body.tracksPerArtist;
+        const artistIdsStr: string = req.body.artistIds;
+
+        const sessionData = {
+            festivalName,
+            festivalYear,
+            tracksPerArtist,
+            artistIdsStr,
+        };
+
+        // Save our session data for what artists and how many tracks to include
+        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData, redis.print);
         res.redirect("/personalized-lineup");
     });
 
     router.post("/generate-spotify-playlist", async (req: express.Request, res: express.Response) => {
-        const festivalName: string = req.body.festivalName;
-        const tracksPerArtist: string = req.body.tracksPerArtist;
-        const artistIdsStr: string = req.body.artistIds;
-        const trackIdsStr: string = req.body.trackIds;
-
-        if (!festivalName || !tracksPerArtist || !artistIdsStr || !trackIdsStr) {
-            return res.status(403).send("You must choose to generate a playlist from the customized lineup page.");
+        const sessionData: SessionData = await redisHelper.getSessionData(redisClient, req.sessionUid);
+        if (sessionData === null) {
+            return res.status(403).send("This url only accessible after generating a lineup from the customize page.");
         }
-
-        const sessionUid = uuid();
-        const sessionData = {
-            festivalName,
-            tracksPerArtist,
-            artistIdsStr,
-            trackIdsStr
-        };
-
-        redisClient.hmset(`playlistData:${sessionUid}`, sessionData, redis.print);
-        res.cookie("lineup-list-session", sessionUid);
 
         const queryParams = {
             client_id: constants.clientId,
@@ -54,14 +48,15 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     });
 
     router.get("/spotify-auth-callback", async (req: express.Request, res: express.Response) => {
-        // Check we came from spotify auth callback with a previously-set session uid for retrieving data
-        if (req.query.state !== "kush" || req.sessionUid) {
+        // Check we came from spotify auth callback with a previously-set state
+        if (req.query.state !== "kush") {
             return res.status(403).send("This url only accessible after authorizing with Spotify");
         }
 
-        const playlistData: PlaylistData = await redisHelper.getSessionData(redisClient, req.sessionUid);
-        if (playlistData === null) {
-            return res.status(400).send("This url only accessible after authorizing with Spotify, please restart playlist generation.");
+        // make sure they didn't just navigate straight to this URL
+        const sessionData: SessionData = await redisHelper.getSessionData(redisClient, req.sessionUid);
+        if (sessionData === null) {
+            return res.status(403).send("This url only accessible after authorizing with Spotify, please restart playlist generation.");
         }
 
         const { access, refresh, ...accessTokenResponse } = await spotifyHelper.getAccessTokenFromCallback(req.query.code, req.query.error);
@@ -74,10 +69,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             res.status(500).send(getUserFromTokenResponse.error);
         }
 
-        const playlistName: string = `${playlistData.festivalName} - Lineup List`;
+        const playlistName: string = `${sessionData.festivalName} - Lineup List`;
         const playlist: any = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
 
-        const trackUris: string[] = playlistData.trackIdsStr.split(',')
+        const trackUris: string[] = sessionData.trackIdsStr.split(',')
             .map(x => `spotify:track:${x}`);
 
         const success: boolean = await spotifyHelper.addTracksToPlaylist(access, playlist, trackUris);
@@ -86,9 +81,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(500).send("Server error, please try again.");
         }
 
-        res.clearCookie("lineup-list-session");
-        redisClient.DEL(`playlistData:${req.sessionUid}`);
-
+        redisClient.hmset(`sessionData:${req.sessionUid}`, { playlistName: playlistName, ...sessionData })
         res.redirect("/generate-playlist-success");
     });
 
