@@ -18,7 +18,7 @@ if (!process.env.DEPLOY_STAGE || process.env.DEPLOY_STAGE === '') {
     console.log("Need to source setup_env.sh to set env variables");
     process.exit(1);
 }
-const port = process.env.DEPLOY_STAGE == 'PROD' ? 7443 : 80;
+const port = process.env.DEPLOY_STAGE === 'PROD' ? 7443 : 80;
 
 app.engine("handlebars", handlebars());
 app.set("view engine", "handlebars");
