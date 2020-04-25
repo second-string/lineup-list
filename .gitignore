@@ -16,3 +16,6 @@ setup_env.sh
 # temp 
 *.un*
 *~
+
+# self-signed ssl cert files
+*.pem
