@@ -3,9 +3,10 @@
 3. source ./setup_env.sh
 4. `npm i`
 5. `npm run build`
-6. `node dist/warm-cache-for-festival.js`
+6. (optional) `node dist/warm-cache-for-festival.js`
     * might need to run it twice if it hangs, it's kinda sketchy
     * hardcoded festival for now, change the filename in the code to load other lineup text file
+    * if you don't run it, when you choose a festival the site will automatically get all the artists and load into cache anyway
 7. `npm start`
 8. GET `localhost/health` for healthcheck
 9. GET `localhost/festivals`
