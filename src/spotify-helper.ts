@@ -56,11 +56,12 @@ export async function getAccessTokenFromCallback(code: string, reqError: any):  
         // return res.status(500).send("Server error, please try again.");
     }
 
+    const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.brianteam.dev" : "localhost";
     const postOptions = {
         method: "POST",
         body: {
             grant_type: "authorization_code",
-            redirect_uri: `http://localhost/spotify-auth-callback`, // Doesn't matter, just needs to match what we sent previously
+            redirect_uri: `https://${redirectBaseUri}/spotify-auth-callback`, // Doesn't matter, just needs to match what we sent previously
             code
         },
         headers: {

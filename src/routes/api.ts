@@ -36,10 +36,11 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(403).send("This url only accessible after generating a lineup from the customize page.");
         }
 
+        const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.brianteam.dev" : "localhost";
         const queryParams = {
             client_id: constants.clientId,
             response_type: "code",
-            redirect_uri: "http://localhost/spotify-auth-callback",
+            redirect_uri: `https://${redirectBaseUri}/spotify-auth-callback`,
             state: "kush",
             scope: "playlist-read-collaborative playlist-read-private playlist-modify-private playlist-modify-public"
         };
