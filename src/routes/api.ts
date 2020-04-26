@@ -70,7 +70,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             res.status(500).send(getUserFromTokenResponse.error);
         }
 
-        const playlistName: string = `${sessionData.festivalName} - Lineup List`;
+        const playlistName: string = `${sessionData.festivalName} ${sessionData.festivalYear} - Lineup List`;
         const playlist: any = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
 
         const trackUris: string[] = sessionData.trackIdsStr.split(',')

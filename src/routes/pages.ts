@@ -16,9 +16,9 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
-    router.get("/festivals", (req: express.Request, res: express.Response) => {
+    router.get("/", (req: express.Request, res: express.Response) => {
         const supportedFestivals: Festival[] = [{ name: "Coachella", year: 2020 }, { name: "Bottlerock", year: 2020 }];
-        res.render("festivals", { supportedFestivals });
+        res.render("home", { supportedFestivals });
     });
 
     router.get("/customize", async (req: express.Request, res: express.Response) => {

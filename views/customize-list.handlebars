@@ -2,12 +2,13 @@
 <form id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
     <div id="formContent" style="display: flex; flex-direction: row; justify-content: space-between;">
         <div id="filters" style="max-width: 40%;">
-            <u>Filters</u>
-            <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
-            <p style="margin-bottom: 0;">Number of songs per artist</p>
+            <h4 style="margin-bottom: 0;">Number of songs per artist</h4>
             <input type="number" name="tracksPerArtist" value="3">
 
-            <div style="display: flex; flex-direction: column; margin-top: 2rem;">
+            <h4 style="margin-bottom: 0;">Filters</h4>
+            <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
+
+            <div style="display: flex; flex-direction: column; margin-top: 1rem;">
                 <div style="margin-bottom: 1rem;">
                     <u>Main Genres</u>
                     <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
@@ -36,7 +37,7 @@
         </div>
 
         <div id="includedArtists" style="max-width: 40%;">
-            <u style="margin-bottom: 0;">Artists</u>
+            <h4 style="margin-bottom: 0;">Artists</h4>
             <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
             <div style="display: flex; flex-direction: column;">
                 {{#each artists}}
