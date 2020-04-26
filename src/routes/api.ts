@@ -82,7 +82,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(500).send("Server error, please try again.");
         }
 
-        redisClient.hmset(`sessionData:${req.sessionUid}`, { playlistName, ...sessionData })
+        redisClient.hmset(`sessionData:${req.sessionUid}`, { ...sessionData, playlistName })
         res.redirect("/generate-playlist-success");
     });
 

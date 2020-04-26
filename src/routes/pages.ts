@@ -89,7 +89,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         }
 
         // Update our session data with track IDs
-        redisClient.hmset(`sessionData:${req.sessionUid}`, { trackIdsStr: trackIds.join(","), ...sessionData });
+        redisClient.hmset(`sessionData:${req.sessionUid}`, { ...sessionData, trackIdsStr: trackIds.join(",") });
 
         res.render("personalized-lineup", {
             festivalName: "Coachella 2020",
