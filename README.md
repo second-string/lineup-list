@@ -1,9 +1,9 @@
 1. `brew install redis`
 2. `redis-server` in separate tab
-3. source ./setup_env.sh
+3. set necessary env vars
 4. `npm i`
 5. `npm run build`
-6. (optional) `node dist/warm-cache-for-festival.js`
+6. `node dist/warm-cache-for-festival.js`
     * might need to run it twice if it hangs, it's kinda sketchy
     * hardcoded festival for now, change the filename in the code to load other lineup text file
     * if you don't run it, when you choose a festival the site will automatically get all the artists and load into cache anyway
