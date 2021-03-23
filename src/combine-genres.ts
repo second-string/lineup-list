@@ -1,9 +1,10 @@
 import redis from "redis";
 
+import * as redisHelper   from "./redis-helper";
 import * as spotifyHelper from "./spotify-helper";
-import * as redisHelper from "./redis-helper";
 
-// Need to export reduceSpotifyGenres from redishelper and spotifyToRedisArtist / redisToSpotifyArtist from spotifyhelper to run
+// Need to export reduceSpotifyGenres from redishelper and spotifyToRedisArtist / redisToSpotifyArtist from
+// spotifyhelper to run
 
 // const redisClient = redis.createClient();
 // redisClient.keys("artist:*", (err: Error, artists: string[]) => {

@@ -4,7 +4,7 @@
 <form action="/customize" method="GET" style="display: flex; flex-direction: column;">
     <select name="festival" style="margin: 1rem 0 2rem">
         {{#each supportedFestivals}}
-        <option value="{{this.name}}">{{this.name}} {{this.year}}</option>
+        <option value="{{this.name}}_{{this.year}}">{{this.display_name}} {{this.year}}</option>
         {{/each}}
     </select>
     <input type="submit" />

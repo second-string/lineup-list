@@ -19,3 +19,6 @@ setup_env.sh
 
 # self-signed ssl cert files
 *.pem
+
+# vim swap files
+*.swp

@@ -1,4 +1,4 @@
-<h2>Customize your {{festival.name}} {{festival.year}} lineup</h2>
+<h2>Customize your {{festival.display_name}} {{festival.year}} lineup</h2>
 <form id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
     <div id="formContent" style="display: flex; flex-direction: row; justify-content: space-between;">
         <div id="filters" style="max-width: 40%;">
@@ -51,6 +51,7 @@
     </div>
     <input type="hidden" id="artistIds" name="artistIds">
     <input type="hidden" name="festivalName" value="{{festival.name}}">
+    <input type="hidden" name="festivalDisplayName" value="{{festival.display_name}}">
     <input type="hidden" name="festivalYear" value="{{festival.year}}">
     <input style="margin: 1rem; align-self: center;" type="submit">
 </form>

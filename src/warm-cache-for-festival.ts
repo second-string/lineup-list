@@ -1,5 +1,5 @@
+import {readFileSync} from "fs";
 import redis from "redis";
-import { readFileSync } from "fs";
 
 import * as spotifyHelper from "./spotify-helper";
 
@@ -7,13 +7,14 @@ async function main() {
     const redisClient = redis.createClient();
 
     // A dict of each festival holding all the years we support for that festival
-    const festivals: { [key: string]: string[] } = { "Coachella": ["2020"], "Bottlerock": ["2020"] };
+    const festivals:
+        {[key: string]: string[]} = {"Coachella" : [ "2020" ], "Bottlerock" : [ "2020" ], "OSL" : [ "2021" ]};
 
     for (const festivalName of Object.keys(festivals)) {
         for (const festivalYear of festivals[festivalName]) {
             const filename: string = festivalName + "_" + festivalYear + ".txt";
-            const file = readFileSync(filename, "utf-8");
-            const artistNames = file.split('\n');
+            const file             = readFileSync(filename, "utf-8");
+            const artistNames      = file.split('\n');
 
             // const spotifyToken: string = await spotifyHelper.getSpotifyToken();
             const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistNames);
@@ -44,7 +45,9 @@ async function main() {
         */
             // Set our list of artist IDs with a key of the festival name_year
             const artistIds: string[] = artists.map(x => x.id);
-            redisClient.set(`festival:${festivalName.toLowerCase()}_${festivalYear}`, JSON.stringify(artistIds), redis.print);
+            redisClient.set(`festival:${festivalName.toLowerCase()}_${festivalYear}`,
+                            JSON.stringify(artistIds),
+                            redis.print);
         }
     }
 

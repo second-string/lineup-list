@@ -1,14 +1,11 @@
-import fetch from "node-fetch";
 import formUrlEncode from "form-urlencoded";
+import fetch from "node-fetch";
 
 export function baseSpotifyHeaders(method: string, spotifyToken: string) {
     return {
         method,
-        headers: {
-            "Content-type": "application/json",
-            Authorization: "Bearer " + spotifyToken
-        },
-        family: 4
+        headers : {"Content-type" : "application/json", Authorization : "Bearer " + spotifyToken},
+        family : 4
     };
 }
 
@@ -18,7 +15,7 @@ export async function sleep(ms: number, timeoutValue: any = null) {
 
 export async function instrumentCall(url: string, options: any, logCurl: boolean) {
     let res;
-    let error = null;
+    let error       = null;
     let encodedBody = '';
     let unparsedRes = null;
 
@@ -46,7 +43,7 @@ export async function instrumentCall(url: string, options: any, logCurl: boolean
             unparsedRes = await fetch(url, options);
 
             if (unparsedRes.status === 429) {
-                backoff = true;
+                backoff                 = true;
                 let backoffTime: number = Number(unparsedRes.headers.get('Retry-after'));
                 if (!backoffTime || backoffTime === 0) {
                     backoffTime = 1;
@@ -70,7 +67,7 @@ export async function instrumentCall(url: string, options: any, logCurl: boolean
     } finally {
         // Log out a curl for every call we instrument.
         if (logCurl && process.env.DEPLOY_STAGE !== 'PROD') {
-            const curl = ['curl'];
+            const curl = [ 'curl' ];
 
             // -s: don't show progress ascii
             // -D -: output headers to file, '-' uses stdout as file
@@ -91,7 +88,7 @@ export async function instrumentCall(url: string, options: any, logCurl: boolean
         }
     }
 
-    const success = error === null;
+    const success  = error === null;
     const response = error || res;
-    return { success, response };
+    return {success, response};
 }

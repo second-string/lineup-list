@@ -2,7 +2,8 @@ import redis from "redis";
 
 import * as spotifyHelper from "./spotify-helper";
 
-export async function getArtistsForFestival(redisClient: redis.RedisClient, festivalName: string, festivalYear: number): Promise<SpotifyArtist[]> {
+export async function getArtistsForFestival(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
+    Promise<SpotifyArtist[]> {
     const artistIdsPromise: Promise<string> = new Promise((resolve, reject) => {
         redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}`, (err: Error, obj: string) => {
             if (err) {
@@ -14,7 +15,7 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
     });
 
     const artistIdsString: string = await artistIdsPromise;
-    const artistIds = JSON.parse(artistIdsString);
+    const artistIds               = JSON.parse(artistIdsString);
 
     const redisArtistPromises: Promise<RedisArtist>[] = [];
     for (const artistId of artistIds) {
@@ -25,7 +26,7 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
                 } else if (obj === null) {
                     // We did not have artist in our cache, go get it from spotify and save
                     const spotifyArtist: SpotifyArtist = await spotifyHelper.getArtistById(artistId);
-                    const redisArtist: any = spotifyToRedisArtist(spotifyArtist);
+                    const redisArtist: any             = spotifyToRedisArtist(spotifyArtist);
                     console.log(`adding redis artist ${artistId} to the cache`);
                     redisClient.hmset(`artist:${artistId}`, redisArtist, redis.print);
                     resolve(redisArtist);
@@ -42,21 +43,26 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
     return redisArtists.map(x => redisToSpotifyArtist(x));
 }
 
-export async function getTopTracksForArtist(redisClient: redis.RedisClient, artist: SpotifyArtist, tracksPerArtist: number): Promise<SpotifyTrack[]> {
+export async function getTopTracksForArtist(redisClient: redis.RedisClient,
+                                            artist: SpotifyArtist,
+                                            tracksPerArtist: number): Promise<SpotifyTrack[]> {
     // Coerce to a number since it'll never evaluate to true when checking if we've reached it if it's a string
     tracksPerArtist = Number(tracksPerArtist);
 
     // We need two lists because there's a chance that some tracks come from redis and some from spotify
-    const topTracksFromRedis: RedisTrack[] = [];
+    const topTracksFromRedis: RedisTrack[]   = [];
     let topTracksFromSpotify: SpotifyTrack[] = [];
 
     if (!artist.top_track_ids || artist.top_track_ids.length === 0) {
         // We've never gotten tracks and saved their ids for this artist, need to call spotify for tracks,
         // save their ids for this artist, and save the tracks themselves. We cache all track IDs per artist
         // and tracks themselves, but only return the number requested
-        console.log(`No top track ids for spotify artist ${artist.id}, getting from spot, saving to redis artist, and saving each track`);
+        console.log(`No top track ids for spotify artist ${
+            artist.id}, getting from spot, saving to redis artist, and saving each track`);
         const spotifyTracks: SpotifyTrack[] = await spotifyHelper.getAllTracksForArtist(artist);
-        redisClient.hmset(`artist:${artist.id}`, { top_track_ids: JSON.stringify(spotifyTracks.map(x => x.id)) }, redis.print);
+        redisClient.hmset(`artist:${artist.id}`,
+                          {top_track_ids : JSON.stringify(spotifyTracks.map(x => x.id))},
+                          redis.print);
 
         for (const spotifyTrack of spotifyTracks) {
             const redisTrack: any = spotifyToRedisTrack(spotifyTrack);
@@ -68,15 +74,14 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient, arti
         console.log(`Have top track ids for artist ${artist.id}`);
         for (const trackId of artist.top_track_ids) {
             // See if we have track in our cache
-            const getTrackPromise: Promise<RedisTrack> = new Promise((resolve, reject) => {
-                redisClient.hgetall(`track:${trackId}`, (err: Error, obj: any) => {
-                    if (err) {
-                        reject(err);
-                    } else {
-                        resolve(obj as RedisTrack);
-                    }
-                })
-            });
+            const getTrackPromise: Promise<RedisTrack> =
+                new Promise((resolve, reject) => {redisClient.hgetall(`track:${trackId}`, (err: Error, obj: any) => {
+                                if (err) {
+                                    reject(err);
+                                } else {
+                                    resolve(obj as RedisTrack);
+                                }
+                            })});
 
             const track: RedisTrack = await getTrackPromise;
 
@@ -108,33 +113,32 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient, arti
 }
 
 function redisToSpotifyTrack(redisTrack: RedisTrack): SpotifyTrack {
-    const { artists, spotify_url, available_markets, ...spotifyTrack } = redisTrack;
+    const {artists, spotify_url, available_markets, ...spotifyTrack} = redisTrack;
 
     return {
-        artists: JSON.parse(artists),
-        available_markets: available_markets ? JSON.parse(available_markets) : "[]",
-        external_urls: { 'spotify': spotify_url },
-        external_ids: {},
-        ...spotifyTrack
+        artists: JSON.parse(artists), available_markets: available_markets ? JSON.parse(available_markets) : "[]",
+            external_urls: {'spotify': spotify_url}, external_ids: {}, ...spotifyTrack
     }
 }
 
 function spotifyToRedisTrack(spotifyTrack: SpotifyTrack): RedisTrack {
-    const { artists, external_urls, external_ids, preview_url, album, ...restOfRedisTrack } = spotifyTrack;
+    const {artists, external_urls, external_ids, preview_url, album, ...restOfRedisTrack} = spotifyTrack;
 
     // stringify artists, album, & preview_url (which stringifies null since hmset errors on it).
-    // map spotify_url from external_urls entry, drop external_ids b/c it's got nested keys and I have no clue wtf it's for.
+    // map spotify_url from external_urls entry, drop external_ids b/c it's got nested keys and I have no clue wtf it's
+    // for.
     const redisTrack: any = {
-        artists: JSON.stringify(artists),
-        spotify_url: external_urls.spotify,
-        album: JSON.stringify(album),
-        preview_url: JSON.stringify(preview_url),
+        artists : JSON.stringify(artists),
+        spotify_url : external_urls.spotify,
+        album : JSON.stringify(album),
+        preview_url : JSON.stringify(preview_url),
         ...restOfRedisTrack
     }
 
     for (const [key, value] of Object.entries(redisTrack)) {
-        if (typeof(value) === "undefined") {
-            console.log(`Replaced undefined value with empty string for key ${key} in spotify track ${spotifyTrack.id}`);
+        if (typeof (value) === "undefined") {
+            console.log(
+                `Replaced undefined value with empty string for key ${key} in spotify track ${spotifyTrack.id}`);
             redisTrack[key] = "";
         } else if (value instanceof Array || value instanceof Object) {
             console.log(`Replaced obj/array value with stringified for key ${key} in spotify track ${spotifyTrack.id}`);
@@ -148,41 +152,41 @@ function spotifyToRedisTrack(spotifyTrack: SpotifyTrack): RedisTrack {
 // Perform the json parsing for the stringified genres and top_tracks fields, rebuild the nested external_urls
 // type from the spotfy_url field, and re-add the nested images and followers fields we don't care about
 function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
-    const { spotify_url, genres, top_track_ids, combined_genres, ...spotifyArtist } = redisArtist;
-    const external_urls = {
-        "spotify": spotify_url
-    };
+    const {spotify_url, genres, top_track_ids, combined_genres, ...spotifyArtist} = redisArtist;
+    const external_urls                                                           = {"spotify" : spotify_url};
 
     return {
         external_urls,
-        genres: JSON.parse(genres),
-        combined_genres: combined_genres ? JSON.parse(combined_genres) : [],
-        top_track_ids: JSON.parse(top_track_ids),
-        images: {},
-        followers: {},
+        genres : JSON.parse(genres),
+        combined_genres : combined_genres ? JSON.parse(combined_genres) : [],
+        top_track_ids : JSON.parse(top_track_ids),
+        images : {},
+        followers : {},
         ...spotifyArtist
     };
 }
 
 function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
-    const { external_urls, images, followers, genres, top_track_ids, combined_genres, ...restOfArtist } = spotifyArtist;
+    const {external_urls, images, followers, genres, top_track_ids, combined_genres, ...restOfArtist} = spotifyArtist;
 
     // ternary and handle null top_track_ids since it's something we're appending. It might not
     // be on an artist if we haven't put it there yet, and it'll error an hmset if it's undefined
     const redisArtist: any = {
-        spotify_url: external_urls.spotify,
-        genres: JSON.stringify(genres),
-        combined_genres: combined_genres ? JSON.stringify(combined_genres) : "[]",
-        top_track_ids: top_track_ids ? JSON.stringify(top_track_ids) : "[]",
+        spotify_url : external_urls.spotify,
+        genres : JSON.stringify(genres),
+        combined_genres : combined_genres ? JSON.stringify(combined_genres) : "[]",
+        top_track_ids : top_track_ids ? JSON.stringify(top_track_ids) : "[]",
         ...restOfArtist
     };
 
     for (const [key, value] of Object.entries(redisArtist)) {
-        if (typeof(value) === "undefined") {
-            console.log(`Replaced undefined value with empty string for key ${key} in spotify artist ${redisArtist.id}`);
+        if (typeof (value) === "undefined") {
+            console.log(
+                `Replaced undefined value with empty string for key ${key} in spotify artist ${redisArtist.id}`);
             redisArtist[key] = "";
         } else if (value instanceof Array || value instanceof Object) {
-            console.log(`Replaced obj/array value with stringified for key ${key} in spotify artist ${spotifyArtist.id}`);
+            console.log(
+                `Replaced obj/array value with stringified for key ${key} in spotify artist ${spotifyArtist.id}`);
             redisArtist[key] = JSON.stringify(value);
         }
     }
@@ -191,15 +195,19 @@ function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
 }
 
 export async function getSessionData(redisClient: redis.RedisClient, sessionUid: string): Promise<SessionData> {
-    const sessionDataPromise: Promise<SessionData> = new Promise((resolve, reject) => {
-            redisClient.hgetall(`sessionData:${sessionUid}`, (err: Error, obj: any) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(obj as SessionData);
-                }
-            })
-        });
+    const sessionDataPromise: Promise<SessionData> =
+        new Promise((resolve, reject) => {redisClient.hgetall(`sessionData:${sessionUid}`, (err: Error, obj: any) => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            // The .ts type makes the compiler think these are numbers but they're strings when they
+                            // come out of the cache
+                            const data: SessionData = obj as SessionData;
+                            data.festivalYear       = parseInt(obj.festivalYear, 10)
+                            data.tracksPerArtist    = parseInt(obj.tracksPerArtist, 10)
+                            resolve(obj as SessionData);
+                        }
+                    })});
 
     const playlistData: SessionData = await sessionDataPromise;
     return playlistData;
