@@ -33,7 +33,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             }
         });
 
-        res.render("home", {supportedFestivals : sortedFestivals});
+        res.render("home", {
+            prod : process.env.DEPLOY_STAGE === 'PROD',
+            supportedFestivals : sortedFestivals,
+        });
     });
 
     router.get("/customize", async (req: express.Request, res: express.Response) => {
@@ -70,7 +73,13 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         mainGenres.sort();
         specificGenres.sort();
 
-        res.render("customize-list", {festival, artists, mainGenres, specificGenres});
+        res.render("customize-list", {
+            prod : process.env.DEPLOY_STAGE === 'PROD',
+            festival,
+            artists,
+            mainGenres,
+            specificGenres,
+        });
     });
 
     router.get("/personalized-lineup", async (req: express.Request, res: express.Response) => {
@@ -104,9 +113,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, trackIdsStr : trackIds.join(",")});
 
         res.render("personalized-lineup", {
+            prod : process.env.DEPLOY_STAGE === 'PROD',
             festivalDisplayName : sessionData.festivalDisplayName,
             acts : artistsWithTracks,
-            tracksPerArtist : sessionData.tracksPerArtist
+            tracksPerArtist : sessionData.tracksPerArtist,
         })
     });
 
@@ -119,7 +129,11 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const festival: Festival = supportedFestivals.filter(x => x.name === sessionData.festivalName &&
                                                                   x.year === sessionData.festivalYear)[0];
 
-        res.render("generate-playlist-success", {festival, playlistName : sessionData.playlistName});
+        res.render("generate-playlist-success", {
+            prod : process.env.DEPLOY_STAGE === 'PROD',
+            festival,
+            playlistName : sessionData.playlistName,
+        });
     });
 
     return router;
