@@ -15,11 +15,11 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     router.post("/generate-lineup-list", async (req: express.Request, res: express.Response) => {
         const festivalName: string        = req.body.festivalName;
         const festivalDisplayName: string = req.body.festivalDisplayName;
-        const festivalYear: string        = req.body.festivalYear;
-        const tracksPerArtist: string     = req.body.tracksPerArtist;
+        const festivalYear: number        = parseInt(req.body.festivalYear, 10);
+        const tracksPerArtist: number     = parseInt(req.body.tracksPerArtist, 10);
         const artistIdsStr: string        = req.body.artistIds;
 
-        const sessionData = {
+        const sessionData: SessionData = {
             festivalName,
             festivalDisplayName,
             festivalYear,
@@ -28,7 +28,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         };
 
         // Save our session data for what artists and how many tracks to include
-        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData, redis.print);
+        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData as any, redis.print);
         res.redirect("/personalized-lineup");
     });
 

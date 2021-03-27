@@ -8,9 +8,9 @@ import * as constants   from "../constants";
 import * as redisHelper from "../redis-helper";
 
 const supportedFestivals: Festival[] = [
-    {display_name : "Coachella", year : 2020, name : "coachella"},
-    {display_name : "Bottlerock", year : 2020, name : "bottlerock"},
-    {display_name : "Outside Lands", year : 2021, name : "osl"},
+    {display_name : "Coachella", years : [ 2020 ], name : "coachella"},
+    {display_name : "Bottlerock", years : [ 2020 ], name : "bottlerock"},
+    {display_name : "Outside Lands", years : [ 2021, 2019 ], name : "osl"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
@@ -24,13 +24,15 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     router.get("/", (req: express.Request, res: express.Response) => {
         const sortedFestivals: Festival[] = supportedFestivals.sort((x: Festival, y: Festival) => {
-            if (x.year > y.year) {
-                return -1;
-            } else if (x.year < y.year) {
-                return 1;
-            } else {
-                return 0;
-            }
+            // todo : sort on something here with year lists
+            return 0;
+            // if (x.year > y.year) {
+            //    return -1;
+            // } else if (x.year < y.year) {
+            //    return 1;
+            // } else {
+            //    return 0;
+            // }
         });
 
         res.render("home", {
@@ -40,22 +42,32 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     });
 
     router.get("/customize", async (req: express.Request, res: express.Response) => {
-        if (!req.query.festival) {
-            res.status(400).send("You need to choose a festival first.");
+        if (!req.query.festival || !req.query.year) {
+            return res.status(400).send("You need to choose a festival first.");
         }
 
-        // TODO :: Figure out how to pass fest and year as separate query params. Need two selects changing dynamically
-        // based on festival selected for supported year arrays our hack for now is to concat the two with an underscore
-        const festivalParts: string = req.query.festival.split('_');
+        const queryYear: number = parseInt(req.query.year, 10);
         const festival: Festival =
-            supportedFestivals.filter(x => x.name === festivalParts[0] && x.year === parseInt(festivalParts[1], 10))[0];
+            supportedFestivals.filter(x => x.name === req.query.festival && x.years.includes(queryYear))[0];
 
-        if (!festival.name || !festival.year) {
+        if (!festival || !festival.name) {
             return res.status(400).send("Invalid query params");
         }
 
-        const artists: SpotifyArtist[] =
-            await redisHelper.getArtistsForFestival(redisClient, festival.name, festival.year);
+        const festivalName: string        = festival.name;
+        const festivalDisplayName: string = festival.display_name;
+        const festivalYear: number        = queryYear;
+
+        const sessionData: SessionData = {
+            festivalName,
+            festivalDisplayName,
+            festivalYear,
+        };
+
+        // Save our session data for selected festival year
+        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData as any, redis.print);
+
+        const artists: SpotifyArtist[] = await redisHelper.getArtistsForFestival(redisClient, festival.name, queryYear);
         const mainGenres: string[]     = [];
         const specificGenres: string[] = [];
         for (const artist of artists) {
@@ -76,6 +88,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         res.render("customize-list", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
             festival,
+            festivalYear,
             artists,
             mainGenres,
             specificGenres,
@@ -126,12 +139,14 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(403).send("This url only accessible after generating Spotify playlist.");
         }
 
-        const festival: Festival = supportedFestivals.filter(x => x.name === sessionData.festivalName &&
-                                                                  x.year === sessionData.festivalYear)[0];
+        const festival: Festival   = supportedFestivals.filter(x => x.name === sessionData.festivalName &&
+                                                                  x.years.includes(sessionData.festivalYear))[0];
+        const festivalYear: number = sessionData.festivalYear;
 
         res.render("generate-playlist-success", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
             festival,
+            festivalYear,
             playlistName : sessionData.playlistName,
         });
     });

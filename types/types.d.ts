@@ -98,7 +98,7 @@ interface SpotifyExternalUrls {
 interface Festival {
     display_name: string;
     name: string;
-    year: number;
+    years: number[];
 }
 
 interface User {
@@ -115,8 +115,8 @@ interface SessionData {
     festivalName: string;
     festivalDisplayName: string;
     festivalYear?: number;
-    tracksPerArtist: number;
-    artistIdsStr: string;
-    trackIdsStr: string;
+    tracksPerArtist?: number;
+    artistIdsStr?: string;
+    trackIdsStr?: string;
     playlistName?: string;
 }

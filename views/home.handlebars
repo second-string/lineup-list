@@ -2,10 +2,40 @@
 <p>Create a festival lineup of artists according to your preferred genres. Once you've chosen your artists you also have the option to generate a playlist within your Spotify account.</p>
 <h3>Choose a festival to begin</h3>
 <form action="/customize" method="GET" style="display: flex; flex-direction: column;">
-    <select name="festival" style="margin: 1rem 0 2rem">
-        {{#each supportedFestivals}}
-        <option value="{{this.name}}_{{this.year}}">{{this.display_name}} {{this.year}}</option>
-        {{/each}}
-    </select>
-    <input type="submit" />
+    <div style="display: flex; flex-direction: row; margin-top: 1rem; margin-bottom: .5rem; justify-content: center;">
+        <select id="festival-select" name="festival" onChange="populateYearSelect()">
+            {{#each supportedFestivals}}
+            <option value="{{this.name}}" data-years="{{stringify this.years}}">{{this.display_name}}</option>
+            {{/each}}
+        </select>
+        <select name="year" id="year-select">
+        </select>
+    </div>
+    <a href="mailto:brian.team.jr@gmail.com" style="font-size: smaller; margin-bottom: 2rem;">Don't see the festival or year you want? Let me know</a>
+    <input type="submit" style="align-self: center;"/>
 </form>
+
+<script>
+function populateYearSelect() {
+    const festivalSelect = document.getElementById("festival-select");
+    const selectedOption = festivalSelect.options[festivalSelect.selectedIndex];
+    const supportedYears = JSON.parse(selectedOption.getAttribute("data-years"));
+    const yearsSelect = document.getElementById("year-select");
+
+    while (yearsSelect.options.length) {
+        yearsSelect.remove(0);
+    }
+
+    for (const year of supportedYears) {
+        const option = document.createElement("option");
+        option.value = year;
+        option.text = year;
+        yearsSelect.add(option);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    populateYearSelect();
+});
+
+</script>

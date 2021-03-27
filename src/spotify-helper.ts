@@ -104,8 +104,10 @@ export async function getSpotifyUserFromToken(accessToken: string): Promise<{err
 export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyArtist[]> {
     const artistPromises: Promise<SpotifyArtist>[] = [];
 
+    let lengthCorrection: number = 0;
     for (const artistName of artistNames) {
         if (artistName === '') {
+            lengthCorrection++;
             continue;
         }
 
@@ -134,7 +136,7 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
     let artistObjs = await Promise.all(artistPromises);
     artistObjs     = artistObjs.filter(x => x !== null);
 
-    console.log(`Received ${artistObjs.length} artists from ${artistNames.length} lineup artists`);
+    console.log(`Received ${artistObjs.length} artists from ${artistNames.length - lengthCorrection} lineup artists`);
     return artistObjs;
 }
 
