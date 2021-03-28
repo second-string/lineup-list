@@ -1,74 +1,77 @@
-paul simon
-childish gambino
-twenty one pilots
-the lumineers
-flume
-blink-182
-kygo
-anderson .paak
-leon bridges
-kacey musgraves
-lil wayne
-hozier
-rl grime
-ella mai
-counting crows
-flying lotus
-alina baraz
-mavis staples
-bebe rexha
-sheck wes
-the neighbourhood
-santigold
-better oblivion community center
-toro y moi
-denzel curry
-lauren daigle
-san holo
-judah & the lion
-big wild
-bob moses
-edie brickell & new bohemians
-wallows
-yaeji
-masego
-phosphorescent
-tierra whack
-dj koze
-nombe
-bea miller
-aurora
-nahko and medicine for the people
-justin martin
-dean lewis
-shallou
-luttrell
-the california honeydrops
-cautious clay
-half-alive
-the marías
-brasstracks
-cupcakke
-cherry glazerr
-p-lo
-caamp
-weyes blood
-pj morton
-the funk hunters
-still woozy
-taylor bennett
-mormor
-miya folick
-allblack
-syml
-leven kali
-alex lahey
-jupiter & okwess
-delacey
-altın gün
-grateful shred
-amo amo
-boyfriend
-the seshen
-rainbow girls
-sandy's
+twenty one pilots,1
+the lumineers,1
+blink-182,1
+lil wayne,1
+counting crows,1
+flying lotus,1
+the neighbourhood,1
+lauren daigle,1
+san holo,1
+yaeji,1
+masego,1
+aurora,1
+luttrell,1
+the california honeydrops,1
+cautious clay,1
+half•alive,1
+the marías,1
+brasstracks,1
+p-lo,1
+taylor bennett,1
+miya folick,1
+grateful shred,1
+boyfriend,1
+rainbow girls,1
+the seshen,1
+
+childish gambino,2
+flume,2
+hozier,2
+rl grime,2
+ella mai,2
+alina baraz,2
+santigold,2
+better oblivion community center,2
+big wild,2
+edie brickell & new bohemians,2
+wallows,2
+phosphorescent,2
+tierra whack,2
+nombe,2
+justin martin,2
+bea miller,2
+shallou,2
+cupcakke,2
+caamp,2
+still woozy,2
+allblack,2
+delacey,2
+altin gün,2
+amo amo,2
+fatai,2
+
+paul simon,3
+kygo,3
+anderson .paak,3
+leon bridges,3
+kacey musgraves,3
+mavis staples,3
+bebe rexha,3
+sheck wes,3
+toro y moi,3
+denzel curry,3
+bob moses,3
+judah & the lion,3
+dj koze,3
+nahko and medicine for the people,3
+dean lewis,3
+cherry glazerr,3
+weyes blood,3
+pj morton,3
+the funk hunters,3
+mormor,3
+syml,3
+leven kali,3
+alex lahey,3
+jupiter & okwess,3
+sandy's,3

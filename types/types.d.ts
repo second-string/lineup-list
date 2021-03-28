@@ -18,6 +18,7 @@ interface SpotifyArtist {
     top_track_ids: string[];  // Not a spotify field, I'm glomming it on here from what's saved in redis to save a query
     combined_genres: string[];  // Not a spotify field. Our list of genres containing any main genres it as matched plus
                                 // the loeftover unmatched ones
+    day?: string;  // Not a spotify field, will be set differently for each festival this artist is attending
 }
 
 interface RedisArtist {

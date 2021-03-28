@@ -18,7 +18,11 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     hbs.registerHelper("stringify", (object: any): string => {
         return JSON.stringify(object);
-    })
+    });
+
+    hbs.registerHelper('gt', (a, b) => {
+        return (a > b);
+    });
 
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
@@ -68,8 +72,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData as any, redis.print);
 
         const artists: SpotifyArtist[] = await redisHelper.getArtistsForFestival(redisClient, festival.name, queryYear);
+
         const mainGenres: string[]     = [];
         const specificGenres: string[] = [];
+        const days: string[]           = [];
         for (const artist of artists) {
             for (const genre of artist.combined_genres) {
                 if (constants.mainGenres.includes(genre)) {
@@ -79,6 +85,11 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
                 } else if (!specificGenres.includes(genre)) {
                     specificGenres.push(genre);
                 }
+            }
+
+            // Inefficient since we got a list of supported days in getArtistsForFestival but meh
+            if (!days.includes(artist.day)) {
+                days.push(artist.day);
             }
         }
 
@@ -92,6 +103,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             artists,
             mainGenres,
             specificGenres,
+            days,
         });
     });
 

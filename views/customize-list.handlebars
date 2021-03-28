@@ -10,6 +10,20 @@
 
             <div style="display: flex; flex-direction: column; margin-top: 1rem;">
                 <div style="margin-bottom: 1rem;">
+                    <u>Festival Day</u>
+                    {{#if (gt days.length 1)}}
+                        {{#each days}}
+                        <div>
+                            <input class="dayCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
+                            <p style="display: inline-block; margin: 0;">{{this}}</p>
+                        </div>
+                        {{/each}}
+                    {{else}}
+                        <p style="font-size: smaller; margin-top: 0;">Single day lineups not released for this festival yet.</p>
+                    {{/if}}
+                </div>
+
+                <div style="margin-bottom: 1rem;">
                     <u>Main Genres</u>
                     <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
                     {{#each mainGenres}}
@@ -25,7 +39,7 @@
                     <p style="font-size: smaller; margin-top: 0;">Uncommon genres not easily grouped into a main genre. These might be specific to certain artists and can be used to fine-tune the results.</p>
                     <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" style="display: inline-block;" checked>
                     <p style="display: inline-block; margin: 0 0 1rem;">Check/Uncheck all misc. genres</p>
-                    
+
                     {{#each specificGenres}}
                     <div>
                         <input class="specificGenreCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
@@ -42,7 +56,7 @@
             <div style="display: flex; flex-direction: column;">
                 {{#each artists}}
                 <div id={{this.id}}>
-                    <input class="artistCheckbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" style="display: inline-block;" checked>
+                    <input class="artistCheckbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" style="display: inline-block;" checked>
                     <p style="display: inline-block; margin: 0;">{{this.name}}</p>
                 </div>
                 {{/each}}
@@ -86,6 +100,7 @@ function refreshArtistList() {
     var artists = document.getElementsByClassName("artistCheckbox");
     var mainGenres = document.getElementsByClassName("mainGenreCheckbox");
     var specificGenres = document.getElementsByClassName("specificGenreCheckbox");
+    var days = document.getElementsByClassName("dayCheckbox");
     var allGenres = [];
     allGenres = Array.prototype.concat.apply(allGenres, mainGenres);
     allGenres = Array.prototype.concat.apply(allGenres, specificGenres);
@@ -94,13 +109,18 @@ function refreshArtistList() {
     .filter(x => x.checked)
     .map(x => x.value);
 
+    var selectedDays = Array.prototype.slice.call(days)
+        .filter(x => x.checked)
+        .map(x => x.value);
+
     for (var i = 0; i < artists.length; i++) {
         var artistGenres = JSON.parse(artists[i].getAttribute("data-genres"));
-        
+        var artistDay = artists[i].getAttribute("data-day");
+
         // make sure we hide or show the whole div containing checkbox and name
         var artistDiv = document.getElementById(artists[i].value);
         artistDiv.style.opacity = getArtistOpacity(selectedGenres, artistGenres);
-        if (!artistGenres.some(x => selectedGenres.includes(x))) {
+        if (!artistGenres.some(x => selectedGenres.includes(x)) || (selectedDays.length > 1 && !selectedDays.includes(artistDay))) {
             artistDiv.style.display = "none";
         } else {
             artistDiv.style.display = "block";

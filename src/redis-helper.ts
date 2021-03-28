@@ -4,43 +4,65 @@ import * as spotifyHelper from "./spotify-helper";
 
 export async function getArtistsForFestival(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
     Promise<SpotifyArtist[]> {
-    const artistIdsPromise: Promise<string> = new Promise((resolve, reject) => {
-        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}`, (err: Error, obj: string) => {
+    const daysPromise: Promise<string[]> = new Promise((resolve, reject) => {
+        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:days`, (err: Error, obj: string) => {
             if (err) {
                 reject(err);
             } else {
-                resolve(obj);
+                resolve(JSON.parse(obj));
             }
         });
     });
 
-    const artistIdsString: string = await artistIdsPromise;
-    const artistIds               = JSON.parse(artistIdsString);
+    const days: string[] = await daysPromise;
 
-    const redisArtistPromises: Promise<RedisArtist>[] = [];
-    for (const artistId of artistIds) {
-        const redisArtistPromise: Promise<RedisArtist> = new Promise((resolve, reject) => {
-            redisClient.hgetall(`artist:${artistId}`, async (err: Error, obj: any) => {
-                if (err) {
-                    reject(err);
-                } else if (obj === null) {
-                    // We did not have artist in our cache, go get it from spotify and save
-                    const spotifyArtist: SpotifyArtist = await spotifyHelper.getArtistById(artistId);
-                    const redisArtist: any             = spotifyToRedisArtist(spotifyArtist);
-                    console.log(`adding redis artist ${artistId} to the cache`);
-                    redisClient.hmset(`artist:${artistId}`, redisArtist, redis.print);
-                    resolve(redisArtist);
-                } else {
-                    resolve(obj as RedisArtist);
-                }
-            });
+    const redisArtistPromises: Promise<any>[] = [];
+    for (const day of days) {
+        const artistIdsPromise: Promise<string> = new Promise((resolve, reject) => {
+            redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:${day}`,
+                            (err: Error, obj: string) => {
+                                if (err) {
+                                    reject(err);
+                                } else {
+                                    resolve(obj);
+                                }
+                            });
         });
 
-        redisArtistPromises.push(redisArtistPromise);
+        const artistIdsString: string = await artistIdsPromise;
+        const artistIds               = JSON.parse(artistIdsString);
+
+        for (const artistId of artistIds) {
+            const redisArtistPromise = new Promise((resolve, reject) => {
+                redisClient.hgetall(`artist:${artistId}`, async (err: Error, obj: any) => {
+                    if (err) {
+                        reject(err);
+                    } else if (obj === null) {
+                        // We did not have artist in our cache, go get it from spotify and save
+                        const spotifyArtist: SpotifyArtist = await spotifyHelper.getArtistById(artistId);
+                        const redisArtist: any             = spotifyToRedisArtist(spotifyArtist);
+                        console.log(`adding redis artist ${artistId} to the cache`);
+                        redisClient.hmset(`artist:${artistId}`, redisArtist, redis.print);
+                        resolve(redisArtist);
+                    } else {
+                        // Tag each artist with the day for this festival so we can group when resolving all promises
+                        obj.day = day;
+                        resolve(obj);
+                    }
+                });
+            });
+
+            redisArtistPromises.push(redisArtistPromise);
+        }
     }
 
-    const redisArtists: RedisArtist[] = await Promise.all(redisArtistPromises);
-    return redisArtists.map(x => redisToSpotifyArtist(x));
+    // Technically a RedisArtist[] but with the extra day field we have to cast as any[]
+    const redisArtists: any[] = await Promise.all(redisArtistPromises);
+    return redisArtists.map(x => {
+        const spotifyArtist = redisToSpotifyArtist(x)
+        spotifyArtist.day   = x.day;
+        return spotifyArtist;
+    });
 }
 
 export async function getTopTracksForArtist(redisClient: redis.RedisClient,

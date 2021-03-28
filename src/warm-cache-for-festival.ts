@@ -7,12 +7,46 @@ async function warm(festival: string, years: number[]) {
     const redisClient = redis.createClient();
 
     for (const year of years) {
-        const filename: string = festival + "_" + year + ".txt";
-        const file             = readFileSync(filename, "utf-8");
-        const artistNames      = file.split('\n');
+        const filename: string                      = festival + "_" + year + ".txt";
+        const file                                  = readFileSync(filename, "utf-8");
+        const artistLines                           = file.split('\n');
+        const artistObjs: {[key: string]: string[]} = {};
+        for (const artistLine of artistLines) {
+            // Skip blank lines
+            if (!artistLine.trim()) {
+                continue;
+            }
+            const artistDetails: string[] = artistLine.split(",");
+            const artistName              = artistDetails[0];
+            let day                       = artistDetails[1];
+
+            // If we don't have days in our text file yet, list everything under day zero
+            if (!day) {
+                day = "0";
+            }
+
+            if (artistObjs[day] && artistObjs[day].length) {
+                artistObjs[day].push(artistName);
+            } else {
+                artistObjs[day] = [ artistName ];
+            }
+        }
+
+        // Save all days so we can pull them later
+        redisClient.set(`festival:${festival.toLowerCase()}_${year}:days`,
+                        JSON.stringify(Object.keys(artistObjs)),
+                        redis.print);
 
         // const spotifyToken: string = await spotifyHelper.getSpotifyToken();
-        const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistNames);
+        for (const day of Object.keys(artistObjs)) {
+            const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistObjs[day]);
+
+            // Set our list of artist IDs with a key of the festival name_year
+            const artistIds: string[] = artists.map(x => x.id);
+            redisClient.set(`festival:${festival.toLowerCase()}_${year}:${day}`,
+                            JSON.stringify(artistIds),
+                            redis.print);
+        }
 
         /*
         I'm kinda dumb v since we have to get the artists for their IDs anyway, I guess we might as well cache
@@ -38,9 +72,6 @@ async function warm(festival: string, years: number[]) {
             redisClient.hmset(`artist:${artist.id}`, redisArtist, redis.print);
         }
     */
-        // Set our list of artist IDs with a key of the festival name_year
-        const artistIds: string[] = artists.map(x => x.id);
-        redisClient.set(`festival:${festival.toLowerCase()}_${year}`, JSON.stringify(artistIds), redis.print);
     }
 
     redisClient.quit();
