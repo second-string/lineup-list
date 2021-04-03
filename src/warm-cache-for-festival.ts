@@ -14,6 +14,7 @@ async function warm(festival: string, years: number[]) {
         for (const artistLine of artistLines) {
             // Skip blank lines
             if (!artistLine.trim()) {
+                console.log("Skipping newline");
                 continue;
             }
             const artistDetails: string[] = artistLine.split(",");
@@ -43,6 +44,7 @@ async function warm(festival: string, years: number[]) {
 
             // Set our list of artist IDs with a key of the festival name_year
             const artistIds: string[] = artists.map(x => x.id);
+            console.log(`festival:${festival.toLowerCase()}_${year}:${day}`);
             redisClient.set(`festival:${festival.toLowerCase()}_${year}:${day}`,
                             JSON.stringify(artistIds),
                             redis.print);
@@ -79,8 +81,8 @@ async function warm(festival: string, years: number[]) {
 
 async function main() {
     // A dict of each festival holding all the years we support for that festival
-    const supportedFestivals:
-        {[key: string]: number[]} = {"coachella" : [ 2020 ], "bottlerock" : [ 2020 ], "osl" : [ 2021, 2019 ]};
+    const supportedFestivals: {[key: string]: number[]} =
+        {"coachella" : [ 2020 ], "bottlerock" : [ 2020 ], "osl" : [ 2021, 2019 ], "hardsummer" : [ 2021 ]};
 
     let festivals: {[key: string]: number[]};
     if (process.argv.length > 2) {
