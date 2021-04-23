@@ -135,7 +135,6 @@ function refreshArtistList() {
         .filter(x => x.checked)
         .map(x => x.value);
 
-console.log(selectedDays);
     for (var i = 0; i < artists.length; i++) {
         var artistGenres = JSON.parse(artists[i].getAttribute("data-genres"));
         var artistDay = artists[i].getAttribute("data-day");
@@ -145,7 +144,8 @@ console.log(selectedDays);
         artistDiv.style.opacity = getArtistOpacity(selectedGenres, artistGenres);
 
         var noDayMatch = days.length > 0 && (selectedDays.length == 0 || !selectedDays.includes(artistDay));
-        if (!artistGenres.some(x => selectedGenres.includes(x)) || noDayMatch) {
+        var noGenreMatch = artistGenres.length > 0 && !artistGenres.some(x => selectedGenres.includes(x));
+        if (noGenreMatch || noDayMatch) {
             artistDiv.style.display = "none";
         } else {
             artistDiv.style.display = "block";
