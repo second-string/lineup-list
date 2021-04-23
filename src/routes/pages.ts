@@ -125,8 +125,21 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const artistsWithTracks: any = [];
         let trackIds: string[]       = [];
         for (const artist of filteredArtists) {
-            const tracksForArtist =
-                await redisHelper.getTopTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
+            let tracksForArtist: SpotifyTrack[] = [];
+            if (sessionData.trackType === "recent") {
+                tracksForArtist =
+                    await redisHelper.getNewestTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
+            } else if (sessionData.trackType === "top") {
+                tracksForArtist =
+                    await redisHelper.getTopTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
+            } else {
+                console.warn(`Found track type of ${
+                    sessionData.trackType ? sessionData.trackType
+                                          : "undefined"} in session data, defaulting to top ttracks`);
+                tracksForArtist =
+                    await redisHelper.getTopTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
+            }
+
             const artistWithTracks = {...artist, tracks : tracksForArtist}
 
                                      artistsWithTracks.push(artistWithTracks);

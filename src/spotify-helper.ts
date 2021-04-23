@@ -156,6 +156,44 @@ export function getAllTracksForArtist(spotifyArtist: SpotifyArtist): Promise<Spo
     });
 }
 
+export function getAllAlbumsForArtist(spotifyArtist: SpotifyArtist): Promise<SpotifyAlbum[]> {
+    return new Promise(async (resolve, reject) => {
+        const {success, response} = await autoRetrySpotifyCall(
+            `https://api.spotify.com/v1/artists/${spotifyArtist.id}/albums?market=US&limit=50`,
+            (token: string) => helpers.baseSpotifyHeaders("GET", token),
+            false);
+
+        if (success === undefined || !success) {
+            console.log(`Error getting albums for artist '${spotifyArtist.name}'`);
+            return reject(response);
+        }
+
+        resolve(response.items);
+    });
+}
+
+export function getAllTracksForAlbum(spotifyAlbum: SpotifyAlbum): Promise<SpotifyTrack[]> {
+    return new Promise(async (resolve, reject) => {
+        const {success, response} =
+            await autoRetrySpotifyCall(`https://api.spotify.com/v1/albums/${spotifyAlbum.id}/tracks?market=US&limit=10`,
+                                       (token: string) => helpers.baseSpotifyHeaders("GET", token),
+                                       false);
+
+        if (success === undefined || !success) {
+            console.log(`Error getting tracks for album ${spotifyAlbum.name} (${spotifyAlbum.id})`)
+            return reject(response);
+        }
+
+        // When getting tracks for an album, the album field is not populated on spotify's end (since we needed to know
+        // it to request obviously). Bundle it in for our code's use
+        for (const track of response.items) {
+            track.album = spotifyAlbum;
+        }
+
+        resolve(response.items);
+    });
+}
+
 export async function getAllTracksToAdd(spotifyArtists: SpotifyArtist[],
                                         tracksPerArtist: number): Promise<SpotifyTrack[]> {
     const trackPromises: Promise<SpotifyTrack[]>[] = [];

@@ -16,6 +16,8 @@ interface SpotifyArtist {
     images: any;
     followers: any;
     top_track_ids: string[];  // Not a spotify field, I'm glomming it on here from what's saved in redis to save a query
+    album_ids: string[];      // Same as top_track_ids
+    newest_track_ids: string[];  // Same as top_track_ids
     combined_genres: string[];  // Not a spotify field. Our list of genres containing any main genres it as matched plus
                                 // the loeftover unmatched ones
     day?: string;  // Not a spotify field, will be set differently for each festival this artist is attending
@@ -31,7 +33,30 @@ interface RedisArtist {
     uri: string;
     spotify_url: string;  // parsed out of the external_urls for a SpotifyArtist
     top_track_ids: string;
+    newest_track_ids: string;
+    album_ids: string;
     combined_genres: string;
+}
+
+interface SpotifyTrack {
+    album: any;
+    artists: SpotifyArtist[];
+    available_markets: string[];
+    disc_number: number;
+    duration_ms: number;
+    explicit: boolean;
+    href: string;
+    id: string;
+    is_local: boolean;
+    is_playable: boolean;
+    name: string;
+    popularity: number;
+    preview_url: string;
+    track_number: number;
+    type: string;
+    uri: string;
+    external_urls: SpotifyExternalUrls;
+    external_ids: any;
 }
 
 interface RedisTrack {
@@ -54,25 +79,36 @@ interface RedisTrack {
     spotify_url: string;  // parsed out of the external_urls for a SpotifyTrack
 }
 
-interface SpotifyTrack {
-    album: any;
-    artists: SpotifyArtist[];
-    available_markets: string[];
-    disc_number: number;
-    duration_ms: number;
-    explicit: boolean;
+interface SpotifyAlbum {
+    album_group: string;
+    album_type: string;
+    artists: [];  // Might be SpotifyArtist but seems to have less fields at a glance
+    external_urls: SpotifyExternalUrls;
     href: string;
     id: string;
-    is_local: boolean;
-    is_playable: boolean;
+    images: [ any ];
     name: string;
-    popularity: number;
-    preview_url: string;
-    track_number: number;
+    release_date: string;            // Format YYY-mm-dd
+    release_date_precision: string;  // day, month, year. Might be helpful
+    total_tracks: number;
     type: string;
     uri: string;
-    external_urls: SpotifyExternalUrls;
-    external_ids: any;
+}
+
+interface RedisAlbum {
+    album_group: string;
+    album_type: string;
+    artists: string;      // stringified list of stringified stripped down artist objects
+    spotify_url: string;  // parsed out of the external_urls for a SpotifyTrack
+    href: string;
+    id: string;
+    images: string;
+    name: string;
+    release_date: string;            // Format YYY-mm-dd
+    release_date_precision: string;  // day, month, year. Might be helpful
+    total_tracks: number;
+    type: string;
+    uri: string;
 }
 
 interface SpotifyPlaylist {
@@ -120,4 +156,5 @@ interface SessionData {
     artistIdsStr?: string;
     trackIdsStr?: string;
     playlistName?: string;
+    trackType?: string;
 }

@@ -18,6 +18,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const festivalYear: number        = parseInt(req.body.festivalYear, 10);
         const tracksPerArtist: number     = parseInt(req.body.tracksPerArtist, 10);
         const artistIdsStr: string        = req.body.artistIds;
+        const trackType: string           = req.body.trackType;
 
         const sessionData: SessionData = {
             festivalName,
@@ -25,6 +26,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             festivalYear,
             tracksPerArtist,
             artistIdsStr,
+            trackType,
         };
 
         // Save our session data for what artists and how many tracks to include

@@ -2,10 +2,32 @@
 <form id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
     <div id="formContent" style="display: flex; flex-direction: row; justify-content: space-between;">
         <div id="filters" style="max-width: 40%;">
-            <h4 style="margin-bottom: 0;">Number of songs per artist</h4>
-            <input type="number" name="tracksPerArtist" value="3">
+            <div style="display: flex; flex-direction: column;">
+                <h3 style="margin-bottom: 0;">Playlist options</h3>
+                <p style="font-size: smaller; margin-top: 0;">These settings affect the makeup of your generated playlist</p>
 
-            <h4 style="margin-bottom: 0;">Filters</h4>
+                <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
+                    <u>Tracks per artist</u>
+                    <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist</p>
+                    <input type="number" name="tracksPerArtist" value="3" style="flex: 0; max-width: 30%;">
+                </div>
+
+                <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
+                    <u>Track type</u>
+                    <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. Top tracks are the most popular, while newest tracks pulls from their most recently released music.</p>
+                    <!-- Need separate divs b/c flex-direction column -->
+                    <div style="margin-bottom: .5rem;">
+                        <input type="radio" name="trackType" id="top" value="top" checked>
+                        <label for="top">Top tracks</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="trackType" id="recent" value="recent">
+                        <label for="recent">Newest tracks</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 0;">Filters</h3>
             <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
 
             <div style="display: flex; flex-direction: column; margin-top: 1rem;">
@@ -51,7 +73,7 @@
         </div>
 
         <div id="includedArtists" style="max-width: 40%;">
-            <h4 style="margin-bottom: 0;">Artists</h4>
+            <h3 style="margin-bottom: 0;">Artists</h3>
             <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
             <div style="display: flex; flex-direction: column;">
                 {{#each artists}}
