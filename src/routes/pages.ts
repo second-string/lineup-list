@@ -11,6 +11,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Coachella", years : [ 2020 ], name : "coachella"},
     {display_name : "Bottlerock", years : [ 2020 ], name : "bottlerock"},
     {display_name : "Outside Lands", years : [ 2021, 2019 ], name : "osl"},
+    {display_name : "Bonnaroo", years : [ 2021 ], name : "bonnaroo"},
     {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer"},
 ];
 
