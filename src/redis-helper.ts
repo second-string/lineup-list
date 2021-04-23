@@ -318,7 +318,7 @@ function spotifyToRedisTrack(spotifyTrack: SpotifyTrack): RedisTrack {
             // This is hecka hacky - ideally I'd check to see if key is in the list of keys of the RedisTrack interface
             // to log or not, since we don't care about notifying outselves about any fields that we haven't declared.
             // Can't get interface keys in nice string list though, so here we are
-            if (key !== "linked_from") {
+            if (key !== "linked_from" && key !== "restrictions") {
                 console.log(
                     `Replaced obj/array value with stringified for key ${key} in spotify track ${spotifyTrack.id}`);
             }
