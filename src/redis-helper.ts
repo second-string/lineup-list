@@ -19,6 +19,11 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
 
     const redisArtistPromises: Promise<any>[] = [];
     for (const day of days) {
+        if (day === undefined || day === "") {
+            console.warn(`Got day ${day ? day : "undefined"} from ${festivalName} redis days list, skipping`);
+            continue;
+        }
+
         // Get the artist IDs for this specific day
         const artistIdsPromise: Promise<string> = new Promise((resolve, reject) => {
             redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:${day}`,
@@ -51,6 +56,9 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
                                 console.error(err);
                             }
                         });
+
+                        // Tag each artist with the day for this festival so we can group when resolving all promises
+                        redisArtist.day = day;
                         resolve(redisArtist);
                     } else {
                         // Tag each artist with the day for this festival so we can group when resolving all promises
