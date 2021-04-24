@@ -1,4 +1,4 @@
-import {readFileSync} from "fs";
+import {existsSync, readFileSync} from "fs";
 import redis from "redis";
 
 import * as spotifyHelper from "./spotify-helper";
@@ -7,8 +7,19 @@ async function warm(festival: string, years: number[]) {
     const redisClient = redis.createClient();
 
     for (const year of years) {
-        const filename: string                      = festival + "_" + year + ".txt";
-        const file                                  = readFileSync(filename, "utf-8");
+        const filename: string = festival + "_" + year + ".txt";
+        let file;
+        if (existsSync(filename)) {
+            file = readFileSync(filename, "utf-8");
+        } else if (existsSync(`lineups/${filename}`)) {
+            file = readFileSync(`lineups/${filename}`, "utf-8");
+        } else if (existsSync(`../lineups/${filename}`)) {
+            file = readFileSync(`../lineups/${filename}`, "utf-8");
+        } else {
+            console.error(`File ${filename} not found`);
+            return;
+        }
+
         const artistLines                           = file.split('\n');
         const artistObjs: {[key: string]: string[]} = {};
         for (const artistLine of artistLines) {
