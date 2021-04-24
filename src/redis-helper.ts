@@ -200,8 +200,8 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
                               }
                           });
 
-        let newestAlbum     = spotifyAlbums[0];
-        let newestAlbumDate = Date.parse(spotifyAlbums[0].release_date);
+        let newestAlbum;
+        let newestAlbumDate;
         for (const spotifyAlbum of spotifyAlbums) {
             // Save full album to cache and find most recent
             const redisAlbum: any = spotifyToRedisAlbum(spotifyAlbum);
@@ -210,11 +210,26 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
                     console.error(err);
                 }
             });
+
+            // Skip any "non-real" albums - this isn't the most robust, we're probably dropping a decent amount here.
+            // Good enough for now
+            if (redisAlbum.album_group === "compilation" || redisAlbum.album_group === "appears_on" ||
+                redisAlbum.album_type === "compilation") {
+                continue;
+            }
+
             const currentAlbumDate = Date.parse(spotifyAlbum.release_date);
-            if (currentAlbumDate > newestAlbumDate) {
+            if ((newestAlbumDate === undefined) || (currentAlbumDate > newestAlbumDate)) {
                 newestAlbum     = spotifyAlbum;
                 newestAlbumDate = currentAlbumDate;
             }
+        }
+
+        // If the artist only had compilation or group albums, we won't have anything to work with. Bail here too
+        if (newestAlbum === undefined) {
+            console.warn(`Albums returned from getAllAlbumsForArtist all either compilations or 'appears_on'. Artist ${
+                artist.name} (${artist.id}). Bailing out of remainder of newest tracks process`);
+            return [];
         }
 
         // Now get the tracks for the most recent album
