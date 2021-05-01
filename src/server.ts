@@ -26,6 +26,9 @@ app.set("view engine", "handlebars");
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
+// This hasn't been tested for future static paths, but _should_ be able to add an href relative to static in html
+// href="/css/*"
+app.use("/static", express.static("static"));
 
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
     let sessionUid: string = req.cookies['lineup-list-session'];

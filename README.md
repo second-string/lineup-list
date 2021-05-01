@@ -44,3 +44,4 @@ If you're adding a festival with a long name or name with spaces like Electric Z
 5. `redis-cli --scan --patern "festival:[simplename]_[year]:*"` and verify that the output is a single item ending in `:0`
 6. `redis-cli del "festival:[simplename]_[year]:0"`
 7. Rerun `node dist/warm-cache-for-festival.js [simplename] [year]` to populate days metadata
+> Note: If you're getting a ton of 400s and failures running warm-cache-for-festival.js, make sure you have the spotify token set as an env variable correctly

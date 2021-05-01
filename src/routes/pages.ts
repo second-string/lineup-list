@@ -100,6 +100,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         res.render("customize-list", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
+            titleOverride : "Customize",
             festival,
             festivalYear,
             artists,
@@ -154,6 +155,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         res.render("personalized-lineup", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
+            titleOverride : "Personalized Lineup",
             festivalDisplayName : sessionData.festivalDisplayName,
             acts : artistsWithTracks,
             tracksPerArtist : sessionData.tracksPerArtist,
@@ -172,6 +174,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         res.render("generate-playlist-success", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
+            titleOverride : "Success",
             festival,
             festivalYear,
             playlistName : sessionData.playlistName,

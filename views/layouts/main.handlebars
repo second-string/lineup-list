@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {{#if titleOverride}}
+    <title>{{titleOverride}} - Lineup List</title>
+    {{else}}
     <title>Lineup List</title>
+    {{/if}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
     {{#if prod}}
     <script data-goatcounter="https://lineuplist.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    {{else}}
+    <!-- Non-minified for dev -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure.css" crossorigin="anonymous">
     {{/if}}
+
 </head>
 <body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     {{{body}}}
