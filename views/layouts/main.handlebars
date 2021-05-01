@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{#if titleOverride}}
-    <title>{{titleOverride}} - Lineup List</title>
-    {{else}}
-    <title>Lineup List</title>
-    {{/if}}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+
+    {{#if titleOverride}}
+    <title>{{titleOverride}} - Lineup List</title>
+    <meta property="og:title" content="{{titleOverride}} - Lineup List">
+    {{else}}
+    <title>Lineup List</title>
+    <meta property="og:title" content="Lineup List">
+    {{/if}}
 
     {{#if prod}}
     <script data-goatcounter="https://lineuplist.goatcounter.com/count"
@@ -17,6 +20,15 @@
     <!-- Non-minified for dev -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure.css" crossorigin="anonymous">
     {{/if}}
+
+    <link rel="stylesheet" href="/css/style.css">
+    <meta property="og:description" content="Generate a unique lineup and playlist for a festival from your custom filters">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <!-- Icon made by surang from www.flaticon.com -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
 
 </head>
 <body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">

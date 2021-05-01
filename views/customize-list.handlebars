@@ -1,29 +1,26 @@
 <h2>Customize your {{festival.display_name}} {{festival.year}} lineup</h2>
-<form id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
+<form class="pure-form" id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
     <div id="formContent" style="display: flex; flex-direction: row; justify-content: space-between;">
         <div id="filters" style="max-width: 40%;">
             <div style="display: flex; flex-direction: column;">
-                <h3 style="margin-bottom: 0;">Playlist options</h3>
+                <h3 style="margin-bottom: 0;">Playlist Options</h3>
                 <p style="font-size: smaller; margin-top: 0;">These settings affect the makeup of your generated playlist</p>
 
                 <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
                     <u>Tracks per artist</u>
                     <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist</p>
-                    <input type="number" name="tracksPerArtist" value="3" style="flex: 0; max-width: 30%;">
+                    <input type="number" name="tracksPerArtist" value="3" style="flex: 0; max-width: 30%;" required>
                 </div>
 
                 <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
                     <u>Track type</u>
                     <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. Top tracks are the most popular, while newest tracks pulls from their most recently released music.</p>
-                    <!-- Need separate divs b/c flex-direction column -->
-                    <div style="margin-bottom: .5rem;">
+                    <label for="top" class="pure-checkbox">
                         <input type="radio" name="trackType" id="top" value="top" checked>
-                        <label for="top">Top tracks</label>
-                    </div>
-                    <div>
+                        Top tracks</label>
+                    <label for="recent" class="pure-checkbox">
                         <input type="radio" name="trackType" id="recent" value="recent">
-                        <label for="recent">Newest tracks</label>
-                    </div>
+                        Newest tracks</label>
                 </div>
             </div>
 
@@ -36,8 +33,9 @@
                     {{#if (gt days.length 1)}}
                         {{#each days}}
                         <div>
-                            <input class="dayCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
-                            <p style="display: inline-block; margin: 0;">{{this}}</p>
+                            <label for="{{this}}" class="pure-checkbox">
+                            <input class="dayCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
+                            {{this}}</label>
                         </div>
                         {{/each}}
                     {{else}}
@@ -49,24 +47,22 @@
                     <u>Main Genres</u>
                     <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
                     {{#each mainGenres}}
-                    <div>
-                        <input class="mainGenreCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
-                        <p style="display: inline-block; margin: 0;">{{this}}</p>
-                    </div>
+                        <label for="{{this}}" class="pure-checkbox">
+                            <input class="mainGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
+                            {{this}}</label>
                     {{/each}}
                 </div>
 
                 <div style="margin-top: 1rem;">
                     <u>Misc. Genres</u>
                     <p style="font-size: smaller; margin-top: 0;">Uncommon genres not easily grouped into a main genre. These might be specific to certain artists and can be used to fine-tune the results.</p>
-                    <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" style="display: inline-block;" checked>
-                    <p style="display: inline-block; margin: 0 0 1rem;">Check/Uncheck all misc. genres</p>
-
+                    <label for="uncheckAllSpecificGenres" class="pure-checkbox">
+                        <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" checked>
+                        Check/Uncheck all misc. genres</label>
                     {{#each specificGenres}}
-                    <div>
-                        <input class="specificGenreCheckbox" type="checkbox" value="{{this}}" onchange="refreshArtistList()" style="display: inline-block;" checked>
-                        <p style="display: inline-block; margin: 0;">{{this}}</p>
-                    </div>
+                    <label for="{{this}}" class="pure-checkbox">
+                        <input class="specificGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()"  checked>
+                        {{this}}</label>
                     {{/each}}
                 </div>
             </div>
@@ -75,21 +71,18 @@
         <div id="includedArtists" style="max-width: 40%;">
             <h3 style="margin-bottom: 0;">Artists</h3>
             <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
-            <div style="display: flex; flex-direction: column;">
                 {{#each artists}}
-                <div id={{this.id}}>
-                    <input class="artistCheckbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" style="display: inline-block;" checked>
-                    <p style="display: inline-block; margin: 0;">{{this.name}}</p>
-                </div>
+                    <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
+                    <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" checked>
+                    {{this.name}}</label>
                 {{/each}}
-            </div>
         </div>
     </div>
     <input type="hidden" id="artistIds" name="artistIds">
     <input type="hidden" name="festivalName" value="{{festival.name}}">
     <input type="hidden" name="festivalDisplayName" value="{{festival.display_name}}">
     <input type="hidden" name="festivalYear" value="{{festivalYear}}">
-    <input style="margin: 1rem; align-self: center;" type="submit">
+    <input class="pure-button pure-button-primary" style="margin: 1rem; align-self: center;" type="submit" value="Generate">
 </form>
 
 <script>
@@ -140,15 +133,21 @@ function refreshArtistList() {
         var artistDay = artists[i].getAttribute("data-day");
 
         // make sure we hide or show the whole div containing checkbox and name
-        var artistDiv = document.getElementById(artists[i].value);
-        artistDiv.style.opacity = getArtistOpacity(selectedGenres, artistGenres);
+        var artistLabel = document.getElementById(artists[i].value + "-label");
+        var artistCheckbox = document.getElementById(artists[i].value + "-checkbox");
+        var opacity = getArtistOpacity(selectedGenres, artistGenres);
+        artistLabel.style.opacity = opacity;
+        artistCheckbox.style.opacity = opacity;
 
         var noDayMatch = days.length > 0 && (selectedDays.length == 0 || !selectedDays.includes(artistDay));
         var noGenreMatch = artistGenres.length > 0 && !artistGenres.some(x => selectedGenres.includes(x));
         if (noGenreMatch || noDayMatch) {
-            artistDiv.style.display = "none";
+            artistLabel.style.display = "none";
+            artistCheckbox.style.display = "none";
         } else {
-            artistDiv.style.display = "block";
+            // Let class style take back over
+            artistLabel.style.display = "";
+            artistCheckbox.style.display = "";
         }
     }
 }
