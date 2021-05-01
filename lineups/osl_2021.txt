@@ -1,77 +1,78 @@
-TAME IMPALA
-LIZZO
-THE STROKES
-TYLER THE CREATOR
-VAMPIRE WEEKEND
-J BALVIN
-KAYTRANADA
-KHRUANGBIN
-LORD HURON
-NELLY
-BRITTANY HOWARD
-BURNA BOY
-MELANIE MARTINEZ
-24KGOLDN
-TROYBOI
-ANGEL OLSEN
-SOFI TUKKER
-EARTHGANG
-MARC REBILLET
-SHARON VAN ETTEN
-SG LEWIS
-FLO MILLI
-A R I Z O N A
-JPEGMAFIA
-DRAMA
-DR DOG
-SHIBA SAN
-BOY PABLO
-RICO NASTY
-ANDREW MCMAHON IN THE WILDERNESS
-070 SHAKE
-TREVOR DANIEL
-THE MIDNIGHT
-MOSES SUMNEY
-MXMTOON
-DIJON
-THE HU
-YUNG BAE
-BAKAR
-THE SOUL REBELS
-HINDS
-CAROLINE POLACHEK
-YVES TUMOR AND ITS BAND
-CROOKED COLOURS
-SCARYPOOLPARTY
-J PHLIP
-MARC E
-BASSY
-JULIA JACKLIN
-GOTH BABE
-REMI WOLF
-CAM
-NEIL FRANCES
-REXX LIFE RAJ
-CANNONS
-BUSCABULLA
-JESSIA
-BRIJEAN
-RESISTANCE REVIVAL CHORUS
-ODIE
-CLAUD
-Q
-SOFÍA VALDÉS
-BARTEES STRANGE
-AMY ALLEN
-NOGA EREZ
-MADELINE KENNEY
-POST ANIMAL
-EVANN MCINTOSH
-NAP EYES
-NEAL FRANCIS
-SHILAN
-RÜFÜS DU SOL
-KEHLANI
-GLASS ANIMALS
-ZHU
-YOUNG THUG
+The Strokes,1
+Tyler The Creator,1
+Glass Animals,1
+Kaytranada,1
+Khruangbin,1
+Earthgang,1
+Sharon Van Etten,1
+SG Lewis,1
+Flo Milli,1
+JPEGmafia,1
+Drama,1
+070 Shake,1
+Trevor Daniel,1
+Moses Sumney,1
+The Hu,1
+Yung Bae,1
+The Soul Rebels,1
+Crooked Colours,1
+Buscabulla,1
+Q,1
+Sofía Valdés,1
+Bartees Strange,1
+Amy Allen,1
+Noga Erez,1
+Madeline Kenney,1
+Shilan,1
+
+Lizzo,2
+Vampire Weekend,2
+Zhu,2
+Young Thug,2
+Lord Huron,2
+Melanie Martinez,2
+24kgoldn,2
+Angel Olsen,2
+Marc Rebillet,2
+A R I Z O N A,2
+Rico Nasty,2
+Dr Dog,2
+Shiba San,2
+Andrew Mcmahon In The Wilderness,2
+The Midnight,2
+Dijon,2
+Bakar,2
+Hinds,2
+Julia Jacklin,2
+Remi Wolf,2
+Rexx Life Raj,2
+Jessia,2
+Brijean,2
+Odie,2
+Post Animal,2
+Nap Eyes,2
+
+Tame Impala,3
+J Balvin,3
+RÜFÜS Du Sol,3
+Kehlani,3
+Nelly,3
+Brittany Howard,3
+Burna Boy,3
+Troyboi,3
+Sofi Tukker,3
+Boy Pablo,3
+Mxmtoon,3
+Caroline Polachek,3
+Yves Tumor,3
+Scarypoolparty,3
+J Phlip,3
+Marc E Bassy,3
+Goth Babe,3
+Cam,3
+Neil Frances,3
+Cannons,3
+Resistance Revival Chorus,3
+Claud,3
+Evann Mcintosh,3
+Neal Francis,3

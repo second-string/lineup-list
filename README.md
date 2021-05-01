@@ -37,11 +37,10 @@ For example:
 If you're adding a festival with a long name or name with spaces like Electric Zoo, your text file would be `electriczoo_2021.txt`. It may not have an underscore anywhere besides between name and year. For abbreviate-able festivals you can also use their shortened terms: `ezoo_2021.txt`. That would be filename and the name of the festival within the code. The option for a `display_name` in the code is where you put the pretty version, `Electric Zoo`.
 
 ### Transitioning an existing festival to one with daily lineups
-TODO :: test this logic with a lineup upgrade from regular to daily
 1. Alter festival text file and add days after each artist in accordance with the `Adding a new festival` section
 2. `redis-server` if not already running
-3. `redis-cli --scan --pattern  "festival:[simplename]_[year]:days"` and verify that the output is a stringified list of a single `0` value
+3. `redis-cli get "festival:[simplename]_[year]:days"` and verify that the output is a stringified list of a single `0` value
 4. `redis-cli del "festival:[simplename]_[year]:days"`
 5. `redis-cli --scan --patern "festival:[simplename]_[year]:*"` and verify that the output is a single item ending in `:0`
-6. `redis-cli del "festival:[simplename]_[year]:0`
+6. `redis-cli del "festival:[simplename]_[year]:0"`
 7. Rerun `node dist/warm-cache-for-festival.js [simplename] [year]` to populate days metadata
