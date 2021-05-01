@@ -32,6 +32,7 @@ app.use("/", express.static("static"));
 // Alias a static route straight into imgs for our favicon(s)
 app.use("/", express.static("static/img/"));
 
+// Session management
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
     let sessionUid: string = req.cookies['lineup-list-session'];
     if (sessionUid === undefined) {
@@ -40,6 +41,12 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
     }
 
     req.sessionUid = sessionUid;
+    next();
+});
+
+// Set canonical for hbs main template to stick in head meta tag
+app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+    res.locals.canonicalUrl = `https://${req.get('host')}${req.originalUrl}`;
     next();
 });
 
