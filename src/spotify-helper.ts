@@ -227,7 +227,7 @@ export async function getOrCreatePlaylist(
             await helpers.instrumentCall(url, helpers.baseSpotifyHeaders("GET", accessToken), false);
         if (currentPlaylistsResponse.success === undefined || !currentPlaylistsResponse.success) {
             console.log(`Error getting playlist for current user`);
-            console.log(currentPlaylistsResponse.response);
+            console.error(currentPlaylistsResponse.response);
             throw new Error();
         }
 
@@ -236,19 +236,17 @@ export async function getOrCreatePlaylist(
         hasNext   = url !== null;
     } while (hasNext);
 
-    let playlistObj =
-        playlists.find(x => x.name === playlistName && x.owner.id === 'bteamer' /*userObj.SpotifyUsername*/);
+    let playlistObj = playlists.find(x => x.name === playlistName && x.owner.id === spotifyUsername);
     if (playlistObj === undefined) {
         // They don't have their own lineup list playlist yet, create it
         const postOptions: any = helpers.baseSpotifyHeaders("POST", accessToken);
         postOptions.body       = {name : playlistName, public : false, description : "helloaf"};
 
         console.log("Creating playlist since we didn't find it in their list of existing playlists");
-        const createPlaylistResponse = await helpers.instrumentCall(
-            `https://api.spotify.com/v1/users/${
-            'bteamer' /*userObj.SpotifyUsername*/}/playlists`,
-            postOptions,
-            false);
+        const createPlaylistResponse =
+            await helpers.instrumentCall(`https://api.spotify.com/v1/users/${spotifyUsername}/playlists`,
+                                         postOptions,
+                                         false);
 
         if (createPlaylistResponse === undefined || !createPlaylistResponse.success) {
             console.log(`Error creating playlist`);
