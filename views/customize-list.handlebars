@@ -1,81 +1,84 @@
 <h2>Customize your {{festival.display_name}} {{festival.year}} lineup</h2>
-<form class="pure-form" id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column; max-width: 50%;">
-    <div id="formContent" style="display: flex; flex-direction: row; justify-content: space-between;">
-        <div id="filters" style="max-width: 40%;">
-            <div style="display: flex; flex-direction: column;">
-                <h3 style="margin-bottom: 0;">Playlist Options</h3>
-                <p style="font-size: smaller; margin-top: 0;">These settings affect the makeup of your generated playlist</p>
+<form class="pure-form" id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column;">
+    <div class="pure-g">
+        <div class="pure-u-1-12 pure-u-lg-5-24 pure-u-md-1-8"></div>
+        <div id="formContent" class="pure-g pure-u-11-12 pure-u-lg-7-12 pure-u-md-3-4" style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div id="filters" class="pure-u-11-24 pure-u-lg-2-5 pure-u-md-5-12">
+                <div style="display: flex; flex-direction: column;">
+                    <h3 style="margin-bottom: 0;">Playlist Options</h3>
+                    <p style="font-size: smaller; margin-top: 0;">These settings affect the makeup of your generated playlist</p>
 
-                <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
-                    <u>Tracks per artist</u>
-                    <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist</p>
-                    <input type="number" name="tracksPerArtist" value="3" style="flex: 0; max-width: 30%;" required>
+                    <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
+                        <u>Tracks per artist</u>
+                        <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist</p>
+                        <input type="number" name="tracksPerArtist" value="3" style="flex: 0; max-width: 30%;" required>
+                    </div>
+
+                    <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
+                        <u>Track type</u>
+                        <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. Top tracks are the most popular, while newest tracks pulls from their most recently released music.</p>
+                        <label for="top" class="pure-checkbox">
+                            <input type="radio" name="trackType" id="top" value="top" checked>
+                            Top tracks</label>
+                        <label for="recent" class="pure-checkbox">
+                            <input type="radio" name="trackType" id="recent" value="recent">
+                            Newest tracks</label>
+                    </div>
                 </div>
 
-                <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
-                    <u>Track type</u>
-                    <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. Top tracks are the most popular, while newest tracks pulls from their most recently released music.</p>
-                    <label for="top" class="pure-checkbox">
-                        <input type="radio" name="trackType" id="top" value="top" checked>
-                        Top tracks</label>
-                    <label for="recent" class="pure-checkbox">
-                        <input type="radio" name="trackType" id="recent" value="recent">
-                        Newest tracks</label>
-                </div>
-            </div>
+                <h3 style="margin-bottom: 0;">Filters</h3>
+                <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
 
-            <h3 style="margin-bottom: 0;">Filters</h3>
-            <p style="font-size: smaller; margin-top: 0;">Adjusting these filters affects the artists on the right. The brighter the artist, the better of a match they are. </p>
+                <div style="display: flex; flex-direction: column; margin-top: 1rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <u>Festival Day</u>
+                        {{#if (gt days.length 1)}}
+                            {{#each days}}
+                            <div>
+                                <label for="{{this}}" class="pure-checkbox">
+                                <input class="dayCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
+                                {{this}}</label>
+                            </div>
+                            {{/each}}
+                        {{else}}
+                            <p style="font-size: smaller; margin-top: 0;">Single day lineups not released for this festival yet.</p>
+                        {{/if}}
+                    </div>
 
-            <div style="display: flex; flex-direction: column; margin-top: 1rem;">
-                <div style="margin-bottom: 1rem;">
-                    <u>Festival Day</u>
-                    {{#if (gt days.length 1)}}
-                        {{#each days}}
-                        <div>
+                    <div style="margin-bottom: 1rem;">
+                        <u>Main Genres</u>
+                        <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
+                        {{#each mainGenres}}
                             <label for="{{this}}" class="pure-checkbox">
-                            <input class="dayCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
-                            {{this}}</label>
-                        </div>
+                                <input class="mainGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
+                                {{this}}</label>
                         {{/each}}
-                    {{else}}
-                        <p style="font-size: smaller; margin-top: 0;">Single day lineups not released for this festival yet.</p>
-                    {{/if}}
-                </div>
+                    </div>
 
-                <div style="margin-bottom: 1rem;">
-                    <u>Main Genres</u>
-                    <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
-                    {{#each mainGenres}}
+                    <div style="margin-top: 1rem;">
+                        <u>Misc. Genres</u>
+                        <p style="font-size: smaller; margin-top: 0;">Uncommon genres not easily grouped into a main genre. These might be specific to certain artists and can be used to fine-tune the results.</p>
+                        <label for="uncheckAllSpecificGenres" class="pure-checkbox">
+                            <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" checked>
+                            Check/Uncheck all misc. genres</label>
+                        {{#each specificGenres}}
                         <label for="{{this}}" class="pure-checkbox">
-                            <input class="mainGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
+                            <input class="specificGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()"  checked>
                             {{this}}</label>
-                    {{/each}}
-                </div>
-
-                <div style="margin-top: 1rem;">
-                    <u>Misc. Genres</u>
-                    <p style="font-size: smaller; margin-top: 0;">Uncommon genres not easily grouped into a main genre. These might be specific to certain artists and can be used to fine-tune the results.</p>
-                    <label for="uncheckAllSpecificGenres" class="pure-checkbox">
-                        <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" checked>
-                        Check/Uncheck all misc. genres</label>
-                    {{#each specificGenres}}
-                    <label for="{{this}}" class="pure-checkbox">
-                        <input class="specificGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()"  checked>
-                        {{this}}</label>
-                    {{/each}}
+                        {{/each}}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="includedArtists" style="max-width: 40%;">
-            <h3 style="margin-bottom: 0;">Artists</h3>
-            <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
-                {{#each artists}}
-                    <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
-                    <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" checked>
-                    {{this.name}}</label>
-                {{/each}}
+            <div id="includedArtists" class="pure-u-11-24 pure-u-lg-2-5 pure-u-md-5-12">
+                <h3 style="margin-bottom: 0;">Artists</h3>
+                <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
+                    {{#each artists}}
+                        <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
+                        <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" checked>
+                        {{this.name}}</label>
+                    {{/each}}
+            </div>
         </div>
     </div>
     <input type="hidden" id="artistIds" name="artistIds">
