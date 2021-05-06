@@ -435,8 +435,8 @@ export async function getSessionData(redisClient: redis.RedisClient, sessionUid:
                         if (err) {
                             reject(err);
                         } else {
-                            // The ts type makes the compiler think these are numbers but they're strings when they
-                            // come out of the cache
+                            // The ts type makes the compiler think these are numbers but they're strings when they come
+                            // out of the cache
                             const data: SessionData = obj as SessionData;
                             data.festivalYear       = parseInt(obj.festivalYear, 10);
                             data.tracksPerArtist    = parseInt(obj.tracksPerArtist, 10);

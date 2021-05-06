@@ -9,7 +9,8 @@
     "prebuild": "npm run lint",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "nodemon ."
+    "start": "node .",
+    "dev": "concurrently \"tsc --watch\" \"nodemon .\""
   },
   "author": "",
   "license": "MIT",
@@ -39,6 +40,7 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^6.0.2"
   }
 }
