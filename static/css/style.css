@@ -1,4 +1,17 @@
+/* html and body needed exactly like this to take full viewport height */
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
 
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* ------------------- Select customizations -------------------  */
 select {
   -webkit-appearance: none;
   background-color: transparent;
