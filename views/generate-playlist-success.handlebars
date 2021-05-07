@@ -1,11 +1,12 @@
-<h3 style="text-align: center;">Successfully generated playlist '{{playlistName}}' for {{festival.display_name}} {{festivalYear}}</h3>
+<h2 style="text-align: center;">Successfully generated playlist '{{playlistName}}' for {{festival.display_name}} {{festivalYear}}</h2>
+<p style="text-align: center;">Open up Spotify on your device of choice to check out your new playlist (or just <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">open the web player</a>)
 <div class="pure-g" style="justify-content: center; align-items: center; text-align: center;">
     <form class="pure-u-7-8 pure-u-lg-1-4 pure-u-md-5-12" action="customize" method="GET">
-        <input type="submit" class="pure-button pure-button-primary" style="width: auto; height: auto; white-space: normal; word-wrap: break-word; margin: 1em;" value="Click here to change your lineup options and regenerate for this festival"></input>
+        <input type="submit" class="pure-button pure-button-primary" style="width: auto; height: auto; white-space: normal; word-wrap: break-word; margin: 1em;" value="Change your lineup options and regenerate for this festival"></input>
         <input type="hidden" name="festival" value="{{festival.name}}">
         <input type="hidden" name="year" value="{{festivalYear}}">
     </form>
     <form class="pure-u-7-8 pure-u-lg-1-4 pure-u-md-5-12" action="/" method="GET">
-        <input type="submit" class="pure-button pure-button-primary" style="width: auto; height: auto; white-space: normal; word-wrap: break-word; margin: 1em;" value="Click here to create a lineup for another festival"></input>
+        <input type="submit" class="pure-button pure-button-primary" style="width: auto; height: auto; white-space: normal; word-wrap: break-word; margin: 1em;" value="Create a lineup for another festival"></input>
     </form>
 </div>
