@@ -110,9 +110,7 @@ form.addEventListener("submit", function() {
 
     var artistIds = [];
     for (var i = 0; i < artists.length; i++) {
-        // Need to check if parent div is hidden since genre filtering hides checkbox/p div wrapper
-        var parentDiv = artists[i].parentElement;
-        if (artists[i].checked && parentDiv.style.display !== "none") {
+        if (artists[i].checked && artists[i].style.display !== "none") {
             artistIds.push(artists[i].value);
         }
     }
