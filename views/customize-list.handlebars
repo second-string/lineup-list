@@ -47,6 +47,9 @@
                     <div style="margin-bottom: 1rem;">
                         <u>Main Genres</u>
                         <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
+                        <label for="uncheckAllMainGenres" class="pure-checkbox" style="margin-bottom: 1em">
+                            <input type="checkbox" id="uncheckAllMainGenres" onchange="uncheckAllMainGenresChanged()" checked>
+                            Check/Uncheck all main genres</label>
                         {{#each mainGenres}}
                             <label for="{{this.obj}}" class="pure-checkbox">
                                 <input class="mainGenreCheckbox" id="{{this.obj}}" type="checkbox" value="{{this.obj}}" onchange="refreshArtistList()" {{this.state}}>
@@ -57,7 +60,7 @@
                     <div style="margin-top: 1rem;">
                         <u>Misc. Genres</u>
                         <p style="font-size: smaller; margin-top: 0;">Uncommon genres not easily grouped into a main genre. These might be specific to certain artists and can be used to fine-tune the results.</p>
-                        <label for="uncheckAllSpecificGenres" class="pure-checkbox">
+                        <label for="uncheckAllSpecificGenres" class="pure-checkbox" style="margin-bottom: 1em">
                             <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" checked>
                             Check/Uncheck all misc. genres</label>
                         {{#each specificGenres}}
@@ -72,11 +75,14 @@
             <div id="includedArtists" class="pure-u-11-24 pure-u-lg-2-5 pure-u-md-5-12">
                 <h3 style="margin-bottom: 0;">Artists</h3>
                 <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
-                    {{#each artists}}
-                        <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
-                        <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
-                        {{this.name}}</label>
-                    {{/each}}
+                <label for="uncheckAllArtists" class="pure-checkbox" style="margin-bottom: 1em">
+                    <input type="checkbox" id="uncheckAllArtists" onchange="uncheckAllArtistsChanged()" checked>
+                    Check/Uncheck all artists</label>
+                {{#each artists}}
+                    <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
+                    <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
+                    {{this.name}}</label>
+                {{/each}}
             </div>
         </div>
     </div>
@@ -215,6 +221,28 @@ function uncheckAllSpecificGenresChanged() {
     var isChecked = checkbox.checked;
     for (var i = 0; i < specificGenres.length; i++) {
         specificGenres[i].checked = isChecked;
+    }
+
+    refreshArtistList();
+}
+
+function uncheckAllMainGenresChanged() {
+    var checkbox = document.getElementById("uncheckAllMainGenres");
+    var mainGenres = document.getElementsByClassName("mainGenreCheckbox");
+    var isChecked = checkbox.checked;
+    for (var i = 0; i < mainGenres.length; i++) {
+        mainGenres[i].checked = isChecked;
+    }
+
+    refreshArtistList();
+}
+
+function uncheckAllArtistsChanged() {
+    var checkbox = document.getElementById("uncheckAllArtists");
+    var artists = document.getElementsByClassName("artistCheckbox");
+    var isChecked = checkbox.checked;
+    for (var i = 0; i < artists.length; i++) {
+        artists[i].checked = isChecked;
     }
 
     refreshArtistList();
