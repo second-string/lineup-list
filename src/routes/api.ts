@@ -34,7 +34,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         };
 
         // Save our session data for what artists and how many tracks to include
-        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData as any, (err, res) => {
+        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData as any, (err, obj) => {
             if (err) {
                 console.error(err);
             }

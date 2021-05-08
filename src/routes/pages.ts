@@ -13,6 +13,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Outside Lands", years : [ 2021, 2019 ], name : "osl"},
     {display_name : "Bonnaroo", years : [ 2021 ], name : "bonnaroo"},
     {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer"},
+    {display_name : "The Governor's Ball", years : [ 2021 ], name : "govball"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
@@ -116,7 +117,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
                 "playlistName",
                 "selectedDaysStr",
                 "selectedGenresStr",
-                (err, res) => {
+                (err, obj) => {
                     if (err) {
                         console.error(err);
                     }
