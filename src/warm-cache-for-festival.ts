@@ -97,7 +97,8 @@ async function main() {
         "bottlerock" : [ 2020 ],
         "osl" : [ 2021, 2019 ],
         "hardsummer" : [ 2021 ],
-        "bonnaroo" : [ 2021 ]
+        "bonnaroo" : [ 2021 ],
+        "govball" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};
