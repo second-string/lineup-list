@@ -20,7 +20,8 @@ interface SpotifyArtist {
     newest_track_ids: string[];  // Same as top_track_ids
     combined_genres: string[];  // Not a spotify field. Our list of genres containing any main genres it as matched plus
                                 // the loeftover unmatched ones
-    day?: string;  // Not a spotify field, will be set differently for each festival this artist is attending
+    day?: string;         // Not a spotify field, will be set differently for each festival this artist is attending
+    checkedStr?: string;  // Not a spotify field, used to render customize page with session data
 }
 
 interface RedisArtist {
@@ -157,4 +158,14 @@ interface SessionData {
     trackIdsStr?: string;
     playlistName?: string;
     trackType?: string;
+    selectedDaysStr?: string;
+    selectedGenresStr?: string;
+}
+
+// Exists to wrap an object being passed to hbs with data needed for rendering but not a part of the object itself. For
+// example, passing a genre string to customize with the session knowledge of if itshould be checked or not, state is
+// "checked" or "" and obj is the genre string
+interface StatefulObject {
+    state: string;
+    obj: any;
 }

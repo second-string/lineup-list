@@ -60,53 +60,134 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(400).send("Invalid query params");
         }
 
-        const festivalName: string        = festival.name;
-        const festivalDisplayName: string = festival.display_name;
-        const festivalYear: number        = queryYear;
+        // Now get our session data
+        // TODO :: this will change for multi-festival session data support
+        let                                    tracksPerArtist: number             = 0;
+        let                                    topTracksCheckedStr: string         = "";
+        let                                    newTracksCheckedStr: string         = "";
+        let                                    previouslySelectedArtists: string[] = null;
+        let                                    previouslySelectedGenres: string[]  = null;
+        let                                    previouslySelectedDays: string[]    = null;
+        const sessionData: SessionData = await redisHelper.getSessionData(redisClient, req.sessionUid);
+        if (sessionData !== null && sessionData.festivalName === festival.name &&
+            sessionData.festivalYear === queryYear) {
+            // If the festival name and year matches what page we're loading, then fill in all selections / metadata
+            // from session data. If the user has loaded this festival customize page before, but not saved any values,
+            // we'll end up here but with none of the below options set, so we still fallback to default in here too
+            tracksPerArtist = isNaN(sessionData.tracksPerArtist) ? 3 : sessionData.tracksPerArtist;
+            topTracksCheckedStr =
+                sessionData.trackType === undefined ? "checked" : sessionData.trackType === "top" ? "checked" : "";
+            newTracksCheckedStr =
+                sessionData.trackType === undefined ? "" : sessionData.trackType === "top" ? "" : "checked";
+            previouslySelectedArtists = sessionData.artistIdsStr === undefined || sessionData.artistIdsStr === null
+                                            ? null
+                                            : sessionData.artistIdsStr.split(",");
+            previouslySelectedGenres =
+                sessionData.selectedGenresStr === undefined || sessionData.selectedGenresStr === null
+                    ? null
+                    : sessionData.selectedGenresStr.split(",");
+            previouslySelectedDays = sessionData.selectedDaysStr === undefined || sessionData.selectedDaysStr === null
+                                         ? null
+                                         : sessionData.selectedDaysStr.split(",");
+        } else {
+            // Else save this festival info as our new session data
+            const festivalName: string        = festival.name;
+            const festivalDisplayName: string = festival.display_name;
+            const festivalYear: number        = queryYear;
 
-        const sessionData: SessionData = {
-            festivalName,
-            festivalDisplayName,
-            festivalYear,
-        };
+            const newSessionData: SessionData = {
+                festivalName,
+                festivalDisplayName,
+                festivalYear,
+            };
 
-        // Save our session data for selected festival year
-        redisClient.hmset(`sessionData:${req.sessionUid}`, sessionData as any, redis.print);
+            tracksPerArtist     = 3;
+            topTracksCheckedStr = "checked";
+            newTracksCheckedStr = "";
 
+            // Remove old festivals metadata Save selected festival names/year
+            // clang-format off
+            redisClient.hdel(
+                `sessionData:${req.sessionUid}`,
+                "tracksPerArtist",
+                "artistIdsStr",
+                "trackIdsStr",
+                "trackType",
+                "playlistName",
+                "selectedDaysStr",
+                "selectedGenresStr",
+                (err, res) => {
+                    if (err) {
+                        console.error(err);
+                    }
+                }
+            );
+
+            redisClient.hmset(`sessionData:${req.sessionUid}`, newSessionData as any, redis.print);
+            // clang-format on
+        }
+
+        // Get artists and work genre + session state-re-rendering magic
         const artists: SpotifyArtist[] = await redisHelper.getArtistsForFestival(redisClient, festival.name, queryYear);
-
-        const mainGenres: string[]     = [];
-        const specificGenres: string[] = [];
-        const days: string[]           = [];
+        const mainGenresMap: Map<string, StatefulObject>     = new Map<string, StatefulObject>();
+        const specificGenresMap: Map<string, StatefulObject> = new Map<string, StatefulObject>();
+        const daysMap: Map<string, StatefulObject>           = new Map<string, StatefulObject>();
         for (const artist of artists) {
+            // Perform genre combining logic
             for (const genre of artist.combined_genres) {
                 if (constants.mainGenres.includes(genre)) {
-                    if (!mainGenres.includes(genre)) {
-                        mainGenres.push(genre);
+                    if (!mainGenresMap.has(genre)) {
+                        // If it was null, we've never set any, so check everything. Otherwise, only check those we have
+                        // previously
+                        const checkedStr: string =
+                            previouslySelectedGenres === null || previouslySelectedGenres.includes(genre) ? "checked"
+                                                                                                          : "";
+                        mainGenresMap.set(genre, {state : checkedStr, obj : genre});
                     }
-                } else if (!specificGenres.includes(genre)) {
-                    specificGenres.push(genre);
+                } else if (!specificGenresMap.has(genre)) {
+                    // If it was null, we've never set any, so check everything. Otherwise, only check those we have
+                    // previously
+                    const checkedStr: string =
+                        previouslySelectedGenres === null || previouslySelectedGenres.includes(genre) ? "checked" : "";
+                    specificGenresMap.set(genre, {state : checkedStr, obj : genre});
                 }
             }
 
+            // Cheat with artists and just shove the checked value into the artist itself. Should refactor to use
+            // StatefulObject buuuuuut
+            if (previouslySelectedArtists === null || previouslySelectedArtists.includes(artist.id)) {
+                artist.checkedStr = "checked";
+            } else {
+                artist.checkedStr = "";
+            }
+
             // Inefficient since we got a list of supported days in getArtistsForFestival but meh
-            if (!days.includes(artist.day)) {
-                days.push(artist.day);
+            if (!daysMap.has(artist.day)) {
+                const checkedStr =
+                    previouslySelectedDays === null || previouslySelectedDays.includes(artist.day) ? "checked" : "";
+                daysMap.set(artist.day, {state : checkedStr, obj : artist.day});
             }
         }
 
+        const mainGenres: StatefulObject[]     = Array.from(mainGenresMap.values());
+        const specificGenres: StatefulObject[] = Array.from(specificGenresMap.values());
+        const days: StatefulObject[]           = Array.from(daysMap.values());
         mainGenres.sort();
         specificGenres.sort();
+        days.sort();
 
         res.render("customize-list", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
             titleOverride : "Customize",
             festival,
-            festivalYear,
+            festivalYear : queryYear,
             artists,
             mainGenres,
             specificGenres,
             days,
+            tracksPerArtist,
+            topTracksCheckedStr,
+            newTracksCheckedStr,
         });
     });
 
@@ -151,7 +232,9 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         }
 
         // Update our session data with track IDs
+        // clang-format off
         redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, trackIdsStr : trackIds.join(",")});
+        // clang-format on
 
         res.render("personalized-lineup", {
             prod : process.env.DEPLOY_STAGE === 'PROD',

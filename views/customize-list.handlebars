@@ -10,17 +10,17 @@
                     <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
                         <u>Tracks per artist</u>
                         <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist</p>
-                        <input type="number" name="tracksPerArtist" value="3" style="flex: 0; max-width: 30%;" required>
+                        <input type="number" name="tracksPerArtist" value="{{tracksPerArtist}}" style="flex: 0; max-width: 30%;" required>
                     </div>
 
                     <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
                         <u>Track type</u>
                         <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. Top tracks are the most popular, while newest tracks pulls from their most recently released music.</p>
                         <label for="top" class="pure-checkbox">
-                            <input type="radio" name="trackType" id="top" value="top" checked>
+                            <input type="radio" name="trackType" id="top" value="top" {{topTracksCheckedStr}}>
                             Top tracks</label>
                         <label for="recent" class="pure-checkbox">
-                            <input type="radio" name="trackType" id="recent" value="recent">
+                            <input type="radio" name="trackType" id="recent" value="recent" {{newTracksCheckedStr}}>
                             Newest tracks</label>
                     </div>
                 </div>
@@ -34,9 +34,9 @@
                         {{#if (gt days.length 1)}}
                             {{#each days}}
                             <div>
-                                <label for="{{this}}" class="pure-checkbox">
-                                <input class="dayCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
-                                {{this}}</label>
+                                <label for="{{this.obj}}" class="pure-checkbox">
+                                <input class="dayCheckbox" id="{{this.obj}}" type="checkbox" value="{{this.obj}}" onchange="refreshArtistList()" {{state}}>
+                                {{this.obj}}</label>
                             </div>
                             {{/each}}
                         {{else}}
@@ -48,9 +48,9 @@
                         <u>Main Genres</u>
                         <p style="font-size: smaller; margin-top: 0;">Common genres shared between many artists. Filtering by these will cause the largest impact</p>
                         {{#each mainGenres}}
-                            <label for="{{this}}" class="pure-checkbox">
-                                <input class="mainGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()" checked>
-                                {{this}}</label>
+                            <label for="{{this.obj}}" class="pure-checkbox">
+                                <input class="mainGenreCheckbox" id="{{this.obj}}" type="checkbox" value="{{this.obj}}" onchange="refreshArtistList()" {{this.state}}>
+                                {{this.obj}}</label>
                         {{/each}}
                     </div>
 
@@ -61,9 +61,9 @@
                             <input type="checkbox" id="uncheckAllSpecificGenres" onchange="uncheckAllSpecificGenresChanged()" checked>
                             Check/Uncheck all misc. genres</label>
                         {{#each specificGenres}}
-                        <label for="{{this}}" class="pure-checkbox">
-                            <input class="specificGenreCheckbox" id="{{this}}" type="checkbox" value="{{this}}" onchange="refreshArtistList()"  checked>
-                            {{this}}</label>
+                        <label for="{{this.obj}}" class="pure-checkbox">
+                            <input class="specificGenreCheckbox" id="{{this.obj}}" type="checkbox" value="{{this.obj}}" onchange="refreshArtistList()"  {{this.state}}>
+                            {{this.obj}}</label>
                         {{/each}}
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                 <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
                     {{#each artists}}
                         <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
-                        <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" checked>
+                        <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
                         {{this.name}}</label>
                     {{/each}}
             </div>
@@ -84,13 +84,23 @@
     <input type="hidden" name="festivalName" value="{{festival.name}}">
     <input type="hidden" name="festivalDisplayName" value="{{festival.display_name}}">
     <input type="hidden" name="festivalYear" value="{{festivalYear}}">
+    <input type="hidden" id="selectedGenres" name="selectedGenres">
+    <input type="hidden" id="selectedDays" name="selectedDays">
     <input class="pure-button pure-button-primary" style="margin: 1rem; align-self: center;" type="submit" value="Generate">
 </form>
 
 <script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    refreshArtistList();
+});
+</script>
+<script>
 var form = document.getElementById("listOptionsForm");
 form.addEventListener("submit", function() {
     var artists = document.getElementsByClassName("artistCheckbox");
+    var mainGenres = document.getElementsByClassName("mainGenreCheckbox");
+    var specificGenres = document.getElementsByClassName("specificGenreCheckbox");
+    var days = document.getElementsByClassName("dayCheckbox");
 
     var artistIds = [];
     for (var i = 0; i < artists.length; i++) {
@@ -98,6 +108,23 @@ form.addEventListener("submit", function() {
         var parentDiv = artists[i].parentElement;
         if (artists[i].checked && parentDiv.style.display !== "none") {
             artistIds.push(artists[i].value);
+        }
+    }
+
+    var allGenres = [];
+    allGenres = Array.prototype.concat.apply(allGenres, mainGenres);
+    allGenres = Array.prototype.concat.apply(allGenres, specificGenres);
+    var selectedGenres = [];
+    for (var i = 0; i < allGenres.length; i++) {
+        if (allGenres[i].checked) {
+            selectedGenres.push(allGenres[i].value);
+        }
+    }
+
+    var selectedDays = [];
+    for (var i = 0; i < days.length; i++) {
+        if (days[i].checked) {
+            selectedDays.push(days[i].value);
         }
     }
 
@@ -109,6 +136,22 @@ form.addEventListener("submit", function() {
         // Reset the name in case we came back and unchecked an artist(s)
         artistIdsInput.name = 'artistIds';
         artistIdsInput.value = artistIds.join(',');
+    }
+
+    var selectedGenresInput = document.getElementById("selectedGenres");
+    if (selectedGenres.length === 0) {
+        selectedGenresInput.name = '';
+    } else {
+        selectedGenresInput.name = "selectedGenres";
+        selectedGenresInput.value = selectedGenres.join(",");
+    }
+
+    var selectedDaysInput = document.getElementById("selectedDays");
+    if (selectedDays.length === 0) {
+        selectedDaysInput.name = '';
+    } else {
+        selectedDaysInput.name = "selectedDays";
+        selectedDaysInput.value = selectedDays.join(",");
     }
 });
 </script>
