@@ -32,6 +32,7 @@
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "https": "^1.0.0",
+    "musicbrainz-api": "^0.6.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
     "redis": "^3.0.2",
