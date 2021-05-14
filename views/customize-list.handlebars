@@ -19,12 +19,9 @@
                         <label for="top" class="pure-checkbox">
                             <input type="radio" name="trackType" id="top" value="top" {{topTracksCheckedStr}}>
                             Top tracks</label>
-                        <div style="display: flex; flex-direction: row; align-items: center;">
-                            <label for="recent" class="pure-checkbox" style="color: gray;">
-                                <input type="radio" name="trackType" id="setlist" value="setlist" {{setlistTracksCheckedStr}} disabled>
-                                Recent setlists</label>
-                                <label style="margin-left: 1em; font-size: smaller;">Coming soon!</label>
-                        </div>
+                        <label for="setlist" class="pure-checkbox">
+                            <input type="radio" name="trackType" id="setlist" value="setlist" {{setlistTracksCheckedStr}}>
+                            Recent setlists</label>
                         <label for="recent" class="pure-checkbox">
                             <input type="radio" name="trackType" id="recent" value="recent" {{newTracksCheckedStr}}>
                             Newest tracks</label>

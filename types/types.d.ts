@@ -4,6 +4,12 @@ declare namespace Express {
     }
 }
 
+// the musicbrainz-api package includes types in it, but not exposed for external typescript use. We want to use them
+// anyway
+//
+/// <reference path="../node_modules/musicbrainz-api/lib/musicbrainz-api.d.ts" />
+/// <reference path="../node_modules/musicbrainz-api/lib/musicbrainz.types.d.ts" />
+
 interface SpotifyArtist {
     genres: string[];
     href: string;
@@ -17,7 +23,8 @@ interface SpotifyArtist {
     followers: any;
     top_track_ids: string[];  // Not a spotify field, I'm glomming it on here from what's saved in redis to save a query
     album_ids: string[];      // Same as top_track_ids
-    newest_track_ids: string[];  // Same as top_track_ids
+    newest_track_ids: string[];   // Same as top_track_ids
+    setlist_track_ids: string[];  // Same as top_track_ids
     combined_genres: string[];  // Not a spotify field. Our list of genres containing any main genres it as matched plus
                                 // the loeftover unmatched ones
     day?: string;         // Not a spotify field, will be set differently for each festival this artist is attending
@@ -35,6 +42,7 @@ interface RedisArtist {
     spotify_url: string;  // parsed out of the external_urls for a SpotifyArtist
     top_track_ids: string;
     newest_track_ids: string;
+    setlist_track_ids: string;
     album_ids: string;
     combined_genres: string;
 }

@@ -216,6 +216,9 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             } else if (sessionData.trackType === "top") {
                 tracksForArtist =
                     await redisHelper.getTopTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
+            } else if (sessionData.trackType === "setlist") {
+                tracksForArtist =
+                    await redisHelper.getSetlistTracksForArtist(redisClient, artist, sessionData.tracksPerArtist);
             } else {
                 console.warn(`Found track type of ${
                     sessionData.trackType ? sessionData.trackType

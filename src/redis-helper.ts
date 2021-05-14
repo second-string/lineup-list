@@ -1,6 +1,8 @@
 import redis from "redis";
 
-import * as spotifyHelper from "./spotify-helper";
+import * as mbHelper        from "./mb-helper";
+import * as setlistFmHelper from "./setlist-fm-helper";
+import * as spotifyHelper   from "./spotify-helper";
 
 export async function getArtistsForFestival(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
     Promise<SpotifyArtist[]> {
@@ -125,7 +127,8 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
             const getTrackPromise: Promise<RedisTrack> =
                 new Promise((resolve, reject) => {redisClient.hgetall(`track:${trackId}`, (err: Error, obj: any) => {
                                 if (err) {
-                                    reject(err);
+                                    console.error(err);
+                                    resolve(null);
                                 } else {
                                     resolve(obj as RedisTrack);
                                 }
@@ -263,7 +266,8 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
             const getTrackPromise: Promise<RedisTrack> = new Promise((resolve, reject) => {
                 redisClient.hgetall(`track:${trackId}`, (err: Error, obj: any) => {
                     if (err) {
-                        reject(err);
+                        console.error(err);
+                        resolve(null);
                     } else {
                         resolve(obj as RedisTrack);
                     }
@@ -297,6 +301,110 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
     }
 
     return newestTracksFromSpotify.concat(newestTracksFromRedis.map(x => redisToSpotifyTrack(x)));
+}
+
+export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
+                                                artist: SpotifyArtist,
+                                                tracksPerArtist: number): Promise<SpotifyTrack[]> {
+    // Coerce to a number since it'll never evaluate to true when checking if we've reached it if it's a string
+    tracksPerArtist = Number(tracksPerArtist);
+
+    // We need two lists because there's a chance that some tracks come from redis and some from spotify
+    const setlistTracksFromRedis: RedisTrack[]   = [];
+    let setlistTracksFromSpotify: SpotifyTrack[] = [];
+
+    if (!artist.setlist_track_ids || artist.setlist_track_ids.length === 0) {
+        // We don't have setlist tracks. Convert the artist to an mbid, get the most recent setlists, get the first 10
+        // track names spread across however many setlists it takes, search each of those track names on spotify, then
+        // save the first result for each track
+        const artistMbid = await mbHelper.spotifyToMbArtistId(artist.id);
+        if (artistMbid === null) {
+            // Return if we couldn't find an mbid for them
+            return [];
+        }
+
+        // clang-format off
+        const setlistTracks: SetlistFmSong[] =
+            await setlistFmHelper.getTrackNamesFromSetlists(artistMbid, tracksPerArtist);
+        const spotifyTrackPromises: Promise<SpotifyTrack>[] = setlistTracks
+            .map(x => new Promise<SpotifyTrack>(async (resolve, reject) => {
+                const spotifyTrack: SpotifyTrack = await spotifyHelper.getSpotifyTrack(x.name, artist.name);
+                resolve(spotifyTrack);
+            }));
+        // clang-format on
+
+        // TODO :: Should we save setlists here somehow, just like albums for newest tracks?
+
+        let spotifyTracks: SpotifyTrack[] = await Promise.all(spotifyTrackPromises);
+        spotifyTracks                     = spotifyTracks.filter(x => x !== null);
+
+        // Save setlist tracks on artist in redis for next page load
+        redisClient.hmset(`artist:${artist.id}`,
+                          {setlist_track_ids : JSON.stringify(spotifyTracks.map(x => x.id))},
+                          (err, res) => {
+                              if (err) {
+                                  console.error(err);
+                              }
+                          });
+
+        // Also save spotify tracks to redis
+        for (const spotifyTrack of spotifyTracks) {
+            const redisTrack: any = spotifyToRedisTrack(spotifyTrack);
+            redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
+                if (err) {
+                    console.error(err);
+                }
+            });
+        }
+
+        // We had to get them all from spotify, so this is the only list that we'll use
+        setlistTracksFromSpotify = setlistTracksFromSpotify.concat(spotifyTracks.slice(0, tracksPerArtist));
+        console.log(`Received ${spotifyTracks.length} tracks from setlists for ${artist.name} (${artist.id})`);
+    } else {
+        console.log(`Have setlist track ids for artist ${artist.name} (${artist.id})`);
+        // TODO :: Need to handle case of setlist track ids not having enough tracks - if setlist_track_ids.length <
+        // tracksPerArtist then get more from setlists
+        for (const trackId of artist.setlist_track_ids) {
+            // See if we have track in our cache
+            const getTrackPromise: Promise<RedisTrack> = new Promise((resolve, reject) => {
+                redisClient.hgetall(`track:${trackId}`, (err: Error, obj: any) => {
+                    if (err) {
+                        console.error(err);
+                        resolve(null);
+                    } else {
+                        resolve(obj as RedisTrack);
+                    }
+                });
+            });
+
+            const track: RedisTrack = await getTrackPromise;
+
+            if (track === null) {
+                console.log(`Did not have track ${trackId}, getting from spotify`);
+                // It was not in our cache, we need to request it from spotify and cache the response
+                // I'm not sure if this is possible? Since it would have to be in our cache if we had
+                // the ID saved in the artist's top tracks IDs (unless it's been evicted I guess)
+                const spotifyTrack: SpotifyTrack = await spotifyHelper.getTrackById(trackId);
+                const redisTrack: any            = spotifyToRedisTrack(spotifyTrack);
+                redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+                setlistTracksFromSpotify.push(spotifyTrack);
+            } else {
+                // Happy path, we found the track in our cache: push onto returned list
+                setlistTracksFromRedis.push(track);
+            }
+
+            if (setlistTracksFromSpotify.length + setlistTracksFromRedis.length === tracksPerArtist) {
+                // Stop if we already have enough
+                break;
+            }
+        }
+    }
+
+    return setlistTracksFromSpotify.concat(setlistTracksFromRedis.map(x => redisToSpotifyTrack(x)));
 }
 
 function redisToSpotifyTrack(redisTrack: RedisTrack): SpotifyTrack {
@@ -333,7 +441,7 @@ function spotifyToRedisTrack(spotifyTrack: SpotifyTrack): RedisTrack {
             // This is hecka hacky - ideally I'd check to see if key is in the list of keys of the RedisTrack interface
             // to log or not, since we don't care about notifying outselves about any fields that we haven't declared.
             // Can't get interface keys in nice string list though, so here we are
-            if (key !== "linked_from" && key !== "restrictions") {
+            if (key !== "linked_from" && key !== "restrictions" && key !== "available_markets") {
                 console.log(
                     `Replaced obj/array value with stringified for key ${key} in spotify track ${spotifyTrack.id}`);
             }
@@ -347,8 +455,16 @@ function spotifyToRedisTrack(spotifyTrack: SpotifyTrack): RedisTrack {
 // nested external_urls type from the spotfy_url field, and re-add the nested images and followers fields we don't
 // care about
 function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
-    const {spotify_url, genres, top_track_ids, album_ids, newest_track_ids, combined_genres, ...spotifyArtist} =
-        redisArtist;
+    const {
+        spotify_url,
+        genres,
+        top_track_ids,
+        album_ids,
+        newest_track_ids,
+        setlist_track_ids,
+        combined_genres,
+        ...spotifyArtist
+    }                   = redisArtist;
     const external_urls = {"spotify" : spotify_url};
 
     return {
@@ -358,6 +474,7 @@ function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
         top_track_ids : top_track_ids ? JSON.parse(top_track_ids) : [],
         album_ids : album_ids ? JSON.parse(album_ids) : [],
         newest_track_ids : newest_track_ids ? JSON.parse(newest_track_ids) : [],
+        setlist_track_ids : setlist_track_ids ? JSON.parse(setlist_track_ids) : [],
         images : {},
         followers : {},
         ...spotifyArtist
@@ -372,19 +489,22 @@ function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
         genres,
         top_track_ids,
         newest_track_ids,
+        setlist_track_ids,
         combined_genres,
         album_ids,
         ...restOfArtist
     } = spotifyArtist;
 
-    // ternary and handle null top_track_ids/newest_track_ids and album_ids since they're something we're appending.
-    // They might not be on an artist if we haven't put it there yet, and it'll error an hmset if it's undefined
+    // ternary and handle null top_track_ids/newest_track_ids/setlist_track_ids and album_ids since they're something
+    // we're appending. They might not be on an artist if we haven't put it there yet, and it'll error an hmset if it's
+    // undefined
     const redisArtist: any = {
         spotify_url : external_urls.spotify,
         genres : JSON.stringify(genres),
         combined_genres : combined_genres ? JSON.stringify(combined_genres) : "[]",
         top_track_ids : top_track_ids ? JSON.stringify(top_track_ids) : "[]",
         newest_track_ids : newest_track_ids ? JSON.stringify(newest_track_ids) : "[]",
+        setlist_track_ids : setlist_track_ids ? JSON.stringify(setlist_track_ids) : "[]",
         album_ids : album_ids ? JSON.stringify(album_ids) : "[]",
         ...restOfArtist
     };

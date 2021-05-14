@@ -7,6 +7,9 @@ export const spotifyAuth = () =>
     "Basic " + Buffer.from(`${constants.clientId}:${constants.clientSecret}`).toString("base64");
 let spotifyToken: string = null;
 
+export const spotifyBaseUrl: string    = "https://open.spotify.com/";
+export const spotifyApiBaseUrl: string = "https://api.spotify.com/v1/";
+
 async function refreshSpotifyToken() {
     const postOptions = {
         method : "POST",
@@ -138,6 +141,37 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
 
     console.log(`Received ${artistObjs.length} artists from ${artistNames.length - lengthCorrection} lineup artists`);
     return artistObjs;
+}
+
+export async function getSpotifyTrack(trackName: string, artistName: string): Promise<SpotifyTrack> {
+    // You can specify multiple filters by denoting their type followed by a colon then the search term, separating each
+    // filter out by a space.
+    // For example: https://api.spotify.com/v1/search?q=track:captain%20artist:dave%20matthews&type=track
+    // It's okay for artists/tracks to be separated by a space as well as between the filter types. Must be URL encoded
+    // Don't encode equals sign of type=track, their api can't handl that encoding
+    const query                               = `track:${trackName} artist:${artistName}`;
+    const queryType = "type=track";
+    const trackPromise: Promise<SpotifyTrack> = new Promise(async (resolve, reject) => {
+        const {success, response} =
+            await autoRetrySpotifyCall(`${spotifyApiBaseUrl}search?q=${encodeURIComponent(query)}&${queryType}`,
+                                       (token: string) => helpers.baseSpotifyHeaders("GET", token),
+                                       false);
+
+        if (!success) {
+            console.error(`Error searching for spotify track for trackname ${trackName} and artistname ${
+                artistName} and encoded query string: ${encodeURIComponent(query)}&${queryType}`);
+            console.error(response);
+            resolve(null);
+        } else if (response.tracks && response.tracks.items && response.tracks.items.length > 0) {
+            // Return the first track and hope it's right
+            resolve(response.tracks.items[0]);
+        } else {
+            console.log(`Received no search results for artist ${artistName} and track ${trackName}`);
+            resolve(null);
+        }
+    });
+
+    return trackPromise;
 }
 
 export function getAllTracksForArtist(spotifyArtist: SpotifyArtist): Promise<SpotifyTrack[]> {

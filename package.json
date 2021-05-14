@@ -36,6 +36,7 @@
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
     "redis": "^3.0.2",
+    "setlistfm-js": "^1.2.0",
     "tslint": "^6.0.0",
     "typescript": "^3.7.5",
     "uuid": "^3.4.0"
