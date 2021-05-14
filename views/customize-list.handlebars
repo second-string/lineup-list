@@ -15,10 +15,16 @@
 
                     <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
                         <u>Track type</u>
-                        <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. Top tracks are the most popular, while newest tracks pulls from their most recently released music.</p>
+                        <p style="margin-top: 0; font-size: smaller;">How the tracks are selected for each artist. "Top tracks" are the most popular, "Recent setlists" are tracks from the artist's most recent performances, and "Newest tracks" pulls from their most recently released music.</p>
                         <label for="top" class="pure-checkbox">
                             <input type="radio" name="trackType" id="top" value="top" {{topTracksCheckedStr}}>
                             Top tracks</label>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <label for="recent" class="pure-checkbox" style="color: gray;">
+                                <input type="radio" name="trackType" id="setlist" value="setlist" {{setlistTracksCheckedStr}} disabled>
+                                Recent setlists</label>
+                                <label style="margin-left: 1em; font-size: smaller;">Coming soon!</label>
+                        </div>
                         <label for="recent" class="pure-checkbox">
                             <input type="radio" name="trackType" id="recent" value="recent" {{newTracksCheckedStr}}>
                             Newest tracks</label>
