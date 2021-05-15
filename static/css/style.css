@@ -11,7 +11,7 @@ body {
     min-height: 100%;
 }
 
-.nav, .mobile-nav {
+.nav {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -23,6 +23,43 @@ body {
 .nav-item {
     font-size: larger;
     margin: 0.5em 0 0.5em 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 3em;
+    height: 3em;
+}
+
+/*menu burger*/
+.mobile-nav-a {
+    display: block;
+    position: absolute;
+    top: 2em;
+    left: 1.5em;
+}
+
+.mobile-nav-dropdown {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 10;
+    margin: 0;
+}
+
+/*options in the menu dropdown*/
+.mobile-nav-dropdown-option-a {
+    display: block;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* After we downsize below medium, shift nav mobile nav */

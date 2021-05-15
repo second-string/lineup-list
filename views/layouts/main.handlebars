@@ -32,6 +32,17 @@
     <!-- Icon made by surang from www.flaticon.com -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon.ico">
+
+    <script>
+        function mobileNavClicked() {
+            const dropdown = document.getElementById("mobile-nav-dropdown");
+            if (dropdown.style.display === "none") {
+                dropdown.style.display = "block";
+            } else {
+                dropdown.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <div class="pure-menu nav">
@@ -39,7 +50,14 @@
         <a class="pure-menu-link nav-item" href="/faq">FAQ</a>
     </div>
     <div class="mobile-nav">
-        <a href="/">mobilehome</a>
+        <a class="mobile-nav-a" href="#" onclick="mobileNavClicked()">
+            <img class="menu-img" src="/img/menu.svg" />
+        </a>
+        <div class="mobile-nav-dropdown" id="mobile-nav-dropdown" style="display: none;">
+            <a class="pure-menu-link mobile-nav-dropdown-option-a" href="#" onclick="mobileNavClicked()">Close menu</a>
+            <a class="pure-menu-link mobile-nav-dropdown-option-a" href="/">Home</a>
+            <a class="pure-menu-link mobile-nav-dropdown-option-a" href="/faq">FAQ</a>
+        </div>
     </div>
     {{{body}}}
 </body>
