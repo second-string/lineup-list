@@ -99,6 +99,7 @@ async function main() {
         "hardsummer" : [ 2021 ],
         "bonnaroo" : [ 2021 ],
         "govball" : [ 2021 ],
+        "ohana" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};
