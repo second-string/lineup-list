@@ -65,6 +65,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         // TODO :: this will change for multi-festival session data support
         let                                    tracksPerArtist: number             = 0;
         let                                    topTracksCheckedStr: string         = "";
+        let                                    setlistTracksCheckedStr: string     = "";
         let                                    newTracksCheckedStr: string         = "";
         let                                    previouslySelectedArtists: string[] = null;
         let                                    previouslySelectedGenres: string[]  = null;
@@ -76,10 +77,27 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             // from session data. If the user has loaded this festival customize page before, but not saved any values,
             // we'll end up here but with none of the below options set, so we still fallback to default in here too
             tracksPerArtist = isNaN(sessionData.tracksPerArtist) ? 3 : sessionData.tracksPerArtist;
-            topTracksCheckedStr =
-                sessionData.trackType === undefined ? "checked" : sessionData.trackType === "top" ? "checked" : "";
-            newTracksCheckedStr =
-                sessionData.trackType === undefined ? "" : sessionData.trackType === "top" ? "" : "checked";
+
+            if (sessionData.trackType === "top") {
+                topTracksCheckedStr     = "checked";
+                setlistTracksCheckedStr = "";
+                newTracksCheckedStr     = "";
+            } else if (sessionData.trackType === "setlist") {
+                topTracksCheckedStr     = "";
+                setlistTracksCheckedStr = "checked";
+                newTracksCheckedStr     = "";
+            } else if (sessionData.trackType === "new") {
+                topTracksCheckedStr     = "";
+                setlistTracksCheckedStr = "";
+                newTracksCheckedStr     = "checked";
+            } else {
+                console.error(`Resetting customize page to last known state and recieved unknown tracktype: ${
+                    sessionData.trackType ? sessionData.trackType : "null or undefined"}`)
+                topTracksCheckedStr     = "checked";
+                setlistTracksCheckedStr = "";
+                newTracksCheckedStr     = "";
+            }
+
             previouslySelectedArtists = sessionData.artistIdsStr === undefined || sessionData.artistIdsStr === null
                                             ? null
                                             : sessionData.artistIdsStr.split(",");
@@ -102,9 +120,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
                 festivalYear,
             };
 
-            tracksPerArtist     = 3;
-            topTracksCheckedStr = "checked";
-            newTracksCheckedStr = "";
+            tracksPerArtist         = 3;
+            topTracksCheckedStr     = "checked";
+            setlistTracksCheckedStr = "";
+            newTracksCheckedStr     = "";
 
             // Remove old festivals metadata Save selected festival names/year
             // clang-format off
@@ -188,6 +207,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             days,
             tracksPerArtist,
             topTracksCheckedStr,
+            setlistTracksCheckedStr,
             newTracksCheckedStr,
         });
     });
