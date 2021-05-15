@@ -11,6 +11,51 @@ body {
     min-height: 100%;
 }
 
+.nav, .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 3em 0 0 3em; /* If this is changed make sure to update large media query below */
+}
+
+.nav-item {
+    font-size: larger;
+    margin: 0.5em 0 0.5em 0;
+}
+
+/* After we downsize below medium, shift nav mobile nav */
+@media only screen and (min-width: 48em) {
+    .nav {
+        display: flex;
+    }
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+    .nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+/* After we downsize below large, shift nav to less left margin */
+@media only screen and (max-width: 64em) {
+    .nav {
+        margin: 1em 0 0 1em;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .nav {
+        margin: 3em 0 0 3em;
+    }
+}
 /* ------------------- Select customizations -------------------  */
 select {
   -webkit-appearance: none;
