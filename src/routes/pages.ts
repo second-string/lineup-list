@@ -289,6 +289,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         });
     });
 
+    router.get("/faq", (req: express.Request, res: express.Response) => {
+        res.render("faq");
+    });
+
     return router;
 }
 

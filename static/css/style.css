@@ -56,7 +56,8 @@ body {
         margin: 3em 0 0 3em;
     }
 }
-/* ------------------- Select customizations -------------------  */
+
+/* ------------------- Select customizations for home page fest selection -------------------  */
 select {
   -webkit-appearance: none;
   background-color: transparent;
