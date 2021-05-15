@@ -285,6 +285,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             festival,
             festivalYear,
             playlistName : sessionData.playlistName,
+            playlistUrl : sessionData.playlistUrl,
         });
     });
 

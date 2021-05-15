@@ -86,8 +86,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         const playlistName: string = `${sessionData.festivalDisplayName} ${sessionData.festivalYear} - Lineup List`;
         const playlist: any = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
-
-        const trackUris: string[] = sessionData.trackIdsStr.split(',').map(x => `spotify:track:${x}`);
+        const trackUris: string[]  = sessionData.trackIdsStr.split(',').map(x => `spotify:track:${x}`);
 
         const success: boolean = await spotifyHelper.addTracksToPlaylist(access, playlist, trackUris);
         if (!success) {
@@ -95,7 +94,9 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(500).send("Server error, please try again.");
         }
 
-        redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, playlistName})
+        const playlistUrl: string = playlist.external_urls.spotify;
+
+        redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, playlistName, playlistUrl});
         res.redirect("/generate-playlist-success");
     });
 

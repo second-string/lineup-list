@@ -168,6 +168,7 @@ interface SessionData {
     trackType?: string;
     selectedDaysStr?: string;
     selectedGenresStr?: string;
+    playlistUrl?: string;
 }
 
 // Exists to wrap an object being passed to hbs with data needed for rendering but not a part of the object itself. For
