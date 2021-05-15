@@ -18,7 +18,7 @@ async function getArtistSetlists(artistMbid: string): Promise<SetlistFmSetlist[]
         return setlistsResponse.setlist;
     } else {
         console.error(`Error getting setlists for ${artistMbid} from setlist.fm:`);
-        console.error(response);
+        console.error(`${response.status} - ${response.url}`);
         return [];
     }
 }
@@ -43,7 +43,7 @@ export async function getTrackNamesFromSetlists(mbArtistId: string, numTracks: n
         }
     }
 
-    console.error(`Didn't find any setlist either of length > 0 or any valid setlist objs for MBID ${mbArtistId}`);
+    // console.error(`Didn't find any setlist either of length > 0 or any valid setlist objs for MBID ${mbArtistId}`);
     // console.dir(setlists, {depth : null});
     return [];
 }

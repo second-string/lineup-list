@@ -313,7 +313,9 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
     const setlistTracksFromRedis: RedisTrack[]   = [];
     let setlistTracksFromSpotify: SpotifyTrack[] = [];
 
-    if (!artist.setlist_track_ids || artist.setlist_track_ids.length === 0) {
+    // Note! Only check for null setlist tracks here - if it's an empty list that means we've previously looked for them
+    // and haven't found them, so no need to search again
+    if (!artist.setlist_track_ids) {
         // We don't have setlist tracks. Convert the artist to an mbid, get the most recent setlists, get the first 10
         // track names spread across however many setlists it takes, search each of those track names on spotify, then
         // save the first result for each track
@@ -467,6 +469,8 @@ function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
     }                   = redisArtist;
     const external_urls = {"spotify" : spotify_url};
 
+    // Note setlist_track_ids special casing: we need null vs. empty list tristate logic to differentiate
+    // never-before-searched setlists for artist compared to found no setlists for artist in previous search
     return {
         external_urls,
         genres : JSON.parse(genres),
@@ -474,7 +478,7 @@ function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
         top_track_ids : top_track_ids ? JSON.parse(top_track_ids) : [],
         album_ids : album_ids ? JSON.parse(album_ids) : [],
         newest_track_ids : newest_track_ids ? JSON.parse(newest_track_ids) : [],
-        setlist_track_ids : setlist_track_ids ? JSON.parse(setlist_track_ids) : [],
+        setlist_track_ids : setlist_track_ids ? JSON.parse(setlist_track_ids) : null,
         images : {},
         followers : {},
         ...spotifyArtist
@@ -498,13 +502,15 @@ function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
     // ternary and handle null top_track_ids/newest_track_ids/setlist_track_ids and album_ids since they're something
     // we're appending. They might not be on an artist if we haven't put it there yet, and it'll error an hmset if it's
     // undefined
+    // Note special case for setlist_track_ids to preserve tristate null/empty list/full list logic for never searched,
+    // searched and found none previously, and has setlist tracks
     const redisArtist: any = {
         spotify_url : external_urls.spotify,
         genres : JSON.stringify(genres),
         combined_genres : combined_genres ? JSON.stringify(combined_genres) : "[]",
         top_track_ids : top_track_ids ? JSON.stringify(top_track_ids) : "[]",
         newest_track_ids : newest_track_ids ? JSON.stringify(newest_track_ids) : "[]",
-        setlist_track_ids : setlist_track_ids ? JSON.stringify(setlist_track_ids) : "[]",
+        setlist_track_ids : setlist_track_ids ? JSON.stringify(setlist_track_ids) : null,
         album_ids : album_ids ? JSON.stringify(album_ids) : "[]",
         ...restOfArtist
     };
