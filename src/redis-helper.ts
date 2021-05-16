@@ -53,9 +53,9 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
                         const spotifyArtist: SpotifyArtist = await spotifyHelper.getArtistById(artistId);
                         const redisArtist: any             = spotifyToRedisArtist(spotifyArtist);
                         console.log(`adding redis artist ${artistId} to the cache`);
-                        redisClient.hmset(`artist:${artistId}`, redisArtist, (redisErr, res) => {
+                        redisClient.hmset(`artist:${artistId}`, redisArtist, (redisErr: Error, res) => {
                             if (redisErr) {
-                                console.error(err);
+                                console.error(`redis error: ${redisErr}`);
                             }
                         });
 
@@ -469,16 +469,28 @@ function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
     }                   = redisArtist;
     const external_urls = {"spotify" : spotify_url};
 
+    let converted_setlist_track_ids: string[] = null;
+    if (!(setlist_track_ids === "null" || setlist_track_ids === null || setlist_track_ids === undefined)) {
+        converted_setlist_track_ids = JSON.parse(setlist_track_ids);
+    }
+
+    // Parse these out separately for easier undefined diagnosis if problems arise
+    const converted_newest_track_ids = newest_track_ids ? JSON.parse(newest_track_ids) : [];
+    const converted_top_track_ids    = top_track_ids ? JSON.parse(top_track_ids) : [];
+    const converted_genres           = genres ? JSON.parse(genres) : [];
+    const converted_combined_genres  = combined_genres ? JSON.parse(combined_genres) : [];
+    const converted_album_ids        = album_ids ? JSON.parse(album_ids) : [];
+
     // Note setlist_track_ids special casing: we need null vs. empty list tristate logic to differentiate
-    // never-before-searched setlists for artist compared to found no setlists for artist in previous search
+    // never-before-searched setlists for artist compared to found no setlists for artist in previous search.
     return {
         external_urls,
-        genres : JSON.parse(genres),
-        combined_genres : combined_genres ? JSON.parse(combined_genres) : [],
-        top_track_ids : top_track_ids ? JSON.parse(top_track_ids) : [],
-        album_ids : album_ids ? JSON.parse(album_ids) : [],
-        newest_track_ids : newest_track_ids ? JSON.parse(newest_track_ids) : [],
-        setlist_track_ids : setlist_track_ids ? JSON.parse(setlist_track_ids) : null,
+        genres : converted_genres,
+        combined_genres : converted_combined_genres,
+        top_track_ids : converted_top_track_ids,
+        album_ids : converted_album_ids,
+        newest_track_ids : converted_newest_track_ids,
+        setlist_track_ids : converted_setlist_track_ids,
         images : {},
         followers : {},
         ...spotifyArtist
@@ -504,13 +516,14 @@ function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
     // undefined
     // Note special case for setlist_track_ids to preserve tristate null/empty list/full list logic for never searched,
     // searched and found none previously, and has setlist tracks
+    // redis client can't handle nulls, so when we insert we do as string and then coerce into real null on the way out
     const redisArtist: any = {
         spotify_url : external_urls.spotify,
         genres : JSON.stringify(genres),
         combined_genres : combined_genres ? JSON.stringify(combined_genres) : "[]",
         top_track_ids : top_track_ids ? JSON.stringify(top_track_ids) : "[]",
         newest_track_ids : newest_track_ids ? JSON.stringify(newest_track_ids) : "[]",
-        setlist_track_ids : setlist_track_ids ? JSON.stringify(setlist_track_ids) : null,
+        setlist_track_ids : setlist_track_ids ? JSON.stringify(setlist_track_ids) : "null",
         album_ids : album_ids ? JSON.stringify(album_ids) : "[]",
         ...restOfArtist
     };
