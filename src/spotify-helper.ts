@@ -59,7 +59,7 @@ export async function getAccessTokenFromCallback(code: string, reqError: any):
         // return res.status(500).send("Server error, please try again.");
     }
 
-    const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.brianteam.dev" : "localhost";
+    const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.live" : "localhost";
     const postOptions     = {
         method : "POST",
         body : {
