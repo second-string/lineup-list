@@ -48,7 +48,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(403).send("This url only accessible after generating a lineup from the customize page.");
         }
 
-        const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.brianteam.dev" : "localhost";
+        const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.live" : "localhost";
         const queryParams     = {
             client_id : constants.clientId,
             response_type : "code",

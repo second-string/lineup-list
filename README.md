@@ -1,5 +1,6 @@
 ### If you're setting up for the first time:
-1. `brew install redis`
+#### macOS
+1. `brew install redis npm`
 2. `redis-server` in separate tab
 3. set necessary env vars
 4. `npm i`
