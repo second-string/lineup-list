@@ -76,12 +76,12 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const {access, refresh, ...accessTokenResponse} =
             await spotifyHelper.getAccessTokenFromCallback(req.query.code, req.query.error);
         if (accessTokenResponse.error) {
-            res.status(500).send(accessTokenResponse.error);
+            return res.status(500).send(accessTokenResponse.error);
         }
 
         const {user, ...getUserFromTokenResponse} = await spotifyHelper.getSpotifyUserFromToken(access);
         if (getUserFromTokenResponse.error) {
-            res.status(500).send(getUserFromTokenResponse.error);
+            return res.status(500).send(getUserFromTokenResponse.error);
         }
 
         const playlistName: string = `${sessionData.festivalDisplayName} ${sessionData.festivalYear} - Lineup List`;
