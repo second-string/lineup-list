@@ -325,8 +325,8 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
             return [];
         }
 
-        // Gets 10 (ish, maybe more) setlist tracks for the artist from past setlist. No de-duping. Need to slice to
-        // tracksPerArist here
+        // Gets 15 (ish, maybe more) setlist tracks for the artist from past setlist. No de-duping. Need to slice to
+        // tracksPerArist before showing to user, and 15 drops rapidly once searched and filtered for nulls and dupes
         const setlistTracks: SetlistFmSong[] = await setlistFmHelper.getTracksFromSetlists(artistMbid);
 
         // clang-format off
@@ -367,9 +367,18 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
             });
         }
 
-        // We had to get them all from spotify, so this is the only list that we'll use
         setlistTracksFromSpotify = setlistTracksFromSpotify.concat(spotifyTracks.slice(0, tracksPerArtist));
-        console.log(`Received ${spotifyTracks.length} tracks from setlists for ${artist.name} (${artist.id})`);
+        let logStr = `Received ${spotifyTracks.length} tracks from setlists for ${artist.name} (${artist.id})`;
+        if (spotifyTracks.length < tracksPerArtist) {
+            // If after the setlist tracks were searched, null filtered, and deduped, we don't have enough to cover
+            // tracksperartist, go get top tracks to supplement remainder. This case is most common for artists that
+            // have no setlist tracks on setlist.fm
+            const topTracks = await getTopTracksForArtist(redisClient, artist, tracksPerArtist - spotifyTracks.length);
+            setlistTracksFromSpotify = setlistTracksFromSpotify.concat(topTracks);
+            logStr += `, supplemented with ${topTracks.length} top tracks`;
+        }
+
+        console.log(logStr);
     } else {
         console.log(`Have setlist track ids for artist ${artist.name} (${artist.id})`);
         // TODO :: Need to handle case of setlist track ids not having enough tracks - if setlist_track_ids.length <
@@ -411,6 +420,13 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
                 // Stop if we already have enough
                 break;
             }
+        }
+
+        // Supplement with top tracks if we don't have enough setlist tracks saved
+        if (artist.setlist_track_ids.length < tracksPerArtist) {
+            const topTracks =
+                await getTopTracksForArtist(redisClient, artist, tracksPerArtist - artist.setlist_track_ids.length);
+            setlistTracksFromSpotify = setlistTracksFromSpotify.concat(topTracks);
         }
     }
 

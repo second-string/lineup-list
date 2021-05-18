@@ -26,7 +26,7 @@ async function getArtistSetlists(artistMbid: string): Promise<SetlistFmSetlist[]
 export async function getTracksFromSetlists(mbArtistId: string): Promise<SetlistFmSong[]> {
     const setlists: SetlistFmSetlist[] = await getArtistSetlists(mbArtistId);
 
-    // Iterate through every setlist until we find the first setlist with songs. Save 10 or more tracks so we have
+    // Iterate through every setlist until we find the first setlist with songs. Save 15 or more tracks so we have
     // a decent buffer without having to re-fetch. There will likely be duplicates if we need to use more than 1 setlist
     let songs: SetlistFmSong[] = [];
     for (const setlist of setlists) {
@@ -37,8 +37,9 @@ export async function getTracksFromSetlists(mbArtistId: string): Promise<Setlist
             songs = songs.concat(setlist.sets.set[0].song.filter(x => !x.cover));
         }
 
-        // Don't care if it's more, but at least try to get 10
-        if (songs.length >= 10) {
+        // Don't care if it's more, but at least try to get 15. By the time we filter for dupes and nulls from spotify
+        // this will be fairly lower
+        if (songs.length >= 15) {
             break;
         }
     }
