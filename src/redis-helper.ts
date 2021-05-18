@@ -325,9 +325,11 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
             return [];
         }
 
+        // Gets 10 (ish, maybe more) setlist tracks for the artist from past setlist. No de-duping. Need to slice to
+        // tracksPerArist here
+        const setlistTracks: SetlistFmSong[] = await setlistFmHelper.getTracksFromSetlists(artistMbid);
+
         // clang-format off
-        const setlistTracks: SetlistFmSong[] =
-            await setlistFmHelper.getTrackNamesFromSetlists(artistMbid, tracksPerArtist);
         const spotifyTrackPromises: Promise<SpotifyTrack>[] = setlistTracks
             .map(x => new Promise<SpotifyTrack>(async (resolve, reject) => {
                 const spotifyTrack: SpotifyTrack = await spotifyHelper.getSpotifyTrack(x.name, artist.name);
@@ -335,12 +337,18 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
             }));
         // clang-format on
 
-        // TODO :: Should we save setlists here somehow, just like albums for newest tracks?
-
         let spotifyTracks: SpotifyTrack[] = await Promise.all(spotifyTrackPromises);
-        spotifyTracks                     = spotifyTracks.filter(x => x !== null);
+
+        // Remove any songs not found and de-dupe. Inefficient double-iter but easier logic b/c we know both track and y
+        // will always have an id in second filter
+        // clang-format off
+        spotifyTracks = spotifyTracks
+            .filter(x => x !== null)
+            .filter((track, idx, arr) => arr.findIndex(y => y.id === track.id) === idx);
+        // clang-format on
 
         // Save setlist tracks on artist in redis for next page load
+        // TODO :: Should we save setlists here somehow, just like albums for newest tracks?
         redisClient.hmset(`artist:${artist.id}`,
                           {setlist_track_ids : JSON.stringify(spotifyTracks.map(x => x.id))},
                           (err, res) => {

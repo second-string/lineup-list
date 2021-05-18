@@ -23,27 +23,25 @@ async function getArtistSetlists(artistMbid: string): Promise<SetlistFmSetlist[]
     }
 }
 
-export async function getTrackNamesFromSetlists(mbArtistId: string, numTracks: number): Promise<SetlistFmSong[]> {
+export async function getTracksFromSetlists(mbArtistId: string): Promise<SetlistFmSong[]> {
     const setlists: SetlistFmSetlist[] = await getArtistSetlists(mbArtistId);
 
-    // We could sort on date but it looks like they come down that way already
-    // TODO :: will need to make sure we have enough songs on the setlist, or concat ~10 songs across all most recent
-    // setlists
-    // TODO :: we also will need to do the .filter(x => !x.cover) logic here if we're going to, to make sure we still
-    // hit the full numTracks returned. It might not be a great idea though, bceause artists like kaytranada get a ton
-    // of their stuff filtered out. ALTHOUGH now that I'm running it with no cover filter, spotify api search cannot
-    // find things like song name: kiss it better - kaytranada edition when the artist is still rihanna. So the
-    // fuzzysearch of the gui search bar is not the same as api, so I think we have to respect anti cover checking
-
-    // Iterate through every setlist until we at least get one with songs in a setlist
+    // Iterate through every setlist until we find the first setlist with songs. Save 10 or more tracks so we have
+    // a decent buffer without having to re-fetch. There will likely be duplicates if we need to use more than 1 setlist
+    let songs: SetlistFmSong[] = [];
     for (const setlist of setlists) {
         if (setlist.sets && setlist.sets.set && setlist.sets.set.length > 0 && setlist.sets.set[0] &&
             setlist.sets.set[0].song && setlist.sets.set[0].song.length > 0) {
-            return setlist.sets.set[0].song.slice(0, numTracks);
+            // Add songs in, but don't take any ones with a cover key populated. The search will almost never return
+            // any, or the correct, track on spotify
+            songs = songs.concat(setlist.sets.set[0].song.filter(x => !x.cover));
+        }
+
+        // Don't care if it's more, but at least try to get 10
+        if (songs.length >= 10) {
+            break;
         }
     }
 
-    // console.error(`Didn't find any setlist either of length > 0 or any valid setlist objs for MBID ${mbArtistId}`);
-    // console.dir(setlists, {depth : null});
-    return [];
+    return songs;
 }
