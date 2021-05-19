@@ -41,7 +41,7 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
         const artistIdsString: string = await artistIdsPromise;
         const artistIds               = JSON.parse(artistIdsString);
 
-        // For every artist ID on thsi day, check our cache for their object. If we don't have them, get from spotify
+        // For every artist ID on this day, check our cache for their object. If we don't have them, get from spotify
         // and convert, then store
         for (const artistId of artistIds) {
             const redisArtistPromise = new Promise((resolve, reject) => {
@@ -480,7 +480,7 @@ function spotifyToRedisTrack(spotifyTrack: SpotifyTrack): RedisTrack {
 // Perform the json parsing for the stringified genres, album_ids, and top_tracks/newest_tracks fields, rebuild the
 // nested external_urls type from the spotfy_url field, and re-add the nested images and followers fields we don't
 // care about
-function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
+export function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
     const {
         spotify_url,
         genres,
@@ -521,7 +521,7 @@ function redisToSpotifyArtist(redisArtist: RedisArtist): SpotifyArtist {
     };
 }
 
-function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
+export function spotifyToRedisArtist(spotifyArtist: SpotifyArtist): RedisArtist {
     const {
         external_urls,
         images,

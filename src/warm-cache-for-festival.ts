@@ -1,6 +1,7 @@
 import {existsSync, readFileSync} from "fs";
 import redis from "redis";
 
+import * as redisHelper   from "./redis-helper";
 import * as spotifyHelper from "./spotify-helper";
 
 async function warm(festival: string, years: number[]) {
@@ -49,7 +50,8 @@ async function warm(festival: string, years: number[]) {
                         JSON.stringify(Object.keys(artistObjs)),
                         redis.print);
 
-        // const spotifyToken: string = await spotifyHelper.getSpotifyToken();
+        // For every day in this fest, get the full spot artist obj from the text file name, store ID list for each
+        // artist on this specific day key, then save artist objs themselves
         for (const day of Object.keys(artistObjs)) {
             const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistObjs[day]);
 
@@ -59,32 +61,49 @@ async function warm(festival: string, years: number[]) {
             redisClient.set(`festival:${festival.toLowerCase()}_${year}:${day}`,
                             JSON.stringify(artistIds),
                             redis.print);
+
+            for (const spotifyArtist of artists) {
+                // Check to see if we have this artist and associated metadata saved in cache from a previous warm run
+                // already. This might let us skip getting top/new/setlist tracks if we already have them saved
+                const redisArtistPromise = new Promise<RedisArtist>((resolve, reject) => {
+                    redisClient.hgetall(`artist:${spotifyArtist.id}`, async (err: Error, obj: any) => {
+                        if (err) {
+                            return reject(err);
+                        } else {
+                            // Tag each artist with the day for this festival so we can group when resolving all
+                            // promises. If it's null, still resolve, but we need to go get the artist
+                            if (obj) {
+                                obj.day = day;
+                            }
+                            resolve(obj);
+                        }
+                    });
+                });
+
+                let redisArtist: RedisArtist                                                 = await redisArtistPromise;
+                let                                  spotifyArtistToGetTracks: SpotifyArtist = null;
+                // If we didn't have it, no sweat, convert our spotify. We'll have to go get all 3 track types
+                if (!redisArtist) {
+                    redisArtist = redisHelper.spotifyToRedisArtist(spotifyArtist);
+                    redisClient.hmset(`artist:${redisArtist.id}`, redisArtist as any, (redisErr: Error, res) => {
+                        if (redisErr) {
+                            console.error(`redis error: ${redisErr}`);
+                        }
+                    });
+
+                    spotifyArtistToGetTracks = spotifyArtist;
+                } else {
+                    spotifyArtistToGetTracks = redisHelper.redisToSpotifyArtist(redisArtist);
+                }
+
+                // Then get top, new, and setlist tracks for this artist. This will take a while even with no backoffs
+                // if we didn't have this artist previously. Don't save return values, we don't care. Do setlists before
+                // new tracks to help with backoff
+                await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
+                await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
+                await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
+            }
         }
-
-        /*
-        I'm kinda dumb v since we have to get the artists for their IDs anyway, I guess we might as well cache
-        the artist object itself. Makes no difference since its from the same requests.
-
-         If you feel like pre-loading all the artists, this will do it (albeit with some solid 429 backoff waiting).
-         Otherwise the code in redis-helper will handle getting and caching any artists from the festival list of
-         artist ids it doesn't have yet. Current implementation for that is a little nicer since it awaits each one,
-         so you hit way less 429s and it ends up taking shorter overall.
-
-        for (const artist of artists) {
-            // Strip out all of the unsupported nested stuff
-            const { external_urls, images, followers, genres, ...restOfArtist } = artist;
-
-            // Store the spotify URL from external_urls cause we need that
-            // For some reason redis refuses to accept this as a param to hmset if it's type is set?
-            const redisArtist: any = {
-                spotify_url: external_urls.spotify,
-                genres: JSON.stringify(genres),
-                ...restOfArtist
-            };
-
-            redisClient.hmset(`artist:${artist.id}`, redisArtist, redis.print);
-        }
-    */
     }
 
     redisClient.quit();
