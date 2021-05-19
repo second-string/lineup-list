@@ -9,7 +9,7 @@ import * as redisHelper from "../redis-helper";
 
 const supportedFestivals: Festival[] = [
     {display_name : "Coachella", years : [ 2020 ], name : "coachella"},
-    {display_name : "Bottlerock", years : [ 2020 ], name : "bottlerock"},
+    {display_name : "Bottlerock", years : [ 2021, 2020 ], name : "bottlerock"},
     {display_name : "Outside Lands", years : [ 2021, 2019 ], name : "osl"},
     {display_name : "Bonnaroo", years : [ 2021 ], name : "bonnaroo"},
     {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer"},
@@ -17,6 +17,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Ohanafest", years : [ 2021 ], name : "ohana"},
     {display_name : "Riot Fest", years : [ 2021 ], name : "riot"},
     {display_name : "Firefly", years : [ 2021 ], name : "firefly"},
+    {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
