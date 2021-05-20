@@ -1,3 +1,9 @@
+# Lineup List
+[lineuplist.live](https://lineuplist.live)  
+A Spotify playlist generator for music festival lineups. Choose from different filters and playlist options to customize it to your tastes. See the [FAQ](views/faq.handlebars) for more information.
+
+
+## Running Lineup List locally (not necesary unless you're doing local development)
 ### If you're setting up for the first time:
 #### macOS
 1. `brew install redis npm`
