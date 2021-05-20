@@ -99,6 +99,11 @@ async function warm(festival: string, years: number[]) {
                 // Then get top, new, and setlist tracks for this artist. This will take a while even with no backoffs
                 // if we didn't have this artist previously. Don't save return values, we don't care. Do setlists before
                 // new tracks to help with backoff
+                if (spotifyArtistToGetTracks.id === undefined) {
+                    console.log(spotifyArtistToGetTracks);
+                    console.log("------------------");
+                    console.log(redisArtist);
+                }
                 await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
                 await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
                 await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
@@ -122,6 +127,7 @@ async function main() {
         "riot" : [ 2021 ],
         "firefly" : [ 2021 ],
         "pitchfork" : [ 2021 ],
+        "lollapalooza" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};

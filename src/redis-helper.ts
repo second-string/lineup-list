@@ -121,7 +121,7 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
 
         topTracksFromSpotify = topTracksFromSpotify.concat(spotifyTracks.slice(0, tracksPerArtist));
     } else {
-        console.log(`Have top track ids for artist ${artist.id}`);
+        console.log(`Have top track ids for artist ${artist.name} (${artist.id})`);
         for (const trackId of artist.top_track_ids) {
             // See if we have track in our cache
             const getTrackPromise: Promise<RedisTrack> =
