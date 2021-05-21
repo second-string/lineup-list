@@ -92,7 +92,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
                 topTracksCheckedStr     = "";
                 setlistTracksCheckedStr = "checked";
                 newTracksCheckedStr     = "";
-            } else if (sessionData.trackType === "new") {
+            } else if (sessionData.trackType === "recent") {
                 topTracksCheckedStr     = "";
                 setlistTracksCheckedStr = "";
                 newTracksCheckedStr     = "checked";
