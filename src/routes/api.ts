@@ -22,6 +22,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const selectedDaysStr: string     = req.body.selectedDays ? req.body.selectedDays : "";
         const selectedGenresStr: string   = req.body.selectedGenres ? req.body.selectedGenres : "";
 
+        if (tracksPerArtist < 1 || tracksPerArtist > 10) {
+            return res.status(400).send("Number of tracks per artist must be between 1 and 10");
+        }
+
         const sessionData: SessionData = {
             festivalName,
             festivalDisplayName,

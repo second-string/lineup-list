@@ -9,8 +9,8 @@
 
                     <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
                         <u>Tracks per artist</u>
-                        <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist</p>
-                        <input type="number" name="tracksPerArtist" value="{{tracksPerArtist}}" style="flex: 0; max-width: 30%;" required>
+                        <p style="margin-top: 0; font-size: smaller;">Number of tracks for each artist on the playlist (max 10)</p>
+                        <input type="number" name="tracksPerArtist" value="{{tracksPerArtist}}" style="flex: 0; max-width: 30%;" min="1" max="10" required>
                     </div>
 
                     <div style="margin-bottom: 1rem; display: flex; flex-direction: column;">
