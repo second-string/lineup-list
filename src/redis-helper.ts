@@ -142,10 +142,7 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
                 // I'm not sure if this is possible? Since it would have to be in our cache if we had
                 // the ID saved in the artist's top tracks IDs (unless it's been evicted I guess)
                 const spotifyTrack: SpotifyTrack = await spotifyHelper.getTrackById(trackId);
-                // console.log(`got ${spotifyTrack.name} spotify track`);
-                const redisTrack: any = spotifyToRedisTrack(spotifyTrack);
-                // console.log(`adding ${redisTrack.name} redis track to the cache after translating`)
-                // console.log(redisTrack);
+                const redisTrack: any            = spotifyToRedisTrack(spotifyTrack);
                 redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
                     if (err) {
                         console.error(err);
@@ -153,7 +150,6 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
                 });
                 topTracksFromSpotify.push(spotifyTrack);
             } else {
-                // console.log(`We had track ${trackId} in the cache, all good`);
                 // Happy path, we found the track in our cache: push onto returned list
                 topTracksFromRedis.push(track);
             }
@@ -203,51 +199,67 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
                               }
                           });
 
-        let newestAlbum;
-        let newestAlbumDate;
+        let validSpotifyAlbums: SpotifyAlbum[] = [];
         for (const spotifyAlbum of spotifyAlbums) {
-            // Save full album to cache and find most recent
+            // Skip any "non-real" albums - this isn't the most robust, we're probably dropping a decent amount here.
+            // Good enough for now
+            if (spotifyAlbum.album_group === "compilation" || spotifyAlbum.album_group === "appears_on" ||
+                spotifyAlbum.album_type === "compilation") {
+                continue;
+            }
+
+            validSpotifyAlbums.push(spotifyAlbum);
+
+            // Save full album to cache
             const redisAlbum: any = spotifyToRedisAlbum(spotifyAlbum);
             redisClient.hmset(`album:${redisAlbum.id}`, redisAlbum, (err, res) => {
                 if (err) {
                     console.error(err);
                 }
             });
-
-            // Skip any "non-real" albums - this isn't the most robust, we're probably dropping a decent amount here.
-            // Good enough for now
-            if (redisAlbum.album_group === "compilation" || redisAlbum.album_group === "appears_on" ||
-                redisAlbum.album_type === "compilation") {
-                continue;
-            }
-
-            const currentAlbumDate = Date.parse(spotifyAlbum.release_date);
-            if ((newestAlbumDate === undefined) || (currentAlbumDate > newestAlbumDate)) {
-                newestAlbum     = spotifyAlbum;
-                newestAlbumDate = currentAlbumDate;
-            }
         }
 
         // If the artist only had compilation or group albums, we won't have anything to work with. Bail here too
-        if (newestAlbum === undefined) {
+        if (validSpotifyAlbums.length === 0) {
             console.warn(`Albums returned from getAllAlbumsForArtist all either compilations or 'appears_on'. Artist ${
                 artist.name} (${artist.id}). Bailing out of remainder of newest tracks process`);
             return [];
         }
 
-        // Now get the tracks for the most recent album
-        // TODO :: Need to handle case of single album not having enough tracks - if newestTracks.length <
-        // tracksPerArtist then get more from subsequent newer albums
-        const newestTracks: SpotifyTrack[] = await spotifyHelper.getAllTracksForAlbum(newestAlbum);
-        redisClient.hmset(`artist:${artist.id}`,
-                          {newest_track_ids : JSON.stringify(newestTracks.map(x => x.id))},
-                          (err, res) => {
-                              if (err) {
-                                  console.error(err);
-                              }
-                          });
+        // Order albums by release date descending. Can't just take the newest album from above loop because it might
+        // not have a full 10 tracks
+        validSpotifyAlbums = validSpotifyAlbums.sort((x, y) => Date.parse(y.release_date) - Date.parse(x.release_date));
 
-        for (const spotifyTrack of newestTracks) {
+        // Now get the tracks starting at most recent album and moving older, deduping as we go, until we get enough
+        // const newestTracks: SpotifyTrack[] = await spotifyHelper.getAllTracksForAlbum(newestAlbum);
+        const newestTracks: Map<string, SpotifyTrack> = new Map();
+        let albumIndex                                = 0;
+        while (newestTracks.size < 15 && albumIndex < validSpotifyAlbums.length) {
+            const album       = validSpotifyAlbums[albumIndex];
+            const albumTracks = await spotifyHelper.getAllTracksForAlbum(album);
+            // For every track of this album, only add the ones we haven't seen yet. Shouldn't be normal to get
+            // duplicates, may be impossible.
+            for (const track of albumTracks) {
+                if (!newestTracks.has(track.id)) {
+                    newestTracks.set(track.id, track);
+                }
+            }
+
+            albumIndex++;
+        }
+
+        // Pull out our info into arrays here versus the continuous calling of Array.from every time they're used
+        const newestTrackKeys: string[]         = Array.from(newestTracks.keys());
+        const newestTrackValues: SpotifyTrack[] = Array.from(newestTracks.values());
+
+        redisClient.hmset(`artist:${artist.id}`, {newest_track_ids : JSON.stringify(newestTrackKeys)}, (err, res) => {
+            if (err) {
+                console.error(err);
+            }
+        });
+
+        // Get and insert the actual track objects for all newest_track_ids we've saved on the artist
+        for (const spotifyTrack of newestTrackValues) {
             const redisTrack: any = spotifyToRedisTrack(spotifyTrack);
             redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
                 if (err) {
@@ -256,11 +268,9 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
             });
         }
 
-        newestTracksFromSpotify = newestTracksFromSpotify.concat(newestTracks.slice(0, tracksPerArtist));
+        newestTracksFromSpotify = newestTracksFromSpotify.concat(newestTrackValues.slice(0, tracksPerArtist));
     } else {
         console.log(`Have newest track ids for artist ${artist.id}`);
-        // TODO :: Need to handle case of newest track ids not having enough tracks - if newest_track_ids.length <
-        // tracksPerArtist then get more from saved albums
         for (const trackId of artist.newest_track_ids) {
             // See if we have track in our cache
             const getTrackPromise: Promise<RedisTrack> = new Promise((resolve, reject) => {
