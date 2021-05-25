@@ -1,82 +1,84 @@
-Guns N' Roses
-Stevie Nicks
-Foo Fighters
-Miley Cyrus
-Megan Thee Stallion
-G-Eazy
-Run The Jewels
-Brandi Carlile
-Cage The Elephant
-Portugal. The Man
-Young The Giant
-Maren Morris
-Black Pumas
-Future Islands
-James Murphy
-Jimmy Eat World
-Finneas
-Polo G
-Jack Harlow
-Milky Chance
-Jessie Reyez
-Dominic Fike
-Chromeo
-Mavis Staples
-Jon Batiste
-Walk Off The Earth
-Olivia O'Brien
-MAX
-Digable Planets
-Kota The Friend
-Mod Sun
-Turkuaz
-Remain In Light
-Village People
-Gracie Abrams
-Matt Nathanson
-Watchhouse
-Hobo Johnson
-Lawrence
-Hamilton Leithauser
-Absofacto
-Joywave
-Big Freedia
-MUNA
-Atlas Genius
-White Reaper
-Mondo Cozmo
-Ripe
-Meg Myers
-North Mississippi Allstars
-Spafford
-Devotchka
-Babyjake
-Donna Missal
-Reignwolf
-JJ Wilde
-99 Neighbors
-Smith & Thell
-Moonalice
-Suki Waterhouse
-DJ Z-Trip
-Black Joe Lewis & The Honeybears
-The Last Bandoleros
-Valley
-SIX60
-In The Valley Below
-Oliver Riot
-The Alive
-Crimson Apple
-HOKO
-Molly Moore
-Chris Pierce
-Pacific Radio
-Buffalo Gospel
-S8NT eLEKTRIC
-Peter Harper
-Lily Meola
-Sam Johnson
-OTTTO
-Grass Child
-Obsidian Son
-Silverado Pickups
+Stevie Nicks,1
+G-Eazy,1
+Brandi Carlile,1
+Maren Morris,1
+James Murphy,1
+Finneas,1
+Polo G,1
+Chromeo,1
+Mavis Staples,1
+Kota The Friend,1
+Gracie Abrams,1
+Lawrence,1
+Hamilton Leithauser,1
+Joywave,1
+Big Freedia,1
+MUNA,1
+Spafford,1
+Devotchka,1
+Babyjake,1
+Suki Waterhouse,1
+DJ Z-Trip,1
+In The Valley Below,1
+Black Joe Lewis & The Honeybears,1
+Oliver Riot,1
+Crimson Apple,1
+HOKO,1
+Peter Harper,1
+Lily Meola,1
+Grass Child,1
+
+Guns N' Roses,2
+Miley Cyrus,2
+Run The Jewels,2
+Portugal. The Man,2
+Young The Giant,2
+Milky Chance,2
+Dominic Fike,2
+Olivia O'Brien,2
+Digable Planets,2
+Matt Nathanson,2
+Hobo Johnson,2
+White Reaper,2
+Mondo Cozmo,2
+Ripe,2
+Meg Myers,2
+Reignwolf,2
+North Mississippi Allstars,2
+JJ Wilde,2
+Smith & Thell,2
+The Last Bandoleros,2
+SIX60,2
+Pacific Radio,2
+Molly Moore,2
+S8NT ELEKTRIC,2
+OTTTO,2
+Silverado Pickups,2
+
+Foo Fighters,3
+Megan Thee Stallion,3
+Cage The Elephant,3
+Black Pumas,3
+Future Islands,3
+Jimmy Eat World,3
+Jack Harlow,3
+Jessie Reyez,3
+Jon Batiste,3
+Walk Off The Earth,3
+MAX,3
+Mod Sun,3
+Turkuaz,3
+Village People,3
+Watchhouse,3
+Absofacto,3
+Atlas Genius,3
+Donna Missal,3
+99 Neighbors,3
+Moonalice,3
+Valley,3
+Almost Monday,3
+The Alive,3
+Chris Pierce,3
+Buffalo Gospel,3
+Sam Johnson,3
+Obsidian Son,3
