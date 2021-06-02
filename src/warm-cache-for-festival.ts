@@ -129,6 +129,7 @@ async function main() {
         "pitchfork" : [ 2021 ],
         "lollapalooza" : [ 2021 ],
         "acl" : [ 2021 ],
+        "shaky" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};

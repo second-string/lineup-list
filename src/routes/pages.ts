@@ -20,6 +20,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork"},
     {display_name : "Lollapalooza", years : [ 2021 ], name : "lollapalooza"},
     {display_name : "Austin City Limits", years : [ 2021 ], name : "acl"},
+    {display_name : "Shaky Knees", years : [ 2021 ], name : "shaky"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
