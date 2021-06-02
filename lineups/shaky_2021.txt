@@ -19,7 +19,6 @@ Parker Gispert,1
 Tejon Street Corner Thieves,1
 Leon Of Athens,1
 Specialists,1
-Songs For Kids,1
 
 Run The Jewels,2
 Alice Cooper,2
@@ -43,8 +42,6 @@ Geese,2
 Kid Sistr,2
 Quinton Brock,2
 The Alive,2
-Songs For Kids,2
-The Lowcountry Jukes,2
 
 The Strokes,3
 Modest Mouse,3
@@ -64,4 +61,3 @@ The Aubreys,3
 Michigander,3
 Bartees Strange,3
 Lowertown,3
-Songs For Kids,3
