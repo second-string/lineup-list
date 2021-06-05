@@ -124,11 +124,26 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
                 console.log(`Request to get artist ${artistName} failed with status ${response.status}`);
                 resolve(null);
             } else if (response.artists && response.artists.items.length > 0) {
-                // Take the first one, it's almost always correct
-                response.artists.items[0].combined_genres = reduceSpotifyGenres(response.artists.items[0].genres);
-                resolve(response.artists.items[0]);
+                // The first result is correct ~90% of the time. Unfortunately spotify weights the artists' popularity
+                // in the ordering of the list returned, so if you search for a smaller artist with a similar name as a
+                // big one, the big one will come first (e.g. Camila Cabello for CAM, Claude DeBussy for Claud, etc).
+                // See if we have an exact string match with any of the first ~7 artists before defaulting to the first
+                // in the list if not.
+                const num_to_compare = response.artists.items.length > 7 ? 7 : response.artists.items.length;
+                const adjusted_name  = artistName.trim().toLowerCase();
+                let chosen_index     = 0;
+                for (let i = 0; i <= num_to_compare; i++) {
+                    if (adjusted_name === response.artists.items[i].name.trim().toLowerCase()) {
+                        chosen_index = i;
+                        break;
+                    }
+                }
+
+                response.artists.items[chosen_index].combined_genres =
+                    reduceSpotifyGenres(response.artists.items[chosen_index].genres);
+                resolve(response.artists.items[chosen_index]);
             } else {
-                console.log(`No artists found for search term '${artistName}'`);
+                console.log(`No artists found for tearch term '${artistName}'`);
                 resolve(null);
             }
         });
