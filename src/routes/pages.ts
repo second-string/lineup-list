@@ -21,18 +21,16 @@ const supportedFestivals: Festival[] = [
     {display_name : "Lollapalooza", years : [ 2021 ], name : "lollapalooza"},
     {display_name : "Austin City Limits", years : [ 2021 ], name : "acl"},
     {display_name : "Shaky Knees", years : [ 2021 ], name : "shaky"},
+    {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo"},
+    {display_name : "III Points", years : [ 2021 ], name : "iii"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
     const router = Router();
 
-    hbs.registerHelper("stringify", (object: any): string => {
-        return JSON.stringify(object);
-    });
+    hbs.registerHelper("stringify", (object: any): string => { return JSON.stringify(object); });
 
-    hbs.registerHelper('gt', (a, b) => {
-        return (a > b);
-    });
+    hbs.registerHelper('gt', (a, b) => { return (a > b); });
 
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
@@ -296,9 +294,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         });
     });
 
-    router.get("/faq", (req: express.Request, res: express.Response) => {
-        res.render("faq");
-    });
+    router.get("/faq", (req: express.Request, res: express.Response) => { res.render("faq"); });
 
     return router;
 }
