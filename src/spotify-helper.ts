@@ -129,10 +129,14 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
                 // big one, the big one will come first (e.g. Camila Cabello for CAM, Claude DeBussy for Claud, etc).
                 // See if we have an exact string match with any of the first ~7 artists before defaulting to the first
                 // in the list if not.
-                const num_to_compare = response.artists.items.length > 7 ? 7 : response.artists.items.length;
+                const num_to_compare = response.artists.items.length > 8 ? 8 : response.artists.items.length;
                 const adjusted_name  = artistName.trim().toLowerCase();
                 let chosen_index     = 0;
-                for (let i = 0; i <= num_to_compare; i++) {
+                for (let i = 0; i < num_to_compare; i++) {
+                    if (response.artists.items[i].name === undefined) {
+                        continue;
+                    }
+
                     if (adjusted_name === response.artists.items[i].name.trim().toLowerCase()) {
                         chosen_index = i;
                         break;
