@@ -36,17 +36,9 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
     router.get("/", (req: express.Request, res: express.Response) => {
-        const sortedFestivals: Festival[] = supportedFestivals.sort((x: Festival, y: Festival) => {
-            // todo : sort on something here with year lists
-            return 0;
-            // if (x.year > y.year) {
-            //    return -1;
-            // } else if (x.year < y.year) {
-            //    return 1;
-            // } else {
-            //    return 0;
-            // }
-        });
+        // Just sort by name for now to get a constant order
+        const sortedFestivals: Festival[] =
+            supportedFestivals.sort((x: Festival, y: Festival) => x.name.localeCompare(y.name));
 
         res.render("home", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
