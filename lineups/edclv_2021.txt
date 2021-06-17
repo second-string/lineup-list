@@ -1,0 +1,240 @@
+Alesso,1
+Alison Wonderland,1
+Atliens,1
+Atmozfears,1
+Biscits,1
+Bleu Clair,1
+Blond;Ish,1
+Born Dirty,1
+The Chainsmokers,1
+Ciaran Mcauley,1
+Cid,1
+Claptone,1
+Darksiderz,1
+Mrotek,1
+Delta Heavy,1
+Loadstar,1
+Dieselboy,1
+Dom Dolla,1
+Dombresky,1
+Don Diablo,1
+Excision,1
+Fatum,1
+Flosstradamus,1
+Frank Walker,1
+Geo,1
+Gg Magree,1
+Ghastly,1
+Haliene,1
+J. Worra,1
+Jauz,1
+Peekaboo,1
+John Summit,1
+Kai Tracid,1
+Kayzo,1
+Knife Party,1
+Khromata,1
+Lady Faith,1
+Loco Dice,1
+Loud Luxury,1
+Lp Giobbi,1
+Luke Andy,1
+Mad Dog,1
+Markus Schulz,1
+The Martinez Brothers,1
+Meduza,1
+Michael Bibi,1
+Midnight Tyrannosaurus,1
+Mob Tactics,1
+Prolix,1
+Moore Kismet,1
+Morelia,1
+Nghtmre,1
+Nicky Romero,1
+Nitti Gritti,1
+Noize Suppressor,1
+Noizu,1
+Omnom,1
+Paul Oakenfold,1
+Paul Van Dyk,1
+Peekaboo,1
+Phantoms,1
+The Prophet,1
+Ran-D,1
+Reality Test,1
+Said The Sky,1
+Seven Lions,1
+Shiverz,1
+Sidepiece,1
+Solardo,1
+Vintage Culture,1
+Sullivan King,1
+Sunny Lax,1
+Tchami,1
+Testpilot,1
+Tsuruda,1
+Tweekacore,1
+Tyeguys,1
+Vini Vici,1
+Wuki,1
+Zhu,1
+
+12th Planet,2
+1788-L,2
+Abraxis,2
+Ac Slater,2
+Adaro,2
+Adin,2
+Ahmed Romel,2
+Alan Walker,2
+Alessandra Roncone,2
+Andrew Rayel,2
+Anna Lunoe,2
+Armnhmr,2
+Avision,2
+Bellecour,2
+Benny Benassi,2
+Bijou,2
+Blanke,2
+Blossom,2
+Bt,2
+Charlotte De Witte,2
+Dabin,2
+Deadmau5,2
+Devault,2
+Dillinja,2
+Diplo,2
+Lee Foss,2
+Dj Snake,2
+Dr. Fresch,2
+Dustycloud,2
+Elephante,2
+Eli Brown,2
+Enrico Sangiuliano,2
+Fallen,2
+Richter,2
+Ferry Corsten,2
+Gammer,2
+K?D,2
+Ganesh,2
+Ganja White Night,2
+Grum,2
+Gryffin,2
+Gunz For Hire,2
+Ilan Bluestone,2
+Illuminize,2
+Jason Ross,2
+Junkie Kid,2
+Kaivon,2
+Kill Script,2
+Kloud,2
+Kshmr,2
+Lil Texas,2
+Louis The Child,2
+Lucii,2
+Maceo Plex,2
+Martin Garrix,2
+Matroda,2
+Muzz,2
+Oliver Heldens,2
+Pendulum Trinity,2
+Reinier Zonneveld,2
+Sage Armstrong,2
+Saymyname,2
+Shei,2
+Sidepiece,2
+Slander,2
+Soren,2
+Svdden,2
+Death,2
+TIËSTO,2
+Toneshifterz,2
+Tony Romera,2
+Vini Vici,2
+Vintage Culture,2
+Whethan,2
+Wooli,2
+
+12th Planet,3
+Saymyname,3
+3lau,3
+Afrojack,3
+R3hab,3
+Alpha 9,3
+Aly & Fila,3
+Andrew Bayer,3
+Artbat,3
+Arty,3
+Audien,3
+Audiofreq,3
+Black Coffee,3
+Black V Neck,3
+Borgore,3
+Casmalia,3
+Code Black,3
+Cosmic Gate,3
+Crime Family,3
+Blvckjesus,3
+Wshngtn,3
+Cut Snake,3
+Da Tweekaz,3
+Declan James,3
+Dimension,3
+DJ Diesel,3
+Dr Phunk,3
+Dubfire,3
+Nicole Moudaber,3
+Paco Osuna,3
+Duke Dumont,3
+Eric Prydz,3
+Fury,3
+Habstrakt,3
+Herobust,3
+Spag Heddy,3
+Infected Mushroom,3
+Jaytech,3
+Jerome Isma-Ae,3
+John Summit,3
+Jorza,3
+Joyryde,3
+Kaskade,3
+Knife Party,3
+Kygo,3
+Lane 8,3
+Le Youth,3
+Lee Foss,3
+Liquid Stranger,3
+Lost Kings,3
+Maduk,3
+Malaa,3
+Marauda,3
+Mathame,3
+Mc Dino,3
+Modestep,3
+Mr. Brooks,3
+Nina Kraviz,3
+Noisecontrollers,3
+Patrick Topping,3
+Qrion,3
+Rezz,3
+Rob Gee,3
+Slander,3
+Said The Sky,3
+Snakehips,3
+Solardo,3
+Sub Zero Project,3
+Subtronics,3
+Throttle,3
+Timmy Trumpet,3
+Tokimonsta,3
+Troyboi,3
+Vnssa,3
+Walker & Royce,3
+Water Spirit,3
+Wax Motif,3
+Westend,3
+Wildstylez,3
+William Black,3
+Z-Trip,3
+Zedd,3
+Zomboy,3

@@ -127,9 +127,9 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
                 // The first result is correct ~90% of the time. Unfortunately spotify weights the artists' popularity
                 // in the ordering of the list returned, so if you search for a smaller artist with a similar name as a
                 // big one, the big one will come first (e.g. Camila Cabello for CAM, Claude DeBussy for Claud, etc).
-                // See if we have an exact string match with any of the first 15 artists before defaulting to the first
+                // See if we have an exact string match with any of the first ~7 artists before defaulting to the first
                 // in the list if not.
-                const num_to_compare = response.artists.items.length > 16 ? 16 : response.artists.items.length;
+                const num_to_compare = response.artists.items.length > 8 ? 8 : response.artists.items.length;
                 const adjusted_name  = artistName.trim().toLowerCase();
                 let chosen_index     = 0;
                 for (let i = 0; i < num_to_compare; i++) {
