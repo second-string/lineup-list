@@ -115,6 +115,11 @@ async function warm(festival: string, years: number[]) {
 }
 
 async function main() {
+    if (!process.env.DEPLOY_STAGE || process.env.DEPLOY_STAGE === '') {
+        console.log("Need to source setup_env.sh to set env variables");
+        process.exit(1);
+    }
+
     // A dict of each festival holding all the years we support for that festival
     const supportedFestivals: {[key: string]: number[]} = {
         "coachella" : [ 2020 ],
