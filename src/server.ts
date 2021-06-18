@@ -49,8 +49,11 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
 
 // Set canonical for hbs main template to stick in head meta tag
 app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
-    const protocol          = forceHttp ? "http" : "https";
-    res.locals.canonicalUrl = `${protocol}://${req.get('host')}${req.originalUrl}`;
+    const protocol = forceHttp ? "http" : "https";
+    // res.locals.canonicalUrl = `${protocol}://${req.get('host')}${req.originalUrl}`;
+    res.locals.canonicalUrl      = `${protocol}://lineuplist.live${req.originalUrl}`;
+    res.locals.openGraphUrl = `${protocol}://lineuplist.live${req.originalUrl}`;
+    res.locals.openGraphImageUrl = `${protocol}://lineuplist.live/opengraph_lineuplist.png`;
     next();
 });
 

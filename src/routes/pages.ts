@@ -196,7 +196,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         res.render("customize-list", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
-            titleOverride : "Customize",
+            titleOverride : "Customize Playlist",
             festival,
             festivalYear : queryYear,
             artists,

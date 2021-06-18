@@ -6,7 +6,7 @@
 
     {{#if titleOverride}}
     <title>{{titleOverride}} - Lineup List</title>
-    <meta property="og:title" content="{{titleOverride}} - Lineup List">
+    <meta property="og:title" content="{{titleOverride}}">
     {{else}}
     <title>Lineup List</title>
     <meta property="og:title" content="Lineup List">
@@ -25,10 +25,15 @@
     {{/if}}
 
     <link rel="stylesheet" href="/css/style.css">
-    <meta property="og:description" content="Generate a unique lineup and playlist for a festival from your custom filters">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="{{openGraphUrl}}" />
+    <meta property="og:description" content="Generate unique playlists for music festivals from your own custom filters and settings" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{openGraphImageUrl}}" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta name="twitter:card" content="summary" />
     <!-- Icon made by surang from www.flaticon.com -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon.ico">
