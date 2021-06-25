@@ -90,7 +90,14 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         const playlistName: string = `${sessionData.festivalDisplayName} ${sessionData.festivalYear} - Lineup List`;
         const playlist: any = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
-        const trackUris: string[]  = sessionData.trackIdsStr.split(',').map(x => `spotify:track:${x}`);
+
+        // Saw an instance of trackIds being undefined on the server, not sure if all sessiondata was missing or just
+        // tracks somehow
+        if (sessionData.trackIdsStr == undefined) {
+            return res.status(500).send(
+                "Server state is wonky. Try returning to the customize or personlized lineup screen and try again. Sorry!");
+        }
+        const trackUris: string[] = sessionData.trackIdsStr.split(',').map(x => `spotify:track:${x}`);
 
         const success: boolean = await spotifyHelper.addTracksToPlaylist(access, playlist, trackUris);
         if (!success) {
