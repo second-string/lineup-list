@@ -93,7 +93,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         // Saw an instance of trackIds being undefined on the server, not sure if all sessiondata was missing or just
         // tracks somehow
-        if (sessionData.trackIdsStr == undefined) {
+        if (sessionData.trackIdsStr === undefined) {
             return res.status(500).send(
                 "Server state is wonky. Try returning to the customize or personlized lineup screen and try again. Sorry!");
         }
