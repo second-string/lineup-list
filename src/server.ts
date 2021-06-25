@@ -53,7 +53,7 @@ app.use((req: express.Request, res: express.Response, next: express.NextFunction
     // res.locals.canonicalUrl = `${protocol}://${req.get('host')}${req.originalUrl}`;
     res.locals.canonicalUrl      = `${protocol}://lineuplist.live${req.originalUrl}`;
     res.locals.openGraphUrl = `${protocol}://lineuplist.live${req.originalUrl}`;
-    res.locals.openGraphImageUrl = `${protocol}://lineuplist.live/opengraph_lineuplist.png`;
+    res.locals.openGraphImageUrl = `${protocol}://lineuplist.live/opengraph_lineuplist.jpg`;
     next();
 });
 
