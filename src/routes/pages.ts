@@ -24,6 +24,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo"},
     {display_name : "III Points", years : [ 2021 ], name : "iii"},
     {display_name : "EDC Las Vegas", years : [ 2021 ], name : "edclv"},
+    {display_name : "New Orleans Jazz Fest", years : [ 2021 ], name : "jazzfest"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {

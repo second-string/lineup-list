@@ -22,3 +22,4 @@ setup_env.sh
 
 # vim swap files
 *.swp
+*.swo
