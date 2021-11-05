@@ -140,6 +140,7 @@ async function main() {
         "edclv" : [ 2021 ],
         "jazzfest" : [ 2021 ],
         "lib" : [ 2022 ],
+        "daynvegas" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};
