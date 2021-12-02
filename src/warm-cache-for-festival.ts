@@ -103,6 +103,7 @@ async function warm(festival: string, years: number[]) {
                     console.log(spotifyArtistToGetTracks);
                     console.log("------------------");
                     console.log(redisArtist);
+                    continue;
                 }
                 await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
                 await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
@@ -141,6 +142,7 @@ async function main() {
         "jazzfest" : [ 2021 ],
         "lib" : [ 2022 ],
         "daynvegas" : [ 2021 ],
+        "audacy" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};
