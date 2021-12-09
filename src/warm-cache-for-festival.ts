@@ -143,6 +143,8 @@ async function main() {
         "lib" : [ 2022 ],
         "daynvegas" : [ 2021 ],
         "audacy" : [ 2021 ],
+        "primaverala" : [ 2022 ],
+        "picnic" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};

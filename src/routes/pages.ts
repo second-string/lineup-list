@@ -28,6 +28,8 @@ const supportedFestivals: Festival[] = [
     {display_name : "Lightning in a Bottle", years : [ 2022 ], name : "lib"},
     {display_name : "Day N Vegas", years : [ 2021 ], name : "daynvegas"},
     {display_name : "Audacy Beach Festival", years : [ 2021 ], name : "audacy"},
+    {display_name : "Primavera Sound LA", years : [ 2022 ], name : "primaverala"},
+    {display_name : "This Ain't No Picnic", years : [ 2022 ], name : "picnic"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
