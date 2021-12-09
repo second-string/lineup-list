@@ -145,6 +145,9 @@ async function main() {
         "audacy" : [ 2021 ],
         "primaverala" : [ 2022 ],
         "picnic" : [ 2022 ],
+        "primaverawknd1" : [ 2022 ],
+        "primaverawknd2" : [ 2022 ],
+        "primaveraciutat" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
