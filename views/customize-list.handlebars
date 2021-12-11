@@ -85,8 +85,8 @@
                     <input type="checkbox" id="uncheckAllArtists" onchange="uncheckAllArtistsChanged()" checked>
                     Check/Uncheck all artists</label>
                 {{#each artists}}
-                    <label for="{{this.id}}-checkbox" id="{{this.id}}-label" class="pure-checkbox">
-                    <input class="artistCheckbox" id="{{this.id}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
+                    <label for="{{this.id}}-day-{{this.day}}-checkbox" id="{{this.id}}-day-{{this.day}}-label" class="pure-checkbox">
+                    <input class="artistCheckbox" id="{{this.id}}-day-{{this.day}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
                     {{this.name}}</label>
                 {{/each}}
             </div>
@@ -188,8 +188,8 @@ function refreshArtistList() {
         var artistDay = artists[i].getAttribute("data-day");
 
         // make sure we hide or show the whole div containing checkbox and name
-        var artistLabel = document.getElementById(artists[i].value + "-label");
-        var artistCheckbox = document.getElementById(artists[i].value + "-checkbox");
+        var artistLabel = document.getElementById(artists[i].value + "-day-" + artistDay + "-label");
+        var artistCheckbox = document.getElementById(artists[i].value + "-day-" + artistDay + "-checkbox");
         var opacity = getArtistOpacity(selectedGenres, artistGenres);
         artistLabel.style.opacity = opacity;
         artistCheckbox.style.opacity = opacity;
@@ -209,6 +209,10 @@ function refreshArtistList() {
 
 function getArtistOpacity(selectedGenres, artistGenres) {
     var artistGenresCount = artistGenres.length;
+    if (artistGenresCount == 0) {
+        return 1.0;
+    }
+
     var selectedArtistGenresCount = artistGenres.reduce((total, currentGenre) => {
         if (selectedGenres.includes(currentGenre)) {
             total++;
