@@ -148,6 +148,7 @@ async function main() {
         "primaverawknd1" : [ 2022 ],
         "primaverawknd2" : [ 2022 ],
         "primaveraciutat" : [ 2022 ],
+        "crssd" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
