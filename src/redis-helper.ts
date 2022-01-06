@@ -329,11 +329,13 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
         // We don't have setlist tracks. Convert the artist to an mbid, get the most recent setlists, get the first 10
         // track names spread across however many setlists it takes, search each of those track names on spotify, then
         // save the first result for each track
+        console.log("Looking for setlist tracks for the first time");
+
+        // This will return null if it fails to find an mbid for an artist. That's okay, the getTracksFromSetlists
+        // function will short circuit if mbid passed is null. This lets us still save an empty list of setlist tracks
+        // in redis for this artist to prevent us from trying to get setlist tracks every time a playlist is created
+        // with tracks from recent setlists.
         const artistMbid = await mbHelper.spotifyToMbArtistId(artist.id);
-        if (artistMbid === null) {
-            // Return if we couldn't find an mbid for them
-            return [];
-        }
 
         // Gets 15 (ish, maybe more) setlist tracks for the artist from past setlist. No de-duping. Need to slice to
         // tracksPerArist before showing to user, and 15 drops rapidly once searched and filtered for nulls and dupes

@@ -24,6 +24,10 @@ async function getArtistSetlists(artistMbid: string): Promise<SetlistFmSetlist[]
 }
 
 export async function getTracksFromSetlists(mbArtistId: string): Promise<SetlistFmSong[]> {
+    if (mbArtistId == null) {
+        return [];
+    }
+
     const setlists: SetlistFmSetlist[] = await getArtistSetlists(mbArtistId);
 
     // Iterate through every setlist until we find the first setlist with songs. Save 15 or more tracks so we have
