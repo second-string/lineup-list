@@ -34,6 +34,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Primavera Sound Barcelona (weekend 2)", years : [ 2022 ], name : "primaverawknd2"},
     {display_name : "Primavera a la Ciutat", years : [ 2022 ], name : "primaveraciutat"},
     {display_name : "CRSSD", years : [ 2022 ], name : "crssd"},
+    {display_name : "Okeechobee", years : [ 2022 ], name : "okeechobee"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
