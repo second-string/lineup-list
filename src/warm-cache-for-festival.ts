@@ -100,6 +100,10 @@ async function warm(festival: string, years: number[]) {
                 // if we didn't have this artist previously. Don't save return values, we don't care. Do setlists before
                 // new tracks to help with backoff
                 if (spotifyArtistToGetTracks.id === undefined) {
+                    console.log(spotifyArtist);
+                    console.log("------------------");
+                    console.log(redisArtist);
+                    console.log("------------------");
                     console.log(spotifyArtistToGetTracks);
                     console.log("------------------");
                     console.log(redisArtist);
@@ -124,7 +128,7 @@ async function main() {
     // A dict of each festival holding all the years we support for that festival
     const supportedFestivals: {[key: string]: number[]} = {
         "coachella" : [ 2020 ],
-        "bottlerock" : [ 2021, 2020 ],
+        "bottlerock" : [ 2022, 2021, 2020 ],
         "osl" : [ 2021, 2019 ],
         "hardsummer" : [ 2021 ],
         "bonnaroo" : [ 2021 ],
