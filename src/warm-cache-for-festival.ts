@@ -131,7 +131,7 @@ async function main() {
         "bottlerock" : [ 2022, 2021, 2020 ],
         "osl" : [ 2021, 2019 ],
         "hardsummer" : [ 2021 ],
-        "bonnaroo" : [ 2021 ],
+        "bonnaroo" : [ 2022, 2021 ],
         "govball" : [ 2021 ],
         "ohana" : [ 2021 ],
         "riot" : [ 2021 ],
