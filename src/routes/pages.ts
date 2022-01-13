@@ -8,7 +8,7 @@ import * as constants   from "../constants";
 import * as redisHelper from "../redis-helper";
 
 const supportedFestivals: Festival[] = [
-    {display_name : "Coachella", years : [ 2020 ], name : "coachella"},
+    {display_name : "Coachella", years : [ 2022, 2020 ], name : "coachella"},
     {display_name : "Bottlerock", years : [ 2022, 2021, 2020 ], name : "bottlerock"},
     {display_name : "Outside Lands", years : [ 2021, 2019 ], name : "osl"},
     {display_name : "Bonnaroo", years : [ 2022, 2021 ], name : "bonnaroo"},
