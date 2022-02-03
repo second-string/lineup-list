@@ -13,7 +13,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Outside Lands", years : [ 2021, 2019 ], name : "osl"},
     {display_name : "Bonnaroo", years : [ 2022, 2021 ], name : "bonnaroo"},
     {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer"},
-    {display_name : "The Governor's Ball", years : [ 2021 ], name : "govball"},
+    {display_name : "The Governor's Ball", years : [ 2022, 2021 ], name : "govball"},
     {display_name : "Ohanafest", years : [ 2021 ], name : "ohana"},
     {display_name : "Riot Fest", years : [ 2021 ], name : "riot"},
     {display_name : "Firefly", years : [ 2021 ], name : "firefly"},
