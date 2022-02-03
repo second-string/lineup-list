@@ -143,7 +143,7 @@ async function main() {
         "ezoo" : [ 2021 ],
         "iii" : [ 2021 ],
         "edclv" : [ 2021 ],
-        "jazzfest" : [ 2021 ],
+        "jazzfest" : [ 2022, 2021 ],
         "lib" : [ 2022 ],
         "daynvegas" : [ 2021 ],
         "audacy" : [ 2021 ],
