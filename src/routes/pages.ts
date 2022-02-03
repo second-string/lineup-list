@@ -36,6 +36,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "CRSSD", years : [ 2022 ], name : "crssd"},
     {display_name : "Okeechobee", years : [ 2022 ], name : "okeechobee"},
     {display_name : "Forecastle", years : [ 2022 ], name : "forecastle"},
+    {display_name : "Winter Wonder Grass - CA", years : [ 2022 ], name : "wwgtahoe"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
