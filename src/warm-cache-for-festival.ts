@@ -156,6 +156,7 @@ async function main() {
         "okeechobee" : [ 2022 ],
         "forecastle" : [ 2022 ],
         "wwgtahoe" : [ 2022 ],
+        "m3f" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
