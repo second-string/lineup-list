@@ -139,7 +139,7 @@ async function main() {
         "pitchfork" : [ 2021 ],
         "lollapalooza" : [ 2021 ],
         "acl" : [ 2021 ],
-        "shaky" : [ 2021 ],
+        "shaky" : [ 2022, 2021 ],
         "ezoo" : [ 2021 ],
         "iii" : [ 2021 ],
         "edclv" : [ 2021 ],
@@ -157,6 +157,7 @@ async function main() {
         "forecastle" : [ 2022 ],
         "wwgtahoe" : [ 2022 ],
         "m3f" : [ 2022 ],
+        "rollingloudny" : [ 2021 ],
     };
 
     let festivals: {[key: string]: number[]};

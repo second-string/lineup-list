@@ -20,7 +20,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork"},
     {display_name : "Lollapalooza", years : [ 2021 ], name : "lollapalooza"},
     {display_name : "Austin City Limits", years : [ 2021 ], name : "acl"},
-    {display_name : "Shaky Knees", years : [ 2021 ], name : "shaky"},
+    {display_name : "Shaky Knees", years : [ 2022, 2021 ], name : "shaky"},
     {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo"},
     {display_name : "III Points", years : [ 2021 ], name : "iii"},
     {display_name : "EDC Las Vegas", years : [ 2021 ], name : "edclv"},
@@ -38,6 +38,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Forecastle", years : [ 2022 ], name : "forecastle"},
     {display_name : "Winter Wonder Grass - CA", years : [ 2022 ], name : "wwgtahoe"},
     {display_name : "McDowell Mountain Music Festival", years : [ 2022 ], name : "m3f"},
+    {display_name : "Rolling Loud NY", years : [ 2021 ], name : "rollingloudny"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
