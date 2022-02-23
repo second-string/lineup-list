@@ -135,7 +135,7 @@ async function main() {
         "govball" : [ 2022, 2021 ],
         "ohana" : [ 2021 ],
         "riot" : [ 2021 ],
-        "firefly" : [ 2021 ],
+        "firefly" : [ 2022, 2021 ],
         "pitchfork" : [ 2021 ],
         "lollapalooza" : [ 2021 ],
         "acl" : [ 2021 ],
