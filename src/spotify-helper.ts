@@ -317,10 +317,16 @@ export async function getOrCreatePlaylist(
 
 export async function addTracksToPlaylist(accessToken: string, playlistObj: SpotifyPlaylist, trackUris: string[]):
     Promise<boolean> {
+    // PUT overwrites all other tracks in the playlist
     const options: any = helpers.baseSpotifyHeaders("PUT", accessToken);
-    for (let i = 0; i <= Math.floor(trackUris.length / 100); i++) {
-        // PUT overwrites all other tracks in the playlist
-        options.body = {uris : trackUris.slice(i * 100, i * 100 + 99)};
+    for (let i = 0; i < Math.ceil(trackUris.length / 100); i++) {
+        options.body   = {uris : trackUris.slice(i * 100, (i + 1) * 100)};
+        let urisLength = options.body.uris.length;
+        if (urisLength === 0) {
+            console.warn(
+                "Trying to add tracks to playlist w/ uri list length zero. This shouldn't happen with working paging logic - skipping this loop iteration to hopefully drop out of loop condition successfully");
+            continue;
+        }
 
         // Stop overwriting after first set of tracks
         if (i !== 0) {
@@ -338,7 +344,7 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
             return false;
         }
 
-        console.log(`Added a page of tracks to playlist: ${i * 100} to ${i * 100 + 99}`);
+        console.log(`Added a page of tracks to playlist: ${i * 100} to ${i * 100 + urisLength}`);
     }
 
     return true;

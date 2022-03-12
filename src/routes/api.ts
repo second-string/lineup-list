@@ -103,6 +103,8 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         if (!success) {
             console.log(`Error adding ${trackUris.length} tracks to playlist ${playlistName}`);
             return res.status(500).send("Server error, please try again.");
+        } else {
+            console.log(`Successfully added ${trackUris.length} tracks to playlist ${playlistName}`);
         }
 
         const playlistUrl: string = playlist.external_urls.spotify;
