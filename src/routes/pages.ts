@@ -39,6 +39,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Winter Wonder Grass - CA", years : [ 2022 ], name : "wwgtahoe"},
     {display_name : "McDowell Mountain Music Festival", years : [ 2022 ], name : "m3f"},
     {display_name : "Rolling Loud NY", years : [ 2021 ], name : "rollingloudny"},
+    {display_name : "Stern Grove Festival", years : [ 2022 ], name : "sterngrove"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
