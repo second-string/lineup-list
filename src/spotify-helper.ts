@@ -321,7 +321,7 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
     const options: any = helpers.baseSpotifyHeaders("PUT", accessToken);
     for (let i = 0; i < Math.ceil(trackUris.length / 100); i++) {
         options.body   = {uris : trackUris.slice(i * 100, (i + 1) * 100)};
-        let urisLength = options.body.uris.length;
+        const urisLength = options.body.uris.length;
         if (urisLength === 0) {
             console.warn(
                 "Trying to add tracks to playlist w/ uri list length zero. This shouldn't happen with working paging logic - skipping this loop iteration to hopefully drop out of loop condition successfully");

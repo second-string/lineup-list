@@ -129,7 +129,7 @@ async function main() {
     const supportedFestivals: {[key: string]: number[]} = {
         "coachella" : [ 2022, 2020 ],
         "bottlerock" : [ 2022, 2021, 2020 ],
-        "osl" : [ 2021, 2019 ],
+        "osl" : [ 2022, 2021, 2019 ],
         "hardsummer" : [ 2021 ],
         "bonnaroo" : [ 2022, 2021 ],
         "govball" : [ 2022, 2021 ],
