@@ -159,6 +159,7 @@ async function main() {
         "m3f" : [ 2022 ],
         "rollingloudny" : [ 2021 ],
         "sterngrove" : [ 2022 ],
+        "tomorrowland" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
