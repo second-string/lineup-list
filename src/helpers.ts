@@ -63,7 +63,12 @@ export async function instrumentCall(url: string, options: any, logCurl: boolean
         }
     } catch (e) {
         error = unparsedRes === null ? {} : unparsedRes;
-        throw e;
+
+        if (e.name === 'FetchError') {
+            console.error(`FetchError for ${url}, dropping request and continuing`);
+        } else {
+            throw e;
+        }
     } finally {
         // Log out a curl for every call we instrument.
         if (logCurl && process.env.DEPLOY_STAGE !== 'PROD') {
