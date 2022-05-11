@@ -138,7 +138,7 @@ async function main() {
         "firefly" : [ 2022, 2021 ],
         "pitchfork" : [ 2021 ],
         "lollapalooza" : [ 2021 ],
-        "acl" : [ 2021 ],
+        "acl" : [ 2022, 2021 ],
         "shaky" : [ 2022, 2021 ],
         "ezoo" : [ 2021 ],
         "iii" : [ 2021 ],

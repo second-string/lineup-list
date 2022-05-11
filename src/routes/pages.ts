@@ -19,7 +19,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Firefly", years : [ 2022, 2021 ], name : "firefly"},
     {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork"},
     {display_name : "Lollapalooza", years : [ 2021 ], name : "lollapalooza"},
-    {display_name : "Austin City Limits", years : [ 2021 ], name : "acl"},
+    {display_name : "Austin City Limits", years : [ 2022, 2021 ], name : "acl"},
     {display_name : "Shaky Knees", years : [ 2022, 2021 ], name : "shaky"},
     {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo"},
     {display_name : "III Points", years : [ 2021 ], name : "iii"},
