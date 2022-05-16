@@ -41,6 +41,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Rolling Loud NY", years : [ 2021 ], name : "rollingloudny"},
     {display_name : "Stern Grove Festival", years : [ 2022 ], name : "sterngrove"},
     {display_name : "Tomorrowland", years : [ 2022 ], name : "tomorrowland"},
+    {display_name : "Floatfest", years : [ 2022 ], name : "floatfest"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
