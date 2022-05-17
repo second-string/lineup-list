@@ -162,6 +162,7 @@ async function main() {
         "tomorrowland" : [ 2022 ],
         "floatfest" : [ 2022 ],
         "skyline" : [ 2022 ],
+        "sunset" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
