@@ -161,6 +161,7 @@ async function main() {
         "sterngrove" : [ 2022 ],
         "tomorrowland" : [ 2022 ],
         "floatfest" : [ 2022 ],
+        "skyline" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
