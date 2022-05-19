@@ -1,93 +1,93 @@
-Green Day
-Post Malone
-SZA
-Jack Harlow
-Weezer
-Phoebe Bridgers
-Illenium
-Lil Uzi Vert
-Kali Uchis
-Disclosure
-Mitski
-Polo & Pan
-Anitta
-Dominic Fike
-Oliver Tree
-Mac DeMarco
-Pusha T
-Mt. Joy
-Kim Petras
-Local Natives
-The Marías
-Larry June
-100 gecs
-Parcels
-Dayglow
-Purple Disco Machine
-Hiatus Kaiyote
-Washed Out
-Ashe
-Surf Mesa
-Wet Leg
-Sam Fender
-ROLE MODEL
-Baby Tate
-The Backseat Lovers
-Amber Mark
-Best Coast
-Franc Moody
-Pussy Riot
-Duckwrth
-Empress Of
-Rostam
-Zoe Wees
-Faye Webster
-Griff
-Anna Lunoe
-KennyHoopla
-Maxo Kream
-Lido Pimienta
-Briston Maroney
-Sampa The Great
-Del Water Gap
-Robert Glasper
-Inner Wave
-Tyla Yaweh
-Glaive
-The Beths
-Petey
-ODIE
-Benny Sings
-thuy
-MICHELLE
-Jelani Aryeh
-Wilderado
-Cory Henry
-Emo Night
-PawPaw Rod
-L'Rain
-Cassandra Jenkins
-Unusual Demont
-Forester
-THE BLSSM
-SPELLLING
-Tre' Amani
-Claude VonStroke
-Dixon
-TOKiMONSTA
-ABSOLUTE.
-AMÉMÉ
-ANNA
-Avalon Emerson
-Barry Can't Swim
-Cassian
-DJ Minx
-DJ Seinfeld
-Ellen Allien
-India Jordan
-J. Worra
-JOPLYN
-Major League Djz
-MPHD
-Tiffany Tyson
-Perel
+SZA,1
+Phoebe Bridgers,1
+Lil Uzi Vert,1
+Disclosure,1
+Oliver Tree,1
+The Marías,1
+Dayglow,1
+Purple Disco Machine,1
+Hiatus Kaiyote,1
+Washed Out,1
+Ashe,1
+ROLE MODEL,1
+ANNA,1
+Best Coast,1
+Duckwrth,1
+Rostam,1
+AMÉMÉ,1
+Faye Webster,1
+Sampa The Great,1
+Lido Pimienta,1
+Del Water Gap,1
+Ellen Allien,1
+Inner Wave,1
+DJ Seinfeld,1
+The Beths,1
+Major League Djz,1
+ODIE,1
+Cory Henry,1
+India Jordan,1
+PawPaw Rod,1
+THE BLSSM,1
+
+Green Day,2
+Jack Harlow,2
+Kali Uchis,2
+Polo & Pan,2
+Anitta,2
+Mac DeMarco,2
+Local Natives,2
+Claude VonStroke,2
+Larry June,2
+Parcels,2
+TOKiMONSTA,2
+Sam Fender,2
+Franc Moody,2
+Empress Of,2
+Zoe Wees,2
+Anna Lunoe,2
+KennyHoopla,2
+Maxo Kream,2
+Robert Glasper,2
+Cassian,2
+Benny Sings,2
+J. Worra,2
+thuy,2
+MICHELLE,2
+Wilderado,2
+JOPLYN,2
+The Emo Night Tour,2
+L'Rain,2
+SPELLLING,2
+
+Post Malone,3
+Weezer,3
+Illenium,3
+Mitski,3
+Dominic Fike,3
+Pusha T,3
+Mt. Joy,3
+Kim Petras,3
+100 gecs,3
+Surf Mesa,3
+Dixon,3
+Wet Leg,3
+Baby Tate,3
+The Backseat Lovers,3
+Amber Mark,3
+Pussy Riot,3
+Avalon Emerson,3
+Griff,3
+Briston Maroney,3
+Barry Can't Swim,3
+Tyla Yaweh,3
+Glaive,3
+Petey,3
+DJ Minx,3
+Jelani Aryeh,3
+Cassandra Jenkins,3
+Unusual Demont,3
+Forester,3
+Tre' Amani,3
+ABSOLUTE.,3
+MPHD b2b Tiffany Tyson,3
