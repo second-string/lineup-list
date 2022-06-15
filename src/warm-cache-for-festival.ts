@@ -166,6 +166,7 @@ async function main() {
         "portola" : [ 2022 ],
         "daytrip" : [ 2022 ],
         "audiotistic" : [ 2022 ],
+        "abgt_gorge" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};
