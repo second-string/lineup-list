@@ -48,6 +48,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Day Trip", years : [ 2022 ], name : "daytrip"},
     {display_name : "Audiotistic", years : [ 2022 ], name : "audiotistic"},
     {display_name : "Above & Beyond Group Therapy - The Gorge", years : [ 2022 ], name : "abgt_gorge"},
+    {display_name : "Summer Breeze", years : [ 2022 ], name : "summerbreeze"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
