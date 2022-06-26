@@ -169,6 +169,7 @@ async function main() {
         "abgt_gorge" : [ 2022 ],
         "summerbreeze" : [ 2022 ],
         "madcool" : [ 2022 ],
+        "nosalive" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};

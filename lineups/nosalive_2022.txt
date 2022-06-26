@@ -1,0 +1,47 @@
+Da Chick,1
+Lefty,1
+Andrew Cushin,1
+Acid Arab,1
+The Strokes,1
+The War On Drugs,1
+Stromae,1
+Jungle,1
+Clairo,1
+Modest Mouse,1
+Fontaines D.C.,1
+Parov Stelar,1
+Balthazar,1
+Mallu Magalhães,1
+
+Florence + The Machine,2
+Jorja Smith,2
+alt-J,2
+Alec Benjamin,2
+Glass Animals,2
+Celeste,2
+Dino D’Santiago,2
+Nilüfer Yanya,2
+Seasick Steve,2
+Os Quatro e Meia,2
+Inhaler,2
+
+Metallica,3
+Stormzy,3
+Royal Blood,3
+M.I.A.,3
+St. Vincent,3
+Don Broco,3
+Tom Misch,3
+Sea Girls,3
+
+Imagine Dragons,4
+Da Weasel,4
+Two Door Cinema Club,4
+HAIM,4
+Phoebe Bridgers,4
+Caribou,4
+Parcels,4
+Mother Mother,4
+Hope Tala,4
+Manel Cruz,4
+
