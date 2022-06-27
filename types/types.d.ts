@@ -144,7 +144,13 @@ interface SpotifyExternalUrls {
 interface Festival {
     display_name: string;
     name: string;
+    region: string;
     years: number[];
+}
+
+interface Region {
+    display_name: string;
+    name: string
 }
 
 interface User {
