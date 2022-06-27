@@ -47,6 +47,7 @@ export LINEUPLIST_FORCE_HTTP=true-or-false-no-quotes
 echo "done."
 ```
 
+For windows, remove the `-n` and double quotes from the `echo` lines, and replace `export` with `set`.
 
 #### macOS
 1. `brew install redis npm`
@@ -60,9 +61,12 @@ echo "done."
 7. `npm start`
 8. Navigate to `https://localhost` in your browser (or just `http` if LINEUPLIST_FORCE_HTTP is set to true)
 
+Note: for Windows, all steps are the same except step 1 which require equivalent installations of redis and npm on the path, and step 8 where the application will start on port 8080 rather than 80 if in non-PROD
+
+
 ### If you've set up and run before:
-1. `./start_lineup_list.sh`
-2. Navigate to `https://localhost` in your browser (or just `http` if LINEUPLIST_FORCE_HTTP is set to true)
+1. `./start_lineup_list.sh` / `./start_lineup_list.bat`
+2. Navigate to `https://localhost` in your browser (or just `http` if LINEUPLIST_FORCE_HTTP is set to true, noting the use of port 8080 on Windows as described above)
 
 
 - GET `localhost/health` for healthcheck
