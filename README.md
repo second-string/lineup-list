@@ -80,9 +80,9 @@ If the festival only has the full lineup released with no day lineups:
 - One artist on each line, no commas, no numbers
 
 ### Adding a new festival
-1. Add a text file in the form of `[simplename]_[year].txt` in the root of the repo
+1. Add a text file in the form of `[simplename]_[year].txt` in the lineups/ folder
 2. Add support for the festival within src/warm-cache-for-festival.ts following the example of the others
-3. Add support for the festival within src/pages.ts following the example of the others
+3. Add support for the festival within src/routes/pages.ts following the example of the others
 4. Build ts files with `npm run build`
 5. Run `node dist/warm-cache-for-festival.js [simplename] [year]`
 
