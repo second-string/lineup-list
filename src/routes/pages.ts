@@ -78,7 +78,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(400).send("You need to choose a festival first.");
         }
 
-        const queryYear: number = parseInt(req.query.year, 10);
+        const queryYear: number = parseInt(req.query.year as string, 10);
         const festival: Festival =
             supportedFestivals.filter(x => x.name === req.query.festival && x.years.includes(queryYear))[0];
 

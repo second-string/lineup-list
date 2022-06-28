@@ -78,7 +78,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         }
 
         const {access, refresh, ...accessTokenResponse} =
-            await spotifyHelper.getAccessTokenFromCallback(req.query.code, req.query.error);
+            await spotifyHelper.getAccessTokenFromCallback(req.query.code as string, req.query.error);
         if (accessTokenResponse.error) {
             return res.status(500).send(accessTokenResponse.error);
         }
