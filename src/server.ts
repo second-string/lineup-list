@@ -1,4 +1,3 @@
-import os from "os";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import express from "express";
@@ -15,9 +14,6 @@ import pageRouter from "./routes/pages";
 const forceHttp: boolean =
     process.env.LINEUPLIST_FORCE_HTTP && process.env.LINEUPLIST_FORCE_HTTP === "true" ? true : false;
 
-// Windows often has port 80 already in use for various system services, so default to 8080
-const httpPortNum = os.platform() === "win32" ? 8080 : 80;
-
 const redisClient = redis.createClient();
 redisClient.on("error", (err: Error) => console.log(err));
 
@@ -26,7 +22,7 @@ if (!process.env.DEPLOY_STAGE || process.env.DEPLOY_STAGE === '') {
     console.log("Need to source setup_env.sh to set env variables");
     process.exit(1);
 }
-const port = process.env.DEPLOY_STAGE === 'PROD' ? 7443 : forceHttp ? httpPortNum : 443;
+const port = process.env.DEPLOY_STAGE === 'PROD' ? 7443 : forceHttp ? 8080 : 443;
 
 app.engine("handlebars", handlebars());
 app.set("view engine", "handlebars");
