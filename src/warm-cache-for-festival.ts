@@ -170,6 +170,7 @@ async function main() {
         "summerbreeze" : [ 2022 ],
         "madcool" : [ 2022 ],
         "nosalive" : [ 2022 ],
+        "sms" : [ 2022 ],
     };
 
     let festivals: {[key: string]: number[]};

@@ -5,3 +5,10 @@ export const mainGenres: string[] = [
     "punk",  "house", "soul",   "jazz",    "electronic", "rap",   "trap",  "disco", "techno",
     "edm",   "folk",  "trance", "funk",    "k-pop",      "latin", "reggae"
 ];
+
+export const regions: Region[] = [
+    {display_name : "Americas", name : "am"},
+    {display_name : "Asia Pacific", name : "ap"},
+    {display_name : "Europe", name : "eu"},
+    {display_name : "Middle East/Africa", name : "me"},
+];

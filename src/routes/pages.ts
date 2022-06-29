@@ -7,13 +7,6 @@ import redis from "redis";
 import * as constants   from "../constants";
 import * as redisHelper from "../redis-helper";
 
-const regions: Region[] = [
-    {display_name : "Americas", name : "am"},
-    {display_name : "Asia Pacific", name : "ap"},
-    {display_name : "Europe", name : "eu"},
-    {display_name : "Middle East/Africa", name : "me"},
-]
-
 const supportedFestivals: Festival[] = [
     {display_name : "Coachella", years : [ 2022, 2020 ], name : "coachella", region : "am"},
     {display_name : "Bottlerock", years : [ 2022, 2021, 2020 ], name : "bottlerock", region : "am"},
@@ -58,6 +51,7 @@ const supportedFestivals: Festival[] = [
     {display_name : "Summer Breeze", years : [ 2022 ], name : "summerbreeze", region : "am"},
     {display_name : "Mad Cool", years : [ 2022 ], name : "madcool", region : "am"},
     {display_name : "NOS Alive", years : [ 2022 ], name : "nosalive", region : "eu"},
+    {display_name : "SonneMondSterne", years : [ 2022 ], name : "sms", region : "eu"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
@@ -67,24 +61,24 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     hbs.registerHelper('gt', (a, b) => { return (a > b); });
 
-    hbs.registerHelper("disableoptionifregion", (object: Festival): string => { return object.name.length < 1 ? "disabled" : ""; });
+    hbs.registerHelper("disableoptionifregion",
+                       (object: Festival): string => { return object.name.length < 1 ? "disabled" : ""; });
 
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
     router.get("/", (req: express.Request, res: express.Response) => {
+        const sortedFestivals: Festival[] = [...supportedFestivals ];
 
-        const sortedFestivals: Festival[] = [...supportedFestivals];
-
-        const regionCodes = [...new Set(supportedFestivals.map(festival => festival.region))];
+        const regionCodes = [...new Set(supportedFestivals.map(festival => festival.region)) ];
 
         // add regions to the dropdown as disabled values to provide section breaks
-        for (const region of regions) {
+        for (const region of constants.regions) {
             if (regionCodes.includes(region.name))
                 sortedFestivals.push({display_name : region.display_name, years : [], name : "", region : region.name});
         }
 
-        sortedFestivals.sort((x: Festival, y: Festival) => x.region.localeCompare(y.region)
-            || x.name.localeCompare(y.name));
+        sortedFestivals.sort((x: Festival, y: Festival) =>
+                                 x.region.localeCompare(y.region) || x.name.localeCompare(y.name));
 
         res.render("home", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
