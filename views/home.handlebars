@@ -5,7 +5,7 @@
     <div style="display: flex; flex-direction: row; margin-top: 1rem; margin-bottom: .5rem; justify-content: center;">
         <select id="festival-select" name="festival" onChange="populateYearSelect()">
             {{#each supportedFestivals}}
-            <option value="{{this.name}}" data-years="{{stringify this.years}}">{{this.display_name}}</option>
+            <option value="{{this.name}}" data-years="{{stringify this.years}}" {{disableoptionifregion this}}>{{this.display_name}}</option>
             {{/each}}
         </select>
         <select name="year" id="year-select">
