@@ -8,7 +8,7 @@ node_modules/
 .DS_STORE
 
 # env
-setup_env.sh
+setup_env.*
 
 # redis
 *.rdb

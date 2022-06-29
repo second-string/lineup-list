@@ -47,6 +47,7 @@ export LINEUPLIST_FORCE_HTTP=true-or-false-no-quotes
 echo "done."
 ```
 
+For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `echo` lines, and replace `export` with `set`.
 
 #### macOS
 1. `brew install redis npm`
@@ -58,11 +59,24 @@ echo "done."
     * might need to run it twice if it hangs, it's kinda sketchy but has been working
     * handles pulling in artist info  for all supported festival
 7. `npm start`
-8. Navigate to `https://localhost` in your browser (or just `http` if LINEUPLIST_FORCE_HTTP is set to true)
+8. Navigate to `https://localhost` in your browser (or `http://localhost:8080` if LINEUPLIST_FORCE_HTTP is set to true)
+
+#### Windows
+1. Install both redis and npm either through a package manager like Chocolatey or directly from their source installers
+2. `redis-server` in separate tab
+3. set necessary env vars (see section above)
+4. `npm i`
+5. `npm run build`
+6. `node dist/warm-cache-for-festival.js`
+    * might need to run it twice if it hangs, it's kinda sketchy but has been working
+    * handles pulling in artist info  for all supported festival
+7. `npm start`
+8. Navigate to `https://localhost` in your browser (or `http://localhost:8080` if LINEUPLIST_FORCE_HTTP is set to true)
+
 
 ### If you've set up and run before:
-1. `./start_lineup_list.sh`
-2. Navigate to `https://localhost` in your browser (or just `http` if LINEUPLIST_FORCE_HTTP is set to true)
+1. `./start_lineup_list.sh` / `./start_lineup_list.bat`
+2. Navigate to `https://localhost` in your browser, or `http://localhost:8080` if the LINEUPLIST_FORCE_HTTP env var is set to true
 
 
 - GET `localhost/health` for healthcheck
