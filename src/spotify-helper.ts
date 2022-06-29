@@ -293,7 +293,7 @@ export async function getOrCreatePlaylist(
     if (playlistObj === undefined) {
         // They don't have their own lineup list playlist yet, create it
         const postOptions: any = helpers.baseSpotifyHeaders("POST", accessToken);
-        postOptions.body       = {name : playlistName, public : false, description : "helloaf"};
+        postOptions.body       = {name : playlistName, public : false, description : "Created by LineupList.live"};
 
         console.log("Creating playlist since we didn't find it in their list of existing playlists");
         const createPlaylistResponse =
