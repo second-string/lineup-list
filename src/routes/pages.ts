@@ -7,50 +7,57 @@ import redis from "redis";
 import * as constants   from "../constants";
 import * as redisHelper from "../redis-helper";
 
+const regions: Region[] = [
+    {display_name : "Americas", name : "am"},
+    {display_name : "Asia Pacific", name : "ap"},
+    {display_name : "Europe", name : "eu"},
+    {display_name : "Middle East/Africa", name : "me"},
+]
+
 const supportedFestivals: Festival[] = [
-    {display_name : "Coachella", years : [ 2022, 2020 ], name : "coachella"},
-    {display_name : "Bottlerock", years : [ 2022, 2021, 2020 ], name : "bottlerock"},
-    {display_name : "Outside Lands", years : [ 2022, 2021, 2019 ], name : "osl"},
-    {display_name : "Bonnaroo", years : [ 2022, 2021 ], name : "bonnaroo"},
-    {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer"},
-    {display_name : "The Governor's Ball", years : [ 2022, 2021 ], name : "govball"},
-    {display_name : "Ohanafest", years : [ 2021 ], name : "ohana"},
-    {display_name : "Riot Fest", years : [ 2021 ], name : "riot"},
-    {display_name : "Firefly", years : [ 2022, 2021 ], name : "firefly"},
-    {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork"},
-    {display_name : "Lollapalooza", years : [ 2022, 2021 ], name : "lollapalooza"},
-    {display_name : "Austin City Limits", years : [ 2022, 2021 ], name : "acl"},
-    {display_name : "Shaky Knees", years : [ 2022, 2021 ], name : "shaky"},
-    {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo"},
-    {display_name : "III Points", years : [ 2021 ], name : "iii"},
-    {display_name : "EDC Las Vegas", years : [ 2021 ], name : "edclv"},
-    {display_name : "New Orleans Jazz Fest", years : [ 2022, 2021 ], name : "jazzfest"},
-    {display_name : "Lightning in a Bottle", years : [ 2022 ], name : "lib"},
-    {display_name : "Day N Vegas", years : [ 2021 ], name : "daynvegas"},
-    {display_name : "Audacy Beach Festival", years : [ 2021 ], name : "audacy"},
-    {display_name : "Primavera Sound LA", years : [ 2022 ], name : "primaverala"},
-    {display_name : "This Ain't No Picnic", years : [ 2022 ], name : "picnic"},
-    {display_name : "Primavera Sound Barcelona (weekend 1)", years : [ 2022 ], name : "primaverawknd1"},
-    {display_name : "Primavera Sound Barcelona (weekend 2)", years : [ 2022 ], name : "primaverawknd2"},
-    {display_name : "Primavera a la Ciutat", years : [ 2022 ], name : "primaveraciutat"},
-    {display_name : "CRSSD", years : [ 2022 ], name : "crssd"},
-    {display_name : "Okeechobee", years : [ 2022 ], name : "okeechobee"},
-    {display_name : "Forecastle", years : [ 2022 ], name : "forecastle"},
-    {display_name : "Winter Wonder Grass - CA", years : [ 2022 ], name : "wwgtahoe"},
-    {display_name : "McDowell Mountain Music Festival", years : [ 2022 ], name : "m3f"},
-    {display_name : "Rolling Loud NY", years : [ 2021 ], name : "rollingloudny"},
-    {display_name : "Stern Grove Festival", years : [ 2022 ], name : "sterngrove"},
-    {display_name : "Tomorrowland", years : [ 2022 ], name : "tomorrowland"},
-    {display_name : "Float Fest", years : [ 2022 ], name : "floatfest"},
-    {display_name : "Skyline", years : [ 2022 ], name : "skyline"},
-    {display_name : "Sunset", years : [ 2022 ], name : "sunset"},
-    {display_name : "Portola", years : [ 2022 ], name : "portola"},
-    {display_name : "Day Trip", years : [ 2022 ], name : "daytrip"},
-    {display_name : "Audiotistic", years : [ 2022 ], name : "audiotistic"},
-    {display_name : "Above & Beyond Group Therapy - The Gorge", years : [ 2022 ], name : "abgt_gorge"},
-    {display_name : "Summer Breeze", years : [ 2022 ], name : "summerbreeze"},
-    {display_name : "Mad Cool", years : [ 2022 ], name : "madcool"},
-    {display_name : "NOS Alive", years : [ 2022 ], name : "nosalive"},
+    {display_name : "Coachella", years : [ 2022, 2020 ], name : "coachella", region : "am"},
+    {display_name : "Bottlerock", years : [ 2022, 2021, 2020 ], name : "bottlerock", region : "am"},
+    {display_name : "Outside Lands", years : [ 2022, 2021, 2019 ], name : "osl", region : "am"},
+    {display_name : "Bonnaroo", years : [ 2022, 2021 ], name : "bonnaroo", region : "am"},
+    {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer", region : "am"},
+    {display_name : "The Governor's Ball", years : [ 2022, 2021 ], name : "govball", region : "am"},
+    {display_name : "Ohanafest", years : [ 2021 ], name : "ohana", region : "am"},
+    {display_name : "Riot Fest", years : [ 2021 ], name : "riot", region : "am"},
+    {display_name : "Firefly", years : [ 2022, 2021 ], name : "firefly", region : "am"},
+    {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork", region : "am"},
+    {display_name : "Lollapalooza", years : [ 2022, 2021 ], name : "lollapalooza", region : "am"},
+    {display_name : "Austin City Limits", years : [ 2022, 2021 ], name : "acl", region : "am"},
+    {display_name : "Shaky Knees", years : [ 2022, 2021 ], name : "shaky", region : "am"},
+    {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo", region : "am"},
+    {display_name : "III Points", years : [ 2021 ], name : "iii", region : "am"},
+    {display_name : "EDC Las Vegas", years : [ 2021 ], name : "edclv", region : "am"},
+    {display_name : "New Orleans Jazz Fest", years : [ 2022, 2021 ], name : "jazzfest", region : "am"},
+    {display_name : "Lightning in a Bottle", years : [ 2022 ], name : "lib", region : "am"},
+    {display_name : "Day N Vegas", years : [ 2021 ], name : "daynvegas", region : "am"},
+    {display_name : "Audacy Beach Festival", years : [ 2021 ], name : "audacy", region : "am"},
+    {display_name : "Primavera Sound LA", years : [ 2022 ], name : "primaverala", region : "am"},
+    {display_name : "This Ain't No Picnic", years : [ 2022 ], name : "picnic", region : "am"},
+    {display_name : "Primavera Sound Barcelona (weekend 1)", years : [ 2022 ], name : "primaverawknd1", region : "eu"},
+    {display_name : "Primavera Sound Barcelona (weekend 2)", years : [ 2022 ], name : "primaverawknd2", region : "eu"},
+    {display_name : "Primavera a la Ciutat", years : [ 2022 ], name : "primaveraciutat", region : "eu"},
+    {display_name : "CRSSD", years : [ 2022 ], name : "crssd", region : "am"},
+    {display_name : "Okeechobee", years : [ 2022 ], name : "okeechobee", region : "am"},
+    {display_name : "Forecastle", years : [ 2022 ], name : "forecastle", region : "am"},
+    {display_name : "Winter Wonder Grass - CA", years : [ 2022 ], name : "wwgtahoe", region : "am"},
+    {display_name : "McDowell Mountain Music Festival", years : [ 2022 ], name : "m3f", region : "am"},
+    {display_name : "Rolling Loud NY", years : [ 2021 ], name : "rollingloudny", region : "am"},
+    {display_name : "Stern Grove Festival", years : [ 2022 ], name : "sterngrove", region : "am"},
+    {display_name : "Tomorrowland", years : [ 2022 ], name : "tomorrowland", region : "am"},
+    {display_name : "Float Fest", years : [ 2022 ], name : "floatfest", region : "am"},
+    {display_name : "Skyline", years : [ 2022 ], name : "skyline", region : "am"},
+    {display_name : "Sunset", years : [ 2022 ], name : "sunset", region : "am"},
+    {display_name : "Portola", years : [ 2022 ], name : "portola", region : "am"},
+    {display_name : "Day Trip", years : [ 2022 ], name : "daytrip", region : "am"},
+    {display_name : "Audiotistic", years : [ 2022 ], name : "audiotistic", region : "am"},
+    {display_name : "Above & Beyond Group Therapy - The Gorge", years : [ 2022 ], name : "abgt_gorge", region : "am"},
+    {display_name : "Summer Breeze", years : [ 2022 ], name : "summerbreeze", region : "am"},
+    {display_name : "Mad Cool", years : [ 2022 ], name : "madcool", region : "am"},
+    {display_name : "NOS Alive", years : [ 2022 ], name : "nosalive", region : "eu"},
 ];
 
 function setRoutes(redisClient: redis.RedisClient): express.Router {
@@ -60,12 +67,24 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     hbs.registerHelper('gt', (a, b) => { return (a > b); });
 
+    hbs.registerHelper("disableoptionifregion", (object: Festival): string => { return object.name.length < 1 ? "disabled" : ""; });
+
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
     router.get("/", (req: express.Request, res: express.Response) => {
-        // Just sort by name for now to get a constant order
-        const sortedFestivals: Festival[] =
-            supportedFestivals.sort((x: Festival, y: Festival) => x.name.localeCompare(y.name));
+
+        const sortedFestivals: Festival[] = [...supportedFestivals];
+
+        const regionCodes = [...new Set(supportedFestivals.map(festival => festival.region))];
+
+        // add regions to the dropdown as disabled values to provide section breaks
+        for (const region of regions) {
+            if (regionCodes.includes(region.name))
+                sortedFestivals.push({display_name : region.display_name, years : [], name : "", region : region.name});
+        }
+
+        sortedFestivals.sort((x: Festival, y: Festival) => x.region.localeCompare(y.region)
+            || x.name.localeCompare(y.name));
 
         res.render("home", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
