@@ -16,7 +16,7 @@ To run the server locally with full functionality, there are 5 environment varia
 3. DEPLOY_STAGE - this is used internally for switching between production and development logic  
     - Set this to `DEV`  
 4. SETLIST_FM_API_KEY - the API key for accessing the setlist FM API  
-    - If you have no intention of using the "Recent setlists" track type, you can set this to any trash value, as long as it's set, and you don't need to create a setlist dev account  
+    - If you are not in PROD and have no intention of using the "Recent setlists" track type, you can leave this empty and API calls won't be made  
     - Create a setlist.fm regular account  
     - Navigate to their [apps page](https://www.setlist.fm/settings/apps) and apply for an API key  
     - Once they approve (pretty quick turnaround) use the API key shown on the apps page as the value for SETLIST_FM_API_KEY  
