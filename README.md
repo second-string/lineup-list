@@ -96,12 +96,37 @@ If the festival only has the full lineup released with no day lineups:
 ### Adding a new festival
 1. Add a text file in the form of `[simplename]_[year].txt` in the lineups/ folder
 2. Add support for the festival within src/warm-cache-for-festival.ts following the example of the others
+> Note: There can be NO commas in artist names, as that will interfere with the warm-cache script parsing of festival days
 3. Add support for the festival within src/routes/pages.ts following the example of the others
 4. Build ts files with `npm run build`
 5. Run `node dist/warm-cache-for-festival.js [simplename] [year]`
+> The following steps are optional but encouraged if you're set up to run the code locally yourself. It saves me time and will get your PR merged and deployed much faster if you can provide evidence of the below steps.
+6. Verify that for each day of the festival, the line `X == Y` in each line that prints `Received X artists from Y lineup artist`.
+> If it does not, edit the artist names right above it that are printed in the `No artist found for search term <lineup artist>`. Common fixes here are splitting two DJ artists that are on one line going B2B, removing `Live` or `(Live)` from the end of artists, or sometimes just removing an artist entirely if you manually search them on Spotify and they don't appear.
+7. Verify that there are no obvious error printouts in the output. These will be very clear as a node.js exception spewing a lot of information. Simply rerun the script if these are encountered. 404s from setlist.fm or the musicbrainz API are totally fine, the script falls back to other forms of tracks.
+8. After the above step is successful, re-run the same command. Verify that every artist is found in the cache and the script completes instantly.
+> There's one edge case to this - when getting newest songs from an artists albums, if the artist only has albums labelled as 'compilation's we don't persist the list of new tracks successfully. So you might see one or two artists on the re-run that have to retrieve newest songs again - there should be maximum 2, MAYBE 3 of these in a lineup. Often it's zero.
 
 For example:
 If you're adding a festival with a long name or name with spaces like Electric Zoo, your text file would be `electriczoo_2021.txt`. It may not have an underscore anywhere besides between name and year. For abbreviate-able festivals you can also use their shortened terms: `ezoo_2021.txt`. That would be filename and the name of the festival within the code. The option for a `display_name` in the code is where you put the pretty version, `Electric Zoo`.
+If you're running the code locally and want to test and verify once the artists and option day info is in the text file and you've added the proper support in the code, you would run `npm run build`, then `node dist/warm-cache-for-festival.js ezoo 2021`. Monitor this output for any errors, but often you can let it run in the background and take a scroll back when it's finished. It takes anywhere from 1 to 15 minutes depending on number of artists on the lineup and how many have been previously saved to your local redis cache from other lineups.
+Create a PR with your changes and include any testing you've performed.
+
+### Testing an added festival
+Perform these steps if you've added a lineup and want to verify that all artists and data is retrieved properly. Assumes you've followed every step in the 'Adding a new festival' section above and have your environment set up to run the code locally.
+1. Run `npm run dev` to run Lineup List locally, then navigate to the proper localhost URL in the browser depending on if you're running HTTP-only or normally
+2. Verify that your festival is listed in the dropdown in the correct region section and select it
+3. Verify that the correct supported year(s) are shown in the years dropdown then click Submit
+4. If the festival has days available to filter, verify that they're continous ascending numbers from 1 (if an artist has a comma in it's name in the lineup text file, it will break the days filter)
+5. If the festival has days available to filter, uncheck then recheck each day, verifying that a chunk of artists in the proper area of the artist list disappears and reappers (i.e. day one should remove a lot of artists starting from the beginning, day 2 should be somewhere in the middle, day 3 at the end or you can't see any change because the bottom of the list is offscreen)
+6. If the festival has days available to filter, uncheck all days and verify that every artist disappears (added due to a now-fixed bug where an artist that played multiple days wouldn't filter off completely)
+7. Uncheck the 'Check/Uncheck all main genres' checkmark and verify a large opacity change in the artist, probably with some artists disappearing, then recheck it
+8. With every day, genre, and artist checked, switch the Track Type to Recent Setlists and increase tracks per artist to 6 or 7, then click Generate
+9. Verify that the customized lineup page loads very quickly (within 1, maybe 2 seconds)
+10. Verify in the terminal output that no new artist info was fetched and it was all retrieved from the redis cache (with the exception of the edge case explained after step 8 in the 'Adding a new festival' section)
+11. Verify that the first few artist have the same amount of tracks as selected on the previous screen
+12. Verify that these tracks look a bit different than just the artist's most popular songs to make sure they were properly fetched from setlists (for artists without setlists, we fallback to the top songs, so if there's an artist here or there that just has their top songs that's fine. Most headliners should always be able to find setlist songs though)
+13. Click Generate Playlist, and verify the playlist appears in your Spotify library. If running code in HTTP-only mode this will fail, that's okay. It's a low-risk failure point of the process, and doesn't need to be tested that often.
 
 ### Transitioning an existing festival to one with daily lineups
 1. Alter festival text file and add days after each artist in accordance with the `Adding a new festival` section
@@ -112,3 +137,8 @@ If you're adding a festival with a long name or name with spaces like Electric Z
 6. `redis-cli del "festival:[simplename]_[year]:0"`
 7. Rerun `node dist/warm-cache-for-festival.js [simplename] [year]` to populate days metadata
 > Note: If you're getting a ton of 400s and failures running warm-cache-for-festival.js, make sure you have the spotify token set as an env variable correctly
+
+### Updating the artist list of an existing festival
+More and more festivals are doing large shuffles of artists after their lineup is released but before the festival. If a lineup on the site is out of date, these are the only steps needed to update it.
+1. Edit the lineup text file, adding and removing any artists to match the new lineup
+2. Rerun `node dist/warm-cache-for-festival.js [simplename] [year]` to overwite metadata and fetch info for new artists
