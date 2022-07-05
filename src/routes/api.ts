@@ -52,11 +52,18 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(403).send("This url only accessible after generating a lineup from the customize page.");
         }
 
+        // store off the playlist name which they may have customized
+        const userPlaylistName: string =
+            req.body.playlistName ? req.body.playlistName
+                                  : `${sessionData.festivalName} ${sessionData.festivalYear} - Lineup List`;
+
+        redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, playlistName : userPlaylistName});
+
         const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.live" : "localhost";
         const queryParams     = {
-            client_id : constants.clientId,
-            response_type : "code",
-            redirect_uri : `https://${redirectBaseUri}/spotify-auth-callback`,
+                client_id : constants.clientId,
+                response_type : "code",
+                redirect_uri : `https://${redirectBaseUri}/spotify-auth-callback`,
             state : "kush",
             scope : "playlist-read-collaborative playlist-read-private playlist-modify-private playlist-modify-public"
         };
@@ -88,8 +95,8 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(500).send(getUserFromTokenResponse.error);
         }
 
-        const playlistName: string = `${sessionData.festivalDisplayName} ${sessionData.festivalYear} - Lineup List`;
-        const playlist: any = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
+        const playlistName: string = sessionData.playlistName;
+        const playlist: any        = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
 
         // Saw an instance of trackIds being undefined on the server, not sure if all sessiondata was missing or just
         // tracks somehow
@@ -109,7 +116,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         const playlistUrl: string = playlist.external_urls.spotify;
 
-        redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, playlistName, playlistUrl});
+        redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, playlistUrl});
         res.redirect("/generate-playlist-success");
     });
 
