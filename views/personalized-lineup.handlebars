@@ -4,8 +4,8 @@
         <form class="pure-form" id="generatePlaylistForm" action="/generate-spotify-playlist", method="POST">
             <p style="margin-bottom: 0;">Click below to generate a Spotify playlist</p>
             <p style="font-size: smaller; margin-top: 0;">You will need to authorize Lineup List to access your Spotify. The only permissions used are for reading your existing playlists (to determine if you already have a Lineup List playlist created for this festival) and for creating a new playlist within your account.</p>
-            <input style="text-align: center;" class="pure-input-1 pure-input-md-1-2" type="text" name="playlistName" value="{{playlistName}}" required></input>
-            <input style="margin-top: 8px;" class="pure-button pure-button-primary pure-input-1-5" type="submit" value="Generate Playlist"></input>
+            <input style="text-align: center;" class="pure-input-1" type="text" name="playlistName" value="{{playlistName}}" required></input>
+            <input style="margin-top: 8px;" class="pure-button pure-button-primary" type="submit" value="Generate Playlist"></input>
         </form>
         <ul style="list-style: none; text-align: left;">
             {{#each acts}}
