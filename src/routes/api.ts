@@ -53,9 +53,9 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         }
 
         // store off the playlist name which they may have customized
-        const userPlaylistName: string =
-            req.body.playlistName ? req.body.playlistName
-                                  : `${sessionData.festivalName} ${sessionData.festivalYear} - Lineup List`;
+        const userPlaylistName: string = req.body.playlistName
+                                             ? req.body.playlistName
+                                             : `${sessionData.festivalName} ${sessionData.festivalYear} - Lineup List`;
 
         redisClient.hmset(`sessionData:${req.sessionUid}`, {...sessionData, playlistName : userPlaylistName});
 
@@ -95,8 +95,16 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             return res.status(500).send(getUserFromTokenResponse.error);
         }
 
+        // In case the playlist name doesn't get passed in to the session, add the default in here
+        if (sessionData.playlistName === undefined) {
+            sessionData.playlistName = `${sessionData.festivalName} ${sessionData.festivalYear} - Lineup List`;
+            redisClient.hmset(`sessionData:${req.sessionUid}`,
+                              {...sessionData, playlistName : sessionData.playlistName});
+        }
+
         const playlistName: string = sessionData.playlistName;
-        const playlist: any        = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
+
+        const playlist: any = await spotifyHelper.getOrCreatePlaylist(access, user.id, playlistName);
 
         // Saw an instance of trackIds being undefined on the server, not sure if all sessiondata was missing or just
         // tracks somehow
