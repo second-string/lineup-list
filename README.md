@@ -10,6 +10,7 @@ To run the server locally with full functionality, there are 5 environment varia
 1. CLIENT_ID - this is the developer client ID for accessing Spotify's API  
     - Sign into [developer.spotify.com](https://developer.spotify.com) with your regular Spotify account and navigate to the Dashboard page  
     - Click "Create an App" and fill in whatever info you want for the details, it doesn't matter    - When that app's page loads, there is a `Client ID` available underneath the app name and description, use this as the value of the CLIENT_ID env var  
+    - Spotify require you to set the auth callback URL. Click `Edit Settings` and add the following to the Redirect URI section: `https://localhost/spotify-auth-callback`
 2. CLIENT_SECRET - the developer client secret for the above Spotify client ID  
     - Navigate to the app you created above, then click the link that says `Show client secret`  
     - Use this as the value for the CLIENT_SECRET env var  
