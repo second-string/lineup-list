@@ -303,6 +303,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             prod : process.env.DEPLOY_STAGE === 'PROD',
             titleOverride : `Personalized Lineup - ${sessionData.festivalDisplayName} ${sessionData.festivalYear}`,
             festivalDisplayName : sessionData.festivalDisplayName,
+            playlistName : `${sessionData.festivalDisplayName} ${sessionData.festivalYear} - Lineup List`,
             acts : artistsWithTracks,
             tracksPerArtist : sessionData.tracksPerArtist,
         })
