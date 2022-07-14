@@ -89,7 +89,15 @@
                     <input class="artistCheckbox" id="{{this.id}}-day-{{this.day}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
                     {{this.name}}</label>
                 {{/each}}
+
+                {{#if lastUpdatedDate}}
+                <div style="margin-top: 16px; font-size: 0.8rem;">
+                    Last Updated: {{formatDate lastUpdatedDate}}
+                </div>
+                {{/if}}
+
             </div>
+
         </div>
     </div>
     <input type="hidden" id="artistIds" name="artistIds">

@@ -4,6 +4,25 @@ import * as mbHelper        from "./mb-helper";
 import * as setlistFmHelper from "./setlist-fm-helper";
 import * as spotifyHelper   from "./spotify-helper";
 
+export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
+    Promise<Date> {
+    const datePromise: Promise<string> = new Promise((resolve, reject) => {
+        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:last_updated_date`, (err: Error, obj: string) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(JSON.parse(obj));
+            }
+        });
+    });
+
+    const last_updated_date: string = await datePromise;
+
+    if (last_updated_date)
+        return new Date(last_updated_date);
+
+}
+
 export async function getArtistsForFestival(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
     Promise<SpotifyArtist[]> {
     // Get the days we support for this festival. Single day of 0 if no day lineup info yet
