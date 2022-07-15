@@ -1,6 +1,7 @@
 import {existsSync, readFileSync} from "fs";
 import redis from "redis";
 
+import * as constants     from "./constants";
 import * as redisHelper   from "./redis-helper";
 import * as spotifyHelper from "./spotify-helper";
 
@@ -9,7 +10,7 @@ async function warm(festival: string, years: number[]) {
 
     for (const year of years) {
         const filename: string = festival + "_" + year + ".txt";
-        let file;
+        let   file;
         if (existsSync(filename)) {
             file = readFileSync(filename, "utf-8");
         } else if (existsSync(`lineups/${filename}`)) {
@@ -31,7 +32,7 @@ async function warm(festival: string, years: number[]) {
             }
             const artistDetails: string[] = artistLine.split(",");
             const artistName              = artistDetails[0];
-            let day                       = artistDetails[1];
+            let   day                     = artistDetails[1];
 
             // If we don't have days in our text file yet, list everything under day zero
             if (!day) {
@@ -125,77 +126,29 @@ async function main() {
         process.exit(1);
     }
 
-    // A dict of each festival holding all the years we support for that festival
-    const supportedFestivals: {[key: string]: number[]} = {
-        "coachella" : [ 2022, 2020 ],
-        "bottlerock" : [ 2022, 2021, 2020 ],
-        "osl" : [ 2022, 2021, 2019 ],
-        "hardsummer" : [ 2021 ],
-        "bonnaroo" : [ 2022, 2021 ],
-        "govball" : [ 2022, 2021 ],
-        "ohana" : [ 2021 ],
-        "riot" : [ 2021 ],
-        "firefly" : [ 2022, 2021 ],
-        "pitchfork" : [ 2021 ],
-        "lollapalooza" : [ 2022, 2021 ],
-        "acl" : [ 2022, 2021 ],
-        "shaky" : [ 2022, 2021 ],
-        "ezoo" : [ 2021 ],
-        "iii" : [ 2021 ],
-        "edclv" : [ 2021 ],
-        "jazzfest" : [ 2022, 2021 ],
-        "lib" : [ 2022 ],
-        "daynvegas" : [ 2021 ],
-        "audacy" : [ 2021 ],
-        "primaverala" : [ 2022 ],
-        "picnic" : [ 2022 ],
-        "primaverawknd1" : [ 2022 ],
-        "primaverawknd2" : [ 2022 ],
-        "primaveraciutat" : [ 2022 ],
-        "crssd" : [ 2022 ],
-        "okeechobee" : [ 2022 ],
-        "forecastle" : [ 2022 ],
-        "wwgtahoe" : [ 2022 ],
-        "m3f" : [ 2022 ],
-        "rollingloudny" : [ 2021 ],
-        "sterngrove" : [ 2022 ],
-        "tomorrowland" : [ 2022 ],
-        "floatfest" : [ 2022 ],
-        "skyline" : [ 2022 ],
-        "sunset" : [ 2022 ],
-        "portola" : [ 2022 ],
-        "daytrip" : [ 2022 ],
-        "audiotistic" : [ 2022 ],
-        "abgt_gorge" : [ 2022 ],
-        "summerbreeze" : [ 2022 ],
-        "madcool" : [ 2022 ],
-        "nosalive" : [ 2022 ],
-        "sms" : [ 2022 ],
-        "endoftheroad" : [ 2022 ],
-    };
-
-    let festivals: {[key: string]: number[]};
     if (process.argv.length > 2) {
-        const festival: string = process.argv[2];
-        const yearStr: string  = process.argv[3];
-        if (!Object.keys(supportedFestivals).includes(festival)) {
-            console.log(`Did not find ${festival} in list of supported festivals`);
+        const festivalName: string = process.argv[2];
+        const yearStr: string      = process.argv[3];
+
+        const festival = constants.supportedFestivals.find(f => f.name === festivalName)
+
+        if (!festival) {
+            console.log(`Did not find ${festivalName} in list of supported festivals`);
             process.exit(1);
         }
 
         const year: number = parseInt(yearStr, 10);
-        if (!supportedFestivals[festival].includes(year)) {
-            console.log(`Year ${year} not supported for ${festival}`);
+        if (!festival.years.includes(year)) {
+            console.log(`Year ${year} not supported for ${festivalName}`);
             process.exit(1);
         }
 
-        festivals = { [festival] : [ year ] }
-    } else {
-        festivals = supportedFestivals;
-    }
+        await warm(festivalName, [ year ]);
 
-    for (const festivalName of Object.keys(festivals)) {
-        await warm(festivalName, festivals[festivalName]);
+    } else {
+        for (const festival of constants.supportedFestivals) {
+            await warm(festival.name, festival.years);
+        }
     }
 }
 
