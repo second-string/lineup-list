@@ -19,6 +19,11 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
 
     const days: string[] = await daysPromise;
 
+    if (!days) {
+        console.error(`Tried to view a festival ${festivalName} ${festivalYear} with no days`);
+        return [];
+    }
+
     const redisArtistPromises: Promise<any>[] = [];
     for (const day of days) {
         if (day === undefined || day === "") {
