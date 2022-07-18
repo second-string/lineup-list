@@ -17,9 +17,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     hbs.registerHelper("disableoptionifregion",
                        (object: Festival): string => { return object.name.length < 1 ? "disabled" : ""; });
 
-    hbs.registerHelper('formatDate', function(date: Date) {
-        return new hbs.SafeString(date.toDateString());
-    });
+    hbs.registerHelper('formatDate', (date: Date) => new hbs.SafeString(date.toDateString()));
 
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
