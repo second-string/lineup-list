@@ -1,4 +1,4 @@
-import {existsSync, readFileSync} from "fs";
+import {existsSync, readFileSync, statSync} from "fs";
 import redis from "redis";
 
 import * as constants     from "./constants";
@@ -11,12 +11,16 @@ async function warm(festival: string, years: number[]) {
     for (const year of years) {
         const filename: string = festival + "_" + year + ".txt";
         let   file;
+        let   mtime;
         if (existsSync(filename)) {
-            file = readFileSync(filename, "utf-8");
+            file  = readFileSync(filename, "utf-8");
+            mtime = statSync(filename).mtime;
         } else if (existsSync(`lineups/${filename}`)) {
-            file = readFileSync(`lineups/${filename}`, "utf-8");
+            file  = readFileSync(`lineups/${filename}`, "utf-8");
+            mtime = statSync(`lineups/${filename}`).mtime;
         } else if (existsSync(`../lineups/${filename}`)) {
-            file = readFileSync(`../lineups/${filename}`, "utf-8");
+            file  = readFileSync(`../lineups/${filename}`, "utf-8");
+            mtime = statSync(`../lineups/${filename}`).mtime;
         } else {
             console.error(`File ${filename} not found`);
             return;
@@ -51,8 +55,8 @@ async function warm(festival: string, years: number[]) {
                         JSON.stringify(Object.keys(artistObjs)),
                         redis.print);
 
-        // For every day in this fest, get the full spot artist obj from the text file name, store ID list for each
-        // artist on this specific day key, then save artist objs themselves
+        // For every day in this fest, get the full spot artist obj from the text file name, store ID
+        // list for each artist on this specific day key, then save artist objs themselves
         for (const day of Object.keys(artistObjs)) {
             const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistObjs[day]);
 
@@ -64,15 +68,21 @@ async function warm(festival: string, years: number[]) {
                             redis.print);
 
             for (const spotifyArtist of artists) {
-                // Check to see if we have this artist and associated metadata saved in cache from a previous warm run
-                // already. This might let us skip getting top/new/setlist tracks if we already have them saved
+                // Check to see if we have this artist and associated metadata saved in
+                // cache from a previous warm run already. This might let us skip
+                // getting top/new/setlist tracks if we already have them saved
                 const redisArtistPromise = new Promise<RedisArtist>((resolve, reject) => {
                     redisClient.hgetall(`artist:${spotifyArtist.id}`, async (err: Error, obj: any) => {
                         if (err) {
                             return reject(err);
                         } else {
-                            // Tag each artist with the day for this festival so we can group when resolving all
-                            // promises. If it's null, still resolve, but we need to go get the artist
+                            // Tag each artist with the
+                            // day for this festival so
+                            // we can group when
+                            // resolving all promises.
+                            // If it's null, still
+                            // resolve, but we need to
+                            // go get the artist
                             if (obj) {
                                 obj.day = day;
                             }
@@ -83,7 +93,8 @@ async function warm(festival: string, years: number[]) {
 
                 let redisArtist: RedisArtist                                                 = await redisArtistPromise;
                 let                                  spotifyArtistToGetTracks: SpotifyArtist = null;
-                // If we didn't have it, no sweat, convert our spotify. We'll have to go get all 3 track types
+                // If we didn't have it, no sweat, convert our spotify. We'll have to go
+                // get all 3 track types
                 if (!redisArtist) {
                     redisArtist = redisHelper.spotifyToRedisArtist(spotifyArtist);
                     redisClient.hmset(`artist:${redisArtist.id}`, redisArtist as any, (redisErr: Error, res) => {
@@ -97,9 +108,10 @@ async function warm(festival: string, years: number[]) {
                     spotifyArtistToGetTracks = redisHelper.redisToSpotifyArtist(redisArtist);
                 }
 
-                // Then get top, new, and setlist tracks for this artist. This will take a while even with no backoffs
-                // if we didn't have this artist previously. Don't save return values, we don't care. Do setlists before
-                // new tracks to help with backoff
+                // Then get top, new, and setlist tracks for this artist. This will take
+                // a while even with no backoffs if we didn't have this artist
+                // previously. Don't save return values, we don't care. Do setlists
+                // before new tracks to help with backoff
                 if (spotifyArtistToGetTracks.id === undefined) {
                     console.log(spotifyArtist);
                     console.log("------------------");
@@ -115,6 +127,10 @@ async function warm(festival: string, years: number[]) {
                 await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
             }
         }
+
+        redisClient.set(`festival:${festival.toLowerCase()}_${year}:last_updated_date`,
+                        JSON.stringify(mtime),
+                        redis.print);
     }
 
     redisClient.quit();

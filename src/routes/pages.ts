@@ -17,6 +17,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
     hbs.registerHelper("disableoptionifregion",
                        (object: Festival): string => { return object.name.length < 1 ? "disabled" : ""; });
 
+    hbs.registerHelper('formatDate', function(date: Date) {
+        return new hbs.SafeString(date.toDateString());
+    });
+
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
     router.get("/", (req: express.Request, res: express.Response) => {
@@ -187,11 +191,14 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         specificGenres.sort();
         days.sort();
 
+        const lastUpdatedDate = await redisHelper.getLineupLastUpdatedDate(redisClient, festival.name, queryYear);
+
         res.render("customize-list", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
             titleOverride : `Customize Playlist - ${festival.display_name} ${queryYear}`,
             festival,
             festivalYear : queryYear,
+            lastUpdatedDate,
             artists,
             mainGenres,
             specificGenres,
