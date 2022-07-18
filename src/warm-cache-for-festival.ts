@@ -68,9 +68,8 @@ async function warm(festival: string, years: number[]) {
                             redis.print);
 
             for (const spotifyArtist of artists) {
-                // Check to see if we have this artist and associated metadata saved in
-                // cache from a previous warm run already. This might let us skip
-                // getting top/new/setlist tracks if we already have them saved
+                // Check to see if we have this artist and associated metadata saved in cache from a previous warm run
+                // already. This might let us skip getting top/new/setlist tracks if we already have them saved
                 const redisArtistPromise = new Promise<RedisArtist>((resolve, reject) => {
                     redisClient.hgetall(`artist:${spotifyArtist.id}`, async (err: Error, obj: any) => {
                         if (err) {

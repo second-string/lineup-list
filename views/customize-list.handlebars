@@ -1,4 +1,10 @@
-<h2 style="text-align: center;">Customize your {{festival.display_name}} {{festival.year}} lineup</h2>
+<h2 style="text-align: center;">Customize your {{festival.display_name}} {{festivalYear}} lineup</h2>
+
+                {{#if lastUpdatedDate}}
+                    <p style="margin: 0;">Lineup last updated: {{formatDate lastUpdatedDate}}</p>
+                    <p style="font-size: smaller; margin: 0; padding: 2px;">Festival released day lineups or changed the list of artists playing? <a style="font-size: smaller;" href="mailto:lineuplist@brianteam.dev?subject=Update {{festival.display_name}} {{festivalYear}} lineup">Request an update</a></p>
+                {{/if}}
+
 <form class="pure-form" id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column;">
     <div class="pure-g" style="justify-content: center;">
         <div id="formContent" class="pure-g pure-u-11-12 pure-u-lg-7-12 pure-u-md-3-4" style="display: flex; flex-direction: row; justify-content: space-between;">
@@ -80,7 +86,7 @@
 
             <div id="includedArtists" class="pure-u-11-24 pure-u-lg-2-5 pure-u-md-5-12">
                 <h3 style="margin-bottom: 0;">Artists</h3>
-                <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup</p>
+                <p style="font-size: smaller; margin-top: 0;">All checked artists will be included in the final lineup. Uncheck any remaining artists to exclude them from the final lineup.</p>
                 <label for="uncheckAllArtists" class="pure-checkbox" style="margin-bottom: 1em">
                     <input type="checkbox" id="uncheckAllArtists" onchange="uncheckAllArtistsChanged()" checked>
                     Check/Uncheck all artists</label>
@@ -89,13 +95,6 @@
                     <input class="artistCheckbox" id="{{this.id}}-day-{{this.day}}-checkbox" type="checkbox" value="{{this.id}}" data-genres="{{stringify this.combined_genres}}" data-day="{{this.day}}" {{checkedStr}}>
                     {{this.name}}</label>
                 {{/each}}
-
-                {{#if lastUpdatedDate}}
-                <div style="margin-top: 16px; font-size: 0.8rem;">
-                    Last Updated: {{formatDate lastUpdatedDate}}
-                </div>
-                {{/if}}
-
             </div>
 
         </div>

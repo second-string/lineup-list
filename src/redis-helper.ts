@@ -4,23 +4,25 @@ import * as mbHelper        from "./mb-helper";
 import * as setlistFmHelper from "./setlist-fm-helper";
 import * as spotifyHelper   from "./spotify-helper";
 
-export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
-    Promise<Date> {
+export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient,
+                                               festivalName: string,
+                                               festivalYear: number): Promise<Date> {
     const datePromise: Promise<string> = new Promise((resolve, reject) => {
-        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:last_updated_date`, (err: Error, obj: string) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(JSON.parse(obj));
-            }
-        });
+        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:last_updated_date`,
+                        (err: Error, obj: string) => {
+                            if (err) {
+                                reject(err);
+                            } else {
+                                resolve(JSON.parse(obj));
+                            }
+                        });
     });
 
     const last_updated_date: string = await datePromise;
 
-    if (last_updated_date)
+    if (last_updated_date) {
         return new Date(last_updated_date);
-
+    }
 }
 
 export async function getArtistsForFestival(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
@@ -62,8 +64,8 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
                             });
         });
 
-        const artistIdsString: string = await artistIdsPromise;
-        const artistIds               = JSON.parse(artistIdsString);
+        const artistIdsString: string                   = await artistIdsPromise;
+        const                                 artistIds = JSON.parse(artistIdsString);
 
         // For every artist ID on this day, check our cache for their object. If we don't have them, get from spotify
         // and convert, then store
@@ -114,8 +116,8 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
     tracksPerArtist = Number(tracksPerArtist);
 
     // We need two lists because there's a chance that some tracks come from redis and some from spotify
-    const topTracksFromRedis: RedisTrack[]   = [];
-    let topTracksFromSpotify: SpotifyTrack[] = [];
+    const topTracksFromRedis: RedisTrack[]     = [];
+    let   topTracksFromSpotify: SpotifyTrack[] = [];
 
     if (!artist.top_track_ids || artist.top_track_ids.length === 0) {
         // We've never gotten tracks and saved their ids for this artist, need to call spotify for tracks,
@@ -165,8 +167,8 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
                 // It was not in our cache, we need to request it from spotify and cache the response
                 // I'm not sure if this is possible? Since it would have to be in our cache if we had
                 // the ID saved in the artist's top tracks IDs (unless it's been evicted I guess)
-                const spotifyTrack: SpotifyTrack = await spotifyHelper.getTrackById(trackId);
-                const redisTrack: any            = spotifyToRedisTrack(spotifyTrack);
+                const spotifyTrack: SpotifyTrack                         = await spotifyHelper.getTrackById(trackId);
+                const                                    redisTrack: any = spotifyToRedisTrack(spotifyTrack);
                 redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
                     if (err) {
                         console.error(err);
@@ -194,8 +196,8 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
     tracksPerArtist = Number(tracksPerArtist);
 
     // We need two lists because there's a chance that some tracks come from redis and some from spotify
-    const newestTracksFromRedis: RedisTrack[]   = [];
-    let newestTracksFromSpotify: SpotifyTrack[] = [];
+    const newestTracksFromRedis: RedisTrack[]     = [];
+    let   newestTracksFromSpotify: SpotifyTrack[] = [];
 
     if (!artist.newest_track_ids || artist.newest_track_ids.length === 0) {
         // We've never gotten albums and saved their ids for this artist, need to call spotify for albums,
@@ -257,7 +259,7 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
         // Now get the tracks starting at most recent album and moving older, deduping as we go, until we get enough
         // const newestTracks: SpotifyTrack[] = await spotifyHelper.getAllTracksForAlbum(newestAlbum);
         const newestTracks: Map<string, SpotifyTrack> = new Map();
-        let albumIndex                                = 0;
+        let   albumIndex                              = 0;
         while (newestTracks.size < 15 && albumIndex < validSpotifyAlbums.length) {
             const album       = validSpotifyAlbums[albumIndex];
             const albumTracks = await spotifyHelper.getAllTracksForAlbum(album);
@@ -315,8 +317,8 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
                 // It was not in our cache, we need to request it from spotify and cache the response
                 // I'm not sure if this is possible? Since it would have to be in our cache if we had
                 // the ID saved in the artist's top tracks IDs (unless it's been evicted I guess)
-                const spotifyTrack: SpotifyTrack = await spotifyHelper.getTrackById(trackId);
-                const redisTrack: any            = spotifyToRedisTrack(spotifyTrack);
+                const spotifyTrack: SpotifyTrack                         = await spotifyHelper.getTrackById(trackId);
+                const                                    redisTrack: any = spotifyToRedisTrack(spotifyTrack);
                 redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
                     if (err) {
                         console.log(err);
@@ -344,8 +346,8 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
     tracksPerArtist = Number(tracksPerArtist);
 
     // We need two lists because there's a chance that some tracks come from redis and some from spotify
-    const setlistTracksFromRedis: RedisTrack[]   = [];
-    let setlistTracksFromSpotify: SpotifyTrack[] = [];
+    const setlistTracksFromRedis: RedisTrack[]     = [];
+    let   setlistTracksFromSpotify: SpotifyTrack[] = [];
 
     // Note! Only check for null setlist tracks here - if it's an empty list that means we've previously looked for them
     // and haven't found them, so no need to search again
@@ -439,8 +441,8 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
                 // It was not in our cache, we need to request it from spotify and cache the response
                 // I'm not sure if this is possible? Since it would have to be in our cache if we had
                 // the ID saved in the artist's top tracks IDs (unless it's been evicted I guess)
-                const spotifyTrack: SpotifyTrack = await spotifyHelper.getTrackById(trackId);
-                const redisTrack: any            = spotifyToRedisTrack(spotifyTrack);
+                const spotifyTrack: SpotifyTrack                         = await spotifyHelper.getTrackById(trackId);
+                const                                    redisTrack: any = spotifyToRedisTrack(spotifyTrack);
                 redisClient.hmset(`track:${redisTrack.id}`, redisTrack, (err, res) => {
                     if (err) {
                         console.log(err);
@@ -460,7 +462,7 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
 
         // Supplement with top tracks if we don't have enough setlist tracks saved
         if (artist.setlist_track_ids.length < tracksPerArtist) {
-            const topTracks =
+            const     topTracks =
                 await getTopTracksForArtist(redisClient, artist, tracksPerArtist - artist.setlist_track_ids.length);
             setlistTracksFromSpotify = setlistTracksFromSpotify.concat(topTracks);
         }
