@@ -3,18 +3,17 @@ import {instrumentCall} from "./helpers";
 const baseUrl = "https://api.setlist.fm/rest/1.0/";
 
 async function getArtistSetlists(artistMbid: string): Promise<SetlistFmSetlist[]> {
-
     if (process.env.DEPLOY_STAGE !== 'PROD' &&
-       (!process.env.SETLIST_FM_API_KEY || process.env.SETLIST_FM_API_KEY === "")) {
+        (!process.env.SETLIST_FM_API_KEY || process.env.SETLIST_FM_API_KEY === "")) {
         return [];
     }
 
     const url  = `${baseUrl}artist/${artistMbid}/setlists`;
     const opts = {
-        headers : {
-            Accept : "application/json",
-            "Accept-Language" : "en",
-            "x-api-key" : process.env.SETLIST_FM_API_KEY,
+         headers : {
+             Accept : "application/json",
+             "Accept-Language" : "en",
+             "x-api-key" : process.env.SETLIST_FM_API_KEY,
         }
     };
 

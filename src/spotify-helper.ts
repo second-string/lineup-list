@@ -61,14 +61,14 @@ export async function getAccessTokenFromCallback(code: string, reqError: any):
 
     const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.live" : "localhost";
     const postOptions     = {
-        method : "POST",
-        body : {
-            grant_type : "authorization_code",
-            redirect_uri : `https://${
+            method : "POST",
+            body : {
+                grant_type : "authorization_code",
+                redirect_uri : `https://${
                 redirectBaseUri}/spotify-auth-callback`,  // Doesn't matter, just needs to match what we sent previously
             code
         },
-        headers : {"Content-type" : "application/x-www-form-urlencoded", Authorization : spotifyAuth()}
+            headers : {"Content-type" : "application/x-www-form-urlencoded", Authorization : spotifyAuth()}
     };
 
     console.log("Getting spotify access and refresh tokens ...");
@@ -131,7 +131,7 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
                 // in the list if not.
                 const num_to_compare = response.artists.items.length > 16 ? 16 : response.artists.items.length;
                 const adjusted_name  = artistName.trim().toLowerCase();
-                let chosen_index     = 0;
+                let   chosen_index   = 0;
                 for (let i = 0; i < num_to_compare; i++) {
                     if (response.artists.items[i].name === undefined) {
                         continue;
@@ -258,8 +258,8 @@ export async function getAllTracksToAdd(spotifyArtists: SpotifyArtist[],
     // initially get a list of lists from each individual promise resolving the 3 tracks for the artist
     const trackObjects: SpotifyTrack[][] = await Promise.all(trackPromises);
     const trackUris                      = trackObjects.reduce((list: SpotifyTrack[], trackUriList: SpotifyTrack[]) => {
-        list = list.concat(trackUriList.slice(0, tracksPerArtist));
-        return list;
+                             list = list.concat(trackUriList.slice(0, tracksPerArtist));
+                             return list;
     }, []);
 
     console.log(`Received ${trackUris.length} tracks`);
@@ -276,7 +276,7 @@ export async function getOrCreatePlaylist(
     let url                          = "https://api.spotify.com/v1/me/playlists?limit=50";
     let hasNext                      = false;
     do {
-        const currentPlaylistsResponse =
+        const     currentPlaylistsResponse =
             await helpers.instrumentCall(url, helpers.baseSpotifyHeaders("GET", accessToken), false);
         if (currentPlaylistsResponse.success === undefined || !currentPlaylistsResponse.success) {
             console.log(`Error getting playlist for current user`);
@@ -293,10 +293,14 @@ export async function getOrCreatePlaylist(
     if (playlistObj === undefined) {
         // They don't have their own lineup list playlist yet, create it
         const postOptions: any = helpers.baseSpotifyHeaders("POST", accessToken);
-        postOptions.body       = {name : playlistName, public : false, description : "Created with Lineup List - https://lineuplist.live"};
+        postOptions.body       = {
+                  name : playlistName,
+                  public : false,
+                  description : "Created with Lineup List - https://lineuplist.live"
+        };
 
         console.log("Creating playlist since we didn't find it in their list of existing playlists");
-        const createPlaylistResponse =
+        const     createPlaylistResponse =
             await helpers.instrumentCall(`https://api.spotify.com/v1/users/${spotifyUsername}/playlists`,
                                          postOptions,
                                          false);
@@ -320,7 +324,7 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
     // PUT overwrites all other tracks in the playlist
     const options: any = helpers.baseSpotifyHeaders("PUT", accessToken);
     for (let i = 0; i < Math.ceil(trackUris.length / 100); i++) {
-        options.body   = {uris : trackUris.slice(i * 100, (i + 1) * 100)};
+        options.body     = {uris : trackUris.slice(i * 100, (i + 1) * 100)};
         const urisLength = options.body.uris.length;
         if (urisLength === 0) {
             console.warn(
@@ -334,7 +338,7 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
         }
 
         // This response gives us an object with a single 'snapshot_id' element, who cares
-        const addTracksResponse =
+        const     addTracksResponse =
             await helpers.instrumentCall(`https://api.spotify.com/v1/playlists/${playlistObj.id}/tracks`,
                                          options,
                                          false);

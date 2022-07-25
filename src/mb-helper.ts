@@ -1,4 +1,5 @@
 import {MusicBrainzApi} from 'musicbrainz-api';
+
 import {spotifyBaseUrl} from "./spotify-helper";
 
 const mbApi = new MusicBrainzApi({
