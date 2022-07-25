@@ -81,9 +81,7 @@ For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `
 
 
 - GET `localhost/health` for healthcheck
-- GET `localhost/festivals`
-  * first submission for festival will take some time to load all artists into cache
-  * bug where it never loads the last artist in. Restart the server and re-submit and it'll work
+
 
 ### Festival text file format
 If the festival has daily lineups released:
@@ -96,16 +94,15 @@ If the festival only has the full lineup released with no day lineups:
 
 ### Adding a new festival
 1. Add a text file in the form of `[simplename]_[year].txt` in the lineups/ folder
-2. Add support for the festival within src/warm-cache-for-festival.ts following the example of the others
+2. Add support for the festival within src/constants.ts following the example of the others
 > Note: There can be NO commas in artist names, as that will interfere with the warm-cache script parsing of festival days
-3. Add support for the festival within src/routes/pages.ts following the example of the others
-4. Build ts files with `npm run build`
-5. Run `node dist/warm-cache-for-festival.js [simplename] [year]`
+3. Build ts files with `npm run build`
+4. Run `node dist/warm-cache-for-festival.js [simplename] [year]`
 > The following steps are optional but encouraged if you're set up to run the code locally yourself. It saves me time and will get your PR merged and deployed much faster if you can provide evidence of the below steps.
-6. Verify that for each day of the festival, the line `X == Y` in each line that prints `Received X artists from Y lineup artist`.
+5. Verify that for each day of the festival, the line `X == Y` in each line that prints `Received X artists from Y lineup artist`.
 > If it does not, edit the artist names right above it that are printed in the `No artist found for search term <lineup artist>`. Common fixes here are splitting two DJ artists that are on one line going B2B, removing `Live` or `(Live)` from the end of artists, or sometimes just removing an artist entirely if you manually search them on Spotify and they don't appear.
-7. Verify that there are no obvious error printouts in the output. These will be very clear as a node.js exception spewing a lot of information. Simply rerun the script if these are encountered. 404s from setlist.fm or the musicbrainz API are totally fine, the script falls back to other forms of tracks.
-8. After the above step is successful, re-run the same command. Verify that every artist is found in the cache and the script completes instantly.
+6. Verify that there are no obvious error printouts in the output. These will be very clear as a node.js exception spewing a lot of information. Simply rerun the script if these are encountered. 404s from setlist.fm or the musicbrainz API are totally fine, the script falls back to other forms of tracks.
+7. After the above step is successful, re-run the same command. Verify that every artist is found in the cache and the script completes instantly.
 > There's one edge case to this - when getting newest songs from an artists albums, if the artist only has albums labelled as 'compilation's we don't persist the list of new tracks successfully. So you might see one or two artists on the re-run that have to retrieve newest songs again - there should be maximum 2, MAYBE 3 of these in a lineup. Often it's zero.
 
 For example:
