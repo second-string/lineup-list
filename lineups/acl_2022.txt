@@ -46,6 +46,10 @@ GLOVE,Both weekends
 DISKO COWBOY,Both weekends
 HAPPIE HOFFMAN,Both weekends
 MAMA DUKE,Both weekends
+Marcus Mumford,Both weekends
+Gabriels,Both weekends
+Spill Tab,Both weekends
+Danielle Ponder,Both weekends
 
 LIL DURK,Weekend 1
 JAMES BLAKE,Weekend 1
@@ -69,7 +73,6 @@ SLAYYYTER,Weekend 1
 CLAIR ROSIN,Weekend 1
 NATION OF LANGUAGE,Weekend 1
 AQUADOLLS,Weekend 1
-JOSHUA RAY WALKER,Weekend 1
 TAMINO,Weekend 1
 CASSANDRA JENKINS,Weekend 1
 SARAH & THE SUNDAYS,Weekend 1
@@ -84,6 +87,11 @@ THEBROSFRESH,Weekend 1
 KATZU OSO,Weekend 1
 THE PAST LIVES,Weekend 1
 LUNA LUNA,Weekend 1
+Adrian Quesada,Weekend 1
+The Ventures,Weekend 1
+Walt Disco,Weekend 1
+LilyIsThatYou,Weekend 1
+The Future X,Weekend 1
 
 PHOENIX,Weekend 2
 YUNGBLUD,Weekend 2
@@ -114,3 +122,17 @@ SIENA LIGGINS,Weekend 2
 PLEASURE VENOM,Weekend 2
 IZZY HELTAI,Weekend 2
 THE SPIRITUALETTES,Weekend 2
+JOSHUA RAY WALKER,Weekend 2
+Death Cab for Cutie,Weekend 2
+Culture Club,Weekend 2
+Tai Verdes,Weekend 2
+Ripe,Weekend 2
+Vacations,Weekend 2
+BKThaRula,Weekend 2
+The Brummies,Weekend 2
+Lily Rose,Weekend 2
+Dro Kenji,Weekend 2
+Sarah Kinsley,Weekend 2
+Caleb de Casper,Weekend 2
+Jake Lloyd,Weekend 2
+Urban Heat,Weekend 2
