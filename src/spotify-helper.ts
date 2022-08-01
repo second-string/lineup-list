@@ -323,6 +323,7 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
     Promise<boolean> {
     // PUT overwrites all other tracks in the playlist
     const options: any = helpers.baseSpotifyHeaders("PUT", accessToken);
+    let retriesRemaining = 2;
     for (let i = 0; i < Math.ceil(trackUris.length / 100); i++) {
         options.body     = {uris : trackUris.slice(i * 100, (i + 1) * 100)};
         const urisLength = options.body.uris.length;
@@ -343,12 +344,20 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
                                          options,
                                          false);
         if (addTracksResponse.success === undefined || !addTracksResponse.success) {
-            console.log("Error adding tracks to playlist");
-            console.log(addTracksResponse.response);
-            return false;
+            if (retriesRemaining > 0) {
+                console.error(`Failed request to add tracks to playlist w/ status ${addTracksResponse.response.status}, retrying ${retriesRemaining} more times`);
+                i--;
+                retriesRemaining--;
+                await helpers.sleep(500);
+            } else {
+                console.log("Error adding tracks to playlist");
+                console.log(addTracksResponse.response);
+                return false;
+            }
+        } else {
+            console.log(`Added a page of tracks to playlist: ${i * 100} to ${i * 100 + urisLength}`);
+            retriesRemaining = 2;
         }
-
-        console.log(`Added a page of tracks to playlist: ${i * 100} to ${i * 100 + urisLength}`);
     }
 
     return true;
