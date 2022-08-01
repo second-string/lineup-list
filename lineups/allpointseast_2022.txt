@@ -1,71 +1,78 @@
-Aldous Harding
-Anna Calvi
-Bess Atwell
-Caroline Polachek
-Cassandra Jenkins
-Channel Tres
-Charli XCX
-Cici
-Daniel Avery
-Disclosure
-Dry Cleaning
-Eliza Rose
-Elkka
-ENNY
-Erol Alkan
-Femi Kuti
-FKJ
-Fleet Foxes
-Floating Points
-Franky Wah
-Fred again..
-Freddie Gibbs
-Gabriels
-Goat
-Gorillaz
-Greentea Peng
-HAAi
-IDLES
-James Blake
-Japanese Breakfast
-Jehnny Beth
-Joan As Police Woman
-Joy Anonymous
-Joy Orbison
-Kareem Ali
-King Gizzard & The Lizard Wizard
-Koffee
-Kraftwerk
-Kurt Vile
-Logic1000
-Lola Young
-Low
-Lucy Dacus
-Michael Kiwanuka
-Mura Masa
-NewDad
-Nick Cave & The Bad Seeds
-Obongjayar
-Otik
-Overmono
-Perfume Genius
-Pusha T
-Rae Morris
-Remi Wolf
-salute
-Self Esteem
-SHERELLE
-SHY FX
-Sleaford Mods
-Sudan Archives
-Tame Impala
-The Blaze
-The Chemical Brothers
-The National
-The Smile
-Tinariwen
-Tora-i
-Tourist
-Wesley Joseph
-Yung Singh
-Yves Tumor
+
+Femi Kuti,1
+Gorillaz,1
+IDLES,1
+NewDad,1
+Obongjayar,1
+Pusha T,1
+Remi Wolf,1
+Self Esteem,1
+Yves Tumor,1
+
+Cici,2
+Daniel Avery,2
+Eliza Rose,2
+Erol Alkan,2
+Floating Points,2
+HAAi,2
+Kareem Ali,2
+Kraftwerk,2
+Logic1000,2
+Otik,2
+salute,2
+The Chemical Brothers,2
+
+Caroline Polachek,3
+Dry Cleaning,3
+FKJ,3
+Goat,3
+Sudan Archives,3
+Tame Impala,3
+The Blaze,3
+
+Balthazar,4
+Bess Atwell,4
+Cassandra Jenkins,4
+Dehd,4
+Fleet Foxes,4
+King Gizzard & The Lizard Wizard,4
+Kurt Vile,4
+Low,4
+Lucy Dacus,4
+Parcels,4
+Perfume Genius,4
+Rae Morris,4
+The National,4
+Tune-Yards,4
+Valerie June,4
+Villagers,4
+
+Channel Tres,5
+Charli XCX,5
+Disclosure,5
+Elkka,5
+ENNY,5
+Franky Wah,5
+Fred again..,5
+Freddie Gibbs,5
+James Blake,5
+Joy Anonymous,5
+Joy Orbison,5
+Koffee,5
+Lola Young,5
+Mura Masa,5
+Overmono,5
+SHERELLE,5
+SHY FX,5
+Tora-i,5
+Wesley Joseph,5
+Yung Singh,5
+
+Aldous Harding,6
+Anna Calvi,6
+Jehnny Beth,6
+Joan As Police Woman,6
+Michael Kiwanuka,6
+Nick Cave & The Bad Seeds,6
+Sleaford Mods,6
+The Smile,6
