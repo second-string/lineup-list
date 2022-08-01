@@ -322,8 +322,8 @@ export async function getOrCreatePlaylist(
 export async function addTracksToPlaylist(accessToken: string, playlistObj: SpotifyPlaylist, trackUris: string[]):
     Promise<boolean> {
     // PUT overwrites all other tracks in the playlist
-    const options: any = helpers.baseSpotifyHeaders("PUT", accessToken);
-    let retriesRemaining = 2;
+    const options: any     = helpers.baseSpotifyHeaders("PUT", accessToken);
+    let   retriesRemaining = 2;
     for (let i = 0; i < Math.ceil(trackUris.length / 100); i++) {
         options.body     = {uris : trackUris.slice(i * 100, (i + 1) * 100)};
         const urisLength = options.body.uris.length;
@@ -343,9 +343,15 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
             await helpers.instrumentCall(`https://api.spotify.com/v1/playlists/${playlistObj.id}/tracks`,
                                          options,
                                          false);
+
         if (addTracksResponse.success === undefined || !addTracksResponse.success) {
+            // The spotify API has recently started to barf with random statuscodes (404, 500, 502, etc) when we try to
+            // rapidly chunk in a bunch of tracks to a newly created playlist (no problem if playlist already existed).
+            // This block will retry every failed track-add request twice after the initial failure, and sleeps for half
+            // a second before doing so (otherwise all three requests in a row still fail)
             if (retriesRemaining > 0) {
-                console.error(`Failed request to add tracks to playlist w/ status ${addTracksResponse.response.status}, retrying ${retriesRemaining} more times`);
+                console.error(`Failed request to add tracks to playlist w/ status ${
+                    addTracksResponse.response.status}, retrying ${retriesRemaining} more times`);
                 i--;
                 retriesRemaining--;
                 await helpers.sleep(500);
@@ -355,8 +361,9 @@ export async function addTracksToPlaylist(accessToken: string, playlistObj: Spot
                 return false;
             }
         } else {
-            console.log(`Added a page of tracks to playlist: ${i * 100} to ${i * 100 + urisLength}`);
+            // Reset retries for the next failing call to spotify's shitty api
             retriesRemaining = 2;
+            console.log(`Added a page of tracks to playlist: ${i * 100} to ${i * 100 + urisLength}`);
         }
     }
 
