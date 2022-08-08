@@ -23,7 +23,7 @@ async function warm(festival: string, years: number[]) {
             mtime = statSync(`../lineups/${filename}`).mtime;
         } else {
             console.error(`File ${filename} not found`);
-            return;
+            process.exit(1);
         }
 
         const artistLines                           = file.split('\n');
@@ -37,6 +37,11 @@ async function warm(festival: string, years: number[]) {
             const artistDetails: string[] = artistLine.split(",");
             const artistName              = artistDetails[0];
             let   day                     = artistDetails[1];
+
+            if (artistDetails.length > 2) {
+                console.error(`Line appears to contain too many commas - ${artistDetails}`);
+                process.exit(1);
+            }
 
             // If we don't have days in our text file yet, list everything under day zero
             if (!day) {
