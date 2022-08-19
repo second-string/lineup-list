@@ -1,4 +1,3 @@
-
 Femi Kuti,1
 Gorillaz,1
 IDLES,1
@@ -22,6 +21,7 @@ Otik,2
 salute,2
 The Chemical Brothers,2
 
+Caribou,3
 Caroline Polachek,3
 Dry Cleaning,3
 FKJ,3
@@ -35,12 +35,12 @@ Bess Atwell,4
 Cassandra Jenkins,4
 Dehd,4
 Fleet Foxes,4
-King Gizzard & The Lizard Wizard,4
 Kurt Vile,4
-Low,4
 Lucy Dacus,4
+Mogwai,4
 Parcels,4
 Perfume Genius,4
+Public Service Broadcasting,4
 Rae Morris,4
 The National,4
 Tune-Yards,4
@@ -76,3 +76,4 @@ Michael Kiwanuka,6
 Nick Cave & The Bad Seeds,6
 Sleaford Mods,6
 The Smile,6
+
