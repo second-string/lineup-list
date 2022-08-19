@@ -153,6 +153,11 @@ interface Region {
     name: string
 }
 
+interface ArtistAndUri {
+    name: string
+    spotify_uri?: string
+}
+
 interface User {
     display_name: string;
     external_urls: any;

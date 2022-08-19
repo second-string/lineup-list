@@ -83,7 +83,15 @@ For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `
 - GET `localhost/health` for healthcheck
 
 
+### Festival lineup files
+
+Two file formats are supported - text and YAML. Both are described below. The YAML format is more complex, but offers additonal functionality over the text format.
+
+IF both a text and YAML file are present for a festival/year combo, the YAML file will take priority and the text file will be ignored.
+
+
 ### Festival text file format
+
 If the festival has daily lineups released:
 - One artist on each line, followed by a comma, then the day they are performing
 - Days start at 1 for the first day of the festival
@@ -92,10 +100,40 @@ If the festival has daily lineups released:
 If the festival only has the full lineup released with no day lineups:
 - One artist on each line, no commas, no numbers
 
+
+### Festival YAML file format
+
+For convenience, a sample YAML file is shown below. The YAML file format supports some additional features over the text file format, though most are not yet implemented. 
+As of August 2022 the only utilised feature is the ability to specify a Spotify Artist URI, to allow the loader script to lookup the exact artist rather than search by name.
+The festival fields do not overwrite the values currently hardcoded in the application, but are required and may support dynamic loading of festivals in future.
+
+```
+display_name: All Points East
+slug: allpointseast
+region: eu
+year: 2022
+days:
+  - number: 1
+    date: 19-Aug-22
+    display_name: Weekend 1
+    artists:
+      - name: The Chemical Brothers
+        spotify_uri: 1GhPHrq36VKCY3ucVaZCfo
+      - name: The Strokes
+  - number: 2
+...
+```
+
+The above example shows a festival with multiple days. If the festival only has the full lineup released with no day lineups, simply add all artists under a single day with `number: 0`.
+
+YAML files are validated against a schema at load, defined in `lineup-schema.json`. Any error will cause the load process to exit.
+
+Note that is an artist name (or any other string) contains a colon (:), the value will needed to be enclosed in double-quotes to avoid breaking the YAML format.
+
+
 ### Adding a new festival
-1. Add a text file in the form of `[simplename]_[year].txt` in the lineups/ folder
+1. Add a text file in the form of `[simplename]_[year].txt` or `[simplename]_[year].yaml`  in the lineups/ folder. Note that extensions are case-sensitive on some OSes.
 2. Add support for the festival within src/constants.ts following the example of the others
-> Note: There can be NO commas in artist names, as that will interfere with the warm-cache script parsing of festival days
 3. Build ts files with `npm run build`
 4. Run `node dist/warm-cache-for-festival.js [simplename] [year]`
 > The following steps are optional but encouraged if you're set up to run the code locally yourself. It saves me time and will get your PR merged and deployed much faster if you can provide evidence of the below steps.

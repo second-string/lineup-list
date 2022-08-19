@@ -104,53 +104,78 @@ export async function getSpotifyUserFromToken(accessToken: string): Promise<{err
     return {error : null, user : response as User};
 }
 
-export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyArtist[]> {
+export async function getSpotifyArtists(simpleArtists: ArtistAndUri[]): Promise<SpotifyArtist[]> {
     const artistPromises: Promise<SpotifyArtist>[] = [];
 
     let lengthCorrection: number = 0;
-    for (const artistName of artistNames) {
+    for (const simpleArtist of simpleArtists) {
+        const artistName = simpleArtist.name;
+
         if (artistName === '') {
             lengthCorrection++;
             continue;
         }
 
-        const artistPromise: Promise<SpotifyArtist> = new Promise(async (resolve, reject) => {
-            const {success, response} = await autoRetrySpotifyCall(
-                `https://api.spotify.com/v1/search?q=${encodeURIComponent(artistName)}&type=artist`,
-                (token: string) => helpers.baseSpotifyHeaders("GET", token),
-                false);
+        let artistPromise: Promise<SpotifyArtist>;
 
-            if (!success) {
-                console.log(`Request to get artist ${artistName} failed with status ${response.status}`);
-                resolve(null);
-            } else if (response.artists && response.artists.items.length > 0) {
-                // The first result is correct ~90% of the time. Unfortunately spotify weights the artists' popularity
-                // in the ordering of the list returned, so if you search for a smaller artist with a similar name as a
-                // big one, the big one will come first (e.g. Camila Cabello for CAM, Claude DeBussy for Claud, etc).
-                // See if we have an exact string match with any of the first 15 artists before defaulting to the first
-                // in the list if not.
-                const num_to_compare = response.artists.items.length > 16 ? 16 : response.artists.items.length;
-                const adjusted_name  = artistName.trim().toLowerCase();
-                let   chosen_index   = 0;
-                for (let i = 0; i < num_to_compare; i++) {
-                    if (response.artists.items[i].name === undefined) {
-                        continue;
+        // if we don't have a Spotify URI already provided, do a search
+        if (!simpleArtist.spotify_uri) {
+            artistPromise = new Promise(async (resolve, reject) => {
+                const {success, response} = await autoRetrySpotifyCall(
+                    `https://api.spotify.com/v1/search?q=${encodeURIComponent(artistName)}&type=artist`,
+                    (token: string) => helpers.baseSpotifyHeaders("GET", token),
+                    false);
+
+                if (!success) {
+                    console.log(`Request to get artist ${artistName} failed with status ${response.status}`);
+                    resolve(null);
+                } else if (response.artists && response.artists.items.length > 0) {
+                    // The first result is correct ~90% of the time. Unfortunately spotify weights the artists'
+                    // popularity in the ordering of the list returned, so if you search for a smaller artist with a
+                    // similar name as a big one, the big one will come first (e.g. Camila Cabello for CAM, Claude
+                    // DeBussy for Claud, etc). See if we have an exact string match with any of the first 15 artists
+                    // before defaulting to the first in the list if not.
+                    const num_to_compare = response.artists.items.length > 16 ? 16 : response.artists.items.length;
+                    const adjusted_name  = artistName.trim().toLowerCase();
+                    let   chosen_index   = 0;
+                    for (let i = 0; i < num_to_compare; i++) {
+                        if (response.artists.items[i].name === undefined) {
+                            continue;
+                        }
+
+                        if (adjusted_name === response.artists.items[i].name.trim().toLowerCase()) {
+                            chosen_index = i;
+                            break;
+                        }
                     }
 
-                    if (adjusted_name === response.artists.items[i].name.trim().toLowerCase()) {
-                        chosen_index = i;
-                        break;
-                    }
+                    response.artists.items[chosen_index].combined_genres =
+                        reduceSpotifyGenres(response.artists.items[chosen_index].genres);
+                    resolve(response.artists.items[chosen_index]);
+                } else {
+                    console.log(`No artists found for search term '${artistName}'`);
+                    resolve(null);
                 }
+            });
+        } else {
+            // we do have a URI, so just look them up direct
+            artistPromise = new Promise(async (resolve, reject) => {
+                const {success, response} =
+                    await autoRetrySpotifyCall(`https://api.spotify.com/v1/artists/${simpleArtist.spotify_uri}`,
+                                               (token: string) => helpers.baseSpotifyHeaders("GET", token),
+                                               false);
 
-                response.artists.items[chosen_index].combined_genres =
-                    reduceSpotifyGenres(response.artists.items[chosen_index].genres);
-                resolve(response.artists.items[chosen_index]);
-            } else {
-                console.log(`No artists found for tearch term '${artistName}'`);
-                resolve(null);
-            }
-        });
+                if (!success) {
+                    console.log(`Request to get artist with ID ${simpleArtist.spotify_uri} and name ${artistName} failed with status ${
+                        response.status}`);
+                    resolve(null);
+                } else {
+                    response.combined_genres = reduceSpotifyGenres(response.genres);
+
+                    resolve(response);
+                }
+            });
+        }
 
         artistPromises.push(artistPromise);
     }
@@ -158,7 +183,7 @@ export async function getSpotifyArtists(artistNames: string[]): Promise<SpotifyA
     let artistObjs = await Promise.all(artistPromises);
     artistObjs     = artistObjs.filter(x => x !== null);
 
-    console.log(`Received ${artistObjs.length} artists from ${artistNames.length - lengthCorrection} lineup artists`);
+    console.log(`Received ${artistObjs.length} artists from ${simpleArtists.length - lengthCorrection} lineup artists`);
     return artistObjs;
 }
 

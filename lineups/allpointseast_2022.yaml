@@ -1,0 +1,19 @@
+# This is a test file
+display_name: All Points East
+slug: allpointseast
+region: eu
+year: 2022
+days:
+  - number: 1
+    date: 19-Aug-22
+    display_name: Weekend 1
+    artists:
+      - name: The Chemical Brothers
+        spotify_uri: 1GhPHrq36VKCY3ucVaZCfo
+      - name: The Strokes
+  - number: 2
+    date: 26-Aug-22
+    display_name: Weekend 2
+    artists:
+      - name: The Cure
+      - name: The XX
