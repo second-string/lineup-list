@@ -199,31 +199,22 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
     const newestTracksFromRedis: RedisTrack[]     = [];
     let   newestTracksFromSpotify: SpotifyTrack[] = [];
 
-    if (!artist.newest_track_ids || artist.newest_track_ids.length === 0) {
+    // Note! Only check for null new tracks here - if it's an empty list (![] evals to false) that means we've
+    // previously looked for them and haven't found them, so no need to search again. This happens when all the albums
+    // returned for an artist are 'compilation' or 'appears_on', which we don't save tracks for due to remixes,
+    // features, etc.
+    if (!artist.newest_track_ids) {
         // We've never gotten albums and saved their ids for this artist, need to call spotify for albums,
         // save their ids for this artist, save the albums themselves, and (EXTRA STEP COMPARED TO TOP TRACKS) get the
         // tracks from the most recent album(s). We cache up to 50 album IDs per artist (max recieved in spotify query)
         // and albums themselves, but only return the number requested
         console.log(`No newest track ids for spotify artist ${
             artist.id}, getting albums from spot, saving to redis albums, then getting tracks from most recent album and saving each track`);
+
         // Technically we could optimize a bit here by checking to see if we already have the albums and skip a query.
         // We also don't handle the case of if the artist releases a new album after we've already newest tracks from
         // the previously-latest album.
         const spotifyAlbums: SpotifyAlbum[] = await spotifyHelper.getAllAlbumsForArtist(artist);
-        if (spotifyAlbums.length === 0) {
-            console.warn(`Albums returned from getAllAlbumsForArtist length zero. Artist ${artist.name} (${
-                artist.id}). Bailing out of remainder of newest tracks process`);
-            return [];
-        }
-
-        // Get and save album IDs for this artist. Albums are used to look up most recent tracks vs. top tracks
-        redisClient.hmset(`artist:${artist.id}`,
-                          {album_ids : JSON.stringify(spotifyAlbums.map(x => x.id))},
-                          (err, res) => {
-                              if (err) {
-                                  console.error(err);
-                              }
-                          });
 
         let validSpotifyAlbums: SpotifyAlbum[] = [];
         for (const spotifyAlbum of spotifyAlbums) {
@@ -245,10 +236,22 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
             });
         }
 
+        // Get and save album IDs for this artist only after we've filtered out non-valid albums. Albums are used to
+        // look up most recent tracks vs. top tracks
+        redisClient.hmset(`artist:${artist.id}`,
+                          {album_ids : JSON.stringify(validSpotifyAlbums.map(x => x.id))},
+                          (err, res) => {
+                              if (err) {
+                                  console.error(err);
+                              }
+                          });
+
         // If the artist only had compilation or group albums, we won't have anything to work with. Bail here too
         if (validSpotifyAlbums.length === 0) {
-            console.warn(`Albums returned from getAllAlbumsForArtist all either compilations or 'appears_on'. Artist ${
-                artist.name} (${artist.id}). Bailing out of remainder of newest tracks process`);
+            console.warn(
+                `Zero albums returned from getAllAlbumsForArtist after filterout out 'compilations' or 'appears_on'. Artist ${
+                    artist.name} (${
+                    artist.id}). Saved empty list to redis to prevent pointless searches in the future`);
             return [];
         }
 
