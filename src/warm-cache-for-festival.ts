@@ -157,13 +157,21 @@ async function main() {
             process.exit(1);
         }
 
-        const year: number = parseInt(yearStr, 10);
-        if (!festival.years.includes(year)) {
-            console.log(`Year ${year} not supported for ${festivalName}`);
-            process.exit(1);
+        let yearOrYears: number[];
+        if (yearStr) {
+            const year: number = parseInt(yearStr, 10);
+            if (!festival.years.includes(year)) {
+                console.log(`Year ${year} not supported for ${festivalName}`);
+                process.exit(1);
+            }
+
+            yearOrYears = [ year ];
+        } else {
+            // Festival name specified but not year, warm all supported years for this festival
+            yearOrYears = festival.years;
         }
 
-        await warm(festivalName, [ year ]);
+        await warm(festivalName, yearOrYears);
 
     } else {
         for (const festival of constants.supportedFestivals) {
