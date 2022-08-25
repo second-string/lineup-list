@@ -1,5 +1,6 @@
 import redis from "redis";
 
+import * as constants       from "./constants";
 import * as mbHelper        from "./mb-helper";
 import * as setlistFmHelper from "./setlist-fm-helper";
 import * as spotifyHelper   from "./spotify-helper";
@@ -16,6 +17,62 @@ export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient,
                                 resolve(JSON.parse(obj));
                             }
                         });
+    });
+
+    const last_updated_date: string = await datePromise;
+
+    if (last_updated_date) {
+        return new Date(last_updated_date);
+    }
+}
+
+export async function getArtistTopTracksLastUpdated(redisClient: redis.RedisClient, artistId: string): Promise<Date> {
+    const datePromise: Promise<string> = new Promise((resolve, reject) => {
+        redisClient.hget(`artist:${artistId}`, 'top_track_ids_last_updated', (err: Error, obj: string) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(obj);
+            }
+        });
+    });
+
+    const last_updated_date: string = await datePromise;
+
+    if (last_updated_date) {
+        return new Date(last_updated_date);
+    }
+}
+
+export async function getArtistNewestTracksLastUpdated(redisClient: redis.RedisClient,
+                                                       artistId: string): Promise<Date> {
+    const datePromise: Promise<string> = new Promise((resolve, reject) => {
+        redisClient.hget(`artist:${artistId}`, 'newest_track_ids_last_updated', (err: Error, obj: string) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(obj);
+            }
+        });
+    });
+
+    const last_updated_date: string = await datePromise;
+
+    if (last_updated_date) {
+        return new Date(last_updated_date);
+    }
+}
+
+export async function getArtistSetlistTracksLastUpdated(redisClient: redis.RedisClient,
+                                                        artistId: string): Promise<Date> {
+    const datePromise: Promise<string> = new Promise((resolve, reject) => {
+        redisClient.hget(`artist:${artistId}`, 'setlist_track_ids_last_updated', (err: Error, obj: string) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(obj);
+            }
+        });
     });
 
     const last_updated_date: string = await datePromise;
@@ -111,7 +168,8 @@ export async function getArtistsForFestival(redisClient: redis.RedisClient, fest
 
 export async function getTopTracksForArtist(redisClient: redis.RedisClient,
                                             artist: SpotifyArtist,
-                                            tracksPerArtist: number): Promise<SpotifyTrack[]> {
+                                            tracksPerArtist: number,
+                                            allowFetchBasedOnUpdatedDate: boolean = false): Promise<SpotifyTrack[]> {
     // Coerce to a number since it'll never evaluate to true when checking if we've reached it if it's a string
     tracksPerArtist = Number(tracksPerArtist);
 
@@ -119,17 +177,32 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
     const topTracksFromRedis: RedisTrack[]     = [];
     let   topTracksFromSpotify: SpotifyTrack[] = [];
 
-    if (!artist.top_track_ids || artist.top_track_ids.length === 0) {
-        // We've never gotten tracks and saved their ids for this artist, need to call spotify for tracks,
-        // save their ids for this artist, and save the tracks themselves. We cache all track IDs per artist
-        // and tracks themselves, but only return the number requested
-        console.log(`No top track ids for spotify artist ${
-            artist.id}, getting from spot, saving to redis artist, and saving each track`);
+    const lastUpdated = await getArtistTopTracksLastUpdated(redisClient, artist.id);
+
+    if (!lastUpdated) {
+        console.log(`No last updated date for top tracks for artist ${artist.id} found`);
+    }
+
+    const refreshThresholdMs = new Date(Date.now() - constants.daysInMsBeforeArtistTracksRefresh);
+
+    if (!artist.top_track_ids || artist.top_track_ids.length === 0 ||
+        (allowFetchBasedOnUpdatedDate && (!lastUpdated || lastUpdated < refreshThresholdMs))) {
+        // We've never gotten tracks and saved their ids for this artist, or haven't done it for a while, so need to
+        // call spotify for tracks, save their ids for this artist, and save the tracks themselves. We cache all track
+        // IDs per artist and tracks themselves, but only return the number requested
+        console.log(`No/out of date top track ids for spotify artist ${
+            artist.id}, getting from spot, saving to redis artist, and saving each track. lastUpdated: ${
+            lastUpdated ? lastUpdated.toISOString() : 'never'}`);
         const spotifyTracks: SpotifyTrack[] = await spotifyHelper.getAllTracksForArtist(artist);
+
+        const nowISOString = new Date().toISOString();
 
         // Get and save track IDs for this artist
         redisClient.hmset(`artist:${artist.id}`,
-                          {top_track_ids : JSON.stringify(spotifyTracks.map(x => x.id))},
+                          {
+                              top_track_ids : JSON.stringify(spotifyTracks.map(x => x.id)),
+                              top_track_ids_last_updated : nowISOString
+                          },
                           (err, res) => {
                               if (err) {
                                   console.error(err);
@@ -191,7 +264,8 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
 
 export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
                                                artist: SpotifyArtist,
-                                               tracksPerArtist: number): Promise<SpotifyTrack[]> {
+                                               tracksPerArtist: number,
+                                               allowFetchBasedOnUpdatedDate: boolean = false): Promise<SpotifyTrack[]> {
     // Coerce to a number since it'll never evaluate to true when checking if we've reached it if it's a string
     tracksPerArtist = Number(tracksPerArtist);
 
@@ -199,21 +273,27 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
     const newestTracksFromRedis: RedisTrack[]     = [];
     let   newestTracksFromSpotify: SpotifyTrack[] = [];
 
+    const lastUpdated = await getArtistNewestTracksLastUpdated(redisClient, artist.id);
+
+    if (!lastUpdated) {
+        console.log(`No last updated date for newest tracks for artist ${artist.id} found`);
+    }
+
+    const refreshThresholdMs = new Date(Date.now() - constants.daysInMsBeforeArtistTracksRefresh);
+
     // Note! Only check for null new tracks here - if it's an empty list (![] evals to false) that means we've
     // previously looked for them and haven't found them, so no need to search again. This happens when all the albums
     // returned for an artist are 'compilation' or 'appears_on', which we don't save tracks for due to remixes,
     // features, etc.
-    if (!artist.newest_track_ids) {
-        // We've never gotten albums and saved their ids for this artist, need to call spotify for albums,
-        // save their ids for this artist, save the albums themselves, and (EXTRA STEP COMPARED TO TOP TRACKS) get the
-        // tracks from the most recent album(s). We cache up to 50 album IDs per artist (max recieved in spotify query)
-        // and albums themselves, but only return the number requested
-        console.log(`No newest track ids for spotify artist ${
-            artist.id}, getting albums from spot, saving to redis albums, then getting tracks from most recent album and saving each track`);
+    if (!artist.newest_track_ids ||
+        (allowFetchBasedOnUpdatedDate && (!lastUpdated || lastUpdated < refreshThresholdMs))) {
+        // We've never gotten albums and saved their ids for this artist, or haven't done it for a while, need to call
+        // spotify for albums, save their ids for this artist, save the albums themselves, and (EXTRA STEP COMPARED TO
+        // TOP TRACKS) get the tracks from the most recent album(s). We cache up to 50 album IDs per artist (max
+        // recieved in spotify query) and albums themselves, but only return the number requested
+        console.log(`No/out of date newest track ids for spotify artist ${artist.id}, getting albums from spot, saving to redis albums, then getting tracks from most recent album and saving each track. lastUpdated: ${lastUpdated ? lastUpdated.toISOString() : 'never'}`);
 
         // Technically we could optimize a bit here by checking to see if we already have the albums and skip a query.
-        // We also don't handle the case of if the artist releases a new album after we've already newest tracks from
-        // the previously-latest album.
         const spotifyAlbums: SpotifyAlbum[] = await spotifyHelper.getAllAlbumsForArtist(artist);
 
         let validSpotifyAlbums: SpotifyAlbum[] = [];
@@ -281,11 +361,18 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
         const newestTrackKeys: string[]         = Array.from(newestTracks.keys());
         const newestTrackValues: SpotifyTrack[] = Array.from(newestTracks.values());
 
-        redisClient.hmset(`artist:${artist.id}`, {newest_track_ids : JSON.stringify(newestTrackKeys)}, (err, res) => {
-            if (err) {
-                console.error(err);
-            }
-        });
+        const nowISOString = new Date().toISOString();
+
+        redisClient.hmset(`artist:${artist.id}`,
+                          {
+                              newest_track_ids : JSON.stringify(newestTrackKeys),
+                              newest_track_ids_last_updated : nowISOString
+                          },
+                          (err, res) => {
+                              if (err) {
+                                  console.error(err);
+                              }
+                          });
 
         // Get and insert the actual track objects for all newest_track_ids we've saved on the artist
         for (const spotifyTrack of newestTrackValues) {
@@ -342,9 +429,11 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
     return newestTracksFromSpotify.concat(newestTracksFromRedis.map(x => redisToSpotifyTrack(x)));
 }
 
-export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
-                                                artist: SpotifyArtist,
-                                                tracksPerArtist: number): Promise<SpotifyTrack[]> {
+export async function getSetlistTracksForArtist(
+    redisClient: redis.RedisClient,
+    artist: SpotifyArtist,
+    tracksPerArtist: number,
+    allowFetchBasedOnUpdatedDate: boolean = false): Promise<SpotifyTrack[]> {
     // Coerce to a number since it'll never evaluate to true when checking if we've reached it if it's a string
     tracksPerArtist = Number(tracksPerArtist);
 
@@ -352,13 +441,23 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
     const setlistTracksFromRedis: RedisTrack[]     = [];
     let   setlistTracksFromSpotify: SpotifyTrack[] = [];
 
+    const lastUpdated = await getArtistSetlistTracksLastUpdated(redisClient, artist.id);
+
+    if (!lastUpdated) {
+        console.log(`No last updated date for setlist tracks for artist ${artist.id} found`);
+    }
+
+    const refreshThresholdMs = new Date(Date.now() - constants.daysInMsBeforeArtistTracksRefresh);
+
     // Note! Only check for null setlist tracks here - if it's an empty list that means we've previously looked for them
     // and haven't found them, so no need to search again
-    if (!artist.setlist_track_ids) {
-        // We don't have setlist tracks. Convert the artist to an mbid, get the most recent setlists, get the first 10
-        // track names spread across however many setlists it takes, search each of those track names on spotify, then
-        // save the first result for each track
-        console.log("Looking for setlist tracks for the first time");
+    if (!artist.setlist_track_ids ||
+        (allowFetchBasedOnUpdatedDate && (!lastUpdated || lastUpdated < refreshThresholdMs))) {
+        // We don't have setlist tracks, or they're out of date. Convert the artist to an mbid, get the most recent
+        // setlists, get the first 10 track names spread across however many setlists it takes, search each of those
+        // track names on spotify, then save the first result for each track
+        console.log(`Looking for setlist tracks for the first time, or refresh is due. lastUpdated: ${
+            lastUpdated ? lastUpdated.toISOString() : 'never'}`);
 
         // This will return null if it fails to find an mbid for an artist. That's okay, the getTracksFromSetlists
         // function will short circuit if mbid passed is null. This lets us still save an empty list of setlist tracks
@@ -388,10 +487,15 @@ export async function getSetlistTracksForArtist(redisClient: redis.RedisClient,
             .filter((track, idx, arr) => arr.findIndex(y => y.id === track.id) === idx);
         // clang-format on
 
+        const nowISOString = new Date().toISOString();
+
         // Save setlist tracks on artist in redis for next page load
         // TODO :: Should we save setlists here somehow, just like albums for newest tracks?
         redisClient.hmset(`artist:${artist.id}`,
-                          {setlist_track_ids : JSON.stringify(spotifyTracks.map(x => x.id))},
+                          {
+                              setlist_track_ids : JSON.stringify(spotifyTracks.map(x => x.id)),
+                              setlist_track_ids_last_updated : nowISOString
+                          },
                           (err, res) => {
                               if (err) {
                                   console.error(err);
