@@ -126,9 +126,9 @@ async function warm(festival: string, years: number[]) {
                     console.log(redisArtist);
                     continue;
                 }
-                await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
-                await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
-                await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10);
+                await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
+                await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
+                await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
             }
         }
 
