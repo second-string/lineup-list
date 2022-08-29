@@ -1,0 +1,67 @@
+{
+    "title": "FestivalLineup",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "display_name": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "string"
+        },
+        "region": {
+            "type": "string"
+        },        
+        "year": {
+            "type": "integer"
+        },
+        "days": {
+            "type": "array",
+            "items": {
+                "title": "LineupDay",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "number": {
+                        "type": "integer"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    },                                        
+                    "artists": {
+                        "type": "array",
+                        "items": {
+                            "title": "Artist",
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "spotify_uri": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "name"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "number"
+                ]
+            }
+        }
+    },
+    "required": [
+        "days",
+        "display_name",
+        "slug",
+        "region",
+        "year"
+    ]
+}

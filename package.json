@@ -24,6 +24,7 @@
     "@types/node-fetch": "^2.5.4",
     "@types/redis": "^2.8.15",
     "@types/uuid": "^3.4.7",
+    "ajv": "^8.11.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
@@ -39,8 +40,9 @@
     "redis": "^3.0.2",
     "setlistfm-js": "^1.0.1",
     "tslint": "^6.0.0",
-    "typescript": "^3.7.5",
-    "uuid": "^3.4.0"
+    "typescript": "^4.2.3",
+    "uuid": "^3.4.0",
+    "yaml": "^2.1.1"
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
