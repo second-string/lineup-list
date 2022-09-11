@@ -1,11 +1,28 @@
 # Lineup List
+
+## Info
+[![Website https://lineuplist.live](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://lineuplist.live)
+[![GitHub license](https://badgen.net/github/license/dot4qu/lineup-list)](https://github.com/dot4qu/lineup-list/blob/master/LICENSE)
+
 [lineuplist.live](https://lineuplist.live)  
+
 A Spotify playlist generator for music festival lineups. Choose from different filters and playlist options to customize it to your tastes. See the [FAQ](views/faq.handlebars) for more information.
 
 
-## Running Lineup List locally (not necesary unless you're doing local development)
-### If you're setting up for the first time:
-### Setting up necessary environment variables
+## Development
+### Local environment
+
+#### If you've set up and run before:
+1. `./start_lineup_list.sh` / `./start_lineup_list.bat`
+2. Navigate to `https://localhost` in your browser, or `http://localhost:8080` if the LINEUPLIST_FORCE_HTTP env var is set to true
+
+
+- GET `localhost/health` for healthcheck
+
+#### If you're setting up for the first time:
+
+##### Setting up necessary environment variables
+
 To run the server locally with full functionality, there are 5 environment variables you'll need. 
 1. CLIENT_ID - this is the developer client ID for accessing Spotify's API  
     - Sign into [developer.spotify.com](https://developer.spotify.com) with your regular Spotify account and navigate to the Dashboard page  
@@ -50,7 +67,7 @@ echo "done."
 
 For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `echo` lines, and replace `export` with `set`.
 
-#### macOS
+##### macOS build system
 1. `brew install redis npm`
 2. `redis-server` in separate tab
 3. set necessary env vars (see section above)
@@ -62,7 +79,7 @@ For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `
 7. `npm start`
 8. Navigate to `https://localhost` in your browser (or `http://localhost:8080` if LINEUPLIST_FORCE_HTTP is set to true)
 
-#### Windows
+##### Windows build system
 1. Install both redis and npm either through a package manager like Chocolatey or directly from their source installers
 2. `redis-server` in separate tab
 3. set necessary env vars (see section above)
@@ -73,14 +90,6 @@ For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `
     * handles pulling in artist info  for all supported festival
 7. `npm start`
 8. Navigate to `https://localhost` in your browser (or `http://localhost:8080` if LINEUPLIST_FORCE_HTTP is set to true)
-
-
-### If you've set up and run before:
-1. `./start_lineup_list.sh` / `./start_lineup_list.bat`
-2. Navigate to `https://localhost` in your browser, or `http://localhost:8080` if the LINEUPLIST_FORCE_HTTP env var is set to true
-
-
-- GET `localhost/health` for healthcheck
 
 
 ### Festival lineup files
