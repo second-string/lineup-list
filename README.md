@@ -1,5 +1,11 @@
 # Lineup List
+
+## Info
+[![Website https://lineuplist.live](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://lineuplist.live)
+[![GitHub license](https://badgen.net/github/license/dot4qu/lineup-list)](https://github.com/dot4qu/lineup-list/blob/master/LICENSE)
+
 [lineuplist.live](https://lineuplist.live)  
+
 A Spotify playlist generator for music festival lineups. Choose from different filters and playlist options to customize it to your tastes. See the [FAQ](views/faq.handlebars) for more information.
 
 
