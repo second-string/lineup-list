@@ -1,0 +1,34 @@
+display_name: Audacy Beach Festival
+slug: audacy
+region: am
+year: 2022
+days:
+  - number: 1
+    date: 2022-12-03
+    display_name: Day 1
+    artists:
+      - name: Muse
+      - name: Jack White
+      - name: Jimmy Eat World
+      - name: Phoenix
+      - name: YUNGBLUD
+      - name: The Maine
+      - name: BoyWithUke
+      - name: The Struts
+      - name: half*alive
+      - name: Beach Weather
+      - name: Talk
+  - number: 2
+    date: 2022-12-04
+    display_name: Day 2
+    artists:
+      - name: Machine Gun Kelly
+      - name: The 1975
+      - name: The Used
+      - name: Dashboard Confessional
+      - name: Waterparks
+      - name: GAYLE
+      - name: Mayday Parade
+      - name: Story of the Year
+      - name: Wheatus
+      - name: Giovannie & The Hired Guns
