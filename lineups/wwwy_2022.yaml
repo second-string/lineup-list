@@ -1,0 +1,77 @@
+display_name: When We Were Young
+slug: wwwy
+region: am
+year: 2022
+days:
+  - number: 0
+    date: 2022-10-22
+    display_name: All Days
+    artists:
+      - name: The Chemical Brothers
+      - name: 3OH!3
+      - name: Acceptance
+      - name: AFI
+      - name: Alex G
+      - name: Alkaline Trio
+      - name: The All-American Rejects
+      - name: Anberlin
+      - name: Armor for Sleep
+      - name: Atreyu
+      - name: Avril Lavigne
+      - name: Bayside
+      - name: Black Veil Brides
+      - name: Boys Like Girls
+      - name: Bright Eyes
+      - name: Bring Me the Horizon
+      - name: Car Seat Headrest
+      - name: Dance Gavin Dance
+      - name: Dashboard Confessional
+      - name: A Day to Remember
+      - name: Four Year Strong
+      - name: The Garden
+      - name: Glassjaw
+      - name: Hawthorne Heights
+      - name: HorrorPops
+      - name: Lil Huddy
+      - name: I Prevail
+      - name: Ice Nine Kills
+      - name: Jimmy Eat World
+      - name: Jxdn
+      - name: Kittie
+      - name: Knocked Loose
+      - name: La Dispute
+      - name: The Linda Lindas
+      - name: The Maine
+      - name: Manchester Orchestra
+      - name: Mayday Parade
+      - name: Meet Me at the Altar
+      - name: Millionaires (duo)
+      - name: Mom Jeans
+      - name: Motionless in White
+      - name: My Chemical Romance
+      - name: Neck Deep
+      - name: Nessa Barrett
+      - name: Paramore
+      - name: Palaye Royale
+      - name: Prentiss
+      - name: Pierce the Veil
+      - name: Poppy
+      - name: Pvris
+      - name: The Ready Set
+      - name: The Red Jumpsuit Apparatus
+      - name: Royal & the Serpent
+      - name: Saosin
+      - name: Senses Fail
+      - name: Silverstein
+      - name: Sleeping With Sirens
+      - name: The Starting Line
+      - name: State Champs
+      - name: Story of the Year
+      - name: The Story So Far
+      - name: Taking Back Sunday
+      - name: Thursday
+      - name: TV Girl
+      - name: We the Kings
+      - name: Wolf Alice
+      - name: The Wonder Years
+      - name: The Used
