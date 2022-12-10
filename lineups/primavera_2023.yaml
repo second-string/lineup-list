@@ -1,0 +1,195 @@
+display_name: Primavera Sound Barcelona
+slug: primavera
+region: eu
+year: 2023
+days:
+  - number: 1
+    date: 2022-06-01
+    display_name: Day 1
+    artists:
+      - name: BLUR
+      - name: HALSEY
+      - name: DARKSIDE
+      - name: GHOST
+      - name: LE TIGRE
+      - name: NXWORRIES
+      - name: TURNSTILE
+      - name: CENTRAL CEE
+      - name: DRAIN GANG
+      - name: LOYLE CARNER
+      - name: PUSHA T
+      - name: REMA
+      - name: ALEX G
+      - name: AMENRA
+      - name: ANYMA
+      - name: ARTHUR VEROCAI
+      - name: BLACK COUNTRY. NEW ROAD
+      - name: BORIS
+      - name: BUILT TO SPILL
+      - name: DJ PLAYERO
+      - name: EMERALDS
+      - name: FOLAMOUh
+      - name: HUDSON MOHAWKE
+      - name: MACHINE GIRL
+      - name: OFF!
+      - name: PERFUME
+      - name: PINKPANTHERESS
+      - name: RED VELVET
+      - name: SELF ESTEEM
+      - name: SUDAN ARCHIVES
+      - name: THE COMET IS COMING
+      - name: YARD ACT
+      - name: ANTÒNIM
+      - name: ASCENDANT VIERGE
+      - name: BLACKHAINE
+      - name: BRUTALISMUS 3000
+      - name: CABIRIA
+      - name: CHICA GANG
+      - name: COME
+      - name: FLOWEROVLOVE
+      - name: HEATHER
+      - name: HEINALI
+      - name: ISABELLA LOVESTORY
+      - name: JANA RUSH
+      - name: JOE CREPÚSCULO
+      - name: JOE UNKNOWN
+      - name: JULIA COLOM
+      - name: JULIANA HUXTABLE
+      - name: JASSS
+      - name: KARENN
+      - name: MARAL
+      - name: RHYW
+      - name: SALAMANDA
+      - name: SHANNEN SP
+      - name: JOE COTCH
+      - name: SLAUSON MALONE 1
+      - name: TERNO REI
+      - name: VERRACO
+  - number: 2
+    date: 2022-06-02
+    display_name: Day 2
+    artists:
+      - name: KENDRICK LAMAR
+      - name: DEPECHE MODE
+      - name: BABY KEEM
+      - name: FOUR TET
+      - name: FRED AGAIN..
+      - name: SKRILLEX
+      - name: THE MOLDY PEACHES
+      - name: BAD RELIGION
+      - name: BLEACHERS
+      - name: CHRISTINE & THE QUEENS
+      - name: MORA
+      - name: SPARKS
+      - name: THE MARS VOLTA
+      - name: ALVVAYS
+      - name: BEAK>
+      - name: CAVETOWN
+      - name: CHANNEL TRES
+      - name: DAPHNI
+      - name: GABRIELS
+      - name: ISRAEL FERNÁNDEZ
+      - name: DIEGO DEL MORAO
+      - name: JAPANESE BREAKFAST
+      - name: JOHN TALABOT
+      - name: JULIA HOLTER
+      - name: JULIA JACKLIN
+      - name: KARATE
+      - name: KYARY PAMYU PAMYU
+      - name: LEBANON HANOVER
+      - name: NATION OF LANGUAGE
+      - name: SWANS
+      - name: TEMS
+      - name: THE DELGADOS
+      - name: TRUENO
+      - name: TSHA LIVE
+      - name: UNWOUND
+      - name: VTSS
+      - name: LSDXOXO
+      - name: YVES TUMOR
+      - name: BALA
+      - name: BETH ORTON
+      - name: BILL KOULIGAS
+      - name: CARLOTA FLÄNEUR
+      - name: GAZ COOMBES
+      - name: GEORGIA
+      - name: GIGI FM
+      - name: HONOUR
+      - name: JUDELINE
+      - name: LOS HACHEROS
+      - name: LOW JACK
+      - name: LALA &CE
+      - name: MADDY MAIA
+      - name: TOTTIE
+      - name: NAZIRA
+      - name: NIÑA COYOTE ETA CHICO TORNADO
+      - name: SOUL GLO
+      - name: THE BETHS
+      - name: THE SOFT PINK TRUTH
+      - name: TONGUE IN THE MIND
+      - name: TZUSING
+      - name: UPSAMMY
+      - name: VELMONDO
+      - name: VOICES FROM THE LAKE
+  - number: 3
+    date: 2022-06-03
+    display_name: Day 3
+    artists:
+      - name: ROSALIA
+      - name: CALVIN HARRIS
+      - name: BAD GYAL
+      - name: FKA TWIGS
+      - name: MÄNESKIN
+      - name: ST. VINCENT
+      - name: THE WAR ON DRUGS
+      - name: CAROLINE POLACHEK
+      - name: CHARLOTTE DE WITTE
+      - name: MAGGIE ROGERS
+      - name: MY MORNING JACKET
+      - name: TOKISCHA
+      - name: ARLO PARKS
+      - name: DEATH GRIPS
+      - name: DOMI & JD BECK
+      - name: EDDIE PALMIERI
+      - name: EZRA FURMAN
+      - name: GILLA BAND
+      - name: HOLLY HUMBERSTONE
+      - name: JAYDA G
+      - name: JOCKSTRAP
+      - name: JOHN CALE
+      - name: JPEGMAFIA
+      - name: KELELA
+      - name: LAURIE ANDERSON
+      - name: NIA ARCHIVES
+      - name: OVERMONO
+      - name: SHELLAC
+      - name: SURF CURSE
+      - name: THE VOIDZ
+      - name: YUNG LEAN
+      - name: ALISSIC
+      - name: ANISH KUMAR
+      - name: AVALON EMERSON & THE CHARM
+      - name: BAR ITALIA
+      - name: BE YOUR OWN PET
+      - name: CCL
+      - name: CRACK CLOUD
+      - name: DESERT
+      - name: DJ COCO
+      - name: DJ STORM
+      - name: GRUPO DE EXPERTOS SOLYNIEVE
+      - name: JAMES ELLIS FORD
+      - name: JOSEY REBELLE
+      - name: LOS GANGLIOS
+      - name: MALA
+      - name: NÚRIA GRAHAM
+      - name: OM UNIT
+      - name: ORIANA
+      - name: MELINA SERSER
+      - name: PIONAL
+      - name: THE DRIFT INSTITUTE
+      - name: TWIN
+      - name: UBALDO
+      - name: VILLANO ANTILLANO
+      - name: WEDNESDAY
+      - name: WOODEN WISDOM
+      - name: DJ FITZ
