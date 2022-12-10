@@ -1,0 +1,349 @@
+display_name: Primavera Sound Barcelona
+slug: primavera
+region: eu
+year: 2022
+days:
+  - number: 1
+    date: 2022-06-02
+    display_name: Day 1, Weekend 1
+    artists:
+      - name: PAVEMENT
+      - name: TAME IMPALA
+      - name: 100 GECS
+      - name: BAD GYAL
+      - name: BLACK LIPS
+      - name: BLACK MIDI
+      - name: CHARLI XCX
+      - name: CIGARETTES AFTER SEX
+      - name: DINOSAUR JR.
+      - name: DJ SHADOW
+      - name: FRED AGAIN..
+      - name: GIRL IN RED
+      - name: HONEY DIJON
+      - name: KACEY MUSGRAVES
+      - name: KEHLANI
+      - name: KIM GORDON
+      - name: MABEL
+      - name: MARIA DEL MAR BONET
+      - name: SHARON VAN ETTEN
+      - name: YO LA TENGO
+      - name: AFRODEUTSCHE
+      - name: BEABADOOBEE
+      - name: BIG FREEDIA
+      - name: CALL SUPER
+      - name: SHANTI CELESTE
+      - name: CARISTA
+      - name: CARLA
+      - name: CAROLINA DURANTE
+      - name: D. TIFFANY
+      - name: DJ FRA
+      - name: ÉL MATÓ A UN POLICÍA MOTORIZADO
+      - name: FAYE WEBSTER
+      - name: HANNAH DIAMOND
+      - name: IVY BARKAKATI
+      - name: KAREEM ALI
+      - name: LES SAVY FAV
+      - name: LINGUA IGNOTA
+      - name: MARTHA
+      - name: OKLOU
+      - name: MYD
+      - name: RICHARD DAWSON
+      - name: SARAMALACARA
+      - name: DILLOM
+      - name: OSHEYACK
+      - name: AIKO EL GRUPO
+      - name: OTOBOKE BEAVER
+      - name: PELADA
+      - name: POND
+      - name: RINA SAWAYAMA
+      - name: RODRIGO CUEVAS
+      - name: ROMBO
+      - name: SHYGIRL
+      - name: SOTO ASA
+      - name: THE ARMED
+      - name: VTSS
+      - name: VERDE PRATO
+  - number: 2
+    date: 2022-06-03
+    display_name: Day 2, Weekend 1
+    artists:
+      - name: BECK
+      - name: THE NATIONAL
+      - name: THE STROKES
+      - name: AMAIA
+      - name: AUTECHRE
+      - name: BIKINI KILL
+      - name: CARIBOU
+      - name: EARL SWEATSHIRT
+      - name: FONTAINES D.C.
+      - name: JAMIE XX
+      - name: JEFF MILLS
+      - name: JEHNNY BETH
+      - name: KANO
+      - name: KING GIZZARD & THE LIZARD WIZARD
+      - name: LITTLE SIMZ
+      - name: MANEL
+      - name: PABLLO VITTAR
+      - name: PALOMA MAMI
+      - name: PARQUET COURTS
+      - name: WARPAINT
+      - name: WEYES BLOOD
+      - name: AURORA HALAL
+      - name: BEACH BUNNY
+      - name: BLAWAN
+      - name: BUTTECHNO
+      - name: CARIÑO
+      - name: CHAQUETA DE CHÁNDAL
+      - name: CZN
+      - name: DEENA ABDELWAHED
+      - name: DJ STINGRAY 313
+      - name: EVIAN CHRIST
+      - name: GABRIELA RICHARDSON
+      - name: GEORGIA
+      - name: HELADO NEGRO
+      - name: IOSONOUNCANE
+      - name: ISABELLA
+      - name: JASMINE INFINITI
+      - name: KAYDY CAIN
+      - name: LE NAIS
+      - name: LIGHTNING BOLT
+      - name: LORENZO SENNI
+      - name: LORY D
+      - name: MAINLINE MAGIC ORCHESTRA
+      - name: MANO LE TOUGH
+      - name: MARIAH THE SCIENTIST
+      - name: MARINA HERLOP
+      - name: NÍDIA
+      - name: OSCAR MULERO
+      - name: PINPILINPUSSIES
+      - name: SHELLAC
+      - name: TROPICAL FUCK STORM
+      - name: VIOLET
+      - name: YOUNG MARCO
+  - number: 3
+    date: 2022-06-04
+    display_name: Day 3, Weekend 1
+    artists:
+      - name: GORILLAZ
+      - name: JORJA SMITH
+      - name: NICK CAVE
+      - name: TYLER THE CREATOR
+      - name: BAUHAUS
+      - name: BEACH HOUSE
+      - name: CAROLINE POLACHEK
+      - name: DIIV
+      - name: DISCLOSURE
+      - name: DJ HARVEY
+      - name: DUKI
+      - name: DREAMCATCHER
+      - name: EINSTÜRZENDE NEUBAUTEN
+      - name: IDLES
+      - name: JAWBOX
+      - name: KING KRULE
+      - name: MARÍA JOSÉ LLERGO
+      - name: MAVIS STAPLES
+      - name: NAPALM DEATH
+      - name: SLOWTHAI
+      - name: ABBATH
+      - name: AUTOMATIC
+      - name: BEN UFO
+      - name: BISCUIT
+      - name: BLACK COUNTRY NEW ROAD
+      - name: BOY HARSHER
+      - name: DIE KATAPULT
+      - name: DJ PLAYERO
+      - name: ENNY
+      - name: FATIMA YAMAHA
+      - name: FERRAN PALAU
+      - name: GUINEU
+      - name: JAMILA WOODS
+      - name: JENNY HVAL
+      - name: JOHN T GAST
+      - name: MASALO
+      - name: LAS LIGAS MENORES
+      - name: LAWRENCE LE DOUX
+      - name: LEON VYNEHALL
+      - name: LES AMAZONES D'AFRIQUE
+      - name: MECÁNICA POPULAR
+      - name: NORSICAA
+      - name: PORRIDGE RADIO
+      - name: RAPSODY
+      - name: SANGRE NUEVA
+      - name: SHAME
+      - name: SQUAREPUSHER
+      - name: DJ STINGRAY 313
+      - name: TERRENCE DIXON
+      - name: THE CARETAKER
+      - name: TIM BURGESS
+      - name: ZOZO
+  - number: 4
+    date: 2022-06-09
+    display_name: Day 1, Weekend 2
+    artists:
+      - name: DUA LIPA
+      - name: GORILLAZ
+      - name: INTERPOL
+      - name: TYLER THE CREATOR
+      - name: ASHNIKKO
+      - name: BAD GYAL
+      - name: BICEP
+      - name: BIG THIEF
+      - name: CAZZU
+      - name: CHARLI XCX
+      - name: GILLES PETERSON
+      - name: JAY ELECTRONICA
+      - name: KHRUANGBIN
+      - name: KING GIZZARD & THE LIZARD WIZARD
+      - name: MALL GRAB
+      - name: METRONOMY
+      - name: PERFUME
+      - name: PLAYBOI CARTI
+      - name: RIDE
+      - name: SLOWDIVE
+      - name: A. G. COOK
+      - name: AGORAPHOBIA
+      - name: ALEX CAMERON
+      - name: AMBARCHI
+      - name: SPRENGER
+      - name: SOLLMANN
+      - name: ANZ
+      - name: BIKÔKÔ
+      - name: CASERO
+      - name: CUBAN DOLL
+      - name: DRY CLEANING
+      - name: DUMA
+      - name: ÉL MATÓ A UN POLICÍA MOTORIZADO
+      - name: FUTURE UTOPIA
+      - name: GABBER MODUS OPERANDI
+      - name: GRACEY
+      - name: GRIFF
+      - name: HAAI
+      - name: HIGH ON FIRE
+      - name: HOLLY HUMBERSTONE
+      - name: INDIA JORDAN
+      - name: JENSEN MCRAE
+      - name: JOHN TALABOT
+      - name: MOONCHILD SANELLY
+      - name: MUJERES
+      - name: PILE
+      - name: PROSPA
+      - name: RATA NEGRA
+      - name: SLIKBACK
+      - name: SOFIA KOURTESIS
+      - name: SONIDO TUPINAMBA
+      - name: SQUID
+      - name: TARTA RELENA
+      - name: WORKING MENS CLUB
+  - number: 5
+    date: 2022-06-10
+    display_name: Day 2, Weekend 2
+    artists:
+      - name: LORDE
+      - name: MASSIVE ATTACK
+      - name: THE STROKES
+      - name: BLACK COFFEE
+      - name: BRITTANY HOWARD
+      - name: BURNA BOY
+      - name: CLAIRO
+      - name: COURTNEY BARNETT
+      - name: GIVEON
+      - name: KHEA
+      - name: M.I.A.
+      - name: NICOLA CRUZ
+      - name: PA SALIEU
+      - name: RUN THE JEWELS
+      - name: THE JESUS AND MARY CHAIN
+      - name: ALIZZZ
+      - name: AMAARAE
+      - name: APARTAMENTOS ACAPULCO
+      - name: CAUTIOUS CLAY
+      - name: CMAT
+      - name: CONNAN MOCKASIN
+      - name: DANNY L HARLE
+      - name: DORIAN ELECTRA
+      - name: DUMA
+      - name: EFDEMIN
+      - name: ERIKA DE CASIER
+      - name: JAPANESE BREAKFAST
+      - name: LCY
+      - name: MARCO SHUTTLE
+      - name: MAEVE
+      - name: MARTA KNIGHT
+      - name: MARY ANNE HOBBS
+      - name: MENTA
+      - name: NUEVA VULCANO
+      - name: OLI XL
+      - name: PANGAEA
+      - name: PRIYA RAGU
+      - name: RIGOBERTA BANDINI
+      - name: SAMA' ABDULHADI
+      - name: SAMPA THE GREAT
+      - name: SENYAWA
+      - name: SPECIAL INTEREST
+      - name: SPFDJ
+      - name: STEIN
+      - name: TARQUIM
+      - name: THE MURDER CAPITAL
+      - name: TOPS
+      - name: TRIÁNGULO DE AMOR BIZARRO
+      - name: VALENTINO MORA
+      - name: VLADISLAV DELAY
+      - name: VTSS
+      - name: WATA IGARASHI
+  - number: 6
+    date: 2022-06-11
+    display_name: Day 3, Weekend 2
+    artists:
+      - name: JORJA SMITH
+      - name: MEGAN THEE STALLION
+      - name: PHOENIX
+      - name: TAME IMPALA
+      - name: YEAH YEAH YEAHS
+      - name: ANGÈLE
+      - name: ANTÒNIA FONT
+      - name: CELESTE
+      - name: DANIEL AVERY
+      - name: DJ SEINFELD
+      - name: FRED AGAIN
+      - name: JESSIE WARE
+      - name: KING PRINCESS
+      - name: LA MAFIA DEL AMOR
+      - name: MOGWAI
+      - name: MOLCHAT DOMA
+      - name: NICKI NICOLE
+      - name: ROMY
+      - name: SEN SENRA
+      - name: SKY FERREIRA
+      - name: TAINY
+      - name: ACEMOMA
+      - name: ALTIN GÜN
+      - name: ANGEL BAT DAWID
+      - name: AROOJ AFTAB
+      - name: CONFETI DE ODIO
+      - name: COURTESY
+      - name: CRAIG RICHARDS
+      - name: NICOLAS LUTZ
+      - name: DA SOUZA
+      - name: DERBY MOTORETA'S BURRITO KACHIMBA
+      - name: DJ PASTIS
+      - name: ELA MINUS
+      - name: GAAHLS WYRD
+      - name: GENESIS OWUSU
+      - name: GOLDIE
+      - name: LA ZOWI
+      - name: LOGIC1000
+      - name: NAMASENDA
+      - name: ORANSSI PAZUZU
+      - name: PARANOID 1966
+      - name: POND
+      - name: ROLLING BLACKOUTS COASTAL FEVER
+      - name: RENALDO & CLARA
+      - name: SAD NIGHT DYNAMITE
+      - name: SHELLAC
+      - name: SHERELLE
+      - name: TIM REAPER
+      - name: SOLEA MORENTE
+      - name: SPECIAL REQUEST
+      - name: THE WEATHER STATION
+      - name: UNAI MUGURUZA
+      - name: VIAGRA BOYS

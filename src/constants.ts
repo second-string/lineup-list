@@ -37,11 +37,9 @@ export const supportedFestivals: Festival[] = [
     {display_name : "New Orleans Jazz Fest", years : [ 2022, 2021 ], name : "jazzfest", region : "am"},
     {display_name : "Lightning in a Bottle", years : [ 2022 ], name : "lib", region : "am"},
     {display_name : "Day N Vegas", years : [ 2021 ], name : "daynvegas", region : "am"},
-    {display_name : "Audacy Beach Festival", years : [ 2022, 2021 ], name : "audacy", region : "am"},
+    {display_name : "Audacy Beach Festival", years : [ 2021 ], name : "audacy", region : "am"},
     {display_name : "Primavera Sound LA", years : [ 2022 ], name : "primaverala", region : "am"},
     {display_name : "This Ain't No Picnic", years : [ 2022 ], name : "picnic", region : "am"},
-    {display_name : "Primavera Sound Barcelona (weekend 1)", years : [ 2022 ], name : "primaverawknd1", region : "eu"},
-    {display_name : "Primavera Sound Barcelona (weekend 2)", years : [ 2022 ], name : "primaverawknd2", region : "eu"},
     {display_name : "Primavera a la Ciutat", years : [ 2022 ], name : "primaveraciutat", region : "eu"},
     {display_name : "CRSSD", years : [ 2022 ], name : "crssd", region : "am"},
     {display_name : "Okeechobee", years : [ 2022 ], name : "okeechobee", region : "am"},
@@ -73,4 +71,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Life Is Beautiful", years : [ 2022 ], name : "lifeisbeautiful", region : "am"},
     {display_name : "Bourbon and Beyond", years : [ 2022 ], name : "bourbonandbeyond", region : "am"},
     {display_name : "When We Were Young", years : [ 2022 ], name : "wwwy", region : "am"},
+    {display_name : "Primavera Sound Barcelona", years : [ 2023, 2022 ], name : "primavera", region : "eu"},
 ];

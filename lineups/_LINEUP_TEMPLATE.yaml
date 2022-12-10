@@ -1,0 +1,22 @@
+display_name: Name to be displayed to user
+slug: url_friendly_short_version_of_namea
+region: am|eu|??
+year: 2023
+days:
+  - number: 1 # This is an integer for redis key. 1-indexed for festivals with days, or just single '0' day for fest w/ no days announcee
+    date: 2022-06-01 # YYYY-MM-DD
+    display_name: Day 1 # The text displayed to the user for the filters
+    artists:
+      - name: CHARLOTTE DE WITTE # name is required, can also provide spotify_uri field that overrides name search
+      - name: JULIEN BAKER # name capitalization doesn't matter, only used for spotify URI search then replaced w/ spotify name
+        spotify_uri: xxxxxxxxxxxxxxx
+  - number: 2
+    date: 2022-06-02
+    display_name: Day 2
+    artists:
+      - name: FOUR TET
+  - number: 3
+    date: 2022-06-03
+    display_name: Day 3
+    artists:
+      - name: CAROLINE POLACHEK
