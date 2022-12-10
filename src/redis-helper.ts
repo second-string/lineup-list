@@ -185,8 +185,10 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
 
     const refreshThresholdMs = new Date(Date.now() - constants.daysInMsBeforeArtistTracksRefresh);
 
-    if (!artist.top_track_ids || artist.top_track_ids.length === 0 ||
-        (allowFetchBasedOnUpdatedDate && (!lastUpdated || lastUpdated < refreshThresholdMs))) {
+    // Note! Only check for null top tracks here - if it's an empty list (![] evals to false) that means we've
+    // previously looked for them and haven't found them, so no need to search again. Super rare but happens for some
+    // super small artists that only have a few features on others' tracks
+    if (!artist.top_track_ids || (allowFetchBasedOnUpdatedDate && (!lastUpdated || lastUpdated < refreshThresholdMs))) {
         // We've never gotten tracks and saved their ids for this artist, or haven't done it for a while, so need to
         // call spotify for tracks, save their ids for this artist, and save the tracks themselves. We cache all track
         // IDs per artist and tracks themselves, but only return the number requested
@@ -198,16 +200,14 @@ export async function getTopTracksForArtist(redisClient: redis.RedisClient,
         const nowISOString = new Date().toISOString();
 
         // Get and save track IDs for this artist
-        redisClient.hmset(`artist:${artist.id}`,
-                          {
-                              top_track_ids : JSON.stringify(spotifyTracks.map(x => x.id)),
-                              top_track_ids_last_updated : nowISOString
-                          },
-                          (err, res) => {
-                              if (err) {
-                                  console.error(err);
-                              }
-                          });
+        redisClient.hmset(
+            `artist:${artist.id}`,
+            {top_track_ids : JSON.stringify(spotifyTracks.map(x => x.id)), top_track_ids_last_updated : nowISOString},
+            (err, res) => {
+                if (err) {
+                    console.error(err);
+                }
+            });
 
         for (const spotifyTrack of spotifyTracks) {
             const redisTrack: any = spotifyToRedisTrack(spotifyTrack);
@@ -326,13 +326,14 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
                               }
                           });
 
-        // If the artist only had compilation or group albums, we won't have anything to work with. Bail here too
+        // If the artist only had compilation or group albums, we won't have anything to work with. Let rest of logic
+        // run (it will just skip everything since array is empty) so we properly save the empty list and
+        // newest_track_ids_last_updated
         if (validSpotifyAlbums.length === 0) {
             console.warn(
                 `Zero albums returned from getAllAlbumsForArtist after filterout out 'compilations' or 'appears_on'. Artist ${
                     artist.name} (${
-                    artist.id}). Saved empty list to redis to prevent pointless searches in the future`);
-            return [];
+                    artist.id}). Saving empty list to redis to prevent pointless searches in the future`);
         }
 
         // Order albums by release date descending. Can't just take the newest album from above loop because it might
@@ -357,22 +358,23 @@ export async function getNewestTracksForArtist(redisClient: redis.RedisClient,
             albumIndex++;
         }
 
+        // TODO :: if newestTracks.size is still < 15 here, we should supplement with top tracks just like we do for
+        // setlist tracks
+
         // Pull out our info into arrays here versus the continuous calling of Array.from every time they're used
         const newestTrackKeys: string[]         = Array.from(newestTracks.keys());
         const newestTrackValues: SpotifyTrack[] = Array.from(newestTracks.values());
 
         const nowISOString = new Date().toISOString();
 
-        redisClient.hmset(`artist:${artist.id}`,
-                          {
-                              newest_track_ids : JSON.stringify(newestTrackKeys),
-                              newest_track_ids_last_updated : nowISOString
-                          },
-                          (err, res) => {
-                              if (err) {
-                                  console.error(err);
-                              }
-                          });
+        redisClient.hmset(
+            `artist:${artist.id}`,
+            {newest_track_ids : JSON.stringify(newestTrackKeys), newest_track_ids_last_updated : nowISOString},
+            (err, res) => {
+                if (err) {
+                    console.error(err);
+                }
+            });
 
         // Get and insert the actual track objects for all newest_track_ids we've saved on the artist
         for (const spotifyTrack of newestTrackValues) {
