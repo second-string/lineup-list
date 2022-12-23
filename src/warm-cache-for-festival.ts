@@ -8,20 +8,6 @@ import * as constants     from "./constants";
 import * as redisHelper   from "./redis-helper";
 import * as spotifyHelper from "./spotify-helper";
 
-interface LineupDay {
-    number: number
-    display_name: string
-    date: Date
-    artists: ArtistAndUri[]
-}
-
-interface FestivalLineup {
-    display_name: string
-    slug: string
-    year: number
-    days: LineupDay[]
-}
-
 async function warm(festival: string, years: number[]) {
     const redisClient = redis.createClient();
 
@@ -95,6 +81,12 @@ async function warm(festival: string, years: number[]) {
                     artistObjs[day] = [ {name : artistName} ];
                 }
             }
+
+            // Save all days so we can pull them later
+            redisClient.set(`festival:${festival.toLowerCase()}_${year}:days`,
+                            JSON.stringify(Object.keys(artistObjs)),
+                            redis.print);
+
         } else {
             // yaml mode
 
@@ -133,8 +125,25 @@ async function warm(festival: string, years: number[]) {
                 process.exit(1);
             }
 
+            const allDates: Date[] = data.days.map(day => day.date);
+
             // load the days/lineups, per the text format
             for (const day of data.days) {
+                day.date = new Date(day.date);
+
+                // Save day metadata
+                redisClient.hmset(`festival:${festival.toLowerCase()}_${year}:days:${day.number}`,
+                                  {
+                                      number : day.number.toString(),
+                                      date : day.date.toISOString(),
+                                      display_name : day.display_name ? day.display_name : ""
+                                  },
+                                  (err, res) => {
+                                      if (err) {
+                                          console.error(err);
+                                      }
+                                  });
+
                 for (const artist of day.artists) {
                     if (artistObjs[day.number] && artistObjs[day.number].length) {
                         artistObjs[day.number].push(artist);
@@ -143,12 +152,10 @@ async function warm(festival: string, years: number[]) {
                     }
                 }
             }
-        }
 
-        // Save all days so we can pull them later
-        redisClient.set(`festival:${festival.toLowerCase()}_${year}:days`,
-                        JSON.stringify(Object.keys(artistObjs)),
-                        redis.print);
+            // Save all days so we can pull them later
+            redisClient.set(`festival:${festival.toLowerCase()}_${year}:days`, JSON.stringify(allDates), redis.print);
+        }
 
         // For every day in this fest, get the full spot artist obj from the text file name, store ID
         // list for each artist on this specific day key, then save artist objs themselves

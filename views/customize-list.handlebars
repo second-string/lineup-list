@@ -46,9 +46,14 @@
                         {{#if (gt days.length 1)}}
                             {{#each days}}
                             <div>
-                                <label for="{{this.obj}}" class="pure-checkbox">
-                                <input class="dayCheckbox" id="{{this.obj}}" type="checkbox" value="{{this.obj}}" onchange="refreshArtistList()" {{state}}>
-                                {{this.obj}}</label>
+                                <label for="{{this.obj.number}}" class="pure-checkbox">
+                                <input class="dayCheckbox" id="{{this.obj.number}}" type="checkbox" value="{{this.obj.number}}" onchange="refreshArtistList()" {{state}}>
+                                {{#if this.obj.date}}
+                                    {{this.obj.date}}
+                                {{else}}
+                                    {{this.obj.number}}
+                                {{/if}}
+                                </label>
                             </div>
                             {{/each}}
                         {{else}}

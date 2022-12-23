@@ -182,6 +182,20 @@ interface SessionData {
     playlistUrl?: string;
 }
 
+interface LineupDay {
+    number: number
+    display_name: string
+    date: Date
+    artists: ArtistAndUri[]
+}
+
+interface FestivalLineup {
+    display_name: string
+    slug: string
+    year: number
+    days: LineupDay[]
+}
+
 // Exists to wrap an object being passed to hbs with data needed for rendering but not a part of the object itself. For
 // example, passing a genre string to customize with the session knowledge of if itshould be checked or not, state is
 // "checked" or "" and obj is the genre string
