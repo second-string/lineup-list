@@ -58,7 +58,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Above & Beyond Group Therapy - The Gorge", years : [ 2022 ], name : "abgt_gorge", region : "am"},
     {display_name : "Summer Breeze", years : [ 2022 ], name : "summerbreeze", region : "am"},
     {display_name : "Mad Cool", years : [ 2022 ], name : "madcool", region : "am"},
-    {display_name : "NOS Alive", years : [ 2022 ], name : "nosalive", region : "eu"},
+    {display_name : "NOS Alive", years : [ 2023, 2022 ], name : "nosalive", region : "eu"},
     {display_name : "SonneMondSterne", years : [ 2022 ], name : "sms", region : "eu"},
     {display_name : "End Of The Road", years : [ 2022 ], name : "endoftheroad", region : "eu"},
     {display_name : "All Points East", years : [ 2022 ], name : "allpointseast", region : "eu"},
