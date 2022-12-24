@@ -1,0 +1,34 @@
+display_name: NOS Alive
+slug: nosalive
+region: eu
+year: 2023
+days:
+- number: 1
+  date: '2023-07-06'
+  artists:
+  - name: THE DRIVER ERA
+  - name: Puscifer
+  - name: Spoon
+  - name: Red Hot Chili Peppers
+  - name: The Black Keys
+  - name: Jacob Collier
+  - name: Men I Trust
+- number: 2
+  date: '2023-07-07'
+  artists:
+  - name: Morad
+  - name: Nathaniel Rateliff & The Night Sweats
+  - name: City and Colour
+  - name: The Amazons
+  - name: Arctic Monkeys
+  - name: Lizzo
+  - name: IDLES
+  - name: Sylvan Esso
+- number: 3
+  date: '2023-07-08'
+  artists:
+  - name: Branko
+  - name: Sam Smith
+  - name: Queens of the Stone Age
+  - name: Tash Sultana
+  - name: Angel Olsen
