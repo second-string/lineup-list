@@ -1,0 +1,129 @@
+display_name: Bonnaroo
+slug: bonnaroo
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2022-06-15
+    display_name: Day 1 # The text displayed to the user for the filters
+    artists:
+      - name: Zeds Dead
+      - name: Liquid Stranger
+      - name: 070 Shake
+      - name: Abraham Alexander
+      - name: Big Freedia
+      - name: Briscoe
+      - name: Celisse
+      - name: Cimafunk
+      - name: CVC
+      - name: Daily Bread
+      - name: DEHD
+      - name: Diarrhea Planet
+      - name: Elephant Heart
+      - name: Ezra Furman
+      - name: JP Saxe
+      - name: Mersiv
+      - name: Molly Tuttle & Golden Highway
+      - name: Neighbor
+      - name: Petey
+      - name: Suki Waterhouse
+  - number: 2
+    date: 2022-06-16
+    display_name: Day 2
+    artists:
+      - name: Kendrick Lamar
+      - name: Baby Keem
+      - name: Vulfpeck
+      - name: Griz
+      - name: Portugal the Man
+      - name: Noah Kahan
+      - name: Subtronics
+      - name: Three 6 Mafia
+      - name: Fleet Foxes
+      - name: AFI
+      - name: Sylvan Esso
+      - name: Rina Sawayama
+      - name: Charley Crockett
+      - name: Morgan Wade
+      - name: Alex G
+      - name: Muna
+      - name: Diesel
+      - name: Destroy Lonely
+      - name: The Midnight
+      - name: Knocked Loose
+      - name: Matt Maeson
+      - name: Peekaboo
+      - name: Black Midi
+      - name: Apashe
+      - name: Emo Nite
+      - name: Christone Kingfish Ingram
+      - name: Madison Cunningham
+      - name: Sampa the Great
+      - name: Boogie
+      - name: Dirt Monkey
+      - name: Subdocta
+      - name: Maddy O'Neal
+      - name: Jupiter & Okwess
+      - name: Notlo
+  - number: 3
+    date: 2022-06-17
+    display_name: Day 3
+    artists:
+      - name: Odesza
+      - name: Lil Nax X
+      - name: Tyler Childers
+      - name: My Morning Jacket
+      - name: Louis the Child
+      - name: Korn
+      - name: Rainbow Kitten Surprise
+      - name: J.I.D.
+      - name: Sheryl Crow
+      - name: STS9
+      - name: Sofi Tukker
+      - name: Big Wild
+      - name: The Band Camino
+      - name: Jenny Lewis
+      - name: Yung Gravy
+      - name: Remi Wolf
+      - name: Bob Moses
+      - name: Cory Wong
+      - name: Ken Carson
+      - name: Elderbrook
+      - name: Andrew McMahon & the Wilderness
+      - name: Colony House
+      - name: Walker & Royce
+      - name: Devon Gilfillian
+      - name: The Beths
+      - name: Dannielle Ponder
+      - name: Gioli & Assia
+      - name: The Sacred Souls
+      - name: Night Tales
+  - number: 4
+    date: 2022-06-18
+    display_name: Day 4
+    artists:
+      - name: Foo Fighters
+      - name: Paramore
+      - name: Marcus Mumford
+      - name: The Revivalists
+      - name: Alesso
+      - name: Pixies
+      - name: Girl in Red
+      - name: Umphrey's McGee
+      - name: Rebelution
+      - name: Jacob Collier
+      - name: Hippo Campus
+      - name: Jauz
+      - name: Peach Pit
+      - name: Franz Ferdinand
+      - name: Men I Trust
+      - name: MK
+      - name: Drew Holcomb & the Neighbors
+      - name: Amber Mark
+      - name: Wax Motif
+      - name: Kip Moore
+      - name: Makaya McCraven
+      - name: Sammy Rae & the Friends
+      - name: Hermanos Gutierrez
+      - name: Paris Jackson
+      - name: Rome in Silver
