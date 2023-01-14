@@ -1,0 +1,187 @@
+display_name: Coachella
+slug: coachella
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2022-04-14
+    display_name: Day 1
+    artists:
+      - name: Bad Bunny
+      - name: Gorillaz
+      - name: Burna Boy
+      - name: Chemical Brothers
+      - name: Kaytranada
+      - name: Blondie
+      - name: Becky G
+      - name: Metro Boomin
+      - name: FKJ
+      - name: Pusha T
+      - name: Tobe Nwigwe
+      - name: Wet Leg
+      - name: SG Lewis
+      - name: Yves Tumor
+      - name: the Garden
+      - name: TESTPILOT
+      - name: Angèle
+      - name: MUNA
+      - name: Maceo Plex
+      - name: Two Friends
+      - name: YUNGBLUD
+      - name: Jamie Jones
+      - name: Ashnikko
+      - name: Malaa
+      - name: TV Girl
+      - name: Whyte Fang
+      - name: Doechi
+      - name: BENEE
+      - name: Idris Elba
+      - name: Magdalena Bay
+      - name: Vintage Culture
+      - name: Domia
+      - name: JD Beck
+      - name: Dombresky
+      - name: DannyLux
+      - name: Nora En Pure
+      - name: Overmono
+      - name: Uncle Waffles
+      - name: ¿Téo?
+      - name: Mochakk
+      - name: Gabriels
+      - name: Saba
+      - name: Dennis Cruz
+      - name: PAWSA
+      - name: Soul Glo
+      - name: Lava La Rue
+      - name: Sleaford Moils
+      - name: the Comet is Coming
+      - name: Oliver Koletzki
+      - name: Kyle Watson
+      - name: the Murder Capital
+      - name: Chris Stussy
+      - name: Jupiter &  Okwess
+      - name: Lewis Of Man
+      - name: Juliet Mendoza
+      - name: Desert Cahuilla Bird Singers
+  - number: 2
+    date: 2022-04-15
+    display_name: Day 2
+    artists:
+      - name: BLACKPINK
+      - name: ROSALÍA
+      - name: Eric Prydz
+      - name: boygenius
+      - name: $uicideboy$
+      - name: Kid LAROI
+      - name: Charli XCK
+      - name: Labrinth
+      - name: Underworld
+      - name: Dilit Dosanih
+      - name: Eladio Carrión
+      - name: SOF TUKKER
+      - name: Remi Wolf
+      - name: Chromeo
+      - name: Tale Of Us
+      - name: Yung Lean
+      - name: Mura Masa
+      - name: Yaeji
+      - name: 070 Shake
+      - name: Marc Rebillet
+      - name: Hiatus Kaiyote
+      - name: Dinner Party
+      - name: Los Fabulosos Cadillacs
+      - name: Elderbrook
+      - name: Kenny Beats
+      - name: Flo Milli
+      - name: Keinemusik
+      - name: Snail Mail
+      - name: Rebelution
+      - name: Hot Since 82
+      - name: EARTHGANG UMI
+      - name: Shenseea
+      - name: the Breeders
+      - name: Monolink
+      - name: Ethel Cain
+      - name: Bakar
+      - name: Donavan's Yard
+      - name: the Linda Lindas
+      - name: Sunset Rollercoaster
+      - name: NIA ARCHIVES
+      - name: Jan Blomquist
+      - name: DRAMA
+      - name: WhoMadeWho
+      - name: Destroy Boys
+      - name: Elyanna
+      - name: .DJ Tennis
+      - name: Carlita
+      - name: AG Club
+      - name: Mathame
+      - name: BRATTY.
+      - name: Horsegirl
+      - name: Colyn
+      - name: Chloé Caillet
+      - name: Scowl
+      - name: Francis Mercier
+  - number: 3
+    date: 2022-04-16
+    display_name: Day 3
+    artists:
+      - name: Frank Ocean
+      - name: Biörk
+      - name: Kali Uchis
+      - name: Porter Robinson
+      - name: Fisher
+      - name: Chris Lake
+      - name: A Boogie
+      - name: Dominic Fike
+      - name: Ja Paul
+      - name: Jackson Wang
+      - name: Latto
+      - name: the Blaze
+      - name: Willow
+      - name: GloRilla
+      - name: Jai Wolf
+      - name: Boris Brejcha
+      - name: 2manydjs
+      - name: Christine and the Queens
+      - name: Rae Sremmurd
+      - name: Weyes Blood
+      - name: Alex G
+      - name: DPR LIVE
+      - name: DPR IAN
+      - name: Stick Figure
+      - name: Adam Beyer
+      - name: Big Wild
+      - name: MK
+      - name: Cannons
+      - name: Romy
+      - name: Gordo
+      - name: Fousheé
+      - name: Noname
+      - name: Sasha & John Digweed
+      - name: Sudan Archives
+      - name: Knocked Loose
+      - name: Camelphat
+      - name: IDK
+      - name: Sasha Alex Sloan
+      - name: Mareux
+      - name: 1999.0DDS
+      - name: Pierre Bourne
+      - name: Cassian
+      - name: Joy Crookes
+      - name: TSHA
+      - name: El Michels Affair
+      - name: Paris Texas
+      - name: LP Giobbi
+      - name: Momma
+      - name: Ali Sethi
+      - name: Minus the Light
+      - name: Los Bitchos
+      - name: Conexión Divina
+      - name: Airrica
+  - number: 4
+    date: 2022-04-14
+    display_name: Day 4
+    artists:
+      - name: Calvin Harris
+
