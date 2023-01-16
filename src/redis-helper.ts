@@ -5,6 +5,47 @@ import * as mbHelper        from "./mb-helper";
 import * as setlistFmHelper from "./setlist-fm-helper";
 import * as spotifyHelper   from "./spotify-helper";
 
+export async function getLineupDays(redisClient: redis.RedisClient, festivalName: string, festivalYear: number):
+    Promise<number[]> {
+    const daysPromise: Promise<number[]> = new Promise((resolve, reject) => {
+        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:days`, (err: Error, obj: string) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(JSON.parse(obj));
+            }
+        });
+    });
+
+    const days: number[] = await daysPromise;
+
+    if (days) {
+        return days;
+    }
+}
+
+export async function getLineupDayMetadata(redisClient: redis.RedisClient,
+                                           festivalName: string,
+                                           festivalYear: number,
+                                           day: number): Promise<LineupDay> {
+    const dayPromise: Promise<LineupDay> = new Promise((resolve, reject) => {
+        redisClient.hgetall(`festival:${festivalName.toLowerCase()}_${festivalYear}:days:${day}`,
+                            (err: Error, obj: any) => {
+                                if (err) {
+                                    reject(err);
+                                } else {
+                                    resolve(obj);
+                                }
+                            });
+    });
+
+    const lineupDay: LineupDay = await dayPromise;
+
+    if (lineupDay) {
+        return lineupDay;
+    }
+}
+
 export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient,
                                                festivalName: string,
                                                festivalYear: number): Promise<Date> {

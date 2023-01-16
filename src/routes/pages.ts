@@ -145,6 +145,24 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const mainGenresMap: Map<string, StatefulObject>     = new Map<string, StatefulObject>();
         const specificGenresMap: Map<string, StatefulObject> = new Map<string, StatefulObject>();
         const daysMap: Map<string, StatefulObject>           = new Map<string, StatefulObject>();
+
+        const dayNumbers: number[] = await redisHelper.getLineupDays(redisClient, festival.name, queryYear);
+
+        const daysWithMetadata: LineupDay[] = await Promise.all(dayNumbers.map(
+            async (day) => redisHelper.getLineupDayMetadata(redisClient, festival.name, queryYear, day)));
+
+        for (const lineupDay of daysWithMetadata) {
+            const checkedStr =
+                previouslySelectedDays === null || previouslySelectedDays.includes(lineupDay.number.toString())
+                    ? "checked"
+                    : "";
+
+            daysMap.set(lineupDay.number.toString(), {state : checkedStr, obj : lineupDay});
+        }
+
+        const days: StatefulObject[] = Array.from(daysMap.values());
+        days.sort();
+
         for (const artist of artists) {
             // Perform genre combining logic
             for (const genre of artist.combined_genres) {
@@ -173,21 +191,12 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
             } else {
                 artist.checkedStr = "";
             }
-
-            // Inefficient since we got a list of supported days in getArtistsForFestival but meh
-            if (!daysMap.has(artist.day)) {
-                const checkedStr =
-                    previouslySelectedDays === null || previouslySelectedDays.includes(artist.day) ? "checked" : "";
-                daysMap.set(artist.day, {state : checkedStr, obj : artist.day});
-            }
         }
 
         const mainGenres: StatefulObject[]     = Array.from(mainGenresMap.values());
         const specificGenres: StatefulObject[] = Array.from(specificGenresMap.values());
-        const days: StatefulObject[]           = Array.from(daysMap.values());
         mainGenres.sort();
         specificGenres.sort();
-        days.sort();
 
         const lastUpdatedDate = await redisHelper.getLineupLastUpdatedDate(redisClient, festival.name, queryYear);
 
