@@ -22,9 +22,10 @@ interface FestivalLineup {
     days: LineupDay[]
 }
 
-async function warm(festival: string, years: number[]) {
+async function warm(festival: string, years: number[]): Promise<number> {
     const redisClient = redis.createClient();
 
+    let retval = 0;
     for (const year of years) {
         const paths    = [ '', 'lineups/', '../lineups/' ];
         const filename = festival + "_" + year;
@@ -150,6 +151,19 @@ async function warm(festival: string, years: number[]) {
                         JSON.stringify(Object.keys(artistObjs)),
                         redis.print);
 
+        // Pre-check to make sure all artists are findable, otherwise bail
+        const spotifyArtistsByDay: {[key: string]: SpotifyArtist[]} = {};
+        for (const day of Object.keys(artistObjs)) {
+            const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistObjs[day]);
+            if (artists.length !== artistObjs[day].length) {
+                retval = 1;
+            }
+        }
+
+        if (retval !== 0) {
+            break;
+        }
+
         // For every day in this fest, get the full spot artist obj from the text file name, store ID
         // list for each artist on this specific day key, then save artist objs themselves
         for (const day of Object.keys(artistObjs)) {
@@ -228,6 +242,7 @@ async function warm(festival: string, years: number[]) {
     }
 
     redisClient.quit();
+    return retval;
 }
 
 async function main() {
@@ -261,7 +276,7 @@ async function main() {
             yearOrYears = festival.years;
         }
 
-        await warm(festivalName, yearOrYears);
+        return await warm(festivalName, yearOrYears);
 
     } else {
         for (const festival of constants.supportedFestivals) {
@@ -270,4 +285,4 @@ async function main() {
     }
 }
 
-main()
+main().then((retval: number) => process.exit(retval));
