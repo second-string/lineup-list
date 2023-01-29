@@ -1,0 +1,93 @@
+display_name: Bottlerock
+slug: bottlerock
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2022-05-26
+    display_name: Day 1
+    artists:
+      - name: POST MALONE
+      - name: THE SMASHING PUMPKINS
+      - name: BILLY STRINGS
+      - name: BASTILLE
+      - name: PHANTOGRAM
+      - name: YUNG GRAVY
+      - name: THIEVERY CORPORATION
+      - name: LUCIUS
+      - name: NICKY YOURE
+      - name: WAR
+      - name: MIKE CAMPBELL & THE DIRTY KNOBS
+      - name: THE AIRBORNE TOXIC EVENT
+      - name: KENNYHOOPLA
+      - name: JEAN DAWSON
+      - name: PETE YORN
+      - name: BEACH WEATHER
+      - name: TOM ODELL
+      - name: STARCRAWLER
+      - name: THE STONE FOXES
+      - name: MOONALICE
+      - name: AYLEEN VALENTINE
+      - name: PARIS JACKSON
+      - name: GREAT NORTHERN
+      - name: PETER CAT RECORDING CO.
+      - name: SGT. SPLENDOR
+      - name: HIGH NOON
+  - number: 2
+    date: 2022-05-27
+    display_name: Day 2
+    artists:
+      - name: LIZZO
+      - name: DURAN DURAN
+      - name: LEON BRIDGES
+      - name: NILE RODGERS & CHIC
+      - name: CARLY RAE JEPSEN
+      - name: TOVE LO
+      - name: JAPANESE BREAKFAST
+      - name: DAYGLOW
+      - name: ASHE
+      - name: CAUTIOUS CLAY
+      - name: LUPE FIASCO
+      - name: JAX
+      - name: ÁLVARO DÍAZ
+      - name: MEUTE
+      - name: MAUDE LATOUR
+      - name: ARDEN JONES
+      - name: THE UNLIKELY CANDIDATE
+      - name: SSUDAN ARCHIVES
+      - name: DANIELLE PONDER
+      - name: PARTICLE KID
+      - name: MAC SATURN
+      - name: GARZA
+      - name: EAST FOREST
+      - name: THE SILVERADO PICKUPS
+      - name: SPRING SUMMER
+  - number: 3
+    date: 2022-05-28
+    display_name: Day 3
+    artists:
+      - name: RED HOT CHILI PEPPERS
+      - name: LIL NAS X
+      - name: WU-TANG CLAN
+      - name: THE NATIONAL
+      - name: CAAMP
+      - name: SHERYL CROW
+      - name: QUINN XCII
+      - name: TEDDY SWIMS
+      - name: LOS LOBOS
+      - name: TAJ MAHAL
+      - name: THE STRUTS
+      - name: WARREN G
+      - name: HALF•ALIVE
+      - name: JOEY VALENCE & BRAE
+      - name: THE WRECKS
+      - name: THE 502S
+      - name: CHRISTONE “KINGFISH” INGRAM
+      - name: MONOPHONICS
+      - name: CIMAFUNK
+      - name: LITTLE STRANGER
+      - name: THE ALIVE
+      - name: THUNDERSTORM ARTIS
+      - name: OKE JUNIOR
+      - name: MAMA SAID
+      - name: HONEYBOYS

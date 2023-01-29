@@ -3,7 +3,7 @@ const cheerio = require("cheerio");
 const fs = require("fs");
 
 async function run() {
-    const url = "https://www.bottlerocknapavalley.com/2022-artists/";
+    const url = "https://www.bottlerocknapavalley.com/2023-artists/";
     const response = await fetch(url);
     const html = await response.text();
     const $ = cheerio.load(html);
@@ -25,7 +25,7 @@ async function run() {
 
     console.log(artists);
     const artistsStr = artists.join("\r\n");
-    fs.writeFileSync("bottlerock_2022_full.txt", artistsStr);
+    fs.writeFileSync("bottlerock_2023_full.txt", artistsStr);
 }
 
 run()
