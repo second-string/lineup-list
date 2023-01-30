@@ -72,4 +72,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Bourbon and Beyond", years : [ 2022 ], name : "bourbonandbeyond", region : "am"},
     {display_name : "When We Were Young", years : [ 2022 ], name : "wwwy", region : "am"},
     {display_name : "Primavera Sound Barcelona", years : [ 2023, 2022 ], name : "primavera", region : "eu"},
+    {display_name : "Regenerate", years : [ 2023 ], name : "regenerate", region : "am"},
 ];
