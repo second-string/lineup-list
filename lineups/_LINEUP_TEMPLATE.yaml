@@ -1,6 +1,6 @@
 display_name: Name to be displayed to user
 slug: url_friendly_short_version_of_namea
-region: am|eu|??
+region: am|ap|eu|me
 year: 2023
 days:
   - number: 1 # This is an integer for redis key. 1-indexed for festivals with days, or just single '0' day for fest w/ no days announcee
