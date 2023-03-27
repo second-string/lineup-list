@@ -1,0 +1,177 @@
+display_name: Lollapalooza
+slug: lollapalooza
+region: am
+year: 2023
+days:
+  - number: 0
+    date: 2023-08-03 # YYYY-MM-DD
+    display_name: All Days  # The text displayed to the user for the filters
+    artists:
+      - name: Kendrick Lamar
+      - name: Billie Eilish
+      - name: Red Hot Chili Peppers
+      - name: Odesza
+      - name: Lana Del Rey
+      - name: Karol G
+      - name: The 1975
+      - name: Tomorrow X Together
+      - name: Fred Again
+      - name: Noah Kahan
+      - name: A Boogie Wit Da Hoodie
+      - name: Maggie Rogers
+      - name: Carly Rae Jepsen
+      - name: Thirty Seconds To Mars
+      - name: Diplo
+      - name: J.I.D.
+      - name: Louis The Child
+      - name: Pusha T
+      - name: Subtronics
+      - name: Rina Sawayama
+      - name: New Jeans
+      - name: Lil Yachty
+      - name: Mt. Joy
+      - name: The Backseat Lovers
+      - name: Sofi Tukker
+      - name: Portugal The Man
+      - name: Alan Walker
+      - name: Yung Gravy
+      - name: Svdden Death
+      - name: The Revivalists
+      - name: Beabadoobee
+      - name: Big Wild
+      - name: Tems
+      - name: Dom Dolla
+      - name: Meduza
+      - name: Sabrina Carpenter
+      - name: Afrojack
+      - name: Lainey Wilson
+      - name: Jessie Reyez
+      - name: The Rose
+      - name: Joey Bada$$
+      - name: Gorgon City
+      - name: Key Glock
+      - name: Nora En Pure
+      - name: Rema
+      - name: AC Slater
+      - name: Morgan Wade
+      - name: Sylvan Esso
+      - name: Men I Trust
+      - name: Alex G
+      - name: Knocked Loose
+      - name: Foals
+      - name: The Garden
+      - name: Maisie Peters
+      - name: Niki
+      - name: DPR Ian + DPR Live
+      - name: Diesel
+      - name: Poolside
+      - name: Timmy Trumpet
+      - name: Peach Pit
+      - name: Ken Carson
+      - name: Destroy Lonely
+      - name: Wax Motif
+      - name: L'Imperatrice
+      - name: Acraze
+      - name: Lovejoy
+      - name: Armnhmr
+      - name: Suki Waterhouse
+      - name: Knock2
+      - name: Ivan Cornejo
+      - name: Holly Humberstone
+      - name: Jessie Murph
+      - name: DEHD
+      - name: Declan McKenna
+      - name: Thee Sacred Souls
+      - name: Matroda
+      - name: Magdalena Bay
+      - name: Sudan Archives
+      - name: Neil Frances
+      - name: The Knocks
+      - name: Solardo
+      - name: J. Worra
+      - name: Joy Oladokun
+      - name: UMI
+      - name: Franc Moody
+      - name: The Happy Fits
+      - name: Zack Fox
+      - name: EMO Nite
+      - name: Tom Odell
+      - name: Disco Lines
+      - name: Jean Dawson
+      - name: Bonnie X Clyde
+      - name: Ray Volpe
+      - name: Blanke
+      - name: Spacey Jane
+      - name: Hairitage
+      - name: Sueco
+      - name: Gabriels
+      - name: Brakence
+      - name: The 502s
+      - name: REMK
+      - name: Michelle
+      - name: Clinton Kane
+      - name: Band-Maid
+      - name: Dillon Nathaniel
+      - name: Bakar
+      - name: Dope Lemon
+      - name: Loveless
+      - name: Cafune
+      - name: Skizzy Mars
+      - name: Ingrid Andress
+      - name: Upsahl
+      - name: The Linda Lindas
+      - name: Mavi
+      - name: The Beaches
+      - name: Ekkstacy
+      - name: Giant Rooks
+      - name: Pardyalone
+      - name: Ella Jane
+      - name: Matt Maltese
+      - name: Ax& The Hatchetmen
+      - name: Sincere Engineer
+      - name: Friday Pilots Club
+      - name: Madeline Edwards
+      - name: Richy Mitch & The Coal Miners
+      - name: Little Stranger
+      - name: Josh Fudge
+      - name: Motherfolk
+      - name: Husbands
+      - name: Arlie
+      - name: Rosa Linn
+      - name: Tiacorine
+      - name: Beauty School Dropout
+      - name: Ari Abdul
+      - name: Annie DiRusso
+      - name: Danielle Ponder
+      - name: Chir$tian Gate$
+      - name: Somadina
+      - name: Talk
+      - name: Hemlocke Springs
+      - name: Aidan Bisset
+      - name: Sarah Kinsley
+      - name: Big Boss Vette
+      - name: Kidd Kenn
+      - name: Austin Meade
+      - name: Windser
+      - name: Arcy Drive
+      - name: Los Aptos
+      - name: Cydeways
+      - name: Finish Ticket
+      - name: The Red Clay Strays
+      - name: Carola
+      - name: Usted Senalemelo
+      - name: Isabel Larosa
+      - name: Benson
+      - name: Charlotte Sands
+      - name: Harry Edohoukwa
+      - name: Arath Herce
+      - name: Tyler Christian
+      - name: Hoosh
+      - name: Chicago Made
+      - name: Lesly Reynaga
+      - name: Bad Neighbors
+      - name: Pony Bradshaw
+      - name: Loviet
+      - name: Junior Mesa
+      - name: Ninajirachi
+      - name: Ian Asher
