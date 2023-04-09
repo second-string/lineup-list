@@ -5,7 +5,7 @@ import {spotifyBaseUrl} from "./spotify-helper";
 const mbApi = new MusicBrainzApi({
     appName : "lineup-list",
     appVersion : "0.0.1",
-    appContactInfo : "lineuplist@brianteam.dev",
+    appContactInfo : "contact@lineuplist.live",
 });
 
 // TOP id: 5c9752c2-a455-48f6-9e00-47f74cd4a23f

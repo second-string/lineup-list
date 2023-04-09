@@ -2,7 +2,7 @@
 
                 {{#if lastUpdatedDate}}
                     <p style="margin: 0;">Lineup last updated: {{formatDate lastUpdatedDate}}</p>
-                    <p style="font-size: smaller; margin: 0; padding: 2px;">Festival released day lineups or changed the list of artists playing? <a style="font-size: smaller;" href="mailto:lineuplist@brianteam.dev?subject=Update {{festival.display_name}} {{festivalYear}} lineup">Request an update</a></p>
+                    <p style="font-size: smaller; margin: 0; padding: 2px;">Festival released day lineups or changed the list of artists playing? <a style="font-size: smaller;" href="mailto:contact@lineuplist.live?subject=Update {{festival.display_name}} {{festivalYear}} lineup">Request an update</a></p>
                 {{/if}}
 
 <form class="pure-form" id="listOptionsForm" action="/generate-lineup-list" method="POST" style="display: flex; flex-direction: column;">
