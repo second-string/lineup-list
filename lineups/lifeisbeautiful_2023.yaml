@@ -1,0 +1,91 @@
+display_name: Life Is Beautiful
+slug: lifeisbeautiful
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2023-09-22
+    display_name: Day 1
+    artists:
+      - name: THE KILLERS
+      - name: FLUME
+      - name: YEAH YEAH YEAHS
+      - name: BIXST
+      - name: BEBE REXHA
+      - name: DAYGLOW
+      - name: GOTH BABE
+      - name: CLOONEE
+      - name: INHALER
+      - name: THE WOMBATS
+      - name: RAYE
+      - name: FRANC MOODY
+      - name: ANNA LUNOE
+      - name: BEACH WEATHER
+      - name: SLAYYYTER
+      - name: WILLIAM BLACK
+      - name: ROOSEVELT
+      - name: MINDCHATTER
+      - name: VANDELUX
+      - name: TELYKAST
+      - name: ALMOST MONDAY
+      - name: EWAN MCVICAR
+      - name: LEWIS THOMPSON
+      - name: SNACKTIME
+      - name: DANCE SYSTEM
+  - number: 2
+    date: 2023-09-23
+    display_name: Day 2
+    artists:
+      - name: KENDRICK LAMAR
+      - name: THE 1975
+      - name: OMAR APOLLO
+      - name: MADEON
+      - name: FERG
+      - name: CIGARETTES AFTER SEX
+      - name: PURPLE DISCO MACHINE
+      - name: YUNG GRAVY
+      - name: RENEÉ RAPP
+      - name: BEN BÖHMER
+      - name: AMBER MARK
+      - name: THE ROSE
+      - name: BLOND:ISH
+      - name: CHIKA
+      - name: JAWNY
+      - name: BARRY CAN'T SWIM
+      - name: JOCKSTRAP
+      - name: CHARLOTTE SANDS
+      - name: HONEYLUV
+      - name: JOY ANONYMOUS
+      - name: COCO & BREEZY
+      - name: AYYBO
+      - name: NIGHT TALES
+      - name: PRENTISS
+  - number: 3
+    date: 2023-09-24
+    display_name: Day 3
+    artists:
+      - name: ODESZA
+      - name: KHALID
+      - name: NELLY
+      - name: KIM PETRAS
+      - name: JOHN SUMMIT
+      - name: RINA SAWAYAMA
+      - name: CLAPTONE
+      - name: BABY TATE
+      - name: SNAKEHIPS
+      - name: JESSIE MURPH
+      - name: BABYTRON
+      - name: J. WORRA
+      - name: WILDERADO
+      - name: BIIG PIIG
+      - name: MIYA FOLICK
+      - name: TALK
+      - name: TWO ANOTHER
+      - name: SALUTE
+      - name: WINSTON SURFSHIRT
+      - name: HIGHWAY
+      - name: ROCKIE BROWN
+      - name: LEMA
+      - name: THE EMO NIGHT TOUR
+
+
