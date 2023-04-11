@@ -68,7 +68,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Field Day", years : [ 2022 ], name : "fielddayfestival", region : "eu"},
     {display_name : "Leeds Festival", years : [ 2022 ], name : "leeds", region : "eu"},
     {display_name : "Reading Festival", years : [ 2022 ], name : "reading", region : "eu"},
-    {display_name : "Life Is Beautiful", years : [ 2022 ], name : "lifeisbeautiful", region : "am"},
+    {display_name : "Life Is Beautiful", years : [ 2023, 2022 ], name : "lifeisbeautiful", region : "am"},
     {display_name : "Bourbon and Beyond", years : [ 2022 ], name : "bourbonandbeyond", region : "am"},
     {display_name : "When We Were Young", years : [ 2023, 2022 ], name : "wwwy", region : "am"},
     {display_name : "Primavera Sound Barcelona", years : [ 2023, 2022 ], name : "primavera", region : "eu"},
