@@ -1,0 +1,110 @@
+display_name: Outside Lands
+slug: osl
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2022-08-11
+    display_name: Day 1
+    artists:
+      - name: KENDRICK LAMAR
+      - name: ZEDD
+      - name: JANELLE MONÁE
+      - name: J.I.D
+      - name: INTERPOL
+      - name: AESPA
+      - name: WILLOW
+      - name: CUCO
+      - name: ALEX G
+      - name: CLAPTONE
+      - name: MONOLINK
+      - name: SHAOUILLE O'NEAL
+      - name: RAVEENA
+      - name: BLOND:ISH
+      - name: BECKY HILL
+      - name: CRUMB
+      - name: JUSTIN JAY
+      - name: ETHEL CAIN
+      - name: THE DIP
+      - name: SAMIA
+      - name: DISCO LINES
+      - name: LA DOÑA
+      - name: YAYA BEY
+      - name: NATION OF LANGUAGE
+      - name: EVAN GILA
+      - name: MATT HANSEN
+      - name: WESTEND
+      - name: NALA
+      - name: MISS DRE
+      - name: IZZY HELTAI
+  - number: 2
+    date: 2022-08-12
+    display_name: Day 2
+    artists:
+      - name: FOO FIGHTERS
+      - name: LANA DEL REY
+      - name: MAGGIE ROGERS
+      - name: FISHER
+      - name: FATHER JOHN MISTY
+      - name: ORVILLE PECK
+      - name: P'IMPÉRATRICE
+      - name: NORA EN PURE
+      - name: ALVVAYS
+      - name: NIKI
+      - name: MARIAH THE SCIENTIST
+      - name: TRIXIE MATTEL
+      - name: DANIEL AVERY
+      - name: LOVEJOY
+      - name: SAMA' ABDULHADI
+      - name: JESSIE MURPH
+      - name: ZACK FOX
+      - name: DENIS SULTA
+      - name: COBRA MAN
+      - name: TOPS
+      - name: ORION SUN
+      - name: VNSSA
+      - name: MANILA GREY
+      - name: DONNY BENÉT
+      - name: EDDIE ZUKO
+      - name: KIM ANN FOXMAN
+      - name: MIDWXST
+      - name: NO VACATION
+      - name: WEDNESDAY
+      - name: ADI OASIS
+      - name: EREZ
+      - name: SOUR WIDOWS
+  - number: 3
+    date: 2022-08-13
+    display_name: Day 3
+    artists:
+      - name: ODESZA
+      - name: THE 1975
+      - name: MEGAN THEE STALLION
+      - name: LIL YACHTY
+      - name: NOAH KAHAN
+      - name: TOBE NWIGWE
+      - name: CIGARETTES AFTER SEX
+      - name: BEABADOOBEE
+      - name: POOLSIDE
+      - name: SOCCER MOMMY
+      - name: ISOXO
+      - name: HOLLY HUMBERSTONE
+      - name: ÂME B2B TRIKK
+      - name: WHOMADEWHO
+      - name: JOY OLADOKUN
+      - name: INHALER
+      - name: TINLICKER
+      - name: DOPE LEMON
+      - name: GABRIELS
+      - name: THE JUNGLE GIANTS
+      - name: MILD MINDS
+      - name: RED AXES
+      - name: NANNA
+      - name: COCO & BREEZY
+      - name: WILD CHILD
+      - name: UPSAHL
+      - name: PRETTY SICK
+      - name: GRACE IVES
+      - name: FAKE FRUIT
+      - name: LOVERGROUND
+      - name: VENUS & THE FLYTRAPS
