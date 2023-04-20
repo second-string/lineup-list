@@ -1,0 +1,44 @@
+display_name: All Things Go
+slug: atg
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2023-09-30
+    display_name: Day 1
+    artists:
+      - name: MAGGIE ROGERS
+      - name: CARLY RAE JEPSEN
+      - name: MT. JOY
+      - name: LIZZY MCALPINE
+      - name: DAYGLOW
+      - name: FLETCHER
+      - name: SUKI WATERHOUSE
+      - name: PEACH PIT
+      - name: RAYE
+      - name: TEGAN AND SARA
+      - name: THE WOMBATS
+      - name: SUDAN ARCHIVES
+      - name: LAST DINOSAURS
+      - name: VAGATIONS
+      - name: JENSEN MORAE
+      - name: HEMLOGKE SPRINGS
+  - number: 2
+    date: 2023-10-01
+    display_name: Day 2
+    artists:
+      - name: LANA DEL REY
+      - name: BOYGENIUS
+      - name: MUNA
+      - name: BEARADOOREE
+      - name: ARLO PARKS
+      - name: ALEX G  ALVVAYS
+      - name: ETHEL CAIN
+      - name: SAMIA
+      - name: LEITH ROSS
+      - name: MUNDABAR
+      - name: TOMMY LEFROY
+      - name: MEET ME AT THE ALTAR
+      - name: ELLA JANE
+      - name: JULIANA MADRID
+      - name: FREE RANGE
