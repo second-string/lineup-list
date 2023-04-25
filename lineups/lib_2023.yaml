@@ -1,0 +1,221 @@
+display_name: Lightning in a Bottle
+slug: lib
+region: am
+year: 2023
+days:
+  - number: 1
+    date: 2022-05-26
+    display_name: Friday
+    artists:
+      - name: DIPLO
+      - name: SOFI TUKKER
+      - name: 070 SHAKE
+      - name: CARIBOU
+      - name: LIQUID STRANGER
+      - name: THE POLISH AMBASSADOR
+      - name: BLOND ISH
+      - name: AMÉMÉ
+      - name: AN-TEN-NAE
+      - name: ANDREAS ONE
+      - name: BALKAN BUMP
+      - name: BOHEMIAN CRISTAL INSTRUMENT
+      - name: CALVIN ARSENIA
+      - name: CARLO
+      - name: D'ROK THE MENACE
+      - name: DAVID STARFIRE
+      - name: DEATHPACT
+      - name: DEER JADE
+      - name: DEER JADE B2B ELIF
+      - name: DEF3
+      - name: DIGITAL ETHOS
+      - name: DIMOND SAINTS
+      - name: DUFFREY
+      - name: EDEKIT
+      - name: ELIF
+      - name: ELIKENAGI
+      - name: EQUANIMOUS
+      - name: FANNY FEDEROFF
+      - name: FR33SOL
+      - name: FREE CREATURES
+      - name: G@TTO & VALENTINA
+      - name: HAMDI
+      - name: HELLO YES
+      - name: HOUSE OF HAMSA
+      - name: INTEGR&TION
+      - name: JACQUES LOVE
+      - name: JORDAN STRONG
+      - name: JOSH KWON
+      - name: JOSHTEED
+      - name: LAVVA
+      - name: LIAM FITZGERALD
+      - name: LOGICIOOO
+      - name: LYKWID
+      - name: MAJOR LEAGUE DJZ
+      - name: MARTY O'REILLY
+      - name: MASSIO
+      - name: MEUTE
+      - name: MILES SHREWSBERY III
+      - name: MOLOKAI
+      - name: MOXXY
+      - name: OSYRIS
+      - name: PIGEON HOLE
+      - name: RAFFI
+      - name: RANDOM RAB
+      - name: ROHAAN
+      - name: RUBY CHASE
+      - name: SAD NIGHT DYNAMITE
+      - name: SHAWNA
+      - name: SHAWNI
+      - name: SLANG DOGS
+      - name: SORCERIST
+      - name: TOOKER
+      - name: UNCLE WAFFLES
+      - name: UNTITLD
+      - name: YAIMA
+      - name: ZEEFELLAZ
+  - number: 2
+    date: 2022-05-27
+    display_name: Saturday
+    artists:
+      - name: ZHU
+      - name: PHANTOGRAM
+      - name: BEN BÖHMER
+      - name: TOKIMONSTA
+      - name: BEATS ANTIQUE
+      - name: MERSIV
+      - name: THE FLOOZIES
+      - name: STEPHAN BODZIN
+      - name: ABELATION
+      - name: BAGSSS
+      - name: BAND OF GRINGOS
+      - name: BIG CEE
+      - name: TIMO GRANZOTTI
+      - name: LITTLE DINOSAUR
+      - name: BROKEN KITE
+      - name: CANABLISS
+      - name: CASSIAN
+      - name: CHMURA
+      - name: CONNOR Q
+      - name: BRITTANY QUIDANG
+      - name: DESIREE
+      - name: EL PAPACHANGO
+      - name: ELIJAH BADUA
+      - name: ELISUH
+      - name: FRESH VEGGIES MICRO BRASS
+      - name: G-DUBBS
+      - name: GIORGIA ANGIULI
+      - name: GREAT DANE
+      - name: HENRY POPE
+      - name: JORDNMOODY
+      - name: KAIPORA
+      - name: KIYOKA
+      - name: LTJ BUKEM
+      - name: ARMANNI
+      - name: MAHZETAR
+      - name: MARQUES WYATT
+      - name: MINDCHATTER
+      - name: MINDSET
+      - name: MISS JAVI
+      - name: MOONTRICKS
+      - name: MYTHM
+      - name: NIITEI
+      - name: OSO
+      - name: PAPA LU
+      - name: RAINBOW GIRLS
+      - name: RED GIANT PROJECT
+      - name: RENEGADE OPERA
+      - name: RINZEN
+      - name: ROCHELLE JORDAN
+      - name: ROGELIO
+      - name: SIAVASH
+      - name: SINCA
+      - name: SNUFFY
+      - name: SOUNDSEX
+      - name: STEERS & QUEERS
+      - name: STEPHEN LEWIS' BIG FUNDUO
+      - name: SUPER FUTURE
+      - name: TERRELL BROOKE
+      - name: THE GASLAMP KILLER
+      - name: THE GRAND AUCTION
+      - name: TOKIMONSTA
+      - name: TOOKER
+      - name: WRECKNO
+      - name: ZACHWALKER
+      - name: ZEN SELEKTA
+      - name: ZINGARA
+      - name: ZURI ADIA
+  - number: 3
+    date: 2022-05-28
+    display_name: Sunday
+    artists:
+      - name: REZZ
+      - name: TALE OF US
+      - name: TOBE NWIGWE
+      - name: LSDREAM
+      - name: THE GLITCH MOB
+      - name: DRAMA
+      - name: TSHA
+      - name: SAMPA THE GREAT
+      - name: LSDREAM
+      - name: THE POLISH AMBASSADOR
+      - name: 2MELO
+      - name: AHEE
+      - name: ALL:LO COLLECTIVE
+      - name: ANDREAS ONE
+      - name: BAMBII
+      - name: HOLMAR
+      - name: PHILIPP JUNG
+      - name: BENING JUNGLIST
+      - name: BOHEMYTH
+      - name: BORAK
+      - name: DAILY BREAD
+      - name: DAVIDSCUBA
+      - name: DJK MARIE
+      - name: DREÉEMY
+      - name: EDA
+      - name: GAMBIT MORGAN
+      - name: DANNI G
+      - name: SPEKT1
+      - name: BEATALKS
+      - name: GRAND ARTIQUE TALENT SHOW
+      - name: GUNFINGAZ
+      - name: JAHGUN & THE JUSTIFYAH BAND
+      - name: JONCASEY
+      - name: LAYLA BENITEZ
+      - name: LEISAN
+      - name: LITTLEFOOT
+      - name: LORD GENMU
+      - name: MOORE KISMET
+      - name: MR. WU
+      - name: MY BABY
+      - name: NICO STOJAN
+      - name: TOOKER
+      - name: NITEI
+      - name: OOGA
+      - name: OZOMATLI
+      - name: CHALI 2NA
+      - name: CUT CHEMIST
+      - name: PARKBREEZY
+      - name: PATRICIO
+      - name: PROSPALIVE
+      - name: RAEYA
+      - name: RICARDO TORRES
+      - name: SABO
+      - name: GOLDCAP
+      - name: SCARLETT DELA TORRE
+      - name: SPACEHALL SOUND MACHINE
+      - name: SPEKTRUM
+      - name: STRAWBERRY DISCO CIRCUS
+      - name: STYLUST
+      - name: SUBSTANCE
+      - name: SUNDAY REVIVAL
+      - name: SWEET ANOMALY
+      - name: TF MARZ
+      - name: THE WANDERING MENSTRUALS
+      - name: THEE-O
+      - name: THOUGHT PROCESS
+      - name: TROPO
+      - name: UNIIQU3
+      - name: WILD CHOIR
+      - name: WRAZ
+      - name: WYLIE CABLE
