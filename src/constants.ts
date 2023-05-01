@@ -75,4 +75,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Regenerate", years : [ 2023 ], name : "regenerate", region : "am"},
     {display_name : "Envision", years : [ 2023 ], name : "envision", region : "am"},
     {display_name : "All Things Go", years : [ 2023 ], name : "atg", region : "am"},
+    {display_name : "Lovers & Friends", years : [ 2023 ], name : "laf", region : "am"},
 ];

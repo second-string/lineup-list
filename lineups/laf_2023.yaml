@@ -1,0 +1,57 @@
+display_name: Lovers & Friends
+slug: laf
+region: am
+year: 2023
+days:
+  - number: 0
+    date: 2023-05-06
+    display_name: Saturday
+    artists:
+      - name: NELLY
+      - name: BUSTA RHYMES
+      - name: FLO RIDA
+      - name: MASTER P
+      - name: SEAN PAUL
+      - name: SHAGGY
+      - name: BEENIE MAN
+      - name: CHRIS BROWN
+      - name: GINUWINE
+      - name: REMY MA
+      - name: JOJO EN VOGUE
+      - name: BLACKSTEET
+      - name: JAGGED EDGE
+      - name: NEXT
+      - name: WAYNE WONDER
+      - name: KEVIN LYTTLE
+      - name: 702 LILMO
+      - name: LUMIDEE
+      - name: MISSY ELLIOTT
+      - name: MARIAH CAREY
+      - name: PITBULL
+      - name: USHER
+      - name: CHRISTINA AGUILERA
+      - name: MIGUEL
+      - name: SUMMER WALKER
+      - name: JHENE AIKO
+      - name: PARTYNEXTDOOR
+      - name: BRYSON TILLER
+      - name: BOYZ II MEN
+      - name: OMARION
+      - name: BOW WOW
+      - name: LIL KIM
+      - name: EVE
+      - name: T.I.
+      - name: SOULJA BOY
+      - name: DA BRAT
+      - name: 50 CENT
+      - name: THE DIPLOMATS
+      - name: N.O.R.E
+      - name: CHINGY
+      - name: PETEY PABLO
+      - name: MANNIE FRESH
+      - name: DEM FRANCHIZE BOYZ
+      - name: YUNG JOC
+      - name: BABY BASH
+      - name: FRANKIE J
+      - name: MC MAGIC
+      - name: LIL ROB
