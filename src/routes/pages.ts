@@ -21,7 +21,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     hbs.registerHelper(
         "isNullUndefinedOrEmpty",
-        (object: string): boolean => { return object === null || object == undefined || object.length === 0; });
+        (object: string): boolean => { return object === null || object === undefined || object.length === 0; });
 
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
