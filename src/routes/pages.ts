@@ -19,6 +19,10 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
     hbs.registerHelper('formatDate', (date: Date) => new hbs.SafeString(date.toDateString()));
 
+    hbs.registerHelper(
+        "isNullUndefinedOrEmpty",
+        (object: string): boolean => { return object === null || object == undefined || object.length === 0; });
+
     router.get("/health", (req: express.Request, res: express.Response) => res.send("healthy"));
 
     router.get("/", (req: express.Request, res: express.Response) => {
@@ -142,6 +146,11 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
 
         // Get artists and work genre + session state-re-rendering magic
         const artists: SpotifyArtist[] = await redisHelper.getArtistsForFestival(redisClient, festival.name, queryYear);
+        const                                  dayMetadataList: FestivalDayMetadata[] =
+            await redisHelper.getFestivalDayMetadata(redisClient, festival.name, queryYear);
+        const     usingDayMetadata: boolean =
+            dayMetadataList !== null && dayMetadataList !== undefined && dayMetadataList.length > 0;
+
         const mainGenresMap: Map<string, StatefulObject>     = new Map<string, StatefulObject>();
         const specificGenresMap: Map<string, StatefulObject> = new Map<string, StatefulObject>();
         const daysMap: Map<string, StatefulObject>           = new Map<string, StatefulObject>();
@@ -174,11 +183,32 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
                 artist.checkedStr = "";
             }
 
-            // Inefficient since we got a list of supported days in getArtistsForFestival but meh
-            if (!daysMap.has(artist.day)) {
+            // If no festival day metadata exists, this lineup was saved in redis before the yaml format and extraction
+            // was added. Just use old logic where the list of days is built by looking at every artists' day and
+            // de-duping. Still use FestivalDayMetadata object as obj so frontend can always know it's getting that obj,
+            // just fill in the day number field
+            if (!usingDayMetadata && !daysMap.has(artist.day)) {
+                const newDayMetadata: FestivalDayMetadata = {
+                    number : Number(artist.day),
+                    date : null,
+                    display_name : null,
+                };
                 const checkedStr =
                     previouslySelectedDays === null || previouslySelectedDays.includes(artist.day) ? "checked" : "";
-                daysMap.set(artist.day, {state : checkedStr, obj : artist.day});
+                daysMap.set(artist.day, {state : checkedStr, obj : newDayMetadata});
+            }
+        }
+
+        // If day metadata was found in redis, build the 'metadata obj by day number' dict quickly here. daysMap always
+        // is the same time, but if metadata not available for this festival than it's just all null except for the
+        // number and is built in the loop above.
+        if (usingDayMetadata) {
+            console.log("Found day metadata for festival, building days with that (not artists day string)");
+            for (const dayMetadata of dayMetadataList) {
+                const dayNumberStr: string = dayMetadata.number.toString(10);
+                const checkedStr =
+                    previouslySelectedDays === null || previouslySelectedDays.includes(dayNumberStr) ? "checked" : "";
+                daysMap.set(dayNumberStr, {state : checkedStr, obj : dayMetadata});
             }
         }
 
@@ -187,7 +217,7 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         const days: StatefulObject[]           = Array.from(daysMap.values());
         mainGenres.sort();
         specificGenres.sort();
-        days.sort();
+        days.sort((a, b) => Number(a.obj.number) - Number(b.obj.number));  // Orders by returning pos, 0, or neg
 
         const lastUpdatedDate = await redisHelper.getLineupLastUpdatedDate(redisClient, festival.name, queryYear);
 

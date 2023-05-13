@@ -8,20 +8,6 @@ import * as constants     from "./constants";
 import * as redisHelper   from "./redis-helper";
 import * as spotifyHelper from "./spotify-helper";
 
-interface LineupDay {
-    number: number
-    display_name: string
-    date: Date
-    artists: ArtistAndUri[]
-}
-
-interface FestivalLineup {
-    display_name: string
-    slug: string
-    year: number
-    days: LineupDay[]
-}
-
 async function warm(festival: string, years: number[]): Promise<number> {
     const redisClient = redis.createClient();
 
@@ -101,12 +87,13 @@ async function warm(festival: string, years: number[]): Promise<number> {
 
             // the yaml library will do some basic validation on parsing and throw errors/warnings on incorrectly
             // structured YAML
-            const data: FestivalLineup = yaml.parse(file);
+            const data: YamlFestivalLineup = yaml.parse(file);
 
             // the AJV library is used for comparison against an actual lineup schema file
             const ajv = new Ajv();
 
-            const schema: JSONSchemaType<FestivalLineup> = JSON.parse(readFileSync('lineup-schema.json').toString());
+            const schema: JSONSchemaType<YamlFestivalLineup> =
+                JSON.parse(readFileSync('lineup-schema.json').toString());
 
             const validate = ajv.compile(schema);
 
@@ -144,9 +131,19 @@ async function warm(festival: string, years: number[]): Promise<number> {
                     }
                 }
             }
+
+            // save the day metadata for properly displaying day information on customize screen
+            const dayMetadata: FestivalDayMetadata[] = data.days.map(yamlDay => ({
+                                                                         number : yamlDay.number,
+                                                                         date : yamlDay.date,
+                                                                         display_name : yamlDay.display_name,
+                                                                     }));
+            redisClient.set(`festival:${festival.toLowerCase()}_${year}:day_metadata`,
+                            JSON.stringify(dayMetadata),
+                            redis.print);
         }
 
-        // Save all days so we can pull them later
+        // Stringify dict of artist obj by festival day and save under single key for the festival
         redisClient.set(`festival:${festival.toLowerCase()}_${year}:days`,
                         JSON.stringify(Object.keys(artistObjs)),
                         redis.print);

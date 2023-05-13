@@ -148,6 +148,13 @@ interface Festival {
     years: number[];
 }
 
+interface FestivalDayMetadata {
+    number: number;
+    date: string;  // format YYYY-mm-dd
+    display_name: string;
+    // list of artist objs exists too from the yaml file, but we don't care about them in this context
+}
+
 interface Region {
     display_name: string;
     name: string
@@ -180,6 +187,20 @@ interface SessionData {
     selectedDaysStr?: string;
     selectedGenresStr?: string;
     playlistUrl?: string;
+}
+
+interface YamlFestivalDay {
+    number: number
+    display_name: string
+    date: string
+    artists: ArtistAndUri[]
+}
+
+interface YamlFestivalLineup {
+    display_name: string
+    slug: string
+    year: number
+    days: YamlFestivalDay[]
 }
 
 // Exists to wrap an object being passed to hbs with data needed for rendering but not a part of the object itself. For

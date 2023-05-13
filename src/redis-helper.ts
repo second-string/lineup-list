@@ -19,11 +19,31 @@ export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient,
                         });
     });
 
-    const last_updated_date: string = await datePromise;
+    const lastUpdatedDate: string = await datePromise;
 
-    if (last_updated_date) {
-        return new Date(last_updated_date);
+    if (lastUpdatedDate) {
+        return new Date(lastUpdatedDate);
     }
+}
+
+export async function getFestivalDayMetadata(redisClient: redis.RedisClient,
+                                             festivalName: string,
+                                             festivalYear: number): Promise<FestivalDayMetadata[]> {
+    const metadataPromise: Promise<FestivalDayMetadata[]> = new Promise((resolve, reject) => {
+        redisClient.get(`festival:${festivalName.toLowerCase()}_${festivalYear}:day_metadata`,
+                        (err: Error, obj: string) => {
+                            // Don't reject anything - if there's no metadata saved, resolve with empty array for pages
+                            // logic to fallback to default day numbers
+                            if (err || obj === "" || !obj) {
+                                resolve([]);
+                            } else {
+                                resolve(JSON.parse(obj));
+                            }
+                        });
+    });
+
+    const dayMetadata: FestivalDayMetadata[] = await metadataPromise;
+    return dayMetadata;
 }
 
 export async function getArtistTopTracksLastUpdated(redisClient: redis.RedisClient, artistId: string): Promise<Date> {

@@ -46,13 +46,18 @@
                         {{#if (gt days.length 1)}}
                             {{#each days}}
                             <div>
-                                <label for="{{this.obj}}" class="pure-checkbox">
-                                <input class="dayCheckbox" id="{{this.obj}}" type="checkbox" value="{{this.obj}}" onchange="refreshArtistList()" {{state}}>
-                                {{this.obj}}</label>
+                                <label for="{{this.obj.number}}" class="pure-checkbox">
+                                <input class="dayCheckbox" id="{{this.obj.number}}" type="checkbox" value="{{this.obj.number}}" onchange="refreshArtistList()" {{this.state}}>
+                                {{#if (isNullUndefinedOrEmpty this.obj.display_name)}}
+                                    {{this.obj.number}}
+                                {{else}}
+                                    {{this.obj.display_name}}
+                                {{/if}}
+                                </label>
                             </div>
                             {{/each}}
                         {{else}}
-                            <p style="font-size: smaller; margin-top: 0;">Single day lineups not released for this festival yet.</p>
+                            <p style="font-size: smaller; margin-top: 0;">Single day lineups not available for this festival.</p>
                         {{/if}}
                     </div>
 
