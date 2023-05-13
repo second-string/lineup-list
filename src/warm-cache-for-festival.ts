@@ -161,6 +161,8 @@ async function warm(festival: string, years: number[]): Promise<number> {
             break;
         }
 
+        console.log("-------------------------------");
+
         // For every day in this fest, get the full spot artist obj from the text file name, store ID
         // list for each artist on this specific day key, then save artist objs themselves
         for (const day of Object.keys(artistObjs)) {
@@ -173,6 +175,8 @@ async function warm(festival: string, years: number[]): Promise<number> {
                             JSON.stringify(artistIds),
                             redis.print);
 
+            const artistsLength = artists.length;
+            let   artistIndex   = 1;
             for (const spotifyArtist of artists) {
                 // Check to see if we have this artist and associated metadata saved in cache from a previous warm run
                 // already. This might let us skip getting top/new/setlist tracks if we already have them saved
@@ -227,9 +231,13 @@ async function warm(festival: string, years: number[]): Promise<number> {
                     console.log(redisArtist);
                     continue;
                 }
+
+                console.log(`Warming cache for artist ${artistIndex} out of ${artistsLength}...`);
                 await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
                 await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
                 await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
+
+                artistIndex++;
             }
         }
 
