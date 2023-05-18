@@ -52,7 +52,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Float Fest", years : [ 2022 ], name : "floatfest", region : "am"},
     {display_name : "Skyline", years : [ 2022 ], name : "skyline", region : "am"},
     {display_name : "Sunset", years : [ 2022 ], name : "sunset", region : "am"},
-    {display_name : "Portola", years : [ 2022 ], name : "portola", region : "am"},
+    {display_name : "Portola", years : [ 2023, 2022 ], name : "portola", region : "am"},
     {display_name : "Day Trip", years : [ 2022 ], name : "daytrip", region : "am"},
     {display_name : "Audiotistic", years : [ 2022 ], name : "audiotistic", region : "am"},
     {display_name : "Above & Beyond Group Therapy - The Gorge", years : [ 2022 ], name : "abgt_gorge", region : "am"},

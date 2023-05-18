@@ -165,6 +165,8 @@ async function warm(festival: string, years: number[]): Promise<number> {
 
         // For every day in this fest, get the full spot artist obj from the text file name, store ID
         // list for each artist on this specific day key, then save artist objs themselves
+        const daysLength = Object.keys(artistObjs).length;
+        let   dayIndex   = 1;
         for (const day of Object.keys(artistObjs)) {
             const artists: SpotifyArtist[] = await spotifyHelper.getSpotifyArtists(artistObjs[day]);
 
@@ -232,13 +234,16 @@ async function warm(festival: string, years: number[]): Promise<number> {
                     continue;
                 }
 
-                console.log(`Warming cache for artist ${artistIndex} out of ${artistsLength}...`);
+                console.log(
+                    `Warming cache for day ${dayIndex}/${daysLength} for artist ${artistIndex}/${artistsLength}...`);
                 await redisHelper.getTopTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
                 await redisHelper.getSetlistTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
                 await redisHelper.getNewestTracksForArtist(redisClient, spotifyArtistToGetTracks, 10, true);
 
                 artistIndex++;
             }
+
+            dayIndex++;
         }
 
         redisClient.set(`festival:${festival.toLowerCase()}_${year}:last_updated_date`,
