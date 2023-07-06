@@ -4,31 +4,88 @@ region: eu
 year: 2023
 days:
 - number: 1
-  date: '2023-07-06'
+  date: 2023-07-06
+  display_name: Day 1
   artists:
-  - name: THE DRIVER ERA
-  - name: Puscifer
-  - name: Spoon
   - name: Red Hot Chili Peppers
   - name: The Black Keys
+  - name: Puscifer
   - name: Jacob Collier
+  - name: Spoon
+  - name: THE DRIVER ERA
   - name: Men I Trust
+  - name: Ibibio Sound Machine
+  - name: Xinobi
+  - name: Yaya Bey
+  - name: Throes + The Shine
+  - name: Nidia
+  - name: Club Makumba
+  - name: Ana Lua Caiano
+  - name: Femme Falafel
+  - name: BOMBAZINE
+  - name: "Beatriz Fel\xEDcio"
+  - name: y.azz
+  - name: Matilde Castro
+  - name: "LANA GASPAR\xD8TTI"
+  - name: Homem em Catarse
+  - name: Marta Lima
+  - name: Francisco Menezes
+  - name: Diogo Vieira
 - number: 2
-  date: '2023-07-07'
+  date: 2023-07-07
+  display_name: Day 2
   artists:
-  - name: Morad
-  - name: Nathaniel Rateliff & The Night Sweats
-  - name: City and Colour
-  - name: The Amazons
   - name: Arctic Monkeys
   - name: Lizzo
+  - name: Lil Nas X
   - name: IDLES
-  - name: Sylvan Esso
+  - name: Linda Martini
+  - name: YENDRY
+  - name: Papillon
+  - name: Neyna
+  - name: Lhast
+  - name: xtinto
+  - name: SleepyThePrince
+  - name: Bashment
+  - name: MIRAMAR
+  - name: "Z\xE9 Maria"
+  - name: Trafulha
+  - name: "Jo\xE3o Borsch"
+  - name: Rita Onofre
+  - name: Juana Na Rap
+  - name: Carlos Coutinho Vilhena
+  - name: "Andr\xE9 Ferreira"
+  - name: XPTO
+  - name: Road 31
 - number: 3
-  date: '2023-07-08'
+  date: 2023-07-08
+  display_name: Day 3
   artists:
-  - name: Branko
   - name: Sam Smith
   - name: Queens of the Stone Age
+  - name: "R\xDCF\xDCS DU SOL"
+  - name: Machine Gun Kelly
   - name: Tash Sultana
+  - name: Rina Sawayama
   - name: Angel Olsen
+  - name: King Princess
+  - name: Omah Lay
+  - name: Branko
+  - name: Boys Noize
+  - name: Kelly Lee Owens
+  - name: Krystal Klear
+  - name: Storm Mollison
+  - name: TAAHLIAH
+  - name: Third Son
+  - name: Yen Sung
+  - name: Lucy Val
+  - name: "Lu\xEDs Trigacheiro"
+  - name: BELA ENSEMBLE
+  - name: Jesus Quisto
+  - name: Berlok
+  - name: "S\xF3nia Tr\xF3picos"
+  - name: Iolanda
+  - name: "In\xEAs Marques Lucas"
+  - name: Manuel Cardoso
+  - name: Tiago Almeida
+  - name: Manuel Rosa
