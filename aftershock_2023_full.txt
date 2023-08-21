@@ -1,0 +1,103 @@
+THURSDAY
+      - name: AVENGED SEVENFOLD
+      - name: PANTERA
+      - name: INCUBUS
+      - name: THE CULT
+      - name: AFI
+      - name: PENNYWISE
+      - name: L7
+      - name: NOTHING BUT THIEVES
+      - name: WHITE REAPER
+      - name: SENSES FAIL
+      - name: THE BRONX
+      - name: DON BROCO
+      - name: NOTHING, NOWHERE.
+      - name: DEATHBYROMY
+      - name: BEAUTY SCHOOL DROPOUT
+      - name: PINKSHIFT
+      - name: THOUSAND BELOW
+      - name: STARBENDERS
+      - name: HOLDING ABSENCE
+      - name: STATIC DRESS
+      - name: SEEYOUSPACECOWBOY
+      - name: LETDOWN.
+      - name: LUNA AURA
+      - name: KID KAPICHI
+      - name: KIM DRACULA
+
+FRIDAY
+      - name: TOOL
+      - name: GODSMACK
+      - name: LIMP BIZKIT
+      - name: MEGADETH
+      - name: COHEED AND CAMBRIA
+      - name: BAD OMENS
+      - name: SKILLET
+      - name: THE HU
+      - name: DEAFHEAVEN
+      - name: MEMPHIS MAY FIRE
+      - name: CONVERGE
+      - name: FIRE FROM THE GODS
+      - name: POLARIS
+      - name: GIDEON
+      - name: RAIN CITY DRIVE
+      - name: VARIALS
+      - name: TALLAH
+      - name: STRANGE KIDS
+      - name: DRAGGED UNDER
+      - name: HANABIE
+      - name: WIDOW7
+      - name: DEATH VALLEY DREAMS
+      - name: AS YOU WERE
+      - name: ATTILA
+
+SATURDAY
+      - name: KORN
+      - name: TURNSTILE
+      - name: 311
+      - name: PARKWAY DRIVE
+      - name: COREY TAYLOR
+      - name: BABYMETAL
+      - name: POLYPHIA
+      - name: FEVER 333
+      - name: AVATAR
+      - name: DETHKLOK
+      - name: THE AMITY AFFLICTION
+      - name: ESCAPE THE FATE
+      - name: BOSTON MANOR
+      - name: SLEEP TOKEN
+      - name: FAME ON FIRE
+      - name: CATCH YOUR BREATH
+      - name: TEN56.
+      - name: ITHACA
+      - name: REDDSTAR
+      - name: HOLY WARS
+      - name: ALL WAVES
+      - name: DEVIL'S CUT
+      - name: TRAITORS
+      - name: FOX LAKE
+      - name: SUECO
+
+SUNDAY
+      - name: GUNS N' ROSES
+      - name: QUEENS OF THE STONE AGE
+      - name: RANCID
+      - name: I PREVAIL
+      - name: DANCE GAVIN DANCE
+      - name: DAUGHTRY
+      - name: BADFLOWER
+      - name: MAYDAY PARADE
+      - name: YOU ME AT SIX
+      - name: SUICIDE SILENCE
+      - name: BILLY TALENT
+      - name: AYRON JONES
+      - name: MOVEMENTS
+      - name: AUSTIN MEADE
+      - name: CALL ME KARIZMA
+      - name: JEHNNY BETH
+      - name: RYAN OAKES
+      - name: REDLIGHT KING
+      - name: TIGERCUB
+      - name: GNOME
+      - name: ASAVA
+      - name: WARGASM
