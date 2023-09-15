@@ -8,138 +8,149 @@ days:
     display_name: Both weekends
     artists:
       - name: KENDRIGK LAMAR
-      - name: FOO FIGHTERS
-      - name: MUMFORD & SONS
-      - name: ODESZA
-      - name: ALANIS MORISSETTE
-      - name: HOZIER
-      - name: KALI UCHIS
-      - name: YEAH YEAH YEAHS
+      - name: THE LUMINEEHS
+      - name: KALIUGHIS
       - name: MAGGIE ROGERS
-      - name: NOAH KAHAN
-      - name: LABRINTH
-      - name: CIGARETTES AFTER SEX
-      - name: THIRTY SECONDS TO MARS
-      - name: NIALL HORAN
       - name: LIL YACHTY
-      - name: MT. JOY
-      - name: TOVE LO
       - name: ABOVE & BEYOND
       - name: THE REVIVALISTS
-      - name: BOB MOSES
       - name: PORTUGAL. THE MAN
-      - name: DEATH GRIPS
+      - name: FKJ
+      - name: D4VD
+      - name: NESSA BARRETT
+      - name: THE TESKEY BROTHERS
+      - name: THEE SACRED SOULS
+      - name: BLOND:ISH
+      - name: BRELAND
+      - name: BAILEN
+      - name: ABRAHAM ALEXANDER
+      - name: THE ALTONS
+      - name: DEVON GILFILLIAN
+      - name: FOO FIGHTERS
+      - name: ALANIS MORISSETTE
+      - name: NOAH KAHAN
+      - name: THIRTY SECONDS TO MARS
+      - name: MT. JOY
+      - name: TOVE LO
+      - name: BOB MOSES
       - name: RINA SAWAYAMA
       - name: COI LERAY
-      - name: GLORILLA
-      - name: LITTLE SIMZ
       - name: POOLSIDE
+      - name: AMAARAE
+      - name: JESSIE WARE
+      - name: DECLAN MCKENNA
+      - name: TANYA TUCKER
+      - name: GUS DAPPERTON
+      - name: BEN KWELLER
+      - name: EDDIE ZUKO
+      - name: CALDER ALLEN
+      - name: ANGEL WHITE
+      - name: MUMFORD & SONS
+      - name: ODESZA
+      - name: HOZIER
+      - name: YEAH YEAH YEAHS
+      - name: LABRINTH
+      - name: CIGARETTES AFTER SEX
+      - name: NIALL HORAN
+      - name: DEATH GRIPS
       - name: IVAN CORNEJO
       - name: THE BREEDERS
-      - name: FKJ
-      - name: AMAARAE
-      - name: D4VD
       - name: SIDEPIECE
       - name: SUKI WATERHOUSE
       - name: MORGAN WADE
-      - name: JESSIE WARE
-      - name: NESSA BARRETT
-      - name: DECLAN MCKENNA
-      - name: TANYA TUCKER
-      - name: THE TESKEY BROTHERS
       - name: YVES TUMOR
-      - name: GUS DAPPERTON
-      - name: THEE SACRED SOULS
-      - name: BEN KWELLER
-      - name: BLOND:ISH
       - name: KEVIN KAARL
-      - name: BRELAND
       - name: MICHIGANDER
       - name: DOPE LEMON
-      - name: EDDIE ZUKO
       - name: RANDALL KING
       - name: MADISON CUNNINGHAM
-      - name: CHARLOTTE ADIGÉRY & BOLIS PUPUL
-      - name: DEVON GILFILLIAN
-      - name: BAILEN
-      - name: ABRAHAM ALEXANDER
       - name: MIMI WEBB
-      - name: CALDER ALLEN
-      - name: THE ALTONS
-      - name: ANGEL WHITE
+      - name: KATY KIRBY
   - number: 2
     date: 2022-10-06
     display_name: Weekend 1
     artists:
       - name: SHANIA TWAIN
-      - name: THE MARS VOLTA
-      - name: TASH SULTANA
       - name: CHROMEO
-      - name: THE WALKMEN
-      - name: HALF ALIVE
-      - name: RAYE
       - name: BECKY HILL
-      - name: BRITTNEY SPENCER
-      - name: CHRISTONE "KINGFISH" INGRAM
+      - name: TASH SULTANA
+      - name: THE MARS VOLTA
       - name: ALI SETHI
-      - name: JULIA WOLF
-      - name: ASLEEP AT THE WHEEL
-      - name: BASS DRUM OF DEATH
-      - name: BIGXTHAPLUG
-      - name: MAC SATURN
-      - name: SHAED
+      - name: CHARLOTTE ADIGÉRY
+      - name: BOLIS PUPUL
       - name: TANNER USREY
-      - name: WUNDERHORSE
-      - name: ARYA
-      - name: SHOOKS
       - name: SUNROSE
       - name: GRACE SORENSEN
       - name: JANE LEO
-      - name: DIE SPITZ
       - name: MAJOR.
       - name: ELLIS BULLARD
-      - name: YAYA BEY
-      - name: THE DISCIPLES OF JOY
       - name: MATT MALTESE
-      - name: THE NATIONAL PARKS
+      - name: WESLEY BRAY
+      - name: THE WALKMEN
+      - name: GLORILLA
       - name: PATRICK MARTIN
+      - name: VALLEY JAMES
+      - name: DIE SPITZ
+      - name: GUS CLARK
+      - name: NEMEGATA
+      - name: HUSBANDS
+      - name: SERAYAH
+      - name: ARYA
+      - name: SHOOKS
+      - name: RATTLESNAKE MILK
+      - name: SNÕÕPER
+      - name: ABBY SAGE
+      - name: BIGXTHAPLUG
+      - name: MAC SATURN
+      - name: SHAED
+      - name: WUNDERHORSE
+      - name: YAYA BEY
+      - name: CHRISTONE "KINGFISH" INGRAM
+      - name: SUDAN ARCHIVES
+      - name: DELACEY
+      - name: THE NATIONAL PARKS
       - name: DEYAZ
-      - name: MYRON ELKINS
-      - name: KATY KIRBY
+      - name: ASLEEP AT THE WHEEL
+      - name: BASS DRUM OF DEATH
+      - name: BRITTNEY SPENCER
+      - name: JULIA WOLF
+      - name: ETHEL CAIN
+      - name: HALF ALIVE
+      - name: LITTLE SIMZ
   - number: 3
     date: 2022-10-13
     display_name: Weekend 2
     artists:
-      - name: THE 1975
       - name: M83
       - name: TEGAN AND SARA
-      - name: ETHEL CAIN
+      - name: THE 1975
       - name: DEL WATER GAP
-      - name: SUDAN ARCHIVES
-      - name: PENNY & SPARROW
-      - name: ELOISE
-      - name: CELISSE
-      - name: JIMMIE VAUGHAN & TILT-A-WHIRL BAND
-      - name: THE MOSS
-      - name: CVC
+      - name: MIYA FOLICK
       - name: COREY KENT
-      - name: NEW WEST
-      - name: SINCERE ENGINEER
+      - name: PENNY & SPARROW
+      - name: CELISSE
+      - name: QUIN NFN
+      - name: COROOK
+      - name: CARAMELO HAZE
+      - name: KATHRYN LEGENDRE
+      - name: LEON III
+      - name: SISI
+      - name: MYRON ELKINS
+      - name: THE MORIAH SISTERS
+      - name: LITTLE SIMZ
+      - name: GOODNIGHT, TEXAS
       - name: PONY BRADSHAW
       - name: BLAKCHYL
-      - name: QUIN NEN
-      - name: COROOK
+      - name: CVC
+      - name: NEW WEST
+      - name: SINCERE ENGINEER
+      - name: ELOISE
+      - name: JAIME WYATT
+      - name: THE MOSS
       - name: WE DON'T RIDE LLAMAS
-      - name: RATTLESNAKE MILK
-      - name: SNÖÖPER
-      - name: CARAMELO HAZE
-      - name: CAITLIN JAMES
       - name: OLIVER HAZARD
-      - name: NEMEGATA
-      - name: KATHRYN LEGENDRE
-      - name: DELACEY
       - name: EMLYN
-      - name: GOODNIGHT TEXAS
-      - name: MIYA FOLICK
-      - name: HUSBANDS
-      - name: SERAYAH
+      - name: FONT
+      - name: RAYE
+      - name: JIMMIE VAUGHAN & TILT-A-WHIRL BAND
+      - name: GLORILLA
