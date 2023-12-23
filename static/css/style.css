@@ -11,13 +11,40 @@ body {
     min-height: 100%;
 }
 
-.nav {
+.flex-row {
     display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.select-header-text {
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.nav {
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
-    margin: 3em 0 0 3em; /* If this is changed make sure to update large media query below */
+    margin: 1em 0 0 1em;
 }
 
 .nav-item {
@@ -26,6 +53,7 @@ body {
 }
 
 .mobile-nav {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -62,35 +90,54 @@ body {
     text-decoration: none;
 }
 
-/* After we downsize below medium, shift nav mobile nav */
-@media only screen and (min-width: 48em) {
+.home-form {
+    width: 80vw;
+}
+
+.home-select {
+    margin-bottom: 1em;
+}
+
+.request-lineup-button {
+    font-size: smaller;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    max-width: 80vw;
+}
+
+@media only screen and (min-width: 480px) {
     .nav {
         display: flex;
     }
+
     .mobile-nav {
         display: none;
     }
-}
 
-@media only screen and (max-width: 48em) {
-    .nav {
-        display: none;
-    }
-    .mobile-nav {
-        display: flex;
+    .home-form {
+        width: 60vw;
     }
 }
 
-/* After we downsize below large, shift nav to less left margin */
-@media only screen and (max-width: 64em) {
-    .nav {
-        margin: 1em 0 0 1em;
-    }
-}
-
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 768px) {
     .nav {
         margin: 3em 0 0 3em;
+    }
+
+    .home-form {
+        width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .home-form {
+        width: 30vw;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .home-form {
+        width: 20vw;
     }
 }
 
@@ -104,7 +151,6 @@ select {
   box-sizing: inherit;
   /* height: 3.8rem; */
   padding: .6rem 1.0rem .7rem;
-  width: 100%;
 }
 
 select:focus {

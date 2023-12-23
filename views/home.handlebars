@@ -1,19 +1,21 @@
 <h1>Lineup List</h1>
 <p style="text-align: center; margin: 1em 2em 1em 2em">Create a festival lineup of artists according to your preferred genres, track type, and more. Once you've chosen your artists and filter settings, generate a playlist specific to you within your Spotify account.</p>
-<h3>Choose a festival to begin</h3>
-<form action="/customize" method="GET" style="display: flex; flex-direction: column;">
-    <div style="display: flex; flex-direction: row; margin-top: 1rem; margin-bottom: .5rem; justify-content: center;">
-        <select id="festival-select" name="festival" onChange="populateYearSelect()">
-            {{#each supportedFestivals}}
-            <option value="{{this.name}}" data-years="{{stringify this.years}}" {{disableoptionifregion this}}>{{this.display_name}}</option>
-            {{/each}}
-        </select>
-        <select name="year" id="year-select">
-        </select>
-    </div>
-    <a href="mailto:contact@lineuplist.live" style="font-size: smaller; margin-bottom: 2rem;">Don't see the festival or year you want? Let me know</a>
+<form action="/customize" method="GET" class="flex-column justify-content-center home-form" class="">
+    <h4 class="select-header-text">Choose a festival</h4>
+    <select id="festival-select" class="home-select" name="festival" onChange="populateYearSelect()">
+        {{#each supportedFestivals}}
+        <option value="{{this.name}}" data-years="{{stringify this.years}}" {{disableoptionifregion this}}>{{this.display_name}}</option>
+        {{/each}}
+    </select>
+
+    <h4 class="select-header-text">Choose a lineup year</h4>
+
+    <select name="year" class="home-select" id="year-select">
+    </select>
     <input type="submit" class="pure-button pure-button-primary" style="align-self: center;"/>
 </form>
+
+<a href="mailto:contact@lineuplist.live" class="request-lineup-button text-align-center">Don't see the festival or year you want?</a>
 
 <script>
 function populateYearSelect() {
