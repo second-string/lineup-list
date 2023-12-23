@@ -1,0 +1,94 @@
+display_name: Mad Cool
+slug: madcool
+region: eu
+year: 2024
+days:
+  - number: 1
+    date: 2022-07-10
+    display_name: Day 1
+    artists:
+      - name: DUA LIPA
+      - name: THE SMASHING PUMPKINS
+      - name: JANELLE MONÁE
+      - name: GARBAGE
+      - name: RELS B
+      - name: NOTHING BUT THIEVES
+      - name: TOM ODELL
+      - name: JAMES ARTHUR
+      - name: KENYA GRACE
+      - name: SOCCER MOMMY
+      - name: CRAWLERS
+      - name: JULIETA
+      - name: JET VESPER
+      - name: SWIM SCHOOL
+      - name: CARLITA
+      - name: KID FRANCESCOLI
+      - name: PARRA FOR CUVA
+      - name: CLAUDIA LEÓN
+  - number: 2
+    date: 2022-07-11
+    display_name: Day 2
+    artists:
+      - name: PEARL JAM
+      - name: MOTXILA 21
+      - name: GRETA VAN FLEET
+      - name: KEANE
+      - name: MICHAEL KIWANUKA
+      - name: PAUL KALKBRENNER
+      - name: BOMBA ESTÉREO
+      - name: MANDO DIAO
+      - name: SOFI TUKKER
+      - name: LARKIN POE
+      - name: THE HEAVY
+      - name: BLACK HONEY
+      - name: KNEECAP
+      - name: BLANCO WHITE
+      - name: MERINA GRIS
+      - name: MERINO
+      - name: LAWRENCE
+      - name: PIEM
+      - name: BONOBO
+      - name: CC:DISCO!
+      - name: ADIEL
+      - name: SUGAR FREE
+      - name: LOLA BOZZANO
+  - number: 3
+    date: 2022-07-12
+    display_name: Day 3
+    artists:
+      - name: SUM 41
+      - name: JESSIE WARE
+      - name: BLACK PUMAS
+      - name: TOM MORELLO
+      - name: THE BREEDERS
+      - name: UNKNOWN MORTAL ORCHESTRA
+      - name: ALVVAYS
+      - name: SLEAFORD MODS
+      - name: ACID ARAB
+      - name: STAY HOMAS
+      - name: GILIPOJAZZ
+      - name: PI.L.T.
+      - name: MOCHAKK
+      - name: DJ KOZE
+      - name: JAYDA G
+      - name: DANILO PLESSOW
+      - name: LOLA HARO
+  - number: 3
+    date: 2022-07-13
+    display_name: Day 4
+    artists:
+      - name: BRING ME THE HORIZON
+      - name: AVRIL LAVIGNE
+      - name: THE GASLIGHT ANTHEM
+      - name: ARLO PARKS
+      - name: ASHNIKKO
+      - name: NATHANIEL RATELIFF AND THE NIGHT SWEATS
+      - name: GENESIS OWUSU
+      - name: THE WARNING
+      - name: CHINCHILLA
+      - name: JOEL CULPEPPER
+      - name: HE.SHE.THEY.
+      - name: ANOTR
+      - name: THE BLESSED MADONNA
+      - name: AXEL BOMAN
+      - name: HONEYLUV

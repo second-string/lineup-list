@@ -1,0 +1,162 @@
+display_name: Primavera Sound Barcelona
+slug: primavera
+region: eu
+year: 2024
+days:
+  - number: 1
+    date: 2022-05-30
+    display_name: Day 1
+    artists:
+      - name: PULP
+      - name: VAMPIRE WEEKEND
+      - name: JUSTICE
+      - name: PEGGY GOU
+      - name: DEFTONES
+      - name: BETH GIBBONS
+      - name: KIM PETRAS
+      - name: A. G. COOK
+      - name: AMYL AND THE SNIFFERS
+      - name: FREODIE GIBBS
+      - name: MADLIB
+      - name: L'IMPERATRICE
+      - name: THE ARMED
+      - name: BLONDE REDHEAD
+      - name: DERBY MOTORETA'S BURRITO KACHIMBA
+      - name: MCMLXXX
+      - name: SALOME
+      - name: KODE9
+      - name: LAMBCHOP
+      - name: ROOSEVELT
+      - name: SHELLAC
+      - name: SOFIA KOURTESIS
+      - name: WILLIAM BASINSKI
+      - name: YEULE
+      - name: ÁNGELES, VICTOR, GLORIA & JAVIER
+      - name: ARAB STRAP
+      - name: AVA LIVE
+      - name: BALMING TIGER
+      - name: BILLY WOODS
+      - name: CÓMO VIVIR EN EL CAMPO
+      - name: DILLOM
+      - name: DUSTER
+      - name: DJ HARAM
+      - name: HTRK
+      - name: IKONIKA
+      - name: JULIE BYRNE
+      - name: LOLAHOL
+      - name: MANNEQUIN PUSSY
+      - name: MARIA HEIN
+      - name: MJ NEBREDA
+      - name: MUJERES
+      - name: NAZAR LIVE
+      - name: NIEVE ELLA
+      - name: RENALDO & CLARA
+      - name: ROC MARCIANO
+      - name: TIM REAPER
+      - name: VIUDA
+      - name: VOXTROT
+      - name: WIEGEDOOD
+  - number: 2
+    date: 2022-05-31
+    display_name: Day 2
+    artists:
+      - name: LANA DEL REY
+      - name: THE NATIONAL
+      - name: DISCLOSURE
+      - name: TROYE SIVAN
+      - name: JAI PAUL
+      - name: OMAR APOLLO
+      - name: CLIPSE
+      - name: RELS B
+      - name: ARCA
+      - name: BARRY CANT SWIM
+      - name: YO LA TENGO
+      - name: BADBADNOTGOOD
+      - name: MILO J
+      - name: FAYE WEBSTER
+      - name: MOUNT KIMBIE
+      - name: ETHEL CAIN
+      - name: CHELSEA WOLFE
+      - name: DOGSTAR
+      - name: FERRAN PALAU
+      - name: GUILLEM GISBERT
+      - name: HANNAH DIAMOND
+      - name: THE LAST DINNER PARTY
+      - name: MICA LEVI
+      - name: MUSHKAA
+      - name: OBONGJAYAR
+      - name: SEGA BODEGA
+      - name: TIRZAH
+      - name: VERRACO
+      - name: BITTER BADE
+      - name: NICK LEÓN
+      - name: AIKO EL GRUPO
+      - name: BRUTUS
+      - name: CHARLEMAGNE PALESTINE
+      - name: DANIELA LALITA
+      - name: EYE
+      - name: GEL
+      - name: HITECH
+      - name: JESSICA PRATT
+      - name: JOANNA STERMBERG
+      - name: JULIA AMOR
+      - name: LAMIN FOFANA
+      - name: LAMARK ARTEFAX
+      - name: LISASINSON
+      - name: OJOO
+      - name: RITA VIAN
+      - name: SCOWL
+      - name: SILICA GEL
+      - name: SPACE AFRIKA
+      - name: RAINY MILLER
+      - name: XEXA
+  - number: 3
+    date: 2022-06-01
+    display_name: Day 3
+    artists:
+      - name: SZA
+      - name: PJ HARVEY
+      - name: MITSKI
+      - name: FKA TWIGS
+      - name: CHARL XCX
+      - name: BIKINI KILL
+      - name: ROISIN MURPHY
+      - name: ROMY
+      - name: 070 SHAKE
+      - name: AMAARAE
+      - name: AMERICAN FOOTBALL
+      - name: ATARASHII GAKKOI
+      - name: DORIAN ELECTRA
+      - name: EARTHEATER
+      - name: EL MATO A UN POLICIA MOTORIZADO
+      - name: LA ZOWI
+      - name: LANKUM
+      - name: THE LEMON TWIGS
+      - name: LBERATO
+      - name: LISABO
+      - name: NALA SINEPHRO
+      - name: DJ PLAYERO
+      - name: ROYEL OTIS
+      - name: SANDWELL DISTRICT
+      - name: SHABAKA
+      - name: YOVNGCHIMI
+      - name: CHANNEL ONE
+      - name: CRUMB
+      - name: DEPRESIÓN SONORA.
+      - name: DU FART IN THE CLUB
+      - name: F.R.A.C.
+      - name: HOFE X 4:40
+      - name: MANDY, INDIANA
+      - name: MERINA GRIS
+      - name: MILITARIE GUN
+      - name: MODEL/ACTRIZ
+      - name: MONOLAKE
+      - name: PELADA
+      - name: PHEW
+      - name: SLOW PULP
+      - name: SOPHIA CHABLAU
+      - name: TEKI LATEX
+      - name: TERCER SOL
+      - name: WATER FROM YOUR EYES
+      - name: WOLF EYES
+      - name: WOODY92
