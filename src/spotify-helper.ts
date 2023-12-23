@@ -10,7 +10,33 @@ let spotifyToken: string = null;
 export const spotifyBaseUrl: string    = "https://open.spotify.com/";
 export const spotifyApiBaseUrl: string = "https://api.spotify.com/v1/";
 
-async function refreshSpotifyToken() {
+// Enables other logic to get spotify information without having to store and handle refreshing the token themselves
+async function autoRetrySpotifyCall(url: string, createOptions: (token: string) => any, logCurl: boolean):
+    Promise<{success : boolean, response : any}> {
+    if (!spotifyToken) {
+        const tokenSuccess = await refreshSpotifyToken();
+        if (!tokenSuccess) {
+            return {success : tokenSuccess, response : "Error refreshing token"};
+        }
+    }
+
+    let options = createOptions(spotifyToken);
+
+    let {success, response} = await helpers.instrumentCall(url, options, logCurl);
+    if (!success) {
+        // This could probably be refined with error codes, but give it a refresh and retry for any failure for now
+        console.log(`Failed a spotify request to ${url} with status ${response.status}, refreshing token and retrying`);
+        await refreshSpotifyToken();
+        options = createOptions(spotifyToken);
+        ({success, response} = await helpers.instrumentCall(url, options, logCurl));
+    }
+
+    return {success, response};
+}
+
+// Exported to allow us to kick an initial token population of the in-mem variable (shit way to hold this but that's how
+// I originally wrote it so oops)
+export async function refreshSpotifyToken(): Promise<boolean> {
     const postOptions = {
         method : "POST",
         body : {grant_type : "client_credentials"},
@@ -20,28 +46,14 @@ async function refreshSpotifyToken() {
     console.log("Getting spotify API token...");
     const {success, response} =
         await helpers.instrumentCall("https://accounts.spotify.com/api/token", postOptions, false);
-    return success ? response.access_token : response;
-}
 
-// Enables other logic to get spotify information without having to store and handle refreshing the token themselves
-async function autoRetrySpotifyCall(url: string, createOptions: (token: string) => any, logCurl: boolean):
-    Promise<{success : boolean, response : any}> {
-    if (!spotifyToken) {
-        spotifyToken = await refreshSpotifyToken();
-    }
-
-    let options = createOptions(spotifyToken);
-
-    let {success, response} = await helpers.instrumentCall(url, options, logCurl);
     if (!success) {
-        // This could probably be refined with error codes, but give it a refresh and retry for any failure for now
-        console.log(`Failed a spotify request to ${url} with status ${response.status}, refreshing token and retrying`);
-        spotifyToken = await refreshSpotifyToken();
-        options      = createOptions(spotifyToken);
-        ({success, response} = await helpers.instrumentCall(url, options, logCurl));
+        console.error("Error refreshing spotify token!");
+    } else {
+        spotifyToken = response.access_token;
     }
 
-    return {success, response};
+    return success;
 }
 
 export async function getAccessTokenFromCallback(code: string, reqError: any):
@@ -61,14 +73,14 @@ export async function getAccessTokenFromCallback(code: string, reqError: any):
 
     const redirectBaseUri = process.env.DEPLOY_STAGE === "PROD" ? "lineuplist.live" : "localhost";
     const postOptions     = {
-            method : "POST",
-            body : {
-                grant_type : "authorization_code",
-                redirect_uri : `https://${
+        method : "POST",
+        body : {
+            grant_type : "authorization_code",
+            redirect_uri : `https://${
                 redirectBaseUri}/spotify-auth-callback`,  // Doesn't matter, just needs to match what we sent previously
             code
         },
-            headers : {"Content-type" : "application/x-www-form-urlencoded", Authorization : spotifyAuth()}
+        headers : {"Content-type" : "application/x-www-form-urlencoded", Authorization : spotifyAuth()}
     };
 
     console.log("Getting spotify access and refresh tokens ...");
@@ -166,8 +178,8 @@ export async function getSpotifyArtists(simpleArtists: ArtistAndUri[]): Promise<
                                                false);
 
                 if (!success) {
-                    console.log(`Request to get artist with ID ${simpleArtist.spotify_uri} and name ${artistName} failed with status ${
-                        response.status}`);
+                    console.log(`Request to get artist with ID ${simpleArtist.spotify_uri} and name ${
+                        artistName} failed with status ${response.status}`);
                     resolve(null);
                 } else {
                     response.combined_genres = reduceSpotifyGenres(response.genres);
@@ -283,8 +295,8 @@ export async function getAllTracksToAdd(spotifyArtists: SpotifyArtist[],
     // initially get a list of lists from each individual promise resolving the 3 tracks for the artist
     const trackObjects: SpotifyTrack[][] = await Promise.all(trackPromises);
     const trackUris                      = trackObjects.reduce((list: SpotifyTrack[], trackUriList: SpotifyTrack[]) => {
-                             list = list.concat(trackUriList.slice(0, tracksPerArtist));
-                             return list;
+        list = list.concat(trackUriList.slice(0, tracksPerArtist));
+        return list;
     }, []);
 
     console.log(`Received ${trackUris.length} tracks`);
@@ -319,9 +331,9 @@ export async function getOrCreatePlaylist(
         // They don't have their own lineup list playlist yet, create it
         const postOptions: any = helpers.baseSpotifyHeaders("POST", accessToken);
         postOptions.body       = {
-                  name : playlistName,
-                  public : false,
-                  description : "Created with Lineup List - https://lineuplist.live"
+            name : playlistName,
+            public : false,
+            description : "Created with Lineup List - https://lineuplist.live"
         };
 
         console.log("Creating playlist since we didn't find it in their list of existing playlists");

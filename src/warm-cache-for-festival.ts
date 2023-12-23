@@ -4,7 +4,8 @@ import path from "path";
 import redis from "redis";
 import yaml from "yaml";
 
-import * as constants     from "./constants";
+import * as constants from "./constants";
+import {sleep} from "./helpers";
 import * as redisHelper   from "./redis-helper";
 import * as spotifyHelper from "./spotify-helper";
 
@@ -147,6 +148,10 @@ async function warm(festival: string, years: number[]): Promise<number> {
         redisClient.set(`festival:${festival.toLowerCase()}_${year}:days`,
                         JSON.stringify(Object.keys(artistObjs)),
                         redis.print);
+
+        // Make sure we have a token in mem before firing off a million artist reqs that step all over themselves all
+        // trying to fetch new tokens
+        await spotifyHelper.refreshSpotifyToken();
 
         // Pre-check to make sure all artists are findable, otherwise bail
         const spotifyArtistsByDay: {[key: string]: SpotifyArtist[]} = {};
