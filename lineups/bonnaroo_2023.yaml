@@ -4,7 +4,7 @@ region: am
 year: 2023
 days:
   - number: 1
-    date: 2022-06-15
+    date: 2023-06-15
     display_name: Day 1 # The text displayed to the user for the filters
     artists:
       - name: Zeds Dead
