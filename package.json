@@ -10,7 +10,8 @@
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
-    "dev": "concurrently \"tsc --watch\" \"nodemon .\""
+    "dev": "concurrently \"tsc --watch\" \"nodemon .\"",
+    "deploy": "git dev && git push && git master && git merge dev && git push && git back"
   },
   "author": "",
   "license": "MIT",
