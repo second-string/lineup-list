@@ -1,0 +1,78 @@
+display_name: The Governor's Ball
+slug: govball
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2024-06-07
+    display_name: Day 1
+    artists:
+      - name: POST MALONE
+      - name: RAUW ALEJANDRO
+      - name: DOMINIC FIKE
+      - name: LABRINTH - FARRUKO
+      - name: ALEX G
+      - name: GOTH BABE
+      - name: YUNG GRAVY
+      - name: TEEZO TOUCHDOUN
+      - name: OVEEN HERBY
+      - name: FLO
+      - name: RYAN BEATTY
+      - name: MIMI WERB
+      - name: ARCY DRIVE
+      - name: BLONDSHELL
+      - name: DURRY
+      - name: UNDERSCORES
+      - name: DONNA MISSAL
+      - name: LAURAN HIBBEAD
+      - name: ALEX CHAPMAN
+      - name: SCHOOL OF ROCK OUEENS
+  - number: 2
+    date: 2022-06-08
+    display_name: Day 2
+    artists:
+      - name: THE KILERS
+      - name: 21 SAVAGE
+      - name: CARLO RAE JERSEN
+      - name: SABRINA CAMPENTER
+      - name: SEXQU REN
+      - name: TV GIRL
+      - name: JESSIE MURPH
+      - name: DOECHII
+      - name: HIPPO CAMPUS
+      - name: TYLA
+      - name: P1HARMONY
+      - name: D4VD
+      - name: BAKAR
+      - name: OUARTERS OF CHANGE
+      - name: CLAIRE ROSINKRANZ
+      - name: RIOWAZ
+      - name: SKIZZY MARS
+      - name: TELESCREENS
+      - name: THE THING
+      - name: LITTLE STRANGER
+  - number: 3
+    date: 2022-06-09
+    display_name: Day 3
+    artists:
+      - name: SZA
+      - name: PESO PLUMA
+      - name: RENEÉ RAPP
+      - name: DON TOLIVER
+      - name: VICTORIA MONÉT
+      - name: FAYE WEBSTER
+      - name: KEVIN ARSTRACT
+      - name: CANNONS
+      - name: CHAPPELL ROAN
+      - name: STEPHEN SANCHEZ
+      - name: BEACH FOSSILS
+      - name: SAINT LEVANT
+      - name: ELVANNA
+      - name: GEESE
+      - name: G FLIP
+      - name: BABY OUEEN
+      - name: HUSBANDS
+      - name: FLUKERS
+      - name: HOTLINE TNT
+      - name: THE HAIS
+      - name: SCHOOL OF ROCK BROOKIUN
