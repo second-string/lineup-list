@@ -1,0 +1,172 @@
+display_name: Coachella
+slug: coachella
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2022-04-12
+    display_name: Day 1 (April 12/19)
+    artists:
+      - name: Lana Del Rey
+      - name: Peso Pluma
+      - name: Lil Uzi Vert
+      - name: Justice 
+      - name: Bizarrap
+      - name: Deftones
+      - name: ATEEZ
+      - name: Peggy Gou
+      - name: Young Miko
+      - name: Sabrina Carpenter
+      - name: Anti Up
+      - name: Steve Angello
+      - name: Ken Carson
+      - name: Skepta 
+      - name: Faye Webster
+      - name: Tyla
+      - name: Yoasoba 
+      - name: Cloonee
+      - name: Gorgon City
+      - name: Tinashe ANOTR
+      - name: L'Impératrice
+      - name: Suki Waterhouse 
+      - name: Lovejoy
+      - name: Brittany Howard
+      - name: Chappell Roan
+      - name: Chlöe
+      - name: the Japanese House
+      - name: Black Country, New Road
+      - name: Adriatique 
+      - name: BLOND:ISH
+      - name: the Beths
+      - name: NEIL FRANCES
+      - name: Clown Core
+      - name: Mall Grab
+      - name: Kevin de Vries
+      - name: Kölsch 
+      - name: Kokoroko
+      - name: Eartheater
+      - name: Narrow Head
+      - name: Skin On Skin
+      - name: Innellea
+      - name: late night drive home
+      - name: Sid Sriram
+      - name: Cimafunk
+      - name: Miss Monique
+      - name: Son Rompe Pera
+      - name: Ben Sterling
+      - name: Upchuck
+      - name: Keyspan
+  - number: 2
+    date: 2022-04-13
+    display_name: Day 2 (April 13/20)
+    artists:
+      - name: Tyler, The Creator
+      - name: Blur 
+      - name: Ice Spice
+      - name: Gesaffelstein 
+      - name: Sublime
+      - name: Jungle
+      - name: Dom Dolla
+      - name: Bleachers 
+      - name: Grimes
+      - name: Jon Batiste
+      - name: LE SSERAFIM
+      - name: Charlotte de Witte
+      - name: ISOxo 
+      - name: Knock2
+      - name: Santa Fe Klan
+      - name: Blxst 
+      - name: Purple Disco Machine
+      - name: the Drums
+      - name: Skream 
+      - name: Benga
+      - name: Destroy Lonely
+      - name: Orbital 
+      - name: Kevin Abstract
+      - name: the Aquabats
+      - name: Kevin Kaarl
+      - name: RAYE 
+      - name: the Red Pears
+      - name: FLO
+      - name: the Blessed Madonna
+      - name: Hatsune Miku
+      - name: SPINALL
+      - name: Palace 
+      - name: the Adicts
+      - name: thuy 
+      - name: Oneohtrix Point Never
+      - name: Young Fathers
+      - name: Kenya Grace
+      - name: Patrick Mason
+      - name: the Last Dinner Party
+      - name: bar italia
+      - name: Reinier Zonneveld
+      - name: Saint Levant
+      - name: Mahmut Orhan
+      - name: Âme
+      - name: Marcel Dettmann
+      - name: Brutalismus 3000
+      - name: Erika de Casier
+      - name: Girl Ultra
+      - name: Maz
+      - name: Depresión Sonora
+      - name: Will Clarke
+      - name: Militarie Gun
+      - name: Rebuke
+      - name: Mandy, Indiana 
+      - name: Kimonos
+  - number: 3
+    date: 2022-04-13
+    display_name: Day 3 (April 14/21)
+    artists:
+      - name: Doja Cat
+      - name: J Balvin 
+      - name: Jhené Aiko
+      - name: Khruangbin 
+      - name: Carin León
+      - name: Anyma
+      - name: John Summit
+      - name: Lil Yachty
+      - name: DJ Snake
+      - name: LUDMILLA
+      - name: the Rose
+      - name: AP Dhillon
+      - name: Reneé Rapp
+      - name: Bebe Rexha
+      - name: Coi Leray
+      - name: NAV
+      - name: Tems
+      - name: BICEP 
+      - name: Victoria Monét
+      - name: Taking Back Sunday
+      - name: 88RISING FUTURES
+      - name: ARTBAT
+      - name: ATARASHII GAKKO!
+      - name: Boy Harsher
+      - name: Barry Can't Swim
+      - name: Olivia Dean
+      - name: LATIN MAFIA
+      - name: Two Shell
+      - name: Hermanos Gutiérrez 
+      - name: Folamour 
+      - name: Jockstrap
+      - name: Carlita
+      - name: Mdou Moctar
+      - name: Eddie Zuko
+      - name: Adam Ten 
+      - name: Mita Gami 
+      - name: YC Marley
+      - name: Eli & Fur
+      - name: Flight Facilities
+      - name: DJ Seinfeld 
+      - name: Tita Lau
+      - name: Bb trickz
+      - name: feeble little horse
+      - name: JOPLYN
+      - name: jjuujjuu
+  - number: 4
+    date: 2022-04-14
+    display_name: And...
+    artists:
+      - name: No Doubt
+
