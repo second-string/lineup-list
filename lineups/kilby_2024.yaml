@@ -1,0 +1,87 @@
+display_name: Kilby Block Party
+slug: kilby
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2024-05-10
+    display_name: Day 1
+    artists:
+      - name: VAMPIRE WEEKEND
+      - name: JAI PAUL
+      - name: JOANNA NEWSOM
+      - name: COURTNEY BARNETT
+      - name: ALVVAYS
+      - name: UNKNOWN MORTAL ORCHESTRA
+      - name: PEACH PIT
+      - name: TY SEGALL
+      - name: YOKE LORE
+      - name: ANDY SHAUF
+      - name: YOT CLUB
+      - name: LUNA LI
+      - name: HEMLOCKE SPRINGS
+      - name: BLONDSHELL
+      - name: ABBY SAGE
+      - name: HORSE JUMPER OF LOVE
+      - name: ANNIE DIRUSSO
+      - name: JOANNA STERNBERG
+      - name: GUSTAF
+      - name: KARA JACKSON
+      - name: DAYTIME LOVER
+      - name: DRUSKY
+      - name: BOBO
+  - number: 2
+    date: 2024-05-11
+    display_name: Day 2
+    artists:
+      - name: THE POSTAL SERVICE
+      - name: WU-TANG CLAN
+      - name: DEATH CAB FOR CUTIE
+      - name: BELLE AND SEBASTIAN
+      - name: TV GIRL
+      - name: DINOSAUR JR
+      - name: CURRENT JOYS
+      - name: THE GARDEN
+      - name: BEACH FOSSILS
+      - name: CAUTIOUS CLAY
+      - name: BOMBAY BICYCLE CLUB
+      - name: YELLOW DAYS
+      - name: SLOW PULP
+      - name: KROOKED KINGS
+      - name: LOMELDA
+      - name: MALCOLM TODD
+      - name: FAZERDAZE
+      - name: ARCY DRIVE
+      - name: TAGABOW
+      - name: LATE NIGHT DRIVE HOME
+      - name: WATER FROM YOUR EYES
+      - name: BOYFRIEND SUSHI TOWN
+      - name: BLUE RAIN BOOTS
+      - name: SCULPTURE CLUB
+  - number: 3
+    date: 2024-05-12
+    display_name: Day 3
+    artists:
+      - name: LCD SOUNDSYSTEM
+      - name: INTERPOL
+      - name: 100 GECS
+      - name: DAYGLOW
+      - name: GUIDED BY VOICES
+      - name: KEVIN KAARL
+      - name: YVES TUMOR
+      - name: PANCHIKO
+      - name: POND
+      - name: GINGER ROOT
+      - name: PETEY
+      - name: CSS
+      - name: EKKSTACY
+      - name: CHOIR BOY
+      - name: ODIE LEIGH
+      - name: ROYEL OTIS
+      - name: MODEL/ACTRIZ
+      - name: HANA VU
+      - name: LITTLE MOON
+      - name: 26FIX
+      - name: NICOLE CANAAN
+      - name: BODY OF LEAVES
+      - name: PERSONA 749
