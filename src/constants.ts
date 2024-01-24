@@ -80,4 +80,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Same Same But Different", years : [ 2023 ], name : "ssbd", region : "am"},
     {display_name : "Aftershock", years : [ 2023 ], name : "aftershock", region : "am"},
     {display_name : "Kilby Block Party", years : [ 2024 ], name : "kilby", region : "am"},
+    {display_name : "Faster Horses", years : [ 2024 ], name : "horses", region : "am"},
 ];
