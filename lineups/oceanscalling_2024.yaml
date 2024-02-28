@@ -1,0 +1,56 @@
+display_name: Oceans Calling
+slug: oceanscalling
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2022-09-27
+    display_name: Day 1
+    artists:
+      - name: BLINK-182
+      - name: CAGE THE ELEPHANT
+      - name: SUBLIME
+      - name: "311"
+      - name: O.A.R.
+      - name: THE REVIVALISTS
+      - name: THE DARKNESS
+      - name: SUGAR RAY
+      - name: LARKIN POE
+      - name: TONIC
+      - name: PHILLIP PHILLIPS
+      - name: WINONA FIGHTER
+      - name: VINCENT LIMA
+  - number: 2
+    date: 2022-09-28
+    display_name: Day 2
+    artists:
+      - name: THE KILLERS
+      - name: THE OFFSPRING
+      - name: REBELUTION
+      - name: THE BEACH BOYS
+      - name: YOUNG THE GIANT
+      - name: THE ALL-AMERICAN REJECTS
+      - name: THE HIVES
+      - name: GROUPLOVE
+      - name: SWITCHFOOT
+      - name: THE BEACHES
+      - name: TOM ODELL
+      - name: TREVOR HALL
+      - name: THE SAMPLES
+      - name: KATELYN TARVER
+  - number: 3
+    date: 2022-09-29
+    display_name: Day 3
+    artists:
+      - name: DAVE MATTHEWS BAND
+      - name: MT. JOY
+      - name: COUNTING CROWS
+      - name: BOYZ II MEN
+      - name: BARENAKED LADIES
+      - name: BLUES TRAVELER
+      - name: PIGEONS PLAYING PING PONG
+      - name: GUSTER
+      - name: BIG HEAD TODD AND THE MONSTERS
+      - name: LISA LOEB
+      - name: JADE BIRD
+      - name: STEPHEN KELLOGG
