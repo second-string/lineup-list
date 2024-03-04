@@ -1,0 +1,156 @@
+display_name: Aftershock
+slug: aftershock
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2023-10-10
+    display_name: Day 1
+    artists:
+      - name: Slayer
+      - name: Pantera
+      - name: Till Lindemann
+      - name: Halestorm
+      - name: Cypress Hill
+      - name: Ministry
+      - name: Sevendust
+      - name: Grandson
+      - name: Static X
+      - name: Insane Clown Posse
+      - name: Filter
+      - name: Drain
+      - name: Biohazard
+      - name: Hawthorne Heights
+      - name: Orgy
+      - name: Drug Church
+      - name: Better Lovers
+      - name: Ho99o9
+      - name: GEL
+      - name: Slothrust
+      - name: Touché Amoré
+      - name: Veil of Maya
+      - name: Adema
+      - name: Tim Montana
+      - name: Like A Storm
+      - name: Jeris Johnson
+      - name: Teen Mortgage
+      - name: Descartes A Kant
+      - name: StrateJacket
+      - name: TX2
+      - name: Reach NYC
+      - name: Silly Goose
+      - name: BUDDERSIDE
+  - number: 2
+    date: 2023-10-11
+    display_name: Day 2
+    artists:
+      - name: Slipknot
+      - name: Five Finger Death Punch
+      - name: Evanescence
+      - name: Rise Against
+      - name: Dropkick Murphys
+      - name: Mastodon
+      - name: Architects
+      - name: Daron Malakian and Scars on Broadway
+      - name: Highly Suspect
+      - name: Poppy
+      - name: L.S. Dunes
+      - name: Marky Ramone Plays The Ramones Classics
+      - name: Code Orange
+      - name: Bayside
+      - name: The Warning
+      - name: Lilith Czar
+      - name: Joey Valence & Brae
+      - name: Giovannie and The Hired Guns
+      - name: D.R.U.G.S.
+      - name: The Chisel
+      - name: Vended
+      - name: Soul Glo
+      - name: Taproot
+      - name: Winona Fighter
+      - name: Moonshine Bandits
+      - name: Local H
+      - name: Dead Poet Society
+      - name: Brutus
+      - name: Capital Theatre
+      - name: Hemorage
+      - name: Royale Lynn
+      - name: Jigsaw Youth
+  - number: 3
+    date: 2023-10-12
+    display_name: Day 3
+    artists:
+      - name: Iron Maiden
+      - name: Judas Priest
+      - name: Breaking Benjamin
+      - name: Staind
+      - name: Anthrax
+      - name: Lorna Shore
+      - name: Body Count
+      - name: Tech N9ne
+      - name: Coal Chamber
+      - name: Clutch
+      - name: Sleeping With Sirens
+      - name: P.O.D.
+      - name: Bad Wolves
+      - name: Rival Sons
+      - name: City Morgue
+      - name: Saosin
+      - name: Fugitive
+      - name: Militarie Gun
+      - name: High Vis
+      - name: Whitechapel
+      - name: Show Me The Body
+      - name: Ill Niño
+      - name: I See Stars
+      - name: Holy Fawn
+      - name: New Years Day
+      - name: Alien Ant Farm
+      - name: Alien Weaponry
+      - name: CKY
+      - name: Nerv
+      - name: Any Given Sin
+      - name: LØ SPIRIT
+      - name: Damnage
+      - name: The Funeral Portrait
+      - name: Self Deception
+      - name: Deadlands
+  - number: 4
+    date: 2023-10-13
+    display_name: Day 4
+    artists:
+      - name: Mötley Crüe
+      - name: Disturbed
+      - name: Falling In Reverse
+      - name: Seether
+      - name: Skillet
+      - name: Flogging Molly
+      - name: Tom Morello
+      - name: Juliette Lewis and The Licks
+      - name: Nothing More
+      - name: Badflower
+      - name: PUP
+      - name: Eagles Of Death Metal
+      - name: Jinjer
+      - name: From Ashes To New
+      - name: Set It Off
+      - name: Resorte
+      - name: Shadows Fall
+      - name: Fear Factory
+      - name: Citizen Soldier
+      - name: The Armed
+      - name: Drowning Pool
+      - name: Bob Vylan
+      - name: Powerman 5000
+      - name: HED PE
+      - name: Narrow Head
+      - name: Point North
+      - name: Holding Absence
+      - name: Oxymorrons
+      - name: Mike's Dead
+      - name: Blame My Youth
+      - name: Caskets
+      - name: Black Map
+      - name: Lowlives
+      - name: Jager Bonham
+      - name: Gozu
