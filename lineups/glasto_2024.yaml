@@ -1,0 +1,100 @@
+display_name: Glastonbury
+slug: glasto
+region: eu
+year: 2024
+days:
+  - number: 0
+    date: 2024-06-26
+    display_name: Day 0
+    artists:
+      - name: DUA LIPA
+      - name: COLDPLAY
+      - name: SZA
+      - name: SHANIA TWAIN
+      - name: IDLES
+      - name: DISCLOSURE
+      - name: THE NATIONAL
+      - name: JUNGLE
+      - name: JESSIE WARE
+      - name: JUSTICE
+      - name: HEILUNG
+      - name: MASEGO
+      - name: NIA ARCHIVES
+      - name: JAMIE XX
+      - name: GOSSIP
+      - name: JAMES BLAKE
+      - name: SAMPHA
+      - name: SLEAFORD MODS
+      - name: ROMY
+      - name: FONTAINES D.C.
+      - name: PEGGY GOU
+      - name: LONDON GRAMMAR
+      - name: KING KRULE
+      - name: ORBITAL
+      - name: GHETTS
+      - name: LCD SOUNDSYSTEM
+      - name: LITTLE SIMZ
+      - name: BURNA BOY
+      - name: PJ HARVEY
+      - name: D-BLOCK EUROPE
+      - name: THE STREETS
+      - name: TWO DOOR CINEMA CLUB
+      - name: ANNE-MARIE
+      - name: DANNY BROWN
+      - name: BLACK PUMAS
+      - name: BRITTANY HOWARD
+      - name: SUGABABES
+      - name: NITIN SAWHNEY
+      - name: JORDAN RAKEI
+      - name: DECLAN MCKENNA
+      - name: YARD ACT
+      - name: ARLO PARKS
+      - name: ALVVAYS
+      - name: FAT WHITE FAMILY
+      - name: BLONDSHELL
+      - name: AURORA
+      - name: THE BREEDERS
+      - name: MOUNT KIMBIE
+      - name: DEXYS
+      - name: LANKUM
+      - name: BAXTER DURY
+      - name: THIS IS THE KIT
+      - name: CYNDI LAUPER
+      - name: MICHAEL KIWANUKA
+      - name: JANELLE MONAE
+      - name: SEVENTEEN
+      - name: PAUL HEATON
+      - name: KEANE
+      - name: PALOMA FAITH
+      - name: OLIVIA DEAN
+      - name: AYRA STARR
+      - name: CAMILA CABELLO
+      - name: AVRIL LAVIGNE
+      - name: BOMBAY BICYCLE CLUB
+      - name: BLOC PARTY
+      - name: ASHA PUTHLI
+      - name: NONAME
+      - name: CORINNE BAILEY RAE
+      - name: STEEL PULSE
+      - name: SQUID
+      - name: SOFIA KOURTESIS
+      - name: KENYA GRACE
+      - name: SOCCER MOMMY
+      - name: REMI WOLF
+      - name: MANNEQUIN PUSSY
+      - name: NEWDAD
+      - name: HIGH VIS
+      - name: KNEECAP
+      - name: AFTAB
+      - name: MOU MOCTAR
+      - name: THE MARY WALLOPERS
+      - name: TOBOKE BEAVER
+      - name: BARRY CAN'T SWIM
+      - name: BAR ITALIA
+      - name: FAITHLESS
+      - name: HONEY DIJON
+      - name: DJ SPEN
+      - name: ELIZA ROSE
+      - name: BONOBO
+      - name: SKREAM & BENGA
+      - name: FLOWEROVLOVE
