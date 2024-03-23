@@ -27,7 +27,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Riot Fest", years : [ 2021 ], name : "riot", region : "am"},
     {display_name : "Firefly", years : [ 2022, 2021 ], name : "firefly", region : "am"},
     {display_name : "Pitchfork", years : [ 2021 ], name : "pitchfork", region : "am"},
-    {display_name : "Lollapalooza", years : [ 2023, 2022, 2021 ], name : "lollapalooza", region : "am"},
+    {display_name : "Lollapalooza", years : [ 2024, 2023, 2022, 2021 ], name : "lollapalooza", region : "am"},
     {display_name : "Austin City Limits", years : [ 2023, 2022, 2021 ], name : "acl", region : "am"},
     {display_name : "Shaky Knees", years : [ 2022, 2021 ], name : "shaky", region : "am"},
     {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo", region : "am"},
