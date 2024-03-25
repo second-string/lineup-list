@@ -1,0 +1,87 @@
+display_name: Beyond Wonderland - Chicago
+slug: wonderlandchi
+region: am
+year: 2024
+days:
+  - number: 0
+    date: 2024-06-01
+    display_name: All Days # The text displayed to the user for the filters
+    artists:
+      - name: ABLE GREY
+      - name: AIMMIA
+      - name: ALESSO
+      - name: APASHE
+      - name: AUDIEN
+      - name: JASON ROSS
+      - name: AYYBO
+      - name: BASSRUSH EXPERIENCE
+      - name: BENNY BENASSI
+      - name: CHRIS LORENZO
+      - name: CLAPTONE
+      - name: COOL CUSTOMER
+      - name: DAILY BREAD
+      - name: DAY TRIP PRESENTS
+      - name: DETOX UNIT
+      - name: DIMENSION
+      - name: DIPLO
+      - name: DISCOVERY PROJECT
+      - name: DJ MINX
+      - name: ELI BROWN
+      - name: EYEZIC
+      - name: FELIX DA HOUSECAT
+      - name: HABSTRAKT
+      - name: HAIRITAGE
+      - name: HANNAH WANTS
+      - name: HUGEL
+      - name: IAN SNOW
+      - name: INPHINITY
+      - name: INSOMNIAC RECORDS
+      - name: JAI WOLF
+      - name: JAKE SHORE
+      - name: JEANIE
+      - name: JOYRYDE
+      - name: KAIVON
+      - name: KANINE
+      - name: KASKADE
+      - name: KAYZO
+      - name: KOMPANY
+      - name: KYLE WATSON
+      - name: JOSHWA
+      - name: LAYZ
+      - name: LILLY PALMER
+      - name: LISA PIZZA
+      - name: LOST IN DREAMS PRESENTS
+      - name: MADDIX
+      - name: MADDY O'NEAL
+      - name: MARAUDA
+      - name: MATRODA
+      - name: MAX STYLER
+      - name: NGHTMRE
+      - name: NOTD
+      - name: NURKO
+      - name: ODDKIDOUT
+      - name: OF THE TREES
+      - name: OLIVER HELDENS
+      - name: OOTORO
+      - name: PATRICK TOPPING
+      - name: PAULINE HERR
+      - name: PEEKABOO
+      - name: PHOX
+      - name: RAY VOLPE
+      - name: REAPER
+      - name: REZZ
+      - name: RIOT TEN
+      - name: RL GRIME
+      - name: ROSSY
+      - name: SAN PACHO
+      - name: SODOWA
+      - name: STELLER
+      - name: SVDDEN DEATH
+      - name: TAZU
+      - name: TIÊSTO
+      - name: TIMMY TRUMPET
+      - name: TITA LAU
+      - name: TOBEHONEST
+      - name: TRIVECTA
+      - name: WAY NOTIF
+      - name: XAVI
