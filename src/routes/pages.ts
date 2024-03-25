@@ -37,8 +37,8 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
         }
 
         sortedFestivals.sort((x: Festival, y: Festival) => {
-            const xIsRegion = x.name === "" && x.years.length == 0;
-            const yIsRegion = y.name === "" && y.years.length == 0;
+            const xIsRegion = x.name === "" && x.years.length === 0;
+            const yIsRegion = y.name === "" && y.years.length === 0;
 
             // If both regions, sort normally on region display name. If X XOR Y is a region, either sort on region code
             // or if both the same region code, make region entry first. If neither are region, sort primarily on region
