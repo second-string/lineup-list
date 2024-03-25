@@ -36,8 +36,23 @@ function setRoutes(redisClient: redis.RedisClient): express.Router {
                 sortedFestivals.push({display_name : region.display_name, years : [], name : "", region : region.name});
         }
 
-        sortedFestivals.sort((x: Festival, y: Festival) =>
-                                 x.region.localeCompare(y.region) || x.name.localeCompare(y.name));
+        sortedFestivals.sort((x: Festival, y: Festival) => {
+            const xIsRegion = x.name === "" && x.years.length == 0;
+            const yIsRegion = y.name === "" && y.years.length == 0;
+
+            // If both regions, sort normally on region display name. If X XOR Y is a region, either sort on region code
+            // or if both the same region code, make region entry first. If neither are region, sort primarily on region
+            // and secondarily on display name if region the same.
+            if (xIsRegion && yIsRegion) {
+                return x.display_name.localeCompare(y.display_name);
+            } else if (xIsRegion) {
+                return x.region.localeCompare(y.region) || -1;
+            } else if (yIsRegion) {
+                return x.region.localeCompare(y.region) || 1;
+            } else {
+                return x.region.localeCompare(y.region) || x.display_name.localeCompare(y.display_name);
+            }
+        });
 
         res.render("home", {
             prod : process.env.DEPLOY_STAGE === 'PROD',
