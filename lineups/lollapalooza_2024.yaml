@@ -3,177 +3,189 @@ slug: lollapalooza
 region: am
 year: 2024
 days:
-  - number: 0
+  - number: 1
     date: 2024-08-01
-    display_name: All Days
+    display_name: Thursday
     artists:
-      - name: SZA
       - name: TYLER, THE CREATOR
-      - name: BLINK-182
-      - name: THE KILLERS
-      - name: FUTURE
-      - name: METRO BOOMIN
       - name: HOZIER
-      - name: STRAY KIDS
-      - name: MELANIE
-      - name: MARTINEZ
-      - name: SKRILLEX
-      - name: DEFTONES
-      - name: TATE MCRAE
-      - name: LAUFEY 
-      - name: CONAN GRAY
-      - name: RENEE RAPP
       - name: LIZZY MCALPINE
-      - name: ZEDD
       - name: FISHER 
-      - name: ZEDS DEAD
-      - name: DOMINIC FIKE
       - name: LABRINTH
-      - name: PIERCE THE VEIL
-      - name: FAYE WEBSTER
-      - name: VICTORIA MONÉT
-      - name: SEXYY RED
-      - name: TEDDY SWIMS
       - name: BENSON BOONE
       - name: JUNGLE
-      - name: TWO DOOR CINEMA CLUB
-      - name: IVE
-      - name: KILLER MIKE 
-      - name: VINCE STAPLES
       - name: KESHA
-      - name: TV GIRL
-      - name: GALANTIS 
       - name: MOCHAKK
-      - name: BLACK TIGER SEX MACHINE
-      - name: HIPPO CAMPUS
-      - name: FOUR TET
-      - name: LOUD LUXURY
-      - name: KEVIN ABSTRACT
-      - name: ETHEL CAIN
-      - name: SKREAM & BENGA
-      - name: CHAPPELL ROAN 
-      - name: WHYTE FANG
-      - name: RAYE
-      - name: MEGAN MORONEY
-      - name: SIR
-      - name: BEN BÖHMER
-      - name: CANNONS
-      - name: TEEZO TOUCHDOWN
+      - name: CHAPPELL ROAN
       - name: DON DIABLO
-      - name: THE LAST DINNER PARTY
-      - name: D4Ve
-      - name: RUEL
+      - name: D4VD
       - name: WALKER & ROYCE
-      - name: KENNY BEATS
       - name: TYLA
-      - name: ALOK
+      - name: DADI FREYR
       - name: THE JAPANESE HOUSE
-      - name: QVEEN HERBY
-      - name: BRISTON MARONEY
-      - name: WATERPARKS
-      - name: BOYWITHUKE
-      - name: ROMY
-      - name: YOASOBI 
       - name: KASBO
-      - name: VEEZE
       - name: FLO
-      - name: MERSIV
-      - name: IN THIS MOMENT
-      - name: DAÐI FREYR
-      - name: CULTS
       - name: OLIVIA DEAN
       - name: SAM BARBER
-      - name: NOIZU
-      - name: GRENTPEREZ
       - name: BIGXTHAPLUG
-      - name: GOOD KID
-      - name: HOL! 
-      - name: WILDERADO
       - name: ELYANNA
-      - name: FRIDAYY
-      - name: JOSIAH & THE BONNEVILLES 
       - name: SAINT LEVANT
-      - name: RYAN BEATTY
-      - name: MALCOLM TODD
-      - name: DESTROY BOYS
-      - name: LOLA YOUNG
-      - name: LEISURE
-      - name: DORA JAR
-      - name: MEDIUM BUILD
-      - name: MILITARIE GUN
-      - name: MIMI WEBB
-      - name: EYEDRESS
-      - name: SLOW PULP
-      - name: NIA ARCHIVES
-      - name: JYOTY
-      - name: IT'S MURPH
-      - name: GEESE
-      - name: TANNER USREY
-      - name: QUARTERS OF CHANGE
       - name: GIOLI & ASSIA
-      - name: KNOX
-      - name: ARMANI WHITE
-      - name: FRIKO
-      - name: BRISCOE
-      - name: BLU DETIGER
-      - name: TREATY OAK REVIVAL
       - name: FLESHWATER
-      - name: JESSICA AUDIFFRED
-      - name: NICO VEGA
       - name: MATT HANSEN
-      - name: NATALIE JANE
       - name: BLONDSHELL
-      - name: WISP
-      - name: VCHA
       - name: SPINALL
-      - name: WILLIS 
-      - name: PAWPAW ROD
       - name: BRENN!
-      - name: TINY HABITS
-      - name: HAPPY LANDING
       - name: QUANNNIC
-      - name: THE NATIONAL PARKS
       - name: BRANDI CYRUS
-      - name: DASHA
-      - name: HANABIE.
-      - name: TWINSICK
-      - name: POST SEX NACHOS
       - name: RIOVAZ
-      - name: NOSTALGIX
-      - name: AHADADREAM
       - name: WORRY CLUB
       - name: METTE
-      - name: VALENCIA GRACE
       - name: BEEN STELLAR
-      - name: XANDRA
-      - name: SCARLET DEMORE
-      - name: EDDIE
-      - name: GUDFELLA
-      - name: BRIGITTE CALLS ME BABY
-      - name: SUNDIAL
-      - name: GODLY THE RULER
-      - name: INFINITY SONG
-      - name: KYLE DION
-      - name: TOMMY RICHMAN
       - name: ABBY HOLLIDAY
       - name: CAMDEN COX
       - name: CHANCE EMERSON
-      - name: SAM NELSON
-      - name: KAITLIN BUTTS
-      - name: WILL LINLEY
-      - name: WOLVES OF GLENDALE
-      - name: RYAN TREY
-      - name: HAYES WARNER
-      - name: HUDDY
-      - name: TOMMY NEWPORT
       - name: ADAN DIAZ
+      - name: WOLVES OF GLENDALE
       - name: WALTER THE PRODUCER
-      - name: CARMEN DELEON
-      - name: NIGHTLY
-      - name: AVA MAYBEE
       - name: GOLDIE BOUTILIER
+  - number: 2
+    date: 2024-08-02
+    display_name: Friday
+    artists:
+      - name: SZA
+      - name: STRAY KIDS
+      - name: LAUFEY
+      - name: RENEE RAPP
+      - name: SEXYY RED
+      - name: GALANTIS
+      - name: LOUD LUXURY
+      - name: ZEDD
+      - name: FAYE WEBSTER
+      - name: VICTORIA MONÉT
+      - name: RUEL
+      - name: ALOK
+      - name: QVEEN HERBY
+      - name: KEVIN ABSTRACT
+      - name: RAYE
+      - name: MEGAN MORONEY
+      - name: VEEZE
+      - name: IN THIS MOMENT
+      - name: NOIZU
+      - name: WILDERADO
+      - name: MILITARIE GUN
+      - name: IT'S MURPH
+      - name: GEESE
+      - name: TINY HABITS
+      - name: THE NATIONAL PARKS
+      - name: LOLA YOUNG
+      - name: RYAN BEATTY
+      - name: MALCOLM TODD
+      - name: BLU DETIGER
+      - name: WISP
+      - name: VCHA
+      - name: TWINSICK
+      - name: XANDRA
+      - name: GUDFELLA
+      - name: PAWPAW ROD
+      - name: SUNDIAL
+      - name: GODLY THE RULER
+      - name: TOMMY RICHMAN
+      - name: AVA MAYBEE
       - name: MCKENNA GRACE
       - name: CALE TYSON
       - name: KALIII
-      - name: SAVANNAH RÉ
       - name: FIFTEENOEIGHT
+      - name: BRANDI CYRUS
+  - number: 3
+    date: 2024-08-03
+    display_name: Saturday
+    artists:
+      - name: THE KILLERS
+      - name: FUTURE
+      - name: METRO BOOMIN
+      - name: DEFTONES
+      - name: TATE MCRAE
+      - name: IVE
+      - name: KILLER MIKE
+      - name: TV GIRL
+      - name: HIPPO CAMPUS
+      - name: FOUR TET
+      - name: CANNONS
+      - name: KENNY BEATS
+      - name: BRISTON MARONEY
+      - name: JOSIAH AND THE BONNEVILLES
+      - name: ETHEL CAIN
+      - name: SKREAM & BENGA
+      - name: BOYWITHUKE
+      - name: ROMY
+      - name: YOASOBI
+      - name: LEISURE
+      - name: EYEDRESS
+      - name: DORA JAR
+      - name: NIA ARCHIVES
+      - name: JYOTY
+      - name: TANNER USREY
+      - name: FRIKO
+      - name: QUARTERS OF CHANGE
+      - name: ARMANI WHITE
+      - name: NATALIE JANE
+      - name: HAPPY LANDING
+      - name: NIGHTLY
+      - name: DASHA
+      - name: AHADADREAM
+      - name: BRIGITTE CALLS ME BABY
+      - name: INFINITY SONG
+      - name: SAM NELSON
+      - name: WILL LINLEY
+      - name: HAYES WARNER
+      - name: TOMMY NEWPORT
+      - name: SAVANNAH RÉ
+      - name: XANDRA
+      - name: DESTROY BOYS
+  - number: 4
+    date: 2024-08-04
+    display_name: Sunday
+    artists:
+      - name: BLINK-182
+      - name: MELANIE MARTINEZ
+      - name: CONAN GRAY
+      - name: DOMINIC FIKE
+      - name: ZEDS DEAD
+      - name: PIERCE THE VEIL
+      - name: TEDDY SWIMS
+      - name: TWO DOOR CINEMA CLUB
+      - name: VINCE STAPLES
+      - name: BLACK TIGER SEX MACHINE
+      - name: WHYTE FANG
+      - name: SIR
+      - name: BEN BÖHMER
+      - name: TEEZO TOUCHDOWN
+      - name: THE LAST DINNER PARTY
+      - name: WATERPARKS
+      - name: MERSIV
+      - name: CULTS
+      - name: GRENTPEREZ
+      - name: GOOD KID
+      - name: HOL!
+      - name: FRIDAYY
+      - name: SLOW PULP
+      - name: MEDIUM BUILD
+      - name: MIMI WEBB
+      - name: KNOX
+      - name: BRISCOE
+      - name: TREATY OAK REVIVAL
+      - name: JESSICA AUDIFFRED
+      - name: NICO VEGA
+      - name: WILLIS
+      - name: HANABIE.
+      - name: POST SEX NACHOS
+      - name: NOSTALGIX
+      - name: VALENCIA GRACE
+      - name: SCARLET DEMORE
+      - name: EDDIE
+      - name: KYLE DION
+      - name: KAITLIN BUTTS
+      - name: RYAN TREY
+      - name: HUDDY
+      - name: CARMEN DELEON
