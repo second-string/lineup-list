@@ -1,0 +1,283 @@
+display_name: EDC Las Vegas
+slug: edclv
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2022-05-17
+    display_name: Day 1
+    artists:
+      - name: ADAM BEYER
+      - name: ADVENTURE CLUB
+      - name: ALCHIMYST
+      - name: ANDREW RAYEL
+      - name: ANDRUSS
+      - name: ARMIN VAN BUUREN
+      - name: AUDIOFREQ
+      - name: BEFORE DAWN
+      - name: BLASTOYZ
+      - name: BRINA KNAUSS
+      - name: CARL COX
+      - name: NICOLE MOUDABER
+      - name: CASSIAN
+      - name: CHELINA MANUHUTU
+      - name: CLAWZ
+      - name: DOMINA
+      - name: CRISTOPH
+      - name: DABIN
+      - name: DAVID GUETTA
+      - name: DENIS SULTA
+      - name: DEVAULT
+      - name: ERIC PRYDZ
+      - name: FROSTTOP
+      - name: REMK
+      - name: GIUSEPPE OTTAVIANI
+      - name: HAAI
+      - name: HAMDI
+      - name: HEIDI LAWDEN
+      - name: KAYZO 
+      - name: SPACE LACES 
+      - name: MUST DIE! 
+      - name: HIXXY
+      - name: HOL!
+      - name: ILLENIUM
+      - name: INFECTED MUSHROOM
+      - name: J. WORRA
+      - name: JESSICA AUDIFFRED
+      - name: JOHN SUMMIT
+      - name: JUSTIN JAY
+      - name: JYOTY
+      - name: KELTEK
+      - name: KHIVA
+      - name: LAYZ
+      - name: LILLY PALMER
+      - name: LSDREAM
+      - name: MADDIX
+      - name: MAJESTIC
+      - name: MANDY
+      - name: MARAUDA
+      - name: MARKUS SCHULZ
+      - name: MARLIE
+      - name: MATRODA
+      - name: SAN PACHO
+      - name: MAX STYLER
+      - name: MERSIV
+      - name: MISS DRE
+      - name: MK
+      - name: NGHTMRE
+      - name: NICOLE MOUDABER
+      - name: NIFRA
+      - name: NIGHTSTALKER
+      - name: NINAJIRACHI
+      - name: NOIZU
+      - name: WESTEND
+      - name: MELÉ
+      - name: ODD MOB 
+      - name: OMNOM
+      - name: HYPERBEAM
+      - name: ORJAN NILSEN
+      - name: MARK SIXMA 
+      - name: OWNBOSS
+      - name: PAUL OAKENFOLD
+      - name: PEGGY GOU
+      - name: RIORDAN
+      - name: SALLY C
+      - name: MATISA
+      - name: SICARIA
+      - name: SLANDER
+      - name: SOUND RUSH
+      - name: STEVE AOKI
+      - name: SUBTRONICS
+      - name: TAPE B
+      - name: TAYLOR TORRENCE
+      - name: VINTAGE CULTURE
+      - name: VULLLGUR
+      - name: WARFACE
+      - name: WATER SPIRIT
+      - name: YOSUF
+      - name: ZEN FREEMAN
+      - name: ZOF
+      - name: ZOMBOY
+  - number: 2
+    date: 2022-05-18
+    display_name: Day 2
+    artists:
+      - name: ACRAZE
+      - name: KREAM
+      - name: ADRENALIZE
+      - name: WASTED PENGUINZ
+      - name: AIRWOLF PARADISE
+      - name: ALISON WONDERLAND
+      - name: ALY & FILA
+      - name: ANDREW BAYER
+      - name: ATMOZFEARS
+      - name: BEC
+      - name: BEN HEMSLEY
+      - name: BEN STERLING
+      - name: BENNY BENASSI
+      - name: BIANCA OBLIVION
+      - name: BOOGIE T
+      - name: BOU
+      - name: BOYS NOIZE
+      - name: VTSS
+      - name: BRYAN KEARNEY
+      - name: CAMDEN COX
+      - name: CASPA
+      - name: CHEF BOYARBEATZ
+      - name: CRANKDAT
+      - name: CREEDS
+      - name: HELEN KA
+      - name: DAXSON
+      - name: DEAD X
+      - name: LEVENKHAN
+      - name: DEORRO
+      - name: DEVIN WILD
+      - name: DILLON FRANCIS
+      - name: DJ HEARTSTRING
+      - name: DJ SNAKE
+      - name: DOM DOLLA
+      - name: ELI BROWN
+      - name: HI-LO
+      - name: FALLEN
+      - name: MC DINO
+      - name: FERRY CORSTEN
+      - name: FOUR TET
+      - name: GRAVEDGR
+      - name: HANNAH LAING
+      - name: HEDEX
+      - name: INTERPLANETARY CRIMINAL
+      - name: JAMIE JONES
+      - name: JOHN 00 FLEMING
+      - name: JOLUCA
+      - name: JOSEPH CAPRIATI
+      - name: KEVIN DE VRIES
+      - name: KEVIN SAUNDERSON
+      - name: DJ MINX
+      - name: KREATION
+      - name: DARKSIDERZ
+      - name: KYLE WALKER
+      - name: LIL TEXAS
+      - name: MALÓNE
+      - name: MARCEL DETTMANN
+      - name: MATRODA
+      - name: MATT SASSARI
+      - name: MELÉ
+      - name: METTA
+      - name: GLYDE
+      - name: MITIS
+      - name: MIYUKI
+      - name: ODD MOB
+      - name: PANTEROS666
+      - name: PAUL VAN DYK
+      - name: PEGGY GOU
+      - name: PURPLE DISCO MACHINE
+      - name: RATED R
+      - name: RAYBEN
+      - name: SKIN ON SKIN
+      - name: SOREN
+      - name: SUB ZERO PROJECT
+      - name: SUBTRONICS
+      - name: LEVEL UP
+      - name: TALLA 2XLC
+      - name: TIËSTO
+      - name: TROYBOI
+      - name: WADE
+      - name: WILKINSON
+      - name: WILL CLARKE
+      - name: WOOLI
+      - name: SUB FOCUS
+      - name: DIMENSION
+      - name: CULTURE SHOCK
+      - name: "1991"
+      - name: X-COAST
+      - name: ZEDD
+  - number: 3
+    date: 2022-05-19
+    display_name: Day 3
+    artists:
+      - name: ABANA
+      - name: D. ZELEDON
+      - name: ADAM X
+      - name: ALESSO
+      - name: ANGERFIST
+      - name: ARGY
+      - name: ATLIENS
+      - name: AZZECCA
+      - name: CALUSSA
+      - name: D-STURB
+      - name: DA TWEEKAZ
+      - name: DEADLY GUNS
+      - name: DEADMAU5
+      - name: DEATH CODE
+      - name: DEBORAH DE LUCA
+      - name: DEEPER PURPOSE
+      - name: DEVIN WILD
+      - name: KELTEK
+      - name: DIMENSION
+      - name: DIPLO
+      - name: EAST END DUBS
+      - name: EMORFIK
+      - name: EXCISION
+      - name: FISHER
+      - name: FLEUR SHORE
+      - name: GEO
+      - name: GHASTLY
+      - name: GHENGAR
+      - name: GRIGORÉ
+      - name: GRYFFIN
+      - name: HINT OF LAVENDER
+      - name: HONEYLUV
+      - name: HUGEL
+      - name: INDIRA PAGANOTTO
+      - name: IVY
+      - name: JEANIE
+      - name: JOHN SUMMIT
+      - name: GREEN VELVET
+      - name: JON CASEY
+      - name: KAI WACHI
+      - name: KASABLANCA
+      - name: KASKADE
+      - name: KAYZO
+      - name: KHOMHA
+      - name: KLANGKUENSTLER
+      - name: KOVEN
+      - name: LADY FAITH
+      - name: LF SYSTEM
+      - name: LOST FREQUENCIES
+      - name: LUTTRELL
+      - name: MARSH
+      - name: MARTIN GARRIX
+      - name: MARY DROPPINZ
+      - name: MAU P
+      - name: MIND AGAINST
+      - name: NAZ
+      - name: ODEN & FATZO
+      - name: POCKET
+      - name: PRUNK
+      - name: PRYDA
+      - name: RANGER TRUCCO
+      - name: RICHTER
+      - name: SARA LANDRY
+      - name: SEVEN LIONS
+      - name: SHIBA SAN
+      - name: SHLØMO
+      - name: SOFI TUKKER
+      - name: SOSA
+      - name: SUB FOCUS
+      - name: SVDDEN DEATH
+      - name: TIMMY TRUMPET
+      - name: TOBEHONEST
+      - name: TRYM
+      - name: VALENTINO KHAN
+      - name: VIRTUAL RIOT
+      - name: WASTED PENGUINZ
+      - name: WUKI
+      - name: YOTTO
+      - name: ZINGARA
+      - name: ZUEZEU
+
+
+
+
+
+

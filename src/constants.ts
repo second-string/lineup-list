@@ -32,7 +32,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Shaky Knees", years : [ 2022, 2021 ], name : "shaky", region : "am"},
     {display_name : "Electric Zoo", years : [ 2021 ], name : "ezoo", region : "am"},
     {display_name : "III Points", years : [ 2021 ], name : "iii", region : "am"},
-    {display_name : "EDC Las Vegas", years : [ 2021 ], name : "edclv", region : "am"},
+    {display_name : "EDC Las Vegas", years : [ 2024, 2021 ], name : "edclv", region : "am"},
     {display_name : "EDC Orlando", years : [ 2022 ], name : "edco", region : "am"},
     {display_name : "New Orleans Jazz Fest", years : [ 2024, 2022, 2021 ], name : "jazzfest", region : "am"},
     {display_name : "Lightning in a Bottle", years : [ 2023, 2022 ], name : "lib", region : "am"},
