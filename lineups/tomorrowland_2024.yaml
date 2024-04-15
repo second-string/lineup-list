@@ -1,0 +1,293 @@
+display_name: Tomorrowland
+slug: tomorrowland
+region: eu
+year: 2024
+days:
+  - number: 1
+    date: 2024-07-19
+    display_name: Day 1
+    artists:
+      - name: AARON HIBELL
+      - name: AGENTS OF TIME
+      - name: ALAN DIXON
+      - name: ALFRED BECK
+      - name: ALY & FILA
+      - name: AMÉMÉ
+      - name: ANDREI STAN
+      - name: ARMIN VAN BUUREN
+      - name: ATLIENS
+      - name: kddBLANKO
+      - name: AUDIOWAVE
+      - name: MC RIM
+      - name: AZYR
+      - name: B JONES
+      - name: BILLX
+      - name: BYØRN
+      - name: C-TRACK
+      - name: CALUSSA
+      - name: COSMIC GATE
+      - name: DA TWEEKAZ
+      - name: DENIS SULTA
+      - name: DESIREE
+      - name: DJ HEARTSTRING
+      - name: DON DIABLO
+      - name: DYEN
+      - name: EAGL
+      - name: FOOTWORXX MILITANT CREW
+      - name: FRICTION
+      - name: GEORGIE RIOT
+      - name: CAPTAIN BASS
+      - name: GIUSEPPE OTTAVIANI
+      - name: GUILINI
+      - name: HARDWELL
+      - name: HENRI PFR
+      - name: HUGEL
+      - name: HYPERVERB
+      - name: HYSTA
+      - name: JAMIE LEE SIX
+      - name: LOUIS XIV
+      - name: JOHN NEWMAN
+      - name: K1
+      - name: ARADIA
+      - name: KAMAL BANKAY
+      - name: KARA
+      - name: KEINEMUSIK
+      - name: KÖLSCH
+      - name: KRIS KROSS AMSTERDAM
+      - name: LESSSS
+      - name: MADDIX
+      - name: MATHAME
+      - name: MAU P
+      - name: MAXIM LANY
+      - name: MISS MONIQUE
+      - name: MURDOCK
+      - name: NERVO
+      - name: NETSKY
+      - name: NICKY ROMERO
+      - name: NIFRA
+      - name: NINA BLACK
+      - name: NOVAH
+      - name: NOVAK
+      - name: OGUZ
+      - name: OLIVER HELDENS
+      - name: ÖWNBOSS
+      - name: PHILOU LOUZOLO
+      - name: Q DANCE
+      - name: RAYZEN
+      - name: REFLEXX
+      - name: REGI
+      - name: MARK WITH A K
+      - name: ROSE RINGED
+      - name: RUBEN DE RONDE
+      - name: SAKYRA
+      - name: SAMM
+      - name: SARA LANDRY
+      - name: SHANTI CELESTE
+      - name: SOTA
+      - name: STUK
+      - name: SUNNERY JAMES
+      - name: RYAN MARCIANO
+      - name: PHILOU LOUZOLO
+      - name: SWEDISH HOUSE MAFIA
+      - name: TISOKI
+      - name: OLIVERSE
+      - name: TRINIX
+      - name: TRYM
+      - name: UNICORN ON K
+      - name: UNSYN
+      - name: USED
+      - name: VAMPA
+      - name: VANDAL
+      - name: VIDO
+      - name: VINTAGE CULTURE
+      - name: W&W
+      - name: WHISNU SANTIKA
+      - name: WHOMADEWHO
+      - name: WILKINSON
+      - name: XIJARO & PITCH
+  - number: 2
+    date: 2024-07-20
+    display_name: Day 2
+    artists:
+      - name: ACRAZE
+      - name: ALEX WANN
+      - name: ALOK
+      - name: AMELIE LENS
+      - name: ANDROMEDIK
+      - name: ANONYMIZE
+      - name: ANTDOT
+      - name: ANYMA
+      - name: AYOKI
+      - name: BASSTRIPPER B2B PRIMATE
+      - name: BOBBY & DJENKO
+      - name: BONOBO
+      - name: DIXON
+      - name: BONZAI ALL STARS
+      - name: BRINA KNAUSS
+      - name: CALLUSH
+      - name: CAT DEALERS
+      - name: CHARLIE TEE
+      - name: LENS
+      - name: DEUXFWA
+      - name: DIMENSION
+      - name: DIMITRI VEGAS & LIKE MIKE
+      - name: DINO LENNY
+      - name: DISCOBAAR A MOEDER
+      - name: DIXON
+      - name: DJ ARCHIE
+      - name: DJ GHOST
+      - name: DOEMP
+      - name: DOM DOLLA
+      - name: ELIZA ROSE
+      - name: ELKKA
+      - name: FIDELES
+      - name: FRANKY JONES
+      - name: FRANKY KLOECK
+      - name: FURAX
+      - name: GOMORRIS
+      - name: GOODBOYS
+      - name: GRAFIX
+      - name: HARRIET JAXXON
+      - name: HOLLABACK SOUNDYSTEM
+      - name: JENS LISSAT
+      - name: KANINE
+      - name: KASPA
+      - name: KIËSTO
+      - name: KLAUDIA GAWLAS
+      - name: KRYDER
+      - name: KUNGS
+      - name: LOS BOMBEROS
+      - name: LOST FREQUENCIES
+      - name: LUUDE
+      - name: MAHMUT ORHAN
+      - name: MANDY
+      - name: MARIAH CURRY
+      - name: MEROW
+      - name: MIND AGAINST
+      - name: MONTA
+      - name: MORTEN
+      - name: NEALL
+      - name: NICO PARISI
+      - name: ODD MOB
+      - name: OLSAN TWINS
+      - name: PARFAIT
+      - name: CHARLIE SPARKS
+      - name: PARKERSTRANGE
+      - name: PRETTY PINK
+      - name: PUSH
+      - name: REZZMAU5
+      - name: SALVATORE GANACCI
+      - name: SCHURRALLURES
+      - name: SEBASTIAN INGROSSO
+      - name: STEVE ANGELLO
+      - name: SOLOMUN
+      - name: FOUR TET
+      - name: SUB FOCUS
+      - name: SYMPHONY OF UNITY
+      - name: TIMMY TRUMPET
+      - name: TOBI TREKHAAK
+      - name: TOOLATE GROOVE
+      - name: TSHA
+      - name: VTSS
+      - name: LAIDBACK LUKE
+      - name: WHITE NOISE
+      - name: YVES V
+  - number: 3
+    date: 2024-07-21
+    display_name: Day 3
+    artists:
+      - name: ARE LEGEND
+      - name: ADRIATIQUE
+      - name: AFROJACK
+      - name: ALESSO
+      - name: ALEXANDER POPOV
+      - name: RE-TWIN
+      - name: ALIBI
+      - name: AMBER BROOS
+      - name: ANDREI STAN
+      - name: ANNA
+      - name: ASSIA MK
+      - name: AXEL HAUBE
+      - name: AZTECK
+      - name: BASSJACKERS
+      - name: BERMIO
+      - name: BINGO PLAYERS
+      - name: BKAY
+      - name: BLANKO
+      - name: MARGE
+      - name: BOYCOT
+      - name: BREDREN
+      - name: BRENNAN HEART
+      - name: CHRIS AVANTGARDE
+      - name: DANNIC
+      - name: DANNY HOWARD
+      - name: DELAFINO
+      - name: DJ GEE
+      - name: DIMITRI VEGAS & LIKE MIKE
+      - name: DJ CHUCKIE
+      - name: DJ ISAAC
+      - name: DJ LICIOUS
+      - name: DJ SAHRA
+      - name: DUBDOGZ
+      - name: DVBBS
+      - name: ELENORE
+      - name: FERRECK DAWN
+      - name: FIRAGA
+      - name: GUZ
+      - name: HAAI
+      - name: HARD DRIVER
+      - name: HI PROFILE
+      - name: JAMES HYPE
+      - name: JAMES MARVEL
+      - name: JAY HARDWAY
+      - name: JOEL CORRY
+      - name: JULIET FOX
+      - name: KASIA
+      - name: KEVIN DE VRIES
+      - name: KYBBA
+      - name: KYRIST
+      - name: LOCUS
+      - name: LUCYE
+      - name: MARTIN JENSEN
+      - name: MATTN
+      - name: MAXTREME
+      - name: MC GUSTO
+      - name: MC NICE
+      - name: MC VILLAIN
+      - name: MEDAASE
+      - name: MEDUZA
+      - name: MHA IRI
+      - name: MISH
+      - name: MOGUAI
+      - name: MRAK
+      - name: MUTILATOR
+      - name: NIKI AUGUST
+      - name: NYMFO
+      - name: OLYMPE
+      - name: OMDAT HET KAN & AVERAGE ROB
+      - name: ONE87
+      - name: ROCKEFELLABABE
+      - name: ROOLER
+      - name: SAIDOU
+      - name: SAKO GLITCH
+      - name: SAM FELDT
+      - name: SISLEY
+      - name: BENONESHOT
+      - name: SKAZI
+      - name: SOMNIA
+      - name: STRYKER
+      - name: MAD MAXX
+      - name: SUB ZERO PROJECT
+      - name: TALE OF US
+      - name: TEAM DAMP
+      - name: THE BLESSED MADONNA
+      - name: THE SUBS
+      - name: THE Z.
+      - name: TRIBAL KUSH
+      - name: VATO GONZALEZ
+      - name: VINI VICI
+      - name: VISIONOBI
+      - name: WARFACE
+      - name: YVES DERUYTER
+      - name: YVES V
+      - name: ZEROZERO

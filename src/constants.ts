@@ -49,7 +49,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "McDowell Mountain Music Festival", years : [ 2022 ], name : "m3f", region : "am"},
     {display_name : "Rolling Loud NY", years : [ 2021 ], name : "rollingloudny", region : "am"},
     {display_name : "Stern Grove Festival", years : [ 2022 ], name : "sterngrove", region : "am"},
-    {display_name : "Tomorrowland", years : [ 2022 ], name : "tomorrowland", region : "am"},
+    {display_name : "Tomorrowland", years : [ 2024, 2022 ], name : "tomorrowland", region : "am"},
     {display_name : "Float Fest", years : [ 2022 ], name : "floatfest", region : "am"},
     {display_name : "Skyline", years : [ 2022 ], name : "skyline", region : "am"},
     {display_name : "Sunset", years : [ 2022 ], name : "sunset", region : "am"},
