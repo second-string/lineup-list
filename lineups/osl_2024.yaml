@@ -1,0 +1,113 @@
+display_name: Outside Lands
+slug: osl
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2022-08-9
+    display_name: All Days
+    artists:
+      - name: Tyler, The Creator
+      - name: The Killers
+      - name: Sturgill Simpson
+      - name: Post Malone (Performing a Special Country Set)
+      - name: The Postal Service
+      - name: Grace Jones
+      - name: KAYTRANADA
+      - name: JUNGLE
+      - name: Chris Lake
+      - name: Gryffin
+      - name: Snoh Aalegra
+      - name: Young The Giant
+      - name: ScHoolboy Q
+      - name: Teddy Swims
+      - name: Reneé Rapp
+      - name: Victoria Monét
+      - name: Knock2
+      - name: Slowdive
+      - name: Killer Mike
+      - name: FLETCHER
+      - name: TV Girl
+      - name: Tyla
+      - name: Chappell Roan
+      - name: Channel Tres
+      - name: Charley Crockett
+      - name: Men I Trust
+      - name: Ben Howard
+      - name: Amyl and The Sniffers
+      - name: Kevin Abstract
+      - name: Paul Cauthen
+      - name: The Japanese House
+      - name: Romy
+      - name: The Last Dinner Party
+      - name: BADBADNOTGOOD
+      - name: STRFKR
+      - name: Real Estate
+      - name: K.Flay
+      - name: Corinne Bailey Rae
+      - name: Snakehips
+      - name: Amen Dunes
+      - name: Roosevelt
+      - name: Allen Stone
+      - name: Mindchatter
+      - name: Daði Freyr
+      - name: Ryan Beatty
+      - name: LEISURE
+      - name: Elyanna
+      - name: Confidence Man
+      - name: Kasablanca
+      - name: Vandelux
+      - name: Wisp
+      - name: Medium Build
+      - name: Rocco
+      - name: underscores
+      - name: Devault
+      - name: Chance Peña
+      - name: Mimi Webb
+      - name: Daily Bread
+      - name: BALTHVS
+      - name: Shaboozey
+      - name: billy woods
+      - name: The Lemon Twigs
+      - name: Trueno
+      - name: Sons of the East
+      - name: CMAT
+      - name: Cimafunk
+      - name: Katie Pruitt
+      - name: AG Club
+      - name: Lady Wray
+      - name: Odie Leigh
+      - name: French Cassettes
+      - name: Ogi
+      - name: MiLES.
+      - name: Valencia Grace
+      - name: Dan Spencer
+      - name: Lael Neale
+  - number: 2
+    date: 2022-08-9
+    display_name: SOMA
+    artists:
+      - name: Angrybaby
+      - name: Anish Kumar
+      - name: AYYBO
+      - name: The Blessed Madonna
+      - name: BUNS
+      - name: Chuck Gunn
+      - name: CID
+      - name: DARIUS
+      - name: Dusky
+      - name: Honeyluv
+      - name: Idris Elba
+      - name: Jackie Hollander
+      - name: Jaden Thompson
+      - name: Jared Jackson
+      - name: Joe Kay
+      - name: Kaleena Zanders
+      - name: Marsh
+      - name: Seth Troxler
+      - name: Shiba San
+      - name: SIDEPIECE
+      - name: Sofia Kourtesis
+      - name: TSHA
+      - name: Uncle Waffles
+      - name: Yulia Niko
