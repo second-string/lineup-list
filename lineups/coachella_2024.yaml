@@ -56,6 +56,8 @@ days:
       - name: Ben Sterling
       - name: Upchuck
       - name: Keyspan
+      - name: Honey Dijon
+      - name: Green Velvet
   - number: 2
     date: 2022-04-13
     display_name: Day 2 (April 13/20)
@@ -115,6 +117,8 @@ days:
       - name: Rebuke
       - name: Mandy, Indiana 
       - name: Kimonos
+      - name: Michale Bibi
+      - name: Eric Prydz
   - number: 3
     date: 2022-04-13
     display_name: Day 3 (April 14/21)
@@ -164,6 +168,11 @@ days:
       - name: feeble little horse
       - name: JOPLYN
       - name: jjuujjuu
+      - name: Jamie XX
+      - name: Floating Points
+      - name: Daphni
+      - name: Diplo
+      - name: Mau P
   - number: 4
     date: 2022-04-14
     display_name: And...
