@@ -1,0 +1,90 @@
+display_name: Lovers & Friends
+slug: laf
+region: am
+year: 2024
+days:
+  - number: 0
+    date: 2023-05-04
+    display_name: Saturday
+    artists:
+      - name: JANET JACKSON
+      - name: ALICIA KEYS
+      - name: MARY J BLIGE
+      - name: SNOOP DOGG
+      - name: LIL WAYNE
+      - name: GWEN STEFANI
+      - name: BACKSTREET BOYS
+      - name: NELLY FURTADO
+      - name: NAS
+      - name: USHER
+      - name: LUDACRIS
+      - name: CIARA
+      - name: JA RULE
+      - name: NELLY
+      - name: ASHANTI
+      - name: AKON
+      - name: NE-YO
+      - name: T-PAIN
+      - name: TLC
+      - name: M.I.A.
+      - name: TIMBALAND
+      - name: KEYSHIA COLE
+      - name: BRANDY
+      - name: MONICA
+      - name: EVE
+      - name: JODECI
+      - name: KELLY ROWLAND
+      - name: CRAIG DAVID
+      - name: SEAN PAUL
+      - name: 6LACK
+      - name: FABOLOUS
+      - name: ROBIN THICKE
+      - name: 98 DEGREES
+      - name: TYRESE
+      - name: MAJID JORDAN
+      - name: METHOD MAN
+      - name: REDMAN
+      - name: RICK ROSS
+      - name: JEEZY
+      - name: FAT JOE
+      - name: T.I.
+      - name: E-40
+      - name: SWY
+      - name: XSCAPE
+      - name: TANK
+      - name: JEREMIH
+      - name: PRETTY RICKY
+      - name: GINUWINE
+      - name: MARIO
+      - name: JOJO
+      - name: MYA
+      - name: KELIS
+      - name: LLOYD
+      - name: DRU HILL
+      - name: KERI HILSON
+      - name: LUPE FIASCO
+      - name: TOO $HORT
+      - name: CAM'RON
+      - name: TWISTA
+      - name: JUVENILE
+      - name: PAUL WALL
+      - name: TRINA
+      - name: YING YANG TWINS
+      - name: DAVID BANNER
+      - name: LIL FLIP
+      - name: PLIES
+      - name: MIMS
+      - name: TWEET
+      - name: NEXT
+      - name: LUMIDEE
+      - name: NINA SKY
+      - name: TOTAL
+      - name: BLAQUE
+      - name: "702"
+      - name: AMERIE
+      - name: PAULA DEANDA
+      - name: JON B
+      - name: "112"
+      - name: J HOLIDAY
+      - name: J-KWON
+      - name: IYAZ
