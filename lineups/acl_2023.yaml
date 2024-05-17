@@ -4,7 +4,7 @@ region: am
 year: 2023
 days:
   - number: 1
-    date: 2022-10-06
+    date: 2023-10-06
     display_name: Both weekends
     artists:
       - name: KENDRIGK LAMAR
@@ -67,7 +67,7 @@ days:
       - name: MIMI WEBB
       - name: KATY KIRBY
   - number: 2
-    date: 2022-10-06
+    date: 2023-10-06
     display_name: Weekend 1
     artists:
       - name: SHANIA TWAIN
@@ -118,7 +118,7 @@ days:
       - name: HALF ALIVE
       - name: LITTLE SIMZ
   - number: 3
-    date: 2022-10-13
+    date: 2023-10-13
     display_name: Weekend 2
     artists:
       - name: M83

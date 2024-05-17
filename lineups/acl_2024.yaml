@@ -1,0 +1,153 @@
+display_name: Austin City Limits
+slug: acl
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2024-10-04
+    display_name: Day 1
+    artists:
+      - name: CHRIS STAPLETON
+      - name: BLINK-182
+      - name: LEON BRIDGES
+      - name: CARIN LEON
+      - name: NORAH JONES
+      - name: FOSTER THE PEOPLE
+      - name: THE MARÍAS
+      - name: PORTER ROBINSON
+      - name: FLETCHER
+      - name: JEEZY
+      - name: STEPHEN SANCHEZ
+      - name: ELDERBROOK
+      - name: TYLA
+      - name: CATFISH AND THE BOTTLEMEN
+      - name: BARRY CAN'T SWIM
+      - name: SANTIGOLD
+      - name: ROYEL OTIS
+      - name: EGGY
+      - name: CONNOR PRICE
+      - name: MICKEY GUYTON
+      - name: DASHA
+      - name: MANNEQUIN PUSSY
+      - name: PENNY & SPARROW 
+      - name: CHANCE PEÑAII
+      - name: SIR CHLOE
+      - name: DEXTER And the MOONROCKS
+      - name: THE PAPER KITES
+      - name: THEE SINSEERS
+      - name: ASLEEP AT THE WHEEL
+      - name: KATIE PRUITT
+      - name: PACO VERSAILLES
+      - name: WHOOKILLEDKENNY
+      - name: TANNER ADELL
+      - name: MON ROVIA
+      - name: BRAXTON KEITH
+      - name: LATE NIGHT DRIVE HOME
+      - name: THEO LAWRENCE
+      - name: CHAPARELLE
+      - name: MIDNIGHT NAVY
+      - name: Q BROTHERS
+      - name: MISTER G W2
+      - name: ANDREW & POLLY
+  - number: 2
+    date: 2024-10-05
+    display_name: Day 2
+    artists:
+      - name: SHANIA TWAIN
+      - name: DUA LIPA
+      - name: PRETTY LIGHTS
+      - name: KHRUANGBIN
+      - name: RENEE RAPP
+      - name: TEDDY SWIMS
+      - name: BENSON BOONE JUNGLE
+      - name: CHAPPELL ROAN
+      - name: STILL WOOZY
+      - name: VINCE STAPLES
+      - name: REMI WOLF
+      - name: SOMETHING CORPORATE
+      - name: HERMANOS GUTIÉRREZ
+      - name: KENNY BEATS
+      - name: THE BEACHES
+      - name: MOVEMENTS
+      - name: WAVE TO EARTH
+      - name: SPINALL
+      - name: SAY SHE SHE
+      - name: EYEDRESS
+      - name: ELYANNA
+      - name: GEESE
+      - name: GRAND FUNK RAILROAD
+      - name: BALTHVS
+      - name: VALENCIA GRACE
+      - name: LOLA YOUNG
+      - name: JOE P
+      - name: IDKHOW
+      - name: JONAH KAGEN
+      - name: JORDY
+      - name: BOB SCHNEIDER
+      - name: GOLDIE BOUTILIER
+      - name: BILLY ALLEN
+      - name: THE POLLIES
+      - name: BRITTANY DAVIS
+      - name: PAWPAW ROD
+      - name: NICO VEGA
+      - name: RETT MADISON
+      - name: EMEI
+      - name: THE CRITICALS
+      - name: SAWYER HILL
+      - name: JON MUQ
+      - name: TELESCREENS
+      - name: PROMQUEEN
+      - name: BEING DEAD
+      - name: GODLY THE RULER
+      - name: THE TIARRAS
+      - name: ZACH PERSON
+      - name: OBED PADILLA
+      - name: UNCLE JUMBO
+  - number: 3
+    date: 2024-10-06
+    display_name: Day 3
+    artists:
+      - name: TYLER, THE CREATOR
+      - name: STURGILL SIMPSON
+      - name: KEHLAN
+      - name: CAAMP
+      - name: DOMINIC FIKE
+      - name: DOM DOLLA
+      - name: THE RED CLAY STRAYS
+      - name: ORVILLE PECK
+      - name: CANNONS
+      - name: KEVIN ABSTRACT
+      - name: SAN HOLO
+      - name: JESS GLYNNE
+      - name: THAT MEXICAN OT
+      - name: QVEEN HERBY
+      - name: MEDIUM BUILD
+      - name: FLIPTURN
+      - name: DAVID SHAW
+      - name: MALCOLM TODD
+      - name: FLOW
+      - name: BAKAR
+      - name: MISTERWIVES
+      - name: PETEY
+      - name: GLASS BEAMS
+      - name: DUSTIN KENSRUE
+      - name: MYLES SMITH
+      - name: EMILY NENNI
+      - name: RICHY MITCH & THE COAL MINERS
+      - name: THE DROPTINES
+      - name: KALU & THE ELECTRIC JOINT
+      - name: TYLER HALVERSON
+      - name: DAIISTAR
+      - name: CHIEF CLEOPATRA
+      - name: WEST 22ND
+      - name: RICKSHAW BILLIE'S BURGER PATROL
+      - name: CALE TYSON
+      - name: MOLECULAR STEVE
+      - name: MARLEY BLEU
+      - name: DEYAZ
+      - name: MIRA ELFEKY
+      - name: HE MORIAH SISTERS
+      - name: THE LEVITES
+      - name: LUCY KALANTARI & THE JAZZ CATS
+      - name: MISS TUTTI AND THE FRUITY BAND
+      - name: HOMESCOOL
