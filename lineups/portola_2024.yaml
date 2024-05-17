@@ -1,0 +1,75 @@
+display_name: Portola
+slug: portola
+region: am
+year: 2024
+days:
+  - number: 1
+    date: 2022-09-28
+    display_name: Day 1
+    artists:
+      - name: RÜFÜS DU SOL
+      - name: BICEP
+      - name: GESAFFELSTEIN
+      - name: FLOATING POINTS
+      - name: FCUKERS
+      - name: EMPRESS OF
+      - name: NOORIYAH
+      - name: SNOW STRIPPERS
+      - name: MALL GRAB
+      - name: FRANC MOODY
+      - name: NEIL FRANCES
+      - name: JESSIE WARE
+      - name: NILS HOFFMANN
+      - name: INTERPLANETARY CRIMINAL
+      - name: PEACHES
+      - name: SOULWAX
+      - name: JOY ORBISON
+      - name: JASPER TYGNER
+      - name: JPEGMAFIA
+      - name: FOUR TET
+      - name: TYCHO
+      - name: LAVA LA RUE
+      - name: JAMIE XX
+      - name: NIA ARCHIVES
+      - name: LUKE ALESSI
+      - name: NALA
+      - name: CARLITA
+      - name: DJ TENNIS
+  - number: 2
+    date: 2022-09-29
+    display_name: Day 2
+    artists:
+      - name: A. G. COOK
+      - name: AHADADREAM
+      - name: BARRY CAN'T SWIM
+      - name: BEN BÖHMER
+      - name: BOYS NOIZE 
+      - name: VTSS
+      - name: BUSY P 
+      - name: BRAXE + FALCON
+      - name: DISCLOSURE
+      - name: DJ HEARTSTRING
+      - name: ANDERSON .PAAK
+      - name: DJ SEINFELD
+      - name: FISHER
+      - name: GLASS BEAMS
+      - name: HONEY DIJON
+      - name: HORSEGIIRL
+      - name: JERSEY
+      - name: JUSTICE
+      - name: KENYA GRACE
+      - name: LP GIOBBI
+      - name: M.I.A.
+      - name: MADDY MAIA
+      - name: MOCHAKK
+      - name: MOUNT KIMBIE
+      - name: PANJABI HIT SQUAD
+      - name: PRETTY GIRL
+      - name: RAF SAPERRA
+      - name: REBECCA BLACK
+      - name: SAMMY VIRJI
+      - name: SARA LANDRY
+      - name: SHYGIRL PRESENTS CLUB SHY
+      - name: STARRZA
+      - name: TINLICKER LIVE
+      - name: ZULAN
