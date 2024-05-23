@@ -29,6 +29,13 @@ days:
       - name: RÓISÍN MURPHY
       - name: SAY SHE SHE
       - name: SID SRIRAM
+      - name: THE FOXIES
+      - name: HANS WILLIAMS
+      - name: HAPPY LANDING
+      - name: SAWYER HILL
+      - name: TORS
+      - name: VINCENT LIMA
+      - name: WINYAH
   - number: 2
     date: 2022-06-14
     display_name: Day 2
@@ -42,7 +49,7 @@ days:
       - name: LIZZY MCALPINE
       - name: INTERPOL
       - name: T-PAIN
-      - name: SUDDEN DEATH
+      - name: SVDDEN DEATH
       - name: TV GIRL
       - name: GARY CLARK JR.
       - name: THE MARS VOLTA
@@ -66,6 +73,13 @@ days:
       - name: MIKE
       - name: HAMDI
       - name: LYNY
+      - name: ABBY HOLLIDAY
+      - name: CROWE BOYS
+      - name: DAN SPENCER
+      - name: FRAYNE VIBEZ
+      - name: HOUSEPLANT
+      - name: LOWDOWN BRASS BAND
+      - name: MON ROVÎA
   - number: 3
     date: 2022-06-15
     display_name: Day 3
@@ -100,6 +114,12 @@ days:
       - name: TROUSDALE
       - name: VANDELUX
       - name: LOVRA
+      - name: CALE TYSON
+      - name: INFINITY SONG
+      - name: JIVE TALK
+      - name: JOB RICCIO
+      - name: MANWOLVES
+      - name: PAUL MCDONALD & THE MOURNING DOVES
   - number: 4
     date: 2022-06-16
     display_name: Day 4
@@ -129,3 +149,9 @@ days:
       - name: IRREVERSIBLE ENTANGLEMENTS
       - name: ARMAND HAMMER
       - name: VEGGI
+      - name: AMIRA ELFEKY
+      - name: DEAN JOHNSON
+      - name: LILY FITTS
+      - name: MOLLY GRACE
+      - name: TEXAS HILL
+      - name: WOLVES OF GLENDALE
