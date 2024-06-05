@@ -1,0 +1,222 @@
+display_name: Lost Lands
+slug: lostlands
+region: am
+year: 2024
+days:
+  - number: 0
+    date: 2022-09-20
+    display_name: Day 0
+    artists:
+      - name: AHEE
+      - name: ALIX PEREZ
+      - name: ALLEYCVT
+      - name: APASHE
+      - name: ATLIENS
+      - name: BENDA
+      - name: BLAAP
+      - name: BOOGIE T
+      - name: BOU
+      - name: CALCIUM
+      - name: CAMO & KROOKED
+      - name: CASPA
+      - name: CRANKDAT
+      - name: CYCLOPS
+      - name: DEATHPACT
+      - name: DELTA HEAVY
+      - name: DIESELBOY
+      - name: DION TIMMER
+      - name: DIRT MONKEY
+      - name: DIRTYPHONICS
+      - name: DJ SNAKE
+      - name: DR. FRESCH
+      - name: DRINKURWATER
+      - name: EAZYBAKED
+      - name: EMALKAY
+      - name: EMORFIK
+      - name: EPROM
+      - name: EXCISION
+      - name: WOOLII
+      - name: FLOSSTRADAMUS
+      - name: FUNTCASE
+      - name: G-REX
+      - name: GANJA WHITE NIGHT
+      - name: SUBE
+      - name: GLADDE PALING
+      - name: GORILLAT
+      - name: GRABBITZ
+      - name: HABSTRAKT
+      - name: HAIRITAGE
+      - name: HOL!
+      - name: INFECTED MUSHROOM
+      - name: INFEKT
+      - name: INZO
+      - name: JANTSEN
+      - name: JESSICA AUDIFFRED
+      - name: JUELZ
+      - name: KANINE
+      - name: KAYZO
+      - name: LADY FAITH
+      - name: LAYZ
+      - name: LEVEL UP
+      - name: LEVITY
+      - name: MARAUDA
+      - name: MASTERHAND
+      - name: MEFJUS
+      - name: MERSIV
+      - name: MIJA
+      - name: MITIS
+      - name: MUST DIE!
+      - name: NERO
+      - name: NOIZU
+      - name: OF THE TREES
+      - name: OLIVERSE
+      - name: PHASEONE
+      - name: RAVENSCOON
+      - name: RAY VOLPE
+      - name: REAPER
+      - name: RUSKO
+      - name: SAMPLIFIRE
+      - name: SAN HOLO
+      - name: SHADES
+      - name: SHIP WREK
+      - name: SIPPY
+      - name: SKULL MACHINE
+      - name: SMOAKLAND
+      - name: SODOWN
+      - name: STUMPI
+      - name: SUBTRONICS
+      - name: SULLIVAN KING
+      - name: SUNDAY SCARIES
+      - name: TAPE B
+      - name: TROYBOI
+      - name: UZ
+      - name: VIEZE ASBAK
+      - name: WILKINSON
+      - name: YOOKIE
+      - name: ZEDS DEAD
+      - name: ZINGARA
+      - name: ABELATION
+      - name: ABSTRAKT SONANCE
+      - name: ACE AURA
+      - name: AK RENNY
+      - name: ALIENPARK
+      - name: AMIDY
+      - name: ANDROMEDIK
+      - name: ANGRYBABY
+      - name: ASH HALO
+      - name: AU5
+      - name: AUSTERIA
+      - name: AUTOMHATE
+      - name: BAINBRIDGE
+      - name: BBX
+      - name: BEASTBOI.
+      - name: BENSLEY
+      - name: BLOODTHINNERZ
+      - name: BLVNKSPVCE
+      - name: BOMMER
+      - name: BRAINRACK
+      - name: BUKU
+      - name: CANABLISS
+      - name: CELO
+      - name: CHANGO
+      - name: CHEE
+      - name: CHEF BOYARBEATZ
+      - name: CHIBS
+      - name: CODD DUBZ
+      - name: COKA COBRA
+      - name: CONTROL FREAK
+      - name: CULTURE SHOCK
+      - name: DARKSIDERZ
+      - name: DEADCROW
+      - name: DECIMATE
+      - name: DEUCEZ
+      - name: DIGITAL ETHOS
+      - name: DIRTYSNATCHA
+      - name: DISTINCT MOTIVE
+      - name: DJ TOPGUN
+      - name: DOCUMENT ONE
+      - name: DUBSCRIBE
+      - name: EATER
+      - name: EFFIN
+      - name: FAIRLANE
+      - name: FREAKY
+      - name: FROSTTOP
+      - name: G-SPACE
+      - name: GG MAGREE
+      - name: GHOST IN REAL LIFE
+      - name: HAMRO
+      - name: HEKLER
+      - name: HEYZ
+      - name: HI I'M GHOST
+      - name: HIGH ZOMBIE
+      - name: HUKAE
+      - name: HUMANSION
+      - name: IVORY
+      - name: JAWNS
+      - name: JEANIE
+      - name: JKYL & HYDE
+      - name: JON CASEY
+      - name: JORDNMOODY
+      - name: JOSH TEED
+      - name: JUSTIN HAWKES
+      - name: KJ SAWKA
+      - name: KLIPTIC
+      - name: KUMARION
+      - name: KURSA
+      - name: LEOTRIX
+      - name: LINK
+      - name: LOUIEJAYXX
+      - name: LOWCATION
+      - name: LUCILLE CROFT
+      - name: LUMASI
+      - name: LUZCID
+      - name: MADGRRL
+      - name: MANIC FOCUS
+      - name: MPORT
+      - name: MUERTE
+      - name: MUZZ
+      - name: MYTHM
+      - name: NEOTEK
+      - name: ODDKIDOUT
+      - name: OMAS
+      - name: OZZTIN
+      - name: PAULINE HERR
+      - name: PERRY WAYNE
+      - name: PIERCE
+      - name: PROSECUTE
+      - name: RATED R
+      - name: REBEL SCUM
+      - name: RIOT
+      - name: ROSSY
+      - name: RZRKT
+      - name: SABAI
+      - name: SABRITAZ
+      - name: SAKA
+      - name: SANZU
+      - name: SKYBREAK
+      - name: SPACE WIZARD
+      - name: SQISHI
+      - name: STELLER
+      - name: STONED LEVEL
+      - name: SUBDOCTA
+      - name: SUBFILTRONIK
+      - name: SULLY
+      - name: SUPER FUTURE
+      - name: SUBCHVRGE
+      - name: TEDDY KILLERZ
+      - name: TRXGGX
+      - name: TYPHON
+      - name: UBUR
+      - name: USAYBFLOW
+      - name: VAMPA
+      - name: VASTIVE
+      - name: VERSA
+      - name: VIPERACTIVE
+      - name: VKTM
+      - name: VLCN
+      - name: WAYVE
+      - name: WILEY
+      - name: XOTIX
+      - name: YETEP
+      - name: YVM3
+      - name: ZUEZEU

@@ -85,4 +85,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Glastonbury", years : [ 2024 ], name : "glasto", region : "eu"},
     {display_name : "Beyond Wonderland - Chicago", years : [ 2024 ], name : "wonderlandchi", region : "am"},
     {display_name : "Project Glow", years : [ 2024 ], name : "projectglow", region : "am"},
+    {display_name : "Lost Lands", years : [ 2024 ], name : "lostlands", region : "am"},
 ];
