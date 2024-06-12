@@ -1,0 +1,46 @@
+display_name: FORM
+slug: form
+region: am
+year: 2024
+days:
+  - number: 0
+    date: 2022-10-4
+    display_name: Day 0
+    artists:
+      - name: AJA MONET
+      - name: AMARO FREITAS
+      - name: ANGEL OLSEN
+      - name: BARRY CANT SWIM
+      - name: BONOBO 
+      - name: DVR
+      - name: DYLAN BRADY
+      - name: EMPRESS OF
+      - name: ERIKA DE CASIER
+      - name: FCUKERS
+      - name: FIFI
+      - name: FLOATING POINTS
+      - name: FOUR TET
+      - name: JAMES BLAKE
+      - name: JAMIE XX
+      - name: JESSICA PRATT
+      - name: JULIANNA BARWICK
+      - name: JULIE BYRNE
+      - name: KEVIN MORBY
+      - name: KIM GORDON
+      - name: LA LOM
+      - name: LONNIE HOLLEY
+      - name: LOS ÉSPLIFS
+      - name: MUSTAFA
+      - name: NONAME
+      - name: NIA ARCHIVES
+      - name: NICK HAKIM
+      - name: NICOLE MIGLIS
+      - name: ONEOHTRIX
+      - name: POINT NEVER
+      - name: PINK PANTHERESS
+      - name: SHABAKA
+      - name: SIR CHLOE
+      - name: SKRILLEX
+      - name: THUNDERCAT
+      - name: TEAM EZY
+      - name: TRAYER WILLITS
