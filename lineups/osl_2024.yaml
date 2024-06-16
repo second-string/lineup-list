@@ -5,85 +5,117 @@ year: 2024
 days:
   - number: 1
     date: 2022-08-9
-    display_name: All Days
+    display_name: Day 1
+    artists:
+      - name: The Killers
+      - name: Daniel Caesar
+      - name: JUNGLE
+      - name: Gryffin
+      - name: Young The Giant
+      - name: Reneé Rapp
+      - name: Knock2
+      - name: Tyla
+      - name: Kevin Abstract
+      - name: The Japanese House
+      - name: SIDEPIECE
+      - name: The Last Dinner Party
+      - name: Snakehips
+      - name: Real Estate
+      - name: Mindchatter
+      - name: Shiba San
+      - name: CID
+      - name: Daði Freyr
+      - name: Joe Kay
+      - name: Jared Jackson
+      - name: Confidence Man
+      - name: DARIUS
+      - name: Shaboozey
+      - name: Kasablanca
+      - name: Rocco
+      - name: Devault
+      - name: underscores
+      - name: Marsh
+      - name: billy woods
+      - name: The Lemon Twigs
+      - name: Odie Leigh
+      - name: Yulia Niko
+      - name: MiLES.
+      - name: Valencia Grace
+      - name: Jackie Hollander
+  - number: 2
+    date: 2022-08-10
+    display_name: Day 2
     artists:
       - name: Tyler, The Creator
-      - name: The Killers
-      - name: Sturgill Simpson
-      - name: Post Malone (Performing a Special Country Set)
       - name: The Postal Service
       - name: Grace Jones
-      - name: KAYTRANADA
-      - name: JUNGLE
       - name: Chris Lake
-      - name: Gryffin
-      - name: Snoh Aalegra
-      - name: Young The Giant
       - name: ScHoolboy Q
-      - name: Teddy Swims
-      - name: Reneé Rapp
-      - name: Victoria Monét
-      - name: Knock2
-      - name: Slowdive
-      - name: Killer Mike
       - name: FLETCHER
-      - name: TV Girl
-      - name: Tyla
-      - name: Chappell Roan
       - name: Channel Tres
       - name: Charley Crockett
       - name: Men I Trust
-      - name: Ben Howard
       - name: Amyl and The Sniffers
-      - name: Kevin Abstract
-      - name: Paul Cauthen
-      - name: The Japanese House
+      - name: The Blessed Madonna
       - name: Romy
-      - name: The Last Dinner Party
-      - name: BADBADNOTGOOD
       - name: STRFKR
-      - name: Real Estate
       - name: K.Flay
-      - name: Corinne Bailey Rae
-      - name: Snakehips
-      - name: Amen Dunes
-      - name: Roosevelt
       - name: Allen Stone
-      - name: Mindchatter
-      - name: Daði Freyr
+      - name: TSHA
       - name: Ryan Beatty
+      - name: Sofia Kourtesis
       - name: LEISURE
-      - name: Elyanna
-      - name: Confidence Man
-      - name: Kasablanca
       - name: Vandelux
-      - name: Wisp
+      - name: Dusky
       - name: Medium Build
-      - name: Rocco
-      - name: underscores
-      - name: Devault
-      - name: Chance Peña
       - name: Mimi Webb
-      - name: Daily Bread
+      - name: Kaleena Zanders
       - name: BALTHVS
-      - name: Shaboozey
-      - name: billy woods
-      - name: The Lemon Twigs
       - name: Trueno
-      - name: Sons of the East
-      - name: CMAT
-      - name: Cimafunk
-      - name: Katie Pruitt
+      - name: Anish Kumar
       - name: AG Club
       - name: Lady Wray
-      - name: Odie Leigh
       - name: French Cassettes
+      - name: Chuck Gunn
+  - number: 3
+    date: 2022-08-11
+    display_name: Day 3
+    artists:
+      - name: Sturgill Simpson
+      - name: Post Malone (Performing a Special Country Set)
+      - name: KAYTRANADA
+      - name: Teddy Swims
+      - name: Victoria Monét
+      - name: Chappell Roan
+      - name: Slowdive
+      - name: Killer Mike
+      - name: TV Girl
+      - name: Idris Elba
+      - name: Ben Howard
+      - name: Paul Cauthen
+      - name: Seth Troxler
+      - name: BADBADNOTGOOD
+      - name: Uncle Waffles
+      - name: Amen Dunes
+      - name: Roosevelt
+      - name: Corinne Bailey Rae
+      - name: Elyanna
+      - name: Wisp
+      - name: Chance Peña
+      - name: Daily Bread
+      - name: Honeyluv
+      - name: Jaden Thompson
+      - name: Sons of the East
+      - name: CMAT
+      - name: AYYBO
+      - name: Cimafunk
+      - name: Katie Pruitt
       - name: Ogi
-      - name: MiLES.
-      - name: Valencia Grace
+      - name: Angrybaby
       - name: Dan Spencer
       - name: Lael Neale
-  - number: 2
+      - name: BUNS
+  - number: 4
     date: 2022-08-9
     display_name: SOMA
     artists:
