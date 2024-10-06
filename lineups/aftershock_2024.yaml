@@ -8,149 +8,150 @@ days:
     display_name: Day 1
     artists:
       - name: Slayer
-      - name: Pantera
       - name: Till Lindemann
+      - name: Ministry
+      - name: Filter
+      - name: Hawthorne Heights
+      - name: Adema
+      - name: Like A Storm
+      - name: Pantera
       - name: Halestorm
       - name: Cypress Hill
-      - name: Ministry
       - name: Sevendust
-      - name: Grandson
-      - name: Static X
-      - name: Insane Clown Posse
-      - name: Filter
-      - name: Drain
-      - name: Biohazard
-      - name: Hawthorne Heights
       - name: Orgy
-      - name: Drug Church
-      - name: Better Lovers
-      - name: Ho99o9
-      - name: GEL
-      - name: Slothrust
-      - name: Touché Amoré
-      - name: Veil of Maya
-      - name: Adema
       - name: Tim Montana
-      - name: Like A Storm
-      - name: Jeris Johnson
-      - name: Teen Mortgage
-      - name: Descartes A Kant
-      - name: StrateJacket
-      - name: TX2
       - name: Reach NYC
+      - name: Grandson
+      - name: Fleshwater
+      - name: Drug Church
+      - name: Gel
+      - name: Teen Mortgage
+      - name: Return to Dust
+      - name: The Funeral Portrait
+      - name: Static X
+      - name: Biohazard
+      - name: Better Lovers
+      - name: The Armed
+      - name: Jeris Johnson
+      - name: Stratejacket
+      - name: Insane Clown Posse
+      - name: Ho99o9
+      - name: Signs of the Swarm
+      - name: Descartes a Kant
+      - name: TX2
       - name: Silly Goose
-      - name: BUDDERSIDE
   - number: 2
     date: 2023-10-11
     display_name: Day 2
     artists:
       - name: Slipknot
-      - name: Five Finger Death Punch
       - name: Evanescence
-      - name: Rise Against
       - name: Dropkick Murphys
-      - name: Mastodon
-      - name: Architects
-      - name: Daron Malakian and Scars on Broadway
       - name: Highly Suspect
-      - name: Poppy
-      - name: L.S. Dunes
-      - name: Marky Ramone Plays The Ramones Classics
-      - name: Code Orange
-      - name: Bayside
       - name: The Warning
-      - name: Lilith Czar
-      - name: Joey Valence & Brae
-      - name: Giovannie and The Hired Guns
-      - name: D.R.U.G.S.
-      - name: The Chisel
-      - name: Vended
-      - name: Soul Glo
-      - name: Taproot
-      - name: Winona Fighter
-      - name: Moonshine Bandits
-      - name: Local H
-      - name: Dead Poet Society
+      - name: Giovannie & the Hired Guns
       - name: Brutus
-      - name: Capital Theatre
+      - name: Five Finger Death Punch
+      - name: Rise Against
+      - name: Architects
+      - name: Poppy
+      - name: Lilith Czar
+      - name: Dead Poet Society
+      - name: Vended
+      - name: Mastodon
+      - name: Juliette Lewis & the Licks
+      - name: The Ramones
+      - name: Taproot
+      - name: Soul Glo
+      - name: British Lion
+      - name: Budderside
+      - name: Daron Malakian and Scars on Broadway
+      - name: L.S. Dunes
+      - name: Joey Valence & Brae
+      - name: Zulu
+      - name: Winona Fighter
+      - name: Local H
+      - name: Black Map
+      - name: We Came As Romans
+      - name: Bayside
+      - name: D.R.U.G.S.
+      - name: Moonshine Bandits
       - name: Hemorage
-      - name: Royale Lynn
-      - name: Jigsaw Youth
+      - name: Capital Theatre
+      - name: As You Were
   - number: 3
     date: 2023-10-12
     display_name: Day 3
     artists:
       - name: Iron Maiden
-      - name: Judas Priest
       - name: Breaking Benjamin
-      - name: Staind
       - name: Anthrax
-      - name: Lorna Shore
-      - name: Body Count
-      - name: Tech N9ne
-      - name: Coal Chamber
-      - name: Clutch
-      - name: Sleeping With Sirens
+      - name: Sleeping with Sirens
       - name: P.O.D.
-      - name: Bad Wolves
-      - name: Rival Sons
-      - name: City Morgue
-      - name: Saosin
-      - name: Fugitive
-      - name: Militarie Gun
-      - name: High Vis
-      - name: Whitechapel
-      - name: Show Me The Body
-      - name: Ill Niño
-      - name: I See Stars
-      - name: Holy Fawn
       - name: New Years Day
-      - name: Alien Ant Farm
-      - name: Alien Weaponry
       - name: CKY
+      - name: Judas Priest
+      - name: Staind
+      - name: Clutch
+      - name: Dope
+      - name: Rival Sons
+      - name: Alien Ant Farm
+      - name: Jigsaw Youth
+      - name: Lorna Shore
+      - name: Whitechapel
+      - name: Kublai Khan TX
+      - name: Show Me the Body
+      - name: Ill Nino
       - name: Nerv
-      - name: Any Given Sin
-      - name: LØ SPIRIT
+      - name: CZYK
+      - name: Body Count
+      - name: Fugitive
+      - name: High Vis
+      - name: Simon Says
+      - name: Holy Fawn
       - name: Damnage
-      - name: The Funeral Portrait
-      - name: Self Deception
+      - name: Tech N9ne
+      - name: Saosin
+      - name: Bad Wolves
+      - name: Any Given Sin
+      - name: Convictions
       - name: Deadlands
+      - name: Gozu
   - number: 4
     date: 2023-10-13
     display_name: Day 4
     artists:
-      - name: Mötley Crüe
-      - name: Disturbed
-      - name: Falling In Reverse
-      - name: Seether
+      - name: Motley Crue
+      - name: Falling in Reverse
       - name: Skillet
-      - name: Flogging Molly
-      - name: Tom Morello
-      - name: Juliette Lewis and The Licks
-      - name: Nothing More
       - name: Badflower
-      - name: PUP
-      - name: Eagles Of Death Metal
       - name: Jinjer
-      - name: From Ashes To New
-      - name: Set It Off
-      - name: Resorte
-      - name: Shadows Fall
-      - name: Fear Factory
-      - name: Citizen Soldier
-      - name: The Armed
+      - name: Oxymorrons
+      - name: Point North
+      - name: Disturbed
+      - name: Seether
+      - name: Nothing More
+      - name: Eagles of Death Metal
+      - name: From Ashes to New
       - name: Drowning Pool
+      - name: Hed PE
+      - name: Flogging Molly
+      - name: Pup
+      - name: Set It Off
+      - name: Citizen Soldier
+      - name: Holding Absence
+      - name: Caskets
+      - name: Lowlives
+      - name: Tom Morello
+      - name: Resorte
+      - name: Touche Amore
       - name: Bob Vylan
       - name: Powerman 5000
-      - name: HED PE
-      - name: Narrow Head
-      - name: Point North
-      - name: Holding Absence
-      - name: Oxymorrons
       - name: Mike's Dead
+      - name: Royale Lynn
+      - name: Shadows Fall
+      - name: Fear Factory
+      - name: Narrow Head
+      - name: Slothrust
       - name: Blame My Youth
-      - name: Caskets
-      - name: Black Map
-      - name: Lowlives
-      - name: Jager Bonham
-      - name: Gozu
+      - name: Jager Henry
