@@ -1,0 +1,167 @@
+display_name: Coachella
+slug: coachella
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2025-04-11
+    artists:
+      - name: Lady Gaga
+      - name: Missy Elliott
+      - name: Benson Boone 
+      - name: The Marías
+      - name: LISA
+      - name: The Prodigy
+      - name: Parcels-FKA twigs-Mustard
+      - name: Mau P GloRilla
+      - name: Yeat
+      - name: The Go-Gos
+      - name: MARINA
+      - name: Djo
+      - name: Tyla
+      - name: Sara Landry
+      - name: Thee Sacred Souls
+      - name: d4vd
+      - name: Artemas
+      - name: Miike Snow Three 6 Mafia
+      - name: Chris Lorenzo
+      - name: SAINt JHN
+      - name: 4batz
+      - name: Vintage Culture
+      - name: Tink
+      - name: Maribou State
+      - name: Eyedress
+      - name: A.G. Cook
+      - name: CA7RIEL
+      - name: Paco Amoroso
+      - name: Chris Stussy
+      - name: Damian Lazarus
+      - name: julie
+      - name: Austin Millz
+      - name: Lola Young
+      - name: Tinlicker
+      - name: SPEED
+      - name: Seun Kuti
+      - name: Egypt 80
+      - name: Ravyn Lenae
+      - name: Beltran
+      - name: TOPS
+      - name: Los Mirlos
+      - name: PARISI
+      - name: Pete Tong
+      - name: Ahmed Spins
+      - name: KNEECAP
+      - name: Shermanology
+      - name: vs self
+      - name: HiTech
+      - name: Moon Boots
+      - name: Coco & Breezy
+      - name: Glixen
+      - name: EREZ
+  - number: 2
+    date: 2025-04-12
+    artists:
+      - name: Green Day
+      - name: Charli xcx
+      - name: The Misfits
+      - name: Keinemusik
+      - name: Above a Beyond
+      - name: Anitta
+      - name: Ivan Cornejo
+      - name: Clairo
+      - name: ENHYPEN
+      - name: Shoreline Mafia
+      - name: T-Pain
+      - name: Hanumankind
+      - name: Sam Fender
+      - name: Japanese Breakfast
+      - name: Beth Gibbons
+      - name: Darkside
+      - name: Eli Brown
+      - name: Gustavo Dudamel
+      - name: LA Phil
+      - name: Jimmy Eat World
+      - name: Viagra Boys
+      - name: Disco Lines
+      - name: Blonde Redhead
+      - name: Amelie Lens
+      - name: Alok
+      - name: Yo Cabba Gabba!
+      - name: Glass Beams
+      - name: The Dare
+      - name: 2hollis
+      - name: Mind Against
+      - name: Massano
+      - name: Klangkuenstler
+      - name: salute
+      - name: horsegirL
+      - name: El Malilla
+      - name: Medium Build
+      - name: underscores
+      - name: Indo Warehouse
+      - name: Indira Paganotto
+      - name: Infected Mushroom
+      - name: Rawayana
+      - name: Layton Giordani
+      - name: DJ Gigola
+      - name: HAAi
+      - name: Judeline
+      - name: Together Pangea
+      - name: Bob Vylan
+      - name: Prison Affair
+      - name: Talón
+  - number: 3
+    date: 2025-04-13
+    artists:
+      - name: Post Malone
+      - name: Megan Thee Stallion
+      - name: Zedd
+      - name: Junior H
+      - name: JENNIE
+      - name: Kraftwerk
+      - name: beabadoobee
+      - name: Polo and Pan
+      - name: XG
+      - name: Basement Jaxx
+      - name: Keshi
+      - name: Chase & Status
+      - name: Still Woozy
+      - name: Sammy Virji
+      - name: Jessie Murph
+      - name: Arca
+      - name: Rema
+      - name: Shaboozey
+      - name: Ty Dolla Sign
+      - name: Circle Jerks
+      - name: Ben Böhmer
+      - name: Amy and the Sniffers
+      - name: Boris Brejcha
+      - name: Dixon
+      - name: Jimi Jules
+      - name: Muni Long
+      - name: Amaarae
+      - name: BigXthaPlug
+      - name: Snow Strippers
+      - name: Fcukers
+      - name: Interplanetary Criminal
+      - name: Dennis Cruz
+      - name: VTSS
+      - name: The Beaches
+      - name: Wisp
+      - name: MEUTE
+      - name: Francis Mercier
+      - name: Hope Tala
+      - name: Sparrow & Barbossa
+      - name: Ginger Root
+      - name: AMÉMÉ
+      - name: SOFT PLAY
+      - name: Mohamed Ramadan
+      - name: GEL
+      - name: Kumo 99
+      - name: DESIREE
+      - name: Tripolism
+      - name: Yulia Niko
+  - number: 4
+    date: 2025-04-13
+    artists:
+      - name: Travis Scott
