@@ -1,0 +1,180 @@
+display_name: Primavera Sound Barcelona
+slug: primavera
+region: eu
+year: 2025
+days:
+  - number: 1
+    date: 2025-06-04
+    artists:
+      - name: CARIBOU
+      - name: LA CASA AZUL
+      - name: HINDS
+      - name: ILLUM
+  - number: 2
+    date: 2025-06-05
+    artists:
+      - name: CHARLI XCX
+      - name: FKA TWIGS
+      - name: JAMIE XX
+      - name: IDLES
+      - name: BEABADOOBEE
+      - name: PARCELS
+      - name: STURGILL SIMPSON
+      - name: BRUTALISMUS 3000
+      - name: DENZEL CURRY
+      - name: SPIRITUALIZED
+      - name: ARMAND VAN HELDEN
+      - name: CASSANDRA JENKINS
+      - name: CHAT
+      - name: DJ KOZE
+      - name: MAGDALENA BAY
+      - name: CRYSTALLMESS
+      - name: NOURISHED BY TIME
+      - name: THE DARE
+      - name: JOHN TALABOT
+      - name: DJ DUSTIN MOMMA
+      - name: MUSICA ESPORADICA
+      - name: DJ PYTHON
+      - name: JULIE
+      - name: KALI HALONE
+      - name: KELLY LEE OWENS
+      - name: THE SABRES OF PARADISE
+      - name: AMORE
+      - name: AUNTY RAYZOR
+      - name: DJ TOBZY
+      - name: BARKER
+      - name: BEEN STELLAR
+      - name: CIUTAT
+      - name: DAME AREA
+      - name: DURUM
+      - name: HEINALI
+      - name: ANDRIANA-YAROSLAVA SATENKO
+      - name: JANE FITZ
+      - name: KATE BOLLINGER
+      - name: KIA
+      - name: LUMIERE
+      - name: MIDNIGHT
+      - name: SISTEMA DE ENTRETENIMIENTO
+      - name: SUGAR FREE
+      - name: THIS IS LORELET
+      - name: TOUMBA LIVE
+      - name: TRAMHAUS
+      - name: ULTRALAGRIMA
+      - name: YAWNERS
+  - number: 3
+    date: 2025-06-06
+    artists:
+      - name: SABRINA CARPENTER
+      - name: CLAIRO
+      - name: HAIM
+      - name: BEACH HOUSE
+      - name: AMELIE LENS
+      - name: ANOTR
+      - name: WET LEG
+      - name: FLOATING POINTS
+      - name: TV ON THE RADIO
+      - name: THE JESUS LIZARD
+      - name: STEREOLAB
+      - name: ZAHO DE SAGAZAN
+      - name: CAROLINA DURANTE
+      - name: SALEM
+      - name: CAT PONER
+      - name: DANNY L HARLE
+      - name: FCUKERS
+      - name: FEEBLE LITTLE HORSE
+      - name: ISRAEL FERNÁNDEZ
+      - name: LELA SOTO
+      - name: JULIE BYRNE
+      - name: KITTIN
+      - name: SHABJDEED
+      - name: AL NATHER
+      - name: MAXAHATCHEE
+      - name: YOASOBI
+      - name: 4AM KRU
+      - name: AMOR LÍQUIDO
+      - name: CHANEL BEADS
+      - name: CINNA PEYGHAMY
+      - name: EKUKA MORRIS SIRIKITI
+      - name: FLORENCE SINCLAIR
+      - name: GOUGE AWAY
+      - name: HEAL
+      - name: HIGH VIS
+      - name: JEHIA
+      - name: KINETIC
+      - name: D.DAN
+      - name: DJ TOOL
+      - name: HYPERAKTIVIST
+      - name: YAZZUS
+      - name: MISS BASHFUL
+      - name: DBBD
+      - name: MOR ELIAN
+      - name: ALARICO
+      - name: RED STAMP
+      - name: OGAZON
+      - name: SHED
+      - name: SIDEPROJECT
+      - name: SIMO CELL
+      - name: SOLUNA
+      - name: STILL HOUSE PLANTS
+      - name: TETAS FRIAS
+      - name: YASMIN WILLIAMS
+  - number: 4
+    date: 2025-06-07
+    artists:
+      - name: CHAPPELL ROAN
+      - name: CENTRAL CEE
+      - name: LCD SOUNDSYSTEM
+      - name: FONTAINES D.C.
+      - name: TURNSTILE
+      - name: AMINÉ
+      - name: AMATA
+      - name: ANOHNI AND THE JOHNSONS
+      - name: BLACK COUNTRY, NEW ROAD
+      - name: NICOLA CRUZ
+      - name: GLASS BEAMS
+      - name: KIM DEAL
+      - name: YUNG BEEF
+      - name: CONFIDENCE MAN
+      - name: JUDELINE
+      - name: ALAN SPARHANK
+      - name: CAP'N JAZZ
+      - name: DANNY L HARLE
+      - name: DESTROYER
+      - name: ISABELLA LOVESTORY
+      - name: JOHN TALABOT
+      - name: MAD MIRAN
+      - name: JOY ORBISON
+      - name: LOS CAMPESINOS!
+      - name: MACHINE GIRL
+      - name: MJ LENDERMAN
+      - name: MORITZ VON OSHALD
+      - name: SALIF KEITA
+      - name: SQUID
+      - name: BEATRICE DILLON
+      - name: CHAT PILE
+      - name: CHRISTIAN LEE HUTSON
+      - name: D'ARCANGELO
+      - name: DEHD
+      - name: DIAMIN
+      - name: EUSKOPRINCESS
+      - name: FROST CHILDREN
+      - name: HORSEGIRL
+      - name: INVT
+      - name: JONATHAN FITOUSSI
+      - name: KOKOSHCA
+      - name: LANAV
+      - name: MARIA SOMERVILLE
+      - name: DJ MASDA
+      - name: RESTINGA
+      - name: RHR
+      - name: SANDWELL DISTRICT
+      - name: SHERELLE
+      - name: XENIA
+  - number: 5
+    date: 2025-06-08
+    artists:
+      - name: MICHAEL BIBI
+      - name: PAUL KALKBRENNER
+      - name: CARLITA
+      - name: BUNT
+      - name: ONA
