@@ -43,6 +43,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Primavera a la Ciutat", years : [ 2022 ], name : "primaveraciutat", region : "eu"},
     {display_name : "CRSSD Spring", years : [ 2024, 2023, 2022 ], name : "crssdspring", region : "am"},
     {display_name : "CRSSD Fall", years : [ 2023 ], name : "crssdfall", region : "am"},
+    {display_name : "CRSSD Proper", years : [ 2024 ], name : "crssdproper", region : "am"},
     {display_name : "Okeechobee", years : [ 2023, 2022 ], name : "okeechobee", region : "am"},
     {display_name : "Forecastle", years : [ 2022 ], name : "forecastle", region : "am"},
     {display_name : "Winter Wonder Grass - CA", years : [ 2022 ], name : "wwgtahoe", region : "am"},
