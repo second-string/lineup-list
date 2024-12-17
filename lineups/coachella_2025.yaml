@@ -5,6 +5,7 @@ year: 2025
 days:
   - number: 1
     date: 2025-04-11
+    display_name: Day 1
     artists:
       - name: Lady Gaga
       - name: Missy Elliott
@@ -12,8 +13,11 @@ days:
       - name: The Marías
       - name: LISA
       - name: The Prodigy
-      - name: Parcels-FKA twigs-Mustard
-      - name: Mau P GloRilla
+      - name: Parcels
+      - name: FKA Twigs
+      - name: Mustard
+      - name: Mau P
+      - name: GloRilla
       - name: Yeat
       - name: The Go-Gos
       - name: MARINA
@@ -23,7 +27,8 @@ days:
       - name: Thee Sacred Souls
       - name: d4vd
       - name: Artemas
-      - name: Miike Snow Three 6 Mafia
+      - name: Miike Snow
+      - name: Three 6 Mafia
       - name: Chris Lorenzo
       - name: SAINt JHN
       - name: 4batz
@@ -60,6 +65,7 @@ days:
       - name: EREZ
   - number: 2
     date: 2025-04-12
+    display_name: Day 2
     artists:
       - name: Green Day
       - name: Charli xcx
@@ -112,6 +118,7 @@ days:
       - name: Talón
   - number: 3
     date: 2025-04-13
+    display_name: Day 3
     artists:
       - name: Post Malone
       - name: Megan Thee Stallion
@@ -163,5 +170,6 @@ days:
       - name: Yulia Niko
   - number: 4
     date: 2025-04-13
+    display_name: Designs the Desert
     artists:
       - name: Travis Scott
