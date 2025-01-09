@@ -1,0 +1,126 @@
+display_name: Bonnaroo
+slug: bonnaroo
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2025-06-12
+    display_name: Day 1 # The text displayed to the user for the filters
+    artists:
+      - name: LUKE COMBS
+      - name: DOM DOLLA
+      - name: SAMMY VIRJI
+      - name: MARCUS KING
+      - name: GREENN VELVET
+      - name: 2HOLLIS
+      - name: INSANE CLOWN POSSE
+      - name: JOEY VALENCE & BRAE
+      - name: DANIEL DONATO
+      - name: WILDERADO
+      - name: MAX STYLER
+      - name: AZZECCA
+      - name: THE LEMON TWIGS
+      - name: WISP
+      - name: SOFIA ISELLA
+      - name: KITCHENN DWELLERS
+      - name: DOGS IN A PILE
+      - name: DIE SPITZ
+      - name: HEY, NOTHING
+      - name: THE DROPTINES
+  - number: 2
+    date: 2025-06-13
+    display_name: Day 2
+    artists:
+      - name: TYLER, THE CREATOR
+      - name: JOHN SUMMIT
+      - name: GLASS ANIMALS
+      - name: TIPPER
+      - name: GOOSE
+      - name: THE RED CLAY STRAYS
+      - name: RAINBOW KITTEN SURPRISE
+      - name: MEGADETH
+      - name: WALLOWS
+      - name: FOSTER THE PEOPLE
+      - name: SLIGHTLY STOOPID
+      - name: FLIPTURN
+      - name: OF THE TREES
+      - name: JPEGMAFIA
+      - name: MARINA
+      - name: TAPE B
+      - name: MJ LENDERMAN
+      - name: BOSSMAN DLOW
+      - name: INZO
+      - name: LEVITY
+      - name: MANNEQUIN PUSSY
+      - name: LEON THOMAS
+      - name: CULTS
+      - name: ALY & AJ
+      - name: MATT CHAMPION
+      - name: DETOX UNIT
+      - name: RACHEL CHINOURIRI
+      - name: EATER
+      - name: GINGER ROOT
+      - name: BEBE STOCKWELL
+      - name: EFFIN
+  - number: 3
+    date: 2025-06-14
+    display_name: Day 3
+    artists:
+      - name: OLIVIA RODRIGO
+      - name: AVRIL LAVIGNE
+      - name: JUSTICE
+      - name: NELLY
+      - name: GORILLA
+      - name: MT. JOY
+      - name: RL GRIME
+      - name: BEABADOOBEE
+      - name: TYLA
+      - name: JESSIE MURPH
+      - name: MODEST MOUSE
+      - name: GORGON CITY
+      - name: FLATLAND CAVALRY
+      - name: HOT MULLIGAN
+      - name: ACTION BRONSON
+      - name: CRANKDAT
+      - name: DOPE LEMON
+      - name: GIGI PEREZ
+      - name: WAVE TO EARTH
+      - name: CLAPTONE
+      - name: JADE CICADA
+      - name: WHAT SO NOT
+      - name: DADI FREYR
+      - name: ZIGGY ALBERTS
+      - name: ROSSY
+      - name: DESTROY BOYS
+      - name: THE STEWS
+      - name: THEE SINSEERS AND THE ALTONS
+      - name: AHEE
+  - number: 4
+    date: 2025-06-15
+    display_name: Day 4
+    artists:
+      - name: HOZIER
+      - name: VAMPIRE WEEKEND
+      - name: QUEENS OF THE STONE AGE
+      - name: LSZEE
+      - name: REMI WOLF
+      - name: RAYE
+      - name: ROYEL OTIS
+      - name: DISPATCH
+      - name: ROLE MODEL
+      - name: BARRY CAN'T SWIM
+      - name: TREATY OAK REVIVAL
+      - name: BIG GIGANTIC
+      - name: JACK'S MANNEQUIN
+      - name: ATLIENS
+      - name: BILMURI
+      - name: SAINT MOTEL
+      - name: JAMES ARTHUR
+      - name: ALEX WARREN
+      - name: ZINGARA
+      - name: NATASHA BEDINGFIELD
+      - name: ALEXANDRA KAY
+      - name: GOLDIE BOUTILIER
+      - name: GRACE BOWERS & THE HODGE PODGE
+      - name: GORILLAT
+      - name: YDG
