@@ -1,0 +1,65 @@
+display_name: Boston Calling
+slug: bostoncalling
+region: am
+year: 2025
+days:
+  - number: 1 
+    date: 2025-05-23
+    display_name: Day 1
+    artists:
+      - name: LUKE COMBS
+      - name: MEGAN MORONEY
+      - name: SHERYL CROW
+      - name: T-PAIN
+      - name: TLC
+      - name: MIKE.
+      - name: THEE SACRED SOULS
+      - name: MAX MCNOWN
+      - name: WILDERADO
+      - name: INFINITY SONG
+      - name: KYLE DION
+      - name: BEBE STOCKWELL
+      - name: HOLY ROLLER
+      - name: LATRELL JAMES
+      - name: MEGAN FROM WORK
+      - name: FUTURE TEENS
+      - name: BATTLEMODE
+  - number: 2
+    date: 2025-05-24
+    display_name: Day 2
+    artists:
+      - name: FALL OUT BOY
+      - name: AVRIL LAVIGNE
+      - name: CAGE THE ELEPHANT
+      - name: THE BLACK CROWES
+      - name: ALL TIME LOW
+      - name: JAMES BAY
+      - name: THE MAINE
+      - name: LUCIUS
+      - name: VALLEY
+      - name: MON ROVÎA
+      - name: AMBLE
+      - name: SOFIA ISELLA
+      - name: TIMMY SKELLY
+      - name: SIMON ROBERT FRENCH
+      - name: REBUILDER
+      - name: SIDEBODY
+      - name: PINKLIDS
+  - number: 3
+    date: 2025-05-25
+    display_name: Day 3
+    artists:
+      - name: DAVE MATTHEWS BAND
+      - name: VAMPIRE WEEKEND
+      - name: SUBLIME
+      - name: PUBLIC ENEMY
+      - name: REMI WOLF
+      - name: GOTH BABE TOM MORELLO
+      - name: THE 502S
+      - name: SPIN DOCTORS
+      - name: IDK HOW FHEY FOUND ME MO LOWDA & THE HUMBLE
+      - name: SAM AUSTINS
+      - name: SNACKTIME
+      - name: LAYZI COPILOT
+      - name: VIVID BLOOM
+      - name: NATE PERRY & RAGGED COMPANY
