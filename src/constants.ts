@@ -22,7 +22,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Outside Lands", years : [ 2024, 2023, 2022, 2021, 2019 ], name : "osl", region : "am"},
     {display_name : "Bonnaroo", years : [ 2025, 2024, 2023, 2022, 2021 ], name : "bonnaroo", region : "am"},
     {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer", region : "am"},
-    {display_name : "The Governor's Ball", years : [ 2024, 2022, 2021 ], name : "govball", region : "am"},
+    {display_name : "The Governor's Ball", years : [ 2025, 2024, 2022, 2021 ], name : "govball", region : "am"},
     {display_name : "Ohanafest", years : [ 2021 ], name : "ohana", region : "am"},
     {display_name : "Riot Fest", years : [ 2021 ], name : "riot", region : "am"},
     {display_name : "Firefly", years : [ 2022, 2021 ], name : "firefly", region : "am"},

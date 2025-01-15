@@ -1,0 +1,74 @@
+display_name: The Governor's Ball
+slug: govball
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2024-06-06
+    display_name: Day 1
+    artists:
+      - name: TVLER THE CREATOR
+      - name: BENSON BOONE
+      - name: MK.GEE
+      - name: THE BACKSEAT LOVERS
+      - name: T-PAIN
+      - name: TYLA
+      - name: ROLE MODEL
+      - name: JPEGMAFIA
+      - name: BIGXTHAPLUG
+      - name: MANNEQUIN PUSSY
+      - name: THE BEACHES
+      - name: MATT CHAMPION
+      - name: WASIA PROJECT
+      - name: ISABEL LAROSA
+      - name: JEAN DAWSON
+      - name: BLACK PARTY
+      - name: STOLEN GIN
+      - name: DOGPARK
+      - name: STRAWBERRY LAUNCH
+  - number: 2
+    date: 2022-06-07
+    display_name: Day 2
+    artists:
+      - name: OLIUIA RODRIGO
+      - name: FEID
+      - name: CONAN GRAY
+      - name: YOUNG MIKO
+      - name: WALLOWS
+      - name: MARINA
+      - name: MARIAH THE SCIENTIST
+      - name: CAR SEAT HEADREST
+      - name: ARTEMAS
+      - name: WAVE TO EARTH
+      - name: THE GARDEN
+      - name: ORION SUN
+      - name: THE LEMON TWIGS
+      - name: VAVA BEY
+      - name: THE BACKFIRES
+      - name: LEXA GATES
+      - name: DIE SPITZ
+      - name: MONOBLOC
+      - name: GLASSHOUSE
+  - number: 3
+    date: 2022-06-08
+    display_name: Day 3
+    artists:
+      - name: HOLIER
+      - name: GLASS ANIMALS
+      - name: MT. JOY
+      - name: CLAIRO
+      - name: RAVE
+      - name: ROVEL OTIS
+      - name: THE JAPANESE HOUSE
+      - name: AMAARAE
+      - name: KEY GLOCK
+      - name: BERLIOZ
+      - name: MONTELL FISH
+      - name: MARK AMBOR
+      - name: JOEY VALENCE & BRAE
+      - name: FROST CHILDREN
+      - name: NOURISHED BY TIME
+      - name: MILITARIE GUN
+      - name: KYLE DION
+      - name: SNOW WIFE
+      - name: OLIVIA LUNNY
