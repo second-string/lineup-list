@@ -18,7 +18,7 @@ export const regions: Region[] = [
 
 export const supportedFestivals: Festival[] = [
     {display_name : "Coachella", years : [ 2025, 2024, 2023, 2022, 2020 ], name : "coachella", region : "am"},
-    {display_name : "Bottlerock", years : [ 2023, 2022, 2021, 2020 ], name : "bottlerock", region : "am"},
+    {display_name : "Bottlerock", years : [ 2025, 2023, 2022, 2021, 2020 ], name : "bottlerock", region : "am"},
     {display_name : "Outside Lands", years : [ 2024, 2023, 2022, 2021, 2019 ], name : "osl", region : "am"},
     {display_name : "Bonnaroo", years : [ 2025, 2024, 2023, 2022, 2021 ], name : "bonnaroo", region : "am"},
     {display_name : "Hard Summer", years : [ 2021 ], name : "hardsummer", region : "am"},
