@@ -1,0 +1,258 @@
+display_name: EDC Las Vegas
+slug: edclv
+region: am
+year: 2025
+days:
+  - number: 0
+    date: 2022-05-16
+    display_name: All Days
+    artists:
+      - name: 33 BELOW
+      - name: MPH
+      - name: 6EJOU
+      - name: ADAM TEN
+      - name: MITA GAMI
+      - name: ADRENALIZE
+      - name: AFROJACK
+      - name: AHEE
+      - name: AHMED SPINS
+      - name: AIRRICA
+      - name: ALESSO
+      - name: ALEX CHAPMAN
+      - name: ZOE GITTER
+      - name: ALIGNMENT
+      - name: ALISON WONDERLAND
+      - name: KASKADE
+      - name: ALLEYCVT
+      - name: ALOK
+      - name: AMAL NEMER
+      - name: AMELIE LENS
+      - name: AMÉMÉ
+      - name: ANDROMEDIK
+      - name: ANDY C
+      - name: ANGEL CANNON
+      - name: ANNICKA
+      - name: ANOLUXX
+      - name: APASHE
+      - name: ARGY
+      - name: ARMAND VAN HELDEN
+      - name: ARMIN VAN BUUREN
+      - name: ARMNHMR
+      - name: ARODES
+      - name: ARTBAT
+      - name: MORTEN
+      - name: ATLIENS
+      - name: AVALON
+      - name: BASSTRIPPER
+      - name: SOTA
+      - name: BASSWELL
+      - name: BELTRAN
+      - name: BEN HEMSLEY
+      - name: BEN NICKY
+      - name: BEN STERLING
+      - name: BICEP PRESENT CHROMA
+      - name: BIIA
+      - name: BILLY GILLIES
+      - name: BISCITS
+      - name: BLACK TIGER SEX MACHINE
+      - name: BLOND:ISH
+      - name: BONTAN
+      - name: CALUSSA
+      - name: BOYS NOIZE
+      - name: BRUTALISMUS 3000
+      - name: CARAVEL
+      - name: CARLITA
+      - name: CASPA
+      - name: RUSKO
+      - name: CERA KHIN
+      - name: CHAMPION
+      - name: CHARLOTTE DE WITTE
+      - name: CHASE & STATUS
+      - name: CHASEWEST
+      - name: CHRIS AVANTGARDE
+      - name: CHYL
+      - name: CLARA CUVÉ
+      - name: CLASSMATIC
+      - name: CLAWZ
+      - name: CLOONEE
+      - name: CODE BLACK
+      - name: COLE KNIGHT
+      - name: COSMIC GATE
+      - name: CRANKDAT
+      - name: D-STURB
+      - name: DA TWEEKAZ
+      - name: DANIEL ALLAN
+      - name: DANNY AVILA
+      - name: DARREN STYLES
+      - name: DAVID FORBES
+      - name: DAVID RUST
+      - name: DEATH CODE
+      - name: KAMI
+      - name: DENNIS CRUZ
+      - name: DEORRO & FRIENDS
+      - name: DEVIN WILD
+      - name: DIMENSION
+      - name: DISCO DOM
+      - name: DISCO LINES
+      - name: DISTINCT MOTIVE
+      - name: DJ ANIME
+      - name: DJ FUCKOFF
+      - name: DJ GIGOLA
+      - name: DJ SNAKE
+      - name: DOM DOLLA
+      - name: DRINKURWATER
+      - name: DUAL DAMAGE
+      - name: DYLAN BRADY
+      - name: ELI BROWN
+      - name: ERIC PRYDZ
+      - name: EXCISION
+      - name: FCUKERS
+      - name: FISHER
+      - name: FRANCIS MERCIER
+      - name: FUNK TRIBU
+      - name: MC DINO
+      - name: GESAFFELSTEIN
+      - name: VNSSA
+      - name: NALA
+      - name: GORGON CITY
+      - name: GUDFELLA
+      - name: HANNAH LAING
+      - name: HEDEX
+      - name: HORSEGIIRL
+      - name: HOT SINCE 82
+      - name: HUGEL
+      - name: I HATE MODELS
+      - name: ILLENIUM
+      - name: SLANDER
+      - name: INFEKT
+      - name: INTERPLANETARY CRIMINAL
+      - name: INVT
+      - name: INZO
+      - name: IT'S MURPH
+      - name: JACKIE HOLLANDER
+      - name: JAMES HYPE
+      - name: JESSICA AUDIFFRED
+      - name: LAYZ
+      - name: KASKADE
+      - name: KOMPANY
+      - name: KOROLOVA
+      - name: KY WILLIAM
+      - name: KYLE WATSON
+      - name: LADY FAITH
+      - name: LAKE HILLS
+      - name: LAURA VAN DAM
+      - name: LAUREN MIA
+      - name: LAVERN
+      - name: LAYTON GIORDANI
+      - name: LE YOUTH
+      - name: LEVEL UP
+      - name: LEVENKHAN
+      - name: LEVITY
+      - name: LF SYSTEM
+      - name: LIL TEXAS
+      - name: LINSKA
+      - name: LIQUID STRANGER
+      - name: LOSTLY
+      - name: LOUD LUXURY
+      - name: MADDIX
+      - name: MALUGI
+      - name: MARCO STROUS
+      - name: MARIE VAUNT
+      - name: MARLON HOFFSTADT
+      - name: MARTIN GARRIX
+      - name: THE MARTINEZ BROTHERS
+      - name: LOCO DICE
+      - name: MASHA MAR
+      - name: MATRODA
+      - name: MAU P
+      - name: MAX STYLER
+      - name: MAZ
+      - name: MCR-T
+      - name: MEDUZA
+      - name: MIKE POSNER
+      - name: MISH
+      - name: MISS MONIQUE
+      - name: MIYUKI
+      - name: MOCHAKK
+      - name: MR. BROOKS
+      - name: MRD
+      - name: NARCISS
+      - name: NETSKY
+      - name: NGHTMRE
+      - name: NICO MORENO
+      - name: NILS HOFFMANN
+      - name: NOIZU
+      - name: NORA EN PURE
+      - name: ODD MOB
+      - name: OF THE TREES
+      - name: OGUZ
+      - name: OMIKI
+      - name: OMNOM
+      - name: OMRI.
+      - name: ONLYNUMBERS
+      - name: OPPIDAN
+      - name: ØTTA
+      - name: PABLO BOZZI
+      - name: PAUL OAKENFOLD
+      - name: POCKET
+      - name: SAM BINGA
+      - name: PROSPA
+      - name: JOSH BAKER
+      - name: PRYDA
+      - name: RAECOLA
+      - name: RAY VOLPE
+      - name: RAYRAY
+      - name: RESTRICTED
+      - name: REZZ
+      - name: RIORDAN
+      - name: RIOT TEN
+      - name: RL GRIME
+      - name: ROOLER
+      - name: ROSSI.
+      - name: RUDIM3NTAL
+      - name: RZRKT
+      - name: VASTIVE
+      - name: SAMPLIFIRE
+      - name: SARA LANDRY
+      - name: SELECTIVE RESPONSE
+      - name: SHADES
+      - name: SHLØMO
+      - name: SHOWTEK
+      - name: SIDEPIECE
+      - name: SIMULA
+      - name: SKEPTA
+      - name: SKREAM
+      - name: PARTIBOI69
+      - name: SLUGG
+      - name: SOOTHSLAYER
+      - name: SOSA
+      - name: SPACE 92
+      - name: POPOF
+      - name: STELLER
+      - name: SUB ZERO PROJECT
+      - name: SULLIVAN KING
+      - name: SVDDEN DEATH
+      - name: TAPE B
+      - name: TCHAMI
+      - name: MALAA
+      - name: TDJ
+      - name: TIËSTO
+      - name: TOKIMONSTA
+      - name: TORREN FOOT
+      - name: TRANCE WAX
+      - name: TRIVECTA
+      - name: TRUTH
+      - name: TWENTY SIX
+      - name: VICTOR RUIZ
+      - name: VILLAGER
+      - name: VINI VICI
+      - name: VINTAGE CULTURE
+      - name: VNSSA
+      - name: WAKYIN
+      - name: WALKER & ROYCE
+      - name: X CLUB.
+      - name: XANDRA
+      - name: YDG
+      - name: YELLOW CLAW
+      - name: YOJI BIOMEHANIKA
+      - name: YOSUF
