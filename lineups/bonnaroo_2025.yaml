@@ -22,11 +22,18 @@ days:
       - name: THE LEMON TWIGS
       - name: WISP
       - name: SOFIA ISELLA
-      - name: KITCHENN DWELLERS
+      - name: KITCHEN DWELLERS
       - name: DOGS IN A PILE
       - name: DIE SPITZ
       - name: HEY, NOTHING
       - name: THE DROPTINES
+      - name: OF THE TREES
+      - name: TAPE B
+      - name: PARISI
+      - name: REBECCA BLACK
+      - name: TINZO
+      - name: JOJO LORENZO
+      - name: THE DISCO BISCUITS
   - number: 2
     date: 2025-06-13
     display_name: Day 2
@@ -62,6 +69,7 @@ days:
       - name: GINGER ROOT
       - name: BEBE STOCKWELL
       - name: EFFIN
+      - name: KING GIZZARD & THE LIZARD WIZARD
   - number: 3
     date: 2025-06-14
     display_name: Day 3
@@ -95,6 +103,15 @@ days:
       - name: THE STEWS
       - name: THEE SINSEERS AND THE ALTONS
       - name: AHEE
+      - name: ARCADE FIRE
+      - name: KING GIZZARD & THE LIZARD WIZARD
+      - name: BIG GIGANTIC
+      - name: ZHU
+      - name: CAMERON WINTER
+      - name: LEVITY
+      - name: MARY DROPPINZ
+      - name: MELT
+      - name: SAXSQUATCH
   - number: 4
     date: 2025-06-15
     display_name: Day 4
@@ -125,3 +142,8 @@ days:
       - name: GRACE BOWERS & THE HODGE PODGE
       - name: GORILLAT
       - name: YDG
+      - name: KING GIZZARD & THE LIZARD WIZARD
+      - name: AROOJ AFTAB
+      - name: PHOTAY
+      - name: POST SEX NACHOS
+      - name: WASHED OUT
