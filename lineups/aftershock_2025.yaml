@@ -1,0 +1,139 @@
+display_name: Aftershock
+slug: aftershock
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2023-10-02
+    display_name: Day 1
+    artists:
+      - name: BLINK-182
+      - name: GOOD CHARLOTTE
+      - name: ALL TIME LOW
+      - name: THE ALL-AMERICAN REJECTS
+      - name: ACID BATH
+      - name: TAKING BACK SUNDAY
+      - name: HOLLYWOOD UNDEAD
+      - name: MOM JEANS
+      - name: ALKALINE TRIO
+      - name: POWER TRIP
+      - name: STATE CHAMPS
+      - name: BOWLING FOR SOUP
+      - name: HOOBASTANK
+      - name: HATEBREED
+      - name: CARCASS
+      - name: ALL SHALL PERISH
+      - name: A TRIBUTE TO S.O.D.
+      - name: HIGH ON FIRE
+      - name: NAILS
+      - name: HOT MILK
+      - name: SPEED
+      - name: SNOT
+      - name: CATTLE DECAPITATION
+      - name: THE RED JUMPSUIT APPARATUS
+      - name: SPITE
+      - name: THROWN
+      - name: THE ATARIS
+      - name: DRY KILL LOGIC
+      - name: LEFT TO SUFFER
+  - number: 2
+    date: 2023-10-03
+    display_name: Day 2
+    artists:
+      - name: DEFTONES
+      - name: A PERFECT CIRCLE
+      - name: TURNSTILE
+      - name: LAMB OF GOD
+      - name: KNOCKED LOOSE
+      - name: DREAM THEATER
+      - name: BRUCE DICKINSON
+      - name: THE DILLINGER ESCAPE PLAN
+      - name: CHIODOS
+      - name: KERRY KING
+      - name: BASEMENT
+      - name: TESTAMENT
+      - name: EXODUS
+      - name: FAILURE
+      - name: ALESTORM
+      - name: DEATH ANGEL
+      - name: GET SCARED
+      - name: OF MICE AND MEN
+      - name: YNGWIE MALMSTEEN
+      - name: NORTHLANE
+      - name: FEAR FACTORY
+      - name: VIOLENT VIRA
+      - name: GLARE
+      - name: Gloryhammer
+      - name: Lacuna Coil
+      - name: LANDMVRKS
+      - name: Winds of Plague
+      - name: Forbidden
+      - name: Thornhill
+      - name: Quannnic
+  - number: 3
+    date: 2023-10-04
+    display_name: Day 3
+    artists:
+      - name: KORN
+      - name: BAD OMENS
+      - name: GOJIRA
+      - name: THREE DAYS GRACE WITH ADAM GONTIER
+      - name: SLAUGHTER TO PREVAIL
+      - name: CHEVELLE
+      - name: TRIVIUM
+      - name: POWERWOLF
+      - name: DAYSEEKER
+      - name: SUNAMI
+      - name: AUGUST BURNS RED
+      - name: IMMINENCE
+      - name: BILMURI
+      - name: DRAGONFORCE
+      - name: KITTIE
+      - name: MEMPHIS MAY FIRE
+      - name: DYING FETUS
+      - name: DEMON HUNTER
+      - name: SEVEN HOURS AFTER VIOLET
+      - name: TRASH TALK
+      - name: SCOWL
+      - name: SALIVA
+      - name: Xibalba
+      - name: Dying Wish
+      - name: Nonpoint
+      - name: Born of Osiris
+      - name: Scary Kids Scaring Kids
+      - name: SPY
+      - name: Return To Dust
+      - name: Snuffed On Sight
+  - number: 4
+    date: 2023-10-05
+    display_name: Day 4
+    artists:
+      - name: BRING ME THE HORIZON
+      - name: ROB ZOMBIE
+      - name: MARILYN MANSON
+      - name: MUDVAYNE
+      - name: MOTIONLESS IN WHITE
+      - name: IN THIS MOMENT
+      - name: BLACK VEIL BRIDES
+      - name: FLYLEAF WITH LACEY STURM
+      - name: CAVALERA PERFORMING CHAOS A.D
+      - name: MACHINE HEAD
+      - name: STORY OF THE YEAR
+      - name: CHIMAIRA
+      - name: CROSSFADE
+      - name: STATIC-X
+      - name: GWAR
+      - name: POP EVIL
+      - name: REV THEORY
+      - name: HINDER
+      - name: DEVILDRIVER
+      - name: 3 INCHES OF BLOOD
+      - name: THE PLOT IN YOU
+      - name: SPINESHANK
+      - name: DOPE
+      - name: SLEEP THEORY
+      - name: SICK PUPPIES
+      - name: SIX FEET UNDER
+      - name: PRONG
+      - name: 12 STONES
+      - name: FIVE HEADED COBRA
