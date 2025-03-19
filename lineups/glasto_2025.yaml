@@ -1,0 +1,112 @@
+display_name: Glastonbury
+slug: glasto
+region: eu
+year: 2025
+days:
+  - number: 1
+    date: 2025-06-27
+    display_name: Day 1
+    artists:
+      - name: THE 1975
+      - name: LOYLE CARNER
+      - name: BIFFY CLYRO
+      - name: ALANIS MORISSETTE
+      - name: BUSTA RHYMES
+      - name: MARIBOU STATE
+      - name: GRACIE ABRAMS
+      - name: FOUR TET
+      - name: WET LEG
+      - name: ANOHNI AND THE JOHNSONS
+      - name: BADBADNOTGOOD
+      - name: BLOSSOMS
+      - name: BURNING SPEAR
+      - name: CMAT
+      - name: DENZEL CURRY
+      - name: EN VOGUE
+      - name: ENGLISH TEACHER
+      - name: FATBOY SLIM
+      - name: FAYE WEBSTER
+      - name: FLOATING POINTS
+      - name: FRANZ FERDINAND
+      - name: GLASS BEAMS
+      - name: INHALER
+      - name: LOLA YOUNG
+      - name: MYLES SMITH
+      - name: OSEES
+      - name: PINKPANTHERESS
+      - name: SELF ESTEEM
+      - name: SUPERGRASS
+      - name: VIEUX FARKA TOURÉ
+      - name: WUNDERHORSE
+  - number: 2
+    date: 2025-06-28
+    display_name: Day 2
+    artists:
+      - name: NEIL YOUNG AND THE CHROME HEARTS
+      - name: CHARLI XCX
+      - name: RAYE
+      - name: DOECHII
+      - name: DEFTONES
+      - name: EZRA COLLECTIVE
+      - name: JOHN FOGERTY
+      - name: AMYL AND THE SNIFFERS
+      - name: AMAARAE
+      - name: BEABADOOBEE
+      - name: BETH GIBBONS
+      - name: BOB VYLAN
+      - name: BRANDI CARLILE
+      - name: CARIBOU
+      - name: FATHER JOHN MISTY
+      - name: GARY NUMAN
+      - name: GREENTEA PENG
+      - name: JADE
+      - name: JAPANESE BREAKFAST
+      - name: KAISER CHIEFS
+      - name: KNEECAP
+      - name: LEFTFIELD
+      - name: LUCY DACUS
+      - name: NICK LOWE
+      - name: NOVA TWINS
+      - name: PA SALIEU
+      - name: SCISSOR SISTERS
+      - name: THE SCRIPT
+      - name: TV ON THE RADIO
+      - name: WEEZER
+      - name: YUSSEF DAYES
+  - number: 3
+    date: 2025-06-29
+    display_name: Day 3
+    artists:
+      - name: OLIVIA RODRIGO
+      - name: ROD STEWART
+      - name: THE PRODIGY
+      - name: NOAH KAHAN
+      - name: NILE RODGERS & CHIC
+      - name: WOLF ALICE
+      - name: JORJA SMITH
+      - name: OVERMONO
+      - name: THE LIBERTINES
+      - name: AJ TRACEY
+      - name: BLACK UHURU
+      - name: CELESTE
+      - name: CYMANDE
+      - name: DANILO PLESSOW
+      - name: DJO
+      - name: FUTURE ISLANDS
+      - name: GIRL IN RED
+      - name: GOAT
+      - name: JOY CROOKES
+      - name: KAE TEMPEST
+      - name: KATY J PEARSON
+      - name: PARCELS
+      - name: PAWSA
+      - name: ROYEL OTIS
+      - name: SHABOOZEY
+      - name: SNOW PATROL
+      - name: SPRINTS
+      - name: ST. VINCENT
+      - name: THE BIG MOON
+      - name: THE BRIAN JONESTOWN MASSACRE
+      - name: THE MACCABEES
+      - name: THE SELECTER
+      - name: TURNSTILE
