@@ -1,7 +1,7 @@
 import redis from "redis";
 
 import * as constants from "./constants";
-import * as helpers   from "./helpers";
+import * as helpers from "./helpers";
 
 export const spotifyAuth = () =>
     "Basic " + Buffer.from(`${constants.clientId}:${constants.clientSecret}`).toString("base64");
@@ -318,7 +318,7 @@ export async function getOrCreatePlaylist(
         if (currentPlaylistsResponse.success === undefined || !currentPlaylistsResponse.success) {
             console.log(`Error getting playlist for current user`);
             console.error(currentPlaylistsResponse.response);
-            throw new Error();
+            break;
         }
 
         playlists = playlists.concat(currentPlaylistsResponse.response.items);
@@ -345,7 +345,6 @@ export async function getOrCreatePlaylist(
         if (createPlaylistResponse === undefined || !createPlaylistResponse.success) {
             console.log(`Error creating playlist`);
             console.log(createPlaylistResponse.response);
-            throw new Error();
         }
 
         playlistObj = createPlaylistResponse.response;
