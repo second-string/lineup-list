@@ -1,0 +1,107 @@
+display_name: Outside Lands
+slug: osl
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2025-08-08
+    display_name: Main Festival
+    artists:
+      - name: Tyler, The Creator
+      - name: Hozier
+      - name: Doja Cat
+      - name: John Summit
+      - name: Anderson .Paak & The Free Nationals
+      - name: Vampire Weekend
+      - name: Glass Animals
+      - name: Gracie Abrams
+      - name: Jamie xx
+      - name: Doechii
+      - name: Gesaffelstein
+      - name: Bleachers
+      - name: Ludacris
+      - name: Jorja Smith
+      - name: Still Woozy
+      - name: Sammy Virji
+      - name: Thundercat
+      - name: Wallows
+      - name: FINNEAS
+      - name: MARINA
+      - name: Royel Otis
+      - name: ARMNHMR
+      - name: ROLE MODEL
+      - name: Artemas
+      - name: BigXthaPlug
+      - name: Bakar
+      - name: flipturn
+      - name: 2hollis
+      - name: Julien Baker & TORRES
+      - name: Fujii Kaze
+      - name: BUNT.
+      - name: Levity
+      - name: Mark Ambor
+      - name: Jessica Pratt
+      - name: Mannequin Pussy
+      - name: Rebecca Black
+      - name: LaRussell
+      - name: CA7RIEL & Paco Amoroso
+      - name: julie
+      - name: Mayer Hawthorne
+      - name: DJ Pee .Wee
+      - name: Wasia Project
+      - name: Big Freedia with SF Gay Men's Chorus
+      - name: Fcukers
+      - name: Klangphonics
+      - name: Vansire
+      - name: nimino
+      - name: Kate Bollinger
+      - name: Hope Tala
+      - name: Destroy Boys
+      - name: Luna Li
+      - name: INJI
+      - name: Sarah Kinsley
+      - name: Matt Champion
+      - name: Naomi Sharon
+      - name: Neal Francis
+      - name: Wunderhorse
+      - name: Lexa Gates
+      - name: Amelia Moore
+      - name: Paco Versailles
+      - name: Good Neighbours
+      - name: Orla Gartland
+      - name: Midrift
+      - name: Bay Ledges
+      - name: The Army, The Navy
+      - name: Arcy Drive
+      - name: Nourished by Time
+      - name: almost monday
+      - name: bLAck pARty
+      - name: Alexandra Savior
+      - name: Vincent Lima
+      - name: NewDad
+      - name: Alemeda
+      - name: Midnight Generation
+      - name: Alex Amen
+      - name: AVATARI
+
+  - number: 2
+    date: 2025-08-08
+    display_name: SOMA
+    artists:
+      - name: Black Coffee
+      - name: Claude VonStroke
+      - name: Floating Points
+      - name: Walker & Royce
+      - name: DJ Koze
+      - name: BLOND:ISH
+      - name: Dombresky
+      - name: Claptone
+      - name: NOTION
+      - name: Girl Math (VNSSA b2b Nala)
+      - name: TxC
+      - name: ATRIP
+      - name: Baalti
+      - name: DJ Mandy
+      - name: BANKSIA
+      - name: Infinite Jess
+      - name: "&friends"
