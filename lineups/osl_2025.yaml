@@ -5,7 +5,7 @@ year: 2025
 days:
   - number: 1
     date: 2025-08-08
-    display_name: Main Festival
+    display_name: Main Lineup
     artists:
       - name: Tyler, The Creator
       - name: Hozier
