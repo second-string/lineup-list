@@ -3,256 +3,278 @@ slug: edclv
 region: am
 year: 2025
 days:
-  - number: 0
+  - number: 1
     date: 2022-05-16
-    display_name: All Days
+    display_name: Day 1
     artists:
-      - name: 33 BELOW
-      - name: MPH
       - name: 6EJOU
-      - name: ADAM TEN
-      - name: MITA GAMI
-      - name: ADRENALIZE
-      - name: AFROJACK
-      - name: AHEE
-      - name: AHMED SPINS
-      - name: AIRRICA
-      - name: ALESSO
-      - name: ALEX CHAPMAN
-      - name: ZOE GITTER
-      - name: ALIGNMENT
-      - name: ALISON WONDERLAND
-      - name: KASKADE
-      - name: ALLEYCVT
-      - name: ALOK
-      - name: AMAL NEMER
-      - name: AMELIE LENS
-      - name: AMÉMÉ
-      - name: ANDROMEDIK
-      - name: ANDY C
-      - name: ANGEL CANNON
-      - name: ANNICKA
-      - name: ANOLUXX
-      - name: APASHE
-      - name: ARGY
-      - name: ARMAND VAN HELDEN
-      - name: ARMIN VAN BUUREN
+      - name: Adam Ten
+      - name: Mita Gami
+      - name: Ahee
+      - name: Airrica
+      - name: Alesso
+      - name: Alex Chapman
+      - name: Zoe Gitter
+      - name: Alok
+      - name: Andromedik
+      - name: Andy C
+      - name: DJ AniMe
+      - name: Annika
+      - name: Apashe
+      - name: Armand Van Helden
       - name: ARMNHMR
-      - name: ARODES
-      - name: ARTBAT
-      - name: MORTEN
-      - name: ATLIENS
-      - name: AVALON
-      - name: BASSTRIPPER
+      - name: Avalon
+      - name: Basstripper
       - name: SOTA
-      - name: BASSWELL
-      - name: BELTRAN
-      - name: BEN HEMSLEY
-      - name: BEN NICKY
-      - name: BEN STERLING
-      - name: BICEP PRESENT CHROMA
+      - name: Basswell
+      - name: Ben Sterling
+      - name: Rossi
       - name: BIIA
-      - name: BILLY GILLIES
-      - name: BISCITS
-      - name: BLACK TIGER SEX MACHINE
+      - name: Biscits
       - name: BLOND:ISH
-      - name: BONTAN
-      - name: CALUSSA
-      - name: BOYS NOIZE
-      - name: BRUTALISMUS 3000
+      - name: Boys Noize
       - name: CARAVEL
-      - name: CARLITA
       - name: CASPA
-      - name: RUSKO
-      - name: CERA KHIN
-      - name: CHAMPION
-      - name: CHARLOTTE DE WITTE
-      - name: CHASE & STATUS
-      - name: CHASEWEST
-      - name: CHRIS AVANTGARDE
+      - name: Rusko
+      - name: Cera Khin
       - name: CHYL
-      - name: CLARA CUVÉ
-      - name: CLASSMATIC
       - name: CLAWZ
-      - name: CLOONEE
-      - name: CODE BLACK
-      - name: COLE KNIGHT
-      - name: COSMIC GATE
-      - name: CRANKDAT
-      - name: D-STURB
-      - name: DA TWEEKAZ
-      - name: DANIEL ALLAN
-      - name: DANNY AVILA
-      - name: DARREN STYLES
-      - name: DAVID FORBES
-      - name: DAVID RUST
-      - name: DEATH CODE
-      - name: KAMI
-      - name: DENNIS CRUZ
-      - name: DEORRO & FRIENDS
-      - name: DEVIN WILD
-      - name: DIMENSION
-      - name: DISCO DOM
-      - name: DISCO LINES
-      - name: DISTINCT MOTIVE
-      - name: DJ ANIME
+      - name: Cloonee
+      - name: Crankdat
+      - name: Daniel Allan
+      - name: David Forbes
+      - name: David Rust
+      - name: Deorro
+      - name: Disco Dom
+      - name: Distinct Motive
       - name: DJ FUCKOFF
-      - name: DJ GIGOLA
       - name: DJ SNAKE
-      - name: DOM DOLLA
-      - name: DRINKURWATER
-      - name: DUAL DAMAGE
-      - name: DYLAN BRADY
-      - name: ELI BROWN
-      - name: ERIC PRYDZ
-      - name: EXCISION
-      - name: FCUKERS
-      - name: FISHER
-      - name: FRANCIS MERCIER
-      - name: FUNK TRIBU
-      - name: MC DINO
-      - name: GESAFFELSTEIN
+      - name: Dom Dolla
+      - name: Eli Brown
+      - name: Gorgon City
+      - name: Hot Since 82
+      - name: INVT
+      - name: Jackie Hollander
+      - name: Kompany
+      - name: Ky William
+      - name: Kyle Watson
+      - name: Lake Hills
+      - name: Lavern
+      - name: Layton Giordani
+      - name: Linska
+      - name: MALUGI
+      - name: Marie Vaunt
+      - name: Masha Mar
+      - name: Matroda
+      - name: Max Styler
+      - name: Mochakk
+      - name: Mr. Brooks
+      - name: NARCISS
+      - name: NGHTMRE
+      - name: Noizu
+      - name: OGUZ
+      - name: Omiki
+      - name: OMNOM
+      - name: Onlynumbers
+      - name: Paul Oakenfold
+      - name: Riot Ten
+      - name: RL Grime
+      - name: Sara Landry
+      - name: Shlømo
+      - name: Simula
+      - name: Skepta
+      - name: Skream
+      - name: Partiboi69
+      - name: SOSA
+      - name: Classmatic
+      - name: Sullivan King
+      - name: Tape B
+      - name: Tiësto
+      - name: Trivecta
+      - name: Victor Ruiz
+      - name: Vini Vici
       - name: VNSSA
-      - name: NALA
-      - name: GORGON CITY
-      - name: GUDFELLA
-      - name: HANNAH LAING
-      - name: HEDEX
-      - name: HORSEGIIRL
-      - name: HOT SINCE 82
+      - name: X CLUB.
+      - name: Yellow Claw
+      - name: Yoji Biomehanika
+  - number: 2
+    date: 2022-05-17
+    display_name: Day 2
+    artists:
+      - name: Afrojack
+      - name: Ahmed Spins
+      - name: Amal Nemer
+      - name: AMÉMÉ
+      - name: ANGEL CANNON
+      - name: BELTRAN
+      - name: Ben Hemsley
+      - name: Ben Nicky
+      - name: Billy Gillies
+      - name: Bontan
+      - name: Calussa
+      - name: Boys Noize
+      - name: Brutalismus 3000
+      - name: CARLITA
+      - name: Charlotte de Witte
+      - name: Chase & Status
+      - name: Code Black
+      - name: Cole Knight
+      - name: Cosmic Gate
+      - name: D-Sturb
+      - name: Darren Styles
+      - name: Dennis Cruz
+      - name: Devin Wild
+      - name: DIMENSION
+      - name: DJ Gigola
+      - name: Dylan Brady
+      - name: Eric Prydz
+      - name: Fcukers
+      - name: FISHER
+      - name: Francis Mercier
+      - name: Funk Tribu
+      - name: MC Dino
+      - name: Gesaffelstein
+      - name: Hannah Laing
+      - name: Hedex
+      - name: horsegiirL
       - name: HUGEL
-      - name: I HATE MODELS
       - name: ILLENIUM
       - name: SLANDER
       - name: INFEKT
-      - name: INTERPLANETARY CRIMINAL
-      - name: INVT
-      - name: INZO
-      - name: IT'S MURPH
-      - name: JACKIE HOLLANDER
-      - name: JAMES HYPE
-      - name: JESSICA AUDIFFRED
+      - name: Jessica Audiffred
       - name: LAYZ
-      - name: KASKADE
-      - name: KOMPANY
-      - name: KOROLOVA
-      - name: KY WILLIAM
-      - name: KYLE WATSON
-      - name: LADY FAITH
-      - name: LAKE HILLS
-      - name: LAURA VAN DAM
-      - name: LAUREN MIA
-      - name: LAVERN
-      - name: LAYTON GIORDANI
-      - name: LE YOUTH
+      - name: Kaskade
       - name: LEVEL UP
-      - name: LEVENKHAN
-      - name: LEVITY
       - name: LF SYSTEM
-      - name: LIL TEXAS
-      - name: LINSKA
-      - name: LIQUID STRANGER
-      - name: LOSTLY
-      - name: LOUD LUXURY
-      - name: MADDIX
-      - name: MALUGI
-      - name: MARCO STROUS
-      - name: MARIE VAUNT
-      - name: MARLON HOFFSTADT
-      - name: MARTIN GARRIX
-      - name: THE MARTINEZ BROTHERS
-      - name: LOCO DICE
-      - name: MASHA MAR
-      - name: MATRODA
-      - name: MAU P
-      - name: MAX STYLER
+      - name: Lil Texas
+      - name: Lostly
+      - name: Maddix
+      - name: Ben Nicky
+      - name: Mau P
       - name: MAZ
       - name: MCR-T
       - name: MEDUZA
-      - name: MIKE POSNER
-      - name: MISH
-      - name: MISS MONIQUE
+      - name: Mish
       - name: MIYUKI
-      - name: MOCHAKK
-      - name: MR. BROOKS
       - name: MRD
-      - name: NARCISS
-      - name: NETSKY
-      - name: NGHTMRE
-      - name: NICO MORENO
-      - name: NILS HOFFMANN
-      - name: NOIZU
-      - name: NORA EN PURE
-      - name: ODD MOB
-      - name: OF THE TREES
-      - name: OGUZ
-      - name: OMIKI
-      - name: OMNOM
-      - name: OMRI.
-      - name: ONLYNUMBERS
-      - name: OPPIDAN
+      - name: Netsky
+      - name: Odd Mob
+      - name: Oppidan
       - name: ØTTA
-      - name: PABLO BOZZI
-      - name: PAUL OAKENFOLD
-      - name: POCKET
-      - name: SAM BINGA
-      - name: PROSPA
-      - name: JOSH BAKER
-      - name: PRYDA
-      - name: RAECOLA
-      - name: RAY VOLPE
+      - name: Pablo Bozzi
+      - name: Ray Volpe
       - name: RAYRAY
       - name: RESTRICTED
-      - name: REZZ
-      - name: RIORDAN
-      - name: RIOT TEN
-      - name: RL GRIME
-      - name: ROOLER
-      - name: ROSSI.
-      - name: RUDIM3NTAL
+      - name: Rezz
       - name: RZRKT
-      - name: VASTIVE
-      - name: SAMPLIFIRE
-      - name: SARA LANDRY
-      - name: SELECTIVE RESPONSE
+      - name: Vastive
+      - name: SampliFire
       - name: SHADES
-      - name: SHLØMO
-      - name: SHOWTEK
-      - name: SIDEPIECE
-      - name: SIMULA
-      - name: SKEPTA
-      - name: SKREAM
-      - name: PARTIBOI69
-      - name: SLUGG
-      - name: SOOTHSLAYER
       - name: SOSA
-      - name: SPACE 92
+      - name: Space 92
       - name: POPOF
-      - name: STELLER
-      - name: SUB ZERO PROJECT
-      - name: SULLIVAN KING
+      - name: Sub Zero Project
       - name: SVDDEN DEATH
-      - name: TAPE B
-      - name: TCHAMI
-      - name: MALAA
+      - name: Tchami
+      - name: Malaa
       - name: TDJ
-      - name: TIËSTO
-      - name: TOKIMONSTA
-      - name: TORREN FOOT
-      - name: TRANCE WAX
-      - name: TRIVECTA
-      - name: TRUTH
+      - name: The Martinez Brothers
+      - name: Loco Dice
+      - name: Torren Foot
+      - name: Trance Wax
       - name: TWENTY SIX
-      - name: VICTOR RUIZ
-      - name: VILLAGER
-      - name: VINI VICI
-      - name: VINTAGE CULTURE
-      - name: VNSSA
-      - name: WAKYIN
-      - name: WALKER & ROYCE
-      - name: X CLUB.
+      - name: Villager
+      - name: Vintage Culture
+      - name: Wakyin
       - name: XANDRA
+  - number: 3
+    date: 2022-05-18
+    display_name: Day 3
+    artists:
+      - name: 33 Below
+      - name: MPH
+      - name: Adrenalize
+      - name: Alignment
+      - name: Alison Wonderland
+      - name: Kaskade
+      - name: ALLEYCVT
+      - name: Amelie Lens
+      - name: ANOLUXX
+      - name: ARGY
+      - name: Armin van Buuren
+      - name: Arodes
+      - name: ARTBAT
+      - name: MORTEN
+      - name: ATLiens
+      - name: Ben Sterling
+      - name: Black Tiger Sex Machine
+      - name: Champion
+      - name: ChaseWest
+      - name: Chris Avantgarde
+      - name: Clara Cuvé
+      - name: Cole Knight
+      - name: Crankdat
+      - name: Tape B
+      - name: Da Tweekaz
+      - name: DANNY AVILA
+      - name: DEATH CODE
+      - name: KAMI
+      - name: Disco Lines
+      - name: Dombresky
+      - name: Drinkurwater
+      - name: Dual Damage
+      - name: Excision
+      - name: Funk Tribu
+      - name: ØTTA
+      - name: VNSSA
+      - name: NALA
+      - name: GUDFELLA
+      - name: I Hate Models
+      - name: Interplanetary Criminal
+      - name: INZO
+      - name: it's murph
+      - name: James Hype
+      - name: Korolova
+      - name: Lady Faith
+      - name: Laura van Dam
+      - name: Lauren Mia
+      - name: Le Youth
+      - name: Levenkhan
+      - name: Levity
+      - name: Liquid Stranger
+      - name: Loud Luxury
+      - name: Maddix
+      - name: Marco Strous
+      - name: Marlon Hoffstadt
+      - name: Martin Garrix
+      - name: Matroda
+      - name: Mike Posner
+      - name: Miss Monique
+      - name: Nico Moreno
+      - name: Nils Hoffmann
+      - name: Nora En Pure
+      - name: Odd Mob
+      - name: Of The Trees
+      - name: OMRI.
+      - name: POCKET
+      - name: Sam Binga
+      - name: Prospa
+      - name: Josh Baker
+      - name: Pryda
+      - name: RaeCola
+      - name: RIORDAN
+      - name: Rooler
+      - name: Rudimental
+      - name: Selective Response
+      - name: Showtek
+      - name: SIDEPIECE
+      - name: SLUGG
+      - name: Soothslayer
+      - name: Southstar
+      - name: Steller
+      - name: TOKiMONSTA
+      - name: TRUTH
+      - name: VOYD
+      - name: Walker & Royce
       - name: YDG
-      - name: YELLOW CLAW
-      - name: YOJI BIOMEHANIKA
-      - name: YOSUF
+      - name: Yosuf
