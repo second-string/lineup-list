@@ -66,6 +66,7 @@ days:
       - name: DETOX UNIT
       - name: RACHEL CHINOURIRI
       - name: EATER
+        spotify_uri: 5o9dfJmonwleJh7VcO5m3Z
       - name: GINGER ROOT
       - name: BEBE STOCKWELL
       - name: EFFIN
@@ -77,8 +78,9 @@ days:
       - name: OLIVIA RODRIGO
       - name: AVRIL LAVIGNE
       - name: JUSTICE
+        spotify_uri: 1gR0gsQYfi6joyO1dlp76N
       - name: NELLY
-      - name: GORILLA
+      - name: GLORILLA
       - name: MT. JOY
       - name: RL GRIME
       - name: BEABADOOBEE
@@ -99,6 +101,7 @@ days:
       - name: DADI FREYR
       - name: ZIGGY ALBERTS
       - name: ROSSY
+        spotify_uri: 4wJ7gER76tRe6yTO87KySS
       - name: DESTROY BOYS
       - name: THE STEWS
       - name: THEE SINSEERS AND THE ALTONS
@@ -111,6 +114,7 @@ days:
       - name: LEVITY
       - name: MARY DROPPINZ
       - name: MELT
+        spotify_uri: 0G7KI9I5BApiXc5Sqpyil9
       - name: SAXSQUATCH
   - number: 4
     date: 2025-06-15
