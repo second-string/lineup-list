@@ -11,7 +11,7 @@ days:
       - name: DOM DOLLA
       - name: SAMMY VIRJI
       - name: MARCUS KING
-      - name: GREENN VELVET
+      - name: GREEN VELVET
       - name: 2HOLLIS
       - name: INSANE CLOWN POSSE
       - name: JOEY VALENCE & BRAE
@@ -21,6 +21,7 @@ days:
       - name: AZZECCA
       - name: THE LEMON TWIGS
       - name: WISP
+        spotify_uri: 3TJZG17pjOKXwx1ELKJPfm
       - name: SOFIA ISELLA
       - name: KITCHEN DWELLERS
       - name: DOGS IN A PILE
@@ -32,6 +33,7 @@ days:
       - name: PARISI
       - name: REBECCA BLACK
       - name: TINZO
+        spotify_uri: 0GJISdfop8sLeaYGimeSoG
       - name: JOJO LORENZO
       - name: THE DISCO BISCUITS
   - number: 2
@@ -42,6 +44,7 @@ days:
       - name: JOHN SUMMIT
       - name: GLASS ANIMALS
       - name: TIPPER
+        spotify_uri: 1soJ22UMyjIw6SYFtoFJwe
       - name: GOOSE
       - name: THE RED CLAY STRAYS
       - name: RAINBOW KITTEN SURPRISE
@@ -53,6 +56,7 @@ days:
       - name: OF THE TREES
       - name: JPEGMAFIA
       - name: MARINA
+      - name: DAMIANO DAVID
       - name: TAPE B
       - name: MJ LENDERMAN
       - name: BOSSMAN DLOW
@@ -61,6 +65,7 @@ days:
       - name: MANNEQUIN PUSSY
       - name: LEON THOMAS
       - name: CULTS
+        spotify_uri: 3Oim8XBPbznAa8Jj8QzNc8
       - name: ALY & AJ
       - name: MATT CHAMPION
       - name: DETOX UNIT
@@ -80,6 +85,7 @@ days:
       - name: JUSTICE
         spotify_uri: 1gR0gsQYfi6joyO1dlp76N
       - name: NELLY
+        spotify_uri: 2gBjLmx6zQnFGQJCAQpRgw
       - name: GLORILLA
       - name: MT. JOY
       - name: RL GRIME
@@ -149,5 +155,6 @@ days:
       - name: KING GIZZARD & THE LIZARD WIZARD
       - name: AROOJ AFTAB
       - name: PHOTAY
+        spotify_uri: 1MSxOmIt7uYgvPydd1tU8F
       - name: POST SEX NACHOS
       - name: WASHED OUT
