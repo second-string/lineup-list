@@ -36,6 +36,22 @@ days:
         spotify_uri: 0GJISdfop8sLeaYGimeSoG
       - name: JOJO LORENZO
       - name: THE DISCO BISCUITS
+      - name: BOY GOLDEN
+        spotify_uri: 4oNZapwLKDfR92AX7LbRk1
+      - name: COURTING
+        spotify_uri: 3oLTaC5QBOH96VbxMAafpZ
+      - name: CRUMBSNATCHERS
+        spotify_uri: 3dLJnCnQFqzMHerEUMpYH4
+      - name: GRIFFIN WILLIAM SHERRY
+        spotify_uri: 1YKyVCadrQA7QEFhxRHHX9
+      - name: JON MUQ
+        spotify_uri: 5zAZlJoWriAEhhOlm96vPe
+      - name: PEOPLE R UGLY
+        spotify_uri: 1kXY7pco0sC6GEgJW9xxyI
+      - name: SHANNON LAUREN CALLIHAN
+        spotify_uri: 4bbW7o78JYMG9yuIZgPXD2
+      - name: VAULTBOY
+        spotify_uri: 0K87f3owemzI8NUCoEIXOB
   - number: 2
     date: 2025-06-13
     display_name: Day 2
@@ -76,6 +92,18 @@ days:
       - name: BEBE STOCKWELL
       - name: EFFIN
       - name: KING GIZZARD & THE LIZARD WIZARD
+      - name: ABBIE CALLAHAN
+        spotify_uri: 6XwNHIhBOIQCoD7zAR2Xhm
+      - name: DOGPARK
+        spotify_uri: 2VlmDb05CPERyCZfmZI3x7
+      - name: HELLO MARY
+        spotify_uri: 6kgB8Ix1GHS4t8OWmsMDGn
+      - name: LIP CRITIC
+        spotify_uri: 4ABuKdLlVyzLztIFR8ETX9
+      - name: SUGADAISY
+        spotify_uri: 0eGAT5gCCSuMjddCUkGqeZ
+      - name: THE TAKES
+        spotify_uri: 22CxvQCHRWjDdy0nco4nch
   - number: 3
     date: 2025-06-14
     display_name: Day 3
@@ -122,6 +150,18 @@ days:
       - name: MELT
         spotify_uri: 0G7KI9I5BApiXc5Sqpyil9
       - name: SAXSQUATCH
+      - name: CARTER VAIL
+        spotify_uri: 4Bu9DnBZ12oX7MiiaJy9hK
+      - name: ELKE
+        spotify_uri: 5hYrKCvJDo3NMvcGKQQqBM
+      - name: MOTHERFOLK
+        spotify_uri: 70fUpxdAr6t0LJw3xJmMhm
+      - name: THE PSYCODELICS
+        spotify_uri: 5laLttRqR3x1WXHZ9eZOko
+      - name: TIMMY SKELLY
+        spotify_uri: 4jeNMayo3ERH8lqe2Cd8kb
+      - name: TRUMAN SINCLAIR
+        spotify_uri: 6blV8nsJMWan2a2sYFyxVG
   - number: 4
     date: 2025-06-15
     display_name: Day 4
@@ -158,3 +198,13 @@ days:
         spotify_uri: 1MSxOmIt7uYgvPydd1tU8F
       - name: POST SEX NACHOS
       - name: WASHED OUT
+      - name: THE ARMY, THE NAVY
+        spotify_uri: 4MAnvDgzeM6bAVUVUbUeFI
+      - name: FRANNI CASH
+        spotify_uri: 4fxcjHw2RUb4fBwuqHufT1
+      - name: THE GREETING COMMITTEE
+        spotify_uri: 1MIe1z4RdqLqHSJsb7EBMm
+      - name: MORGAN JOHNSTON
+        spotify_uri: 7Id5sMAP4fhLdPeweOusnC
+      - name: VEAUX
+        spotify_uri: 1asSK5d79kA4LoNp4LmV3z
