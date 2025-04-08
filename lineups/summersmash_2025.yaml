@@ -1,0 +1,73 @@
+display_name: Summer Smash
+slug: summersmash
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2025-06-20
+    display_name: Day 1
+    artists:
+      - name: DON TOLIVER
+      - name: YEAT
+      - name: TRIPPIE REDD
+      - name: SKI MASK THE SLUMP GOD
+      - name: NLE CHOPPA
+      - name: YOUNG NUDY
+      - name: NETTSPEND
+      - name: CHE
+      - name: DC THE DON
+      - name: MOLLY SANTANA
+      - name: BENJI BLUE BILLS
+      - name: KARRAHBOOO
+      - name: WEILAND
+      - name: CLIP
+      - name: PRETTIFUN
+      - name: THIRTEENDEGREES
+      - name: BOSSFTR
+  - number: 2
+    date: 2022-06-21
+    display_name: Day 2
+    artists:
+      - name: FUTURE
+      - name: SEXYY RED
+      - name: LIL TECCA
+      - name: DESTROY LONELY
+      - name: SAHBABII
+      - name: SOULJA BOY
+      - name: OSAMASON
+      - name: BABYTRON
+      - name: PLAQUEBOYMAX
+      - name: LAZER DIM 700
+      - name: FAMOUS DEX
+      - name: YUNG BANS
+      - name: CHUCKYY
+      - name: 1900RUGRAT
+      - name: NINO PAID
+      - name: 10NEAM
+      - name: ADAMN KILLA
+      - name: XTSY
+      - name: KOMLA
+  - number: 3
+    date: 2022-06-22
+    display_name: Day 3
+    artists:
+      - name: YOUNG THUG
+      - name: LIL YACHTY
+      - name: CHANCE THE RAPPER
+      - name: QUAVO
+      - name: NAV
+      - name: G HERBO
+      - name: SABA
+      - name: INSANE CLOWN POSSE
+      - name: LIL TRACY
+      - name: BKTHERULA
+      - name: D. SAVAGE
+      - name: SKAIWATER
+      - name: NINE VICIOUS
+      - name: BABYCHIEFDOIT
+      - name: YUNO MILES
+      - name: TIACORINE
+      - name: DC2TRILL
+      - name: K3
+      - name: SMOKEDOPE2016
+      - name: RONSHACH
