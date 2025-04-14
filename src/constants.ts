@@ -90,4 +90,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "FORM", years : [ 2024 ], name : "form", region : "am"},
     {display_name : "Boston Calling", years : [ 2025 ], name : "bostoncalling", region : "am"},
     {display_name : "Summer Smash", years : [ 2025 ], name : "summersmash", region : "am"},
+    {display_name : "Louder Than Life", years : [ 2025 ], name : "louderthanlife", region : "am"},
 ];
