@@ -62,6 +62,7 @@ days:
       - name: TIPPER
         spotify_uri: 1soJ22UMyjIw6SYFtoFJwe
       - name: GOOSE
+        spotify_uri: 5tkITWzssc9z9hu7ZEOCXz
       - name: THE RED CLAY STRAYS
       - name: RAINBOW KITTEN SURPRISE
       - name: MEGADETH
@@ -104,6 +105,16 @@ days:
         spotify_uri: 0eGAT5gCCSuMjddCUkGqeZ
       - name: THE TAKES
         spotify_uri: 22CxvQCHRWjDdy0nco4nch
+      - name: IT'S MURPH
+        spotify_uri: 3zW0xazqnHoq9QV9zBROVC
+      - name: AYYBO
+        spotify_uri: 0YVquC9RaJLYFNmlJFzkTV
+      - name: OMNOM
+        spotify_uri: 3PYRXP25JcbqhvNaJYcnWy
+      - name: KAMINO
+        spotify_uri: 6XYhu7HPIJ47SY98bY1Hnx
+      - name: AIRRICA
+        spotify_uri: 57sPl5iWgq5t6AscVbMTOW
   - number: 3
     date: 2025-06-14
     display_name: Day 3
