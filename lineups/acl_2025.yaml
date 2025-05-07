@@ -1,0 +1,141 @@
+display_name: Austin City Limits
+slug: acl
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2025-10-03
+    display_name: Both Weekends
+    artists:
+      - name: Sabrina Carpenter
+      - name: Hozier
+      - name: Doja Cat
+      - name: Luke Combs
+      - name: The Strokes
+      - name: John Summit
+      - name: Doechii
+      - name: FEID
+      - name: CAGE THE ELEPHANT
+      - name: T PAIN
+      - name: EMPIRE OF THE SUN
+      - name: DJO
+      - name: MK.GEE
+      - name: POLO & PAN ROLE MODEL
+      - name: RAINBOW KITTEN SURPRISE
+      - name: WET LEG
+      - name: DR. DOG
+      - name: KING PRINCESS
+      - name: JAPANESE BREAKFAST
+      - name: MAGDALENA BAY
+      - name: OLIVIA DEAN
+      - name: MARINA
+      - name: DYLAN GOSSETT
+      - name: GIGI PEREZ
+      - name: MJ LENDERMAN
+      - name: THE FAVORS
+      - name: LATIN MAFIA
+      - name: DISCO LINES
+      - name: PASSION PIT
+      - name: THE DARE
+      - name: OCEAN ALLEY
+      - name: JOEY VALENCE & BRAE
+      - name: LP GIOBBI
+      - name: CONFIDENCE MAN
+      - name: PANDA BEAR
+      - name: ANDERSON EAST
+      - name: SPACEY JANE
+      - name: TANNER USREY
+      - name: GOOD NEIGHBOURS
+      - name: YOKE LORE
+      - name: LA LOM
+      - name: LUCIUS
+      - name: ROYAL & THE SERPENT
+      - name: JENSEN MCRAE
+      - name: SPILL TAB
+      - name: FLOWEROVLOVE
+      - name: VINCENT LIMA
+      - name: AMBLE
+      - name: ALEMEDA
+      - name: DON WEST
+      - name: MIDNIGHT GENERATION
+      - name: CHEZILE
+      - name: SYDNEY ROSE
+  - number: 2
+    date: 2025-10-04
+    display_name: Weekend 1
+    artists:
+      - name: MAREN MORRIS
+      - name: SAMMY VIRJI
+      - name: MODEST MOUSE
+      - name: THE BACKSEAT LOVERS
+      - name: RIIZE
+      - name: PHANTOGRAM
+      - name: WILLOW AVALON
+      - name: BRISCOE
+      - name: WILD RIVERS
+      - name: CELESTE
+      - name: HONESTAV
+      - name: HAUTE & FREDDY
+      - name: ORIONS BELTE
+      - name: THE HEAVY HEAVY
+      - name: BEBE STOCKWELL
+      - name: HOTLINE TNT
+      - name: NEXT OF KIN
+      - name: LAMONT LANDERS
+      - name: TIERA KENNEDY
+      - name: ASLEEP At THE WHEEL
+      - name: INOHA
+      - name: CLOVER COUNTY
+      - name: NICKY YOURE
+      - name: MOODY JOODY
+      - name: LINKA MOJA
+      - name: S.L. HOUSER
+      - name: GOLDFORD
+      - name: CHUWI
+      - name: ZINADELPHIA
+      - name: TYLER BALLGAME
+      - name: LVVRS
+      - name: THE ANIMEROS
+      - name: GETO GALA
+      - name: GIZMO VARILLAS
+      - name: AARON PAGE
+      - name: DISCIPLES OF CHRIST
+  - number: 3
+    date: 2025-10-05
+    display_name: Weekend 2
+    artists:
+      - name: PIERCE THE VEIL
+      - name: RILO KILEY
+      - name: ZEDS DEAD
+      - name: CAR SEAT HEADREST
+      - name: SAM BARBER
+      - name: GREGORY ALAN ISAKOV
+      - name: FUJII KAZE
+      - name: BILMURI
+      - name: CARIEL & PACO AMOROSO
+      - name: LEISURE
+      - name: TOPS
+      - name: HANS WILLIAMS
+      - name: CROWE BOYS
+      - name: JULIE
+      - name: ODEAL
+      - name: HEY, NOTHING
+      - name: AIDAN BISSETT
+      - name: JOHNNY STIMS
+      - name: FANCY HAGOOD
+      - name: THE BENDS
+      - name: TEEN JESUS AND THE JEAN TEASERS
+      - name: SKRILLA
+      - name: ERIC SLICK
+      - name: SOUTHALL
+      - name: THE POINT
+      - name: MAGGIE ANTONE
+      - name: SOUTH ARCADE
+      - name: GIRL TONES
+      - name: ALLY SALORT
+      - name: DIZZY FAE
+      - name: FARMER'S WIFE
+      - name: ALEX AMEN
+      - name: SHALLOWATER
+      - name: TED HAMMIG & THE CAMPAIGN
+
