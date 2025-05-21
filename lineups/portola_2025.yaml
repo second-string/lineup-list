@@ -1,0 +1,82 @@
+display_name: Portola
+slug: portola
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2022-09-20
+    display_name: Day 1
+    artists:
+      - name: LCD SOUNDSYSTEM
+      - name: HAAI
+      - name: CHRISTINA AGUILERA
+      - name: CARIBOU
+      - name: CONFIDENCE MAN
+      - name: DUKE DUMONT
+      - name: 1TBSP
+      - name: THE DARE
+      - name: MAGDALENA BAY
+      - name: ARC DE SOLEIL
+      - name: OPPIDAN
+      - name: YOUSUKE YUK1 MATSU
+      - name: LOUKEMAN
+      - name: SALUTE
+      - name: NEIL FRANCES
+      - name: KELLY LEE OWENS
+      - name: THE CHEMICAL BROTHERS
+      - name: VILLAGER
+      - name: X CLUB,
+      - name: BOB MOSES
+      - name: JAZZY
+      - name: KILIMANJARO
+      - name: ANTI UP
+      - name: THE HELLP
+      - name: MARIE DAVIDSON
+      - name: PROSPA
+      - name: KETTAMA
+      - name: NATE SIB
+      - name: SKI AGGU
+      - name: DABEULL
+      - name: BAD JUUJU
+      - name: DESPACIO
+      - name: KUMO 99
+      - name: ZACK FOX
+      - name: MAU P
+  - number: 2
+    date: 2022-09-21
+    display_name: Day 2
+    artists:
+      - name: DOM DOLLA
+      - name: BRUTALSMUS 3000
+      - name: PEGGY GU
+      - name: BLAWAN
+      - name: BLOOD ORANGE
+      - name: SWIMMING PAUL
+      - name: KI/KI
+      - name: RICO NASTY
+      - name: ARCA
+      - name: HAMDI*
+      - name: CHRIS STUSSY
+      - name: RAVYN LENAE
+      - name: HORSE MEAT DISCO
+      - name: UNDERWORLD
+      - name: THE RAPTURE
+      - name: THE PRODIGY
+      - name: SKIIS
+      - name: SHEE
+      - name: HAUTE & FREDDY
+      - name: MOBY
+      - name: KREAYSHAN
+      - name: BOY HARSHER
+      - name: NICK LEON
+      - name: MARIBOU STATE
+      - name: NOGA EREZ
+      - name: 2MANYDJS
+      - name: EROL ALKAN
+      - name: THE BLESSED MADONNA
+      - name: TIGA
+      - name: MALUGI
+      - name: DJ GIGOLA
+      - name: BOLIS PUPUL
+      - name: DESPACIO
+      - name: DYLAN BRADY
