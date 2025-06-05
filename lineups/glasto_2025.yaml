@@ -8,105 +8,221 @@ days:
     display_name: Day 1
     artists:
       - name: THE 1975
-      - name: LOYLE CARNER
       - name: BIFFY CLYRO
       - name: ALANIS MORISSETTE
-      - name: BUSTA RHYMES
-      - name: MARIBOU STATE
-      - name: GRACIE ABRAMS
-      - name: FOUR TET
-      - name: WET LEG
-      - name: ANOHNI AND THE JOHNSONS
-      - name: BADBADNOTGOOD
-      - name: BLOSSOMS
       - name: BURNING SPEAR
       - name: CMAT
+      - name: SUPERGRASS
+      - name: LOYLE CARNER
+      - name: BUSTA RHYMES
+      - name: GRACIE ABRAMS
+      - name: FRANZ FERDINAND
+      - name: WET LEG
+      - name: INHALER
+      - name: RIZZLE KICKS
+      - name: FABIO & GROOVERIDER AND THE OUTLOOK ORCHESTRA
+      - name: MARIBOU STATE
+      - name: BADBADNOTGOOD
       - name: DENZEL CURRY
       - name: EN VOGUE
-      - name: ENGLISH TEACHER
-      - name: FATBOY SLIM
-      - name: FAYE WEBSTER
-      - name: FLOATING POINTS
-      - name: FRANZ FERDINAND
+      - name: VIEUX FARKA TOURE
       - name: GLASS BEAMS
-      - name: INHALER
-      - name: LOLA YOUNG
-      - name: MYLES SMITH
-      - name: OSEES
+      - name: CA7RIEL & PACO AMOROSO
+      - name: CORTO.ALTO
+      - name: FOUR TET
+      - name: FLOATING POINTS
       - name: PINKPANTHERESS
+      - name: BLOSSOMS
+      - name: LOLA YOUNG
+      - name: SHED SEVEN
+      - name: FAT DOG
+      - name: MYLES SMITH
+      - name: ANOHNI AND THE JOHNSONS
       - name: SELF ESTEEM
-      - name: SUPERGRASS
-      - name: VIEUX FARKA TOURÉ
       - name: WUNDERHORSE
+      - name: OSEES
+      - name: ENGLISH TEACHER
+      - name: FAYE WEBSTER
+      - name: JALEN NGONDA
+      - name: JOHN GLACIER
+      - name: HORSEGIRL
+      - name: ANI DIFRANCO
+      - name: THE SEARCHERS
+      - name: DHANI HARRISON
+      - name: BILLIE MARTEN
+      - name: SKERRYVORE
+      - name: HUGH CORNWELL
+      - name: GABRIELLE APLIN
+      - name: TIFT MERRITT
+      - name: NADIA REID
+      - name: OUR MAN IN THE FIELD
+      - name: THE FRATELLIS
+      - name: TERRORVISION
+      - name: THE MAGIC NUMBERS
+      - name: ORLA GARTLAND
+      - name: ASH
+      - name: PARIS PALOMA
+      - name: RUMBA DE BODAS
+      - name: BEANS ON TOAST
+      - name: BILLY BRAGG
+      - name: ANTONY SZMIEREK
+      - name: JASMINE.4.T
+      - name: GURRIERS
+      - name: THE MEFFS
+      - name: JOB JOBSE B2B PALMS TRAX
+      - name: ROMY
+      - name: SONNY FODERA
+      - name: DRAGONFLY SHOW
+      - name: MAX COOPER
+      - name: OPTIMO (ESPACIO)
+      - name: LOGIC 1000
   - number: 2
     date: 2025-06-28
     display_name: Day 2
     artists:
       - name: NEIL YOUNG AND THE CHROME HEARTS
-      - name: CHARLI XCX
       - name: RAYE
-      - name: DOECHII
+      - name: PATCHWORK
+      - name: JOHN FOGERTY
+      - name: THE SCRIPT
+      - name: BRANDI CARLILE
+      - name: KAISER CHIEFS
+      - name: CHARLI XCX
       - name: DEFTONES
       - name: EZRA COLLECTIVE
-      - name: JOHN FOGERTY
-      - name: AMYL AND THE SNIFFERS
-      - name: AMAARAE
-      - name: BEABADOOBEE
-      - name: BETH GIBBONS
-      - name: BOB VYLAN
-      - name: BRANDI CARLILE
-      - name: CARIBOU
-      - name: FATHER JOHN MISTY
-      - name: GARY NUMAN
-      - name: GREENTEA PENG
-      - name: JADE
-      - name: JAPANESE BREAKFAST
-      - name: KAISER CHIEFS
-      - name: KNEECAP
-      - name: LEFTFIELD
-      - name: LUCY DACUS
-      - name: NICK LOWE
-      - name: NOVA TWINS
-      - name: PA SALIEU
-      - name: SCISSOR SISTERS
-      - name: THE SCRIPT
-      - name: TV ON THE RADIO
+      - name: AMYL & THE SNIFFERS
       - name: WEEZER
+      - name: BEABADOOBEE
+      - name: GOOD NEIGHBOURS
+      - name: ALESSI ROSE
+      - name: DOECHII
+      - name: AMAARAE
+      - name: GREENTEA PENG
       - name: YUSSEF DAYES
+      - name: KNEECAP
+      - name: BOB VYLAN
+      - name: NILÜFER YANYA
+      - name: INFINITY SONG
+      - name: SCISSOR SISTERS
+      - name: TOM ODELL
+      - name: FATHER JOHN MISTY
+      - name: TV ON THE RADIO
+      - name: NOVA TWINS
+      - name: JADE
+      - name: FCUKERS
+      - name: SORRY
+      - name: THE AMAZONS
+      - name: CARIBOU
+      - name: BETH GIBBONS
+      - name: GARY NUMAN
+      - name: PA SALIEU
+      - name: LUCY DACUS
+      - name: JAPANESE BREAKFAST
+      - name: ICHIKO AOBA
+      - name: YANN TIERSEN
+      - name: NICK LOWE
+      - name: HOTHOUSE FLOWERS
+      - name: JEREMY LOOPS
+      - name: THE CORONAS
+      - name: THE BLUEBELLS
+      - name: SOPHIE B. HAWKINS
+      - name: OISIN LEECH
+      - name: LORRAINE NASH
+      - name: HENRY GRACE
+      - name: HARD-FI
+      - name: TOM WALKER
+      - name: RACHEL CHINOURIRI
+      - name: JADE BIRD
+      - name: THE AMY WINEHOUSE BAND
+      - name: JAMIE CULLUM
+      - name: STEPHEN WILSON JR.
+      - name: BESS ATWELL
+      - name: FÜLÜ
+      - name: KATE NASH
+      - name: LAMBRINI GIRLS
+      - name: THE GUEST LIST
+      - name: CHLOE SLATER
+      - name: GIRLBAND!
+      - name: GROOVE ARMADA B2B JUNGLE (DJ SET)
+      - name: ANNIE MAC B2B JAMZ SUPERNOVA
+      - name: FOUR TET
+      - name: DRAGONFLY SHOW
+      - name: MICHAEL BIBI B2B SOLOMUN
+      - name: HANNAH WANTS
+      - name: DANNY HOWARD
+      - name: BECKY HILL
   - number: 3
     date: 2025-06-29
     display_name: Day 3
     artists:
       - name: OLIVIA RODRIGO
-      - name: ROD STEWART
-      - name: THE PRODIGY
       - name: NOAH KAHAN
       - name: NILE RODGERS & CHIC
-      - name: WOLF ALICE
-      - name: JORJA SMITH
-      - name: OVERMONO
+      - name: ROD STEWART
       - name: THE LIBERTINES
-      - name: AJ TRACEY
-      - name: BLACK UHURU
       - name: CELESTE
-      - name: CYMANDE
-      - name: DANILO PLESSOW
-      - name: DJO
-      - name: FUTURE ISLANDS
-      - name: GIRL IN RED
-      - name: GOAT
-      - name: JOY CROOKES
-      - name: KAE TEMPEST
-      - name: KATY J PEARSON
-      - name: PARCELS
-      - name: PAWSA
-      - name: ROYEL OTIS
-      - name: SHABOOZEY
-      - name: SNOW PATROL
-      - name: SPRINTS
-      - name: ST. VINCENT
-      - name: THE BIG MOON
-      - name: THE BRIAN JONESTOWN MASSACRE
-      - name: THE MACCABEES
       - name: THE SELECTER
+      - name: THE PRODIGY
+      - name: WOLF ALICE
+      - name: SNOW PATROL
       - name: TURNSTILE
+      - name: JOY CROOKES
+      - name: SHABOOZEY
+      - name: NADINE SHAH
+      - name: LOUIS DUNFORD
+      - name: OVERMONO
+      - name: PARCELS
+      - name: THE BRIAN JONESTOWN MASSACRE
+      - name: GOAT
+      - name: BLACK UHURU
+      - name: CYMANDE
+      - name: ABEL SELAOCOE & THE BANTU ENSEMBLE
+      - name: THANDII
+      - name: JORJA SMITH
+      - name: AJ TRACEY
+      - name: ST. VINCENT
+      - name: BLACK COUNTRY, NEW ROAD
+      - name: DJO
+      - name: SPRINTS
+      - name: GURRIERS
+      - name: WESTSIDE COWBOY
+      - name: THE MACCABEES
+      - name: FUTURE ISLANDS
+      - name: KAE TEMPEST
+      - name: GIRL IN RED
+      - name: ROYEL OTIS
+      - name: KATY J PEARSON
+      - name: GEORDIE GREEP
+      - name: MELIN MELYN
+      - name: ROY HARPER
+      - name: THE BOOTLEG BEATLES
+      - name: RHIANNON GIDDENS WITH DIRK POWELL
+      - name: LONDON COMMUNITY GOSPEL CHOIR
+      - name: PP ARNOLD
+      - name: THE RIPTIDE MOVEMENT
+      - name: MICHELE STODART
+      - name: THE HENRY GIRLS
+      - name: TOBY LEE
+      - name: DAWN LANDES & FRIENDS PERFORM THE LIBERATED WOMAN’S SONGBOOK
+      - name: ALABAMA 3
+      - name: BEAR'S DEN
+      - name: SAM RYDER
+      - name: THE BIG MOON
+      - name: MY BABY
+      - name: THE HORNE SECTION
+      - name: BROOKE COMBE
+      - name: TALISK
+      - name: DEA MATRONA
+      - name: GRANDSON
+      - name: REVEREND AND THE MAKERS
+      - name: RED RUM CLUB
+      - name: DU BLONDE
+      - name: THE HALFWAY KID
+      - name: BASSLAYERZ B2B BORN ON ROAD
+      - name: SHY FX B2B EATS EVERYTHING
+      - name: BRU-C
+      - name: DRAGONFLY SHOW
+      - name: GIRLS DONT SYNC
+      - name: DR BANANA B2B GALLEGOS
+      - name: EVA LAZARUS
+      - name: JEREMIAH ASIAMAH
