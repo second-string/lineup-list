@@ -1,0 +1,213 @@
+display_name: Lost Lands
+slug: lostlands
+region: am
+year: 2025
+days:
+  - number: 0
+    date: 2025-09-19
+    display_name: Day 0
+    artists:
+      - name: ACRAZE
+      - name: AHEE
+      - name: ALLEYCVT
+      - name: ANDY C
+      - name: ARMNHMR
+      - name: ATLIENS
+      - name: AUDIOFREQ
+      - name: BARELY ALIVE
+      - name: BEAR GRILLZ
+      - name: BIJOU
+      - name: BOOGIE T
+      - name: CALCIUM
+      - name: CRANKDAT
+      - name: CYCLOPS
+      - name: DABIN
+      - name: SAID THE SKY
+      - name: DEADROOM
+      - name: DION TIMMER
+      - name: DISTINCT MOTIVE
+      - name: DRINKURWATER
+      - name: EAZYBAKED
+      - name: EFFIN
+      - name: ELIMINATE
+      - name: EMORFIK
+      - name: EPTIC
+      - name: EXCISION
+      - name: SUBTRONICS
+      - name: FUNTCASE
+      - name: GHENGAR
+      - name: GORILLAT
+      - name: HAIRITAGE
+      - name: HESH
+      - name: HEDEX
+      - name: ILLENIUM
+      - name: INFEKT
+      - name: INZO
+      - name: IVY LAB
+      - name: JANTSEN
+      - name: JEANIE
+      - name: JESSICA AUDIFFRED
+      - name: JKYL & HYDE
+      - name: JSTJR
+      - name: KILL THE NOISE
+      - name: BRO SAFARI
+      - name: KOAN SOUND
+      - name: KOMPANY
+      - name: LAYZ
+      - name: LEVEL UP
+      - name: LSDREAM
+      - name: CLOZEE
+      - name: LYNY
+      - name: MERSIV
+      - name: MOODY GOOD
+      - name: MUST DIE!
+      - name: NOSTALGIX
+      - name: OLIVERSE
+      - name: ONE TRUE GOD
+      - name: PEEKABOO
+      - name: PHASEONE
+      - name: PHIBES
+      - name: RAVENSCOON
+      - name: RAY VOLPE
+      - name: REAPER
+      - name: REZZ
+      - name: RIOT TEN
+      - name: SAMPLIFIRE
+      - name: SHOCKONE
+      - name: SIMULA
+      - name: SIPPY
+      - name: SLANDER
+      - name: SMOAKLAND
+      - name: SODOWN
+      - name: SOTA
+      - name: SPACE LACES
+      - name: STUMPI
+      - name: SULLIVAN KING
+      - name: SVDDEN DEATH
+      - name: TAPE B
+      - name: TRIVECTA
+      - name: VAMPA
+      - name: VENJENT
+      - name: WOOLI
+      - name: WRECKNO
+      - name: ZINGARA
+      - name: AFTERXHEAVEN
+      - name: ALIENPARK
+      - name: ALL THE REASON
+      - name: AUTOMHATE
+      - name: AVANCE
+      - name: BADGER
+      - name: BADKLAAT
+      - name: BADVOID
+      - name: BEASTBOI.
+      - name: BENDA
+      - name: BLOSSOM
+      - name: BOMMER
+      - name: BRAINRACK
+      - name: CANABLISS
+      - name: CAPOCHINO
+      - name: CHASSI
+      - name: CHIBS
+      - name: CHMURA
+      - name: CODD DUBZ
+      - name: CONTRA
+      - name: CONTROL FREAK
+      - name: CRISO
+      - name: CRYSTAL SKIES
+      - name: DAGGZ
+      - name: DECIMATE
+      - name: DÊTRE
+      - name: DEUCEZ
+      - name: DIESELBOY
+      - name: DOMINA
+      - name: DR. USHUU
+      - name: DREAM TAKERS
+      - name: EATER
+      - name: EDDIE
+      - name: FAIRLANE
+      - name: FLOZONE
+      - name: FOCUSS
+      - name: FREAKY
+      - name: G-REX
+      - name: GHOST IN REAL LIFE
+      - name: GOOD TIMES AHEAD
+      - name: GUNPOINT
+      - name: HAMRO
+      - name: HEKLER
+      - name: HEXXA
+      - name: HEYZ
+      - name: HUMANSION
+      - name: HURTBOX
+      - name: HVDES
+      - name: HYDRAULIX
+      - name: IVORY
+      - name: JIQUI
+      - name: JON CASEY
+      - name: JOSH TEED
+      - name: KLIPTIC
+      - name: LAZRUS
+      - name: LEOTRIX
+      - name: LIQUID SMOAK
+      - name: LOUIEJAYXX
+      - name: LUZCID
+      - name: M?STIC
+      - name: MACHAKI
+      - name: MAD DUBZ
+      - name: MANTIS
+      - name: MASHBIT
+      - name: MEDICINE PLACE
+      - name: MUERTE
+      - name: MYTHM
+      - name: NEOTEK
+      - name: NIKITA THE WICKED
+      - name: NIMDA
+      - name: NITEPUNK
+      - name: NXSTY
+      - name: OKAYJAKE
+      - name: PAPER SKIES
+      - name: PERRY WAYNE
+      - name: PHOCUST
+      - name: PROSECUTE
+      - name: PUSHING DAIZIES
+      - name: PYKE
+      - name: RATED RI RIOT
+      - name: RUVLO
+      - name: RYNS
+      - name: RZRKT
+      - name: SAKA
+      - name: SATURNA
+      - name: SCAREXX
+      - name: SHADIENT
+      - name: SHANGHAI DOOM
+      - name: SHIVERZ
+      - name: SISTO
+      - name: SMITH.
+      - name: SPACE WIZARD
+      - name: STONED LEVEL
+      - name: STÖÖKI SOUND
+      - name: STVSH
+      - name: SUBFILTRONIK
+      - name: SULLY
+      - name: SUMTHIN SUMTHIN
+      - name: SUPERAVE.
+      - name: SUPER FUTURE
+      - name: THE ARCTURIANS
+      - name: THE RESISTANCE
+      - name: TISOKI
+      - name: TORCHA
+      - name: TWOPERCENT
+      - name: TYNAN
+      - name: USAYBFLOW
+      - name: VASTIVE
+      - name: VERSA
+      - name: VIPERACTIVE
+      - name: VKTM
+      - name: VLCN
+      - name: VRG
+      - name: WHALES
+      - name: WILEY
+      - name: WODD
+      - name: WONKYWILLA
+      - name: WRAZ.
+      - name: YETEP
+      - name: YOSUF
