@@ -1,0 +1,96 @@
+display_name: Voodoo Village
+slug: voodoo
+region: eu
+year: 2025
+days:
+  - number: 1
+    date: 2025-09-12
+    display_name: Day 1
+    artists:
+      - name: Acid Pauli
+      - name: Âme
+      - name: Trikk
+      - name: AIWAA
+      - name: ANNA
+      - name: Colyn
+      - name: Dixon
+      - name: EG
+      - name: Home of Shivay
+      - name: Julya Karma
+      - name: Maxim Lany
+      - name: Mind Against
+      - name: Parallelle
+  - number: 2
+    date: 2025-09-13
+    display_name: Day 2
+    artists:
+      - name: Adam Ten
+      - name: Mita gami
+      - name: Alarico
+      - name: Yanamaste
+      - name: Alycia Bezgo
+      - name: Aroh Dj
+      - name: Avangart Tabldot
+      - name: Bambounou
+      - name: Saoirse
+      - name: Bedouin
+      - name: Betical
+      - name: CARISTA
+      - name: Dj Holographic
+      - name: ELI FOLA
+      - name: Home of Shivay
+      - name: Job Jobse
+      - name: Laura Hoogland
+      - name: Lexx
+      - name: Calao
+      - name: Lola Bozzano
+      - name: LP Giobbi
+      - name: LSDXOXO
+      - name: Maceo Plex
+      - name: Mahmut Orhan
+      - name: Mëstiza
+      - name: Mushina
+      - name: Odrik
+      - name: Patrick Mason
+      - name: Satori
+      - name: Shimza
+      - name: Socko
+      - name: SPFDJ
+      - name: SALOME
+      - name: Yael Dagon
+  - number: 3
+    date: 2025-09-14
+    display_name: Day 3
+    artists:
+      - name: Antoine Flipo
+      - name: Bad Boombox
+      - name: Ben Böhmer
+      - name: Ben Klock
+      - name: Phllippa Pacho
+      - name: Calva
+      - name: CAMELPHAT
+      - name: Christian Löffler 
+      - name: COPAL 
+      - name: DESIREE
+      - name: Dr. G
+      - name: EMILIJA
+      - name: Fenrick
+      - name: Funk Tribu
+      - name: Odymel
+      - name: Héctor Oaks
+      - name: Heidi
+      - name: Henri Bergmann
+      - name: Hermine
+      - name: Home of Shivay
+      - name: KLANGKUENSTLER
+      - name: Kölsch
+      - name: Marie-Julie
+      - name: Michael Bibi
+      - name: MOsOO
+      - name: Tess
+      - name: Nico Morano
+      - name: Re-Type
+      - name: Samm B2 Ajna
+      - name: Stavroz
+      - name: TWIENA
+      - name: WhoMadeWho
