@@ -1,0 +1,107 @@
+display_name: Riot Fest
+slug: riot
+region: am
+year: 2025
+days:
+  - number: 1
+    date: 2025-09-19
+    display_name: Day 1
+    artists:
+      - name: Blink-182
+      - name: Weird Al Yankovic
+      - name: Alkaline Trio
+      - name: Rilo Kiley
+      - name: Knocked Loose
+      - name: The Pogues
+      - name: The Hold Steady
+      - name: Sparks
+      - name: Rico Nasty
+      - name: Senses Fail
+      - name: Stiff Little Fingers
+      - name: Shudder To Think
+      - name: Harms Way
+      - name: Touché Amoré
+      - name: Honey Revenge
+      - name: Camper Van Beethoven
+      - name: Mariana’s Trench
+      - name: The Didjits
+      - name: Agnostic Front
+      - name: Puddles Pity Party
+      - name: Julia Wolf
+      - name: Harrison Gordon
+      - name: Mac Sabbath
+      - name: Samiam
+      - name: The Tossers
+      - name: Shonen Knife
+      - name: The Barbarians of California
+      - name: Big Ass Truck IE
+      - name: Loviet
+      - name: Emo Philips 
+  - number: 2
+    date: 2025-09-20
+    display_name: Day 2
+    artists:
+      - name: Weezer
+      - name: Jack White
+      - name: All Time Low
+      - name: The Beach Boys
+      - name: Dropkick Murphys
+      - name: The Front Bottoms
+      - name: Knuckle Puck
+      - name: James
+      - name: The Bouncing Souls
+      - name: The Damned
+      - name: Citizen
+      - name: Free Throw
+      - name: Panchiko
+      - name: Buzzcocks
+      - name: Superchunk
+      - name: GWAR
+      - name: Militarie Gun
+      - name: The Cribs
+      - name: Helmet
+      - name: Marky Ramone Plays The Ramones
+      - name: Thrown
+      - name: H2O
+      - name: Wishy
+      - name: Violet Vira
+      - name: Speed of Light
+      - name: Girl In A Coma
+      - name: Agent Orange
+      - name: Cliffdiver
+      - name: Feral Tact
+  - number: 3
+    date: 2025-09-21
+    display_name: Day 3
+    artists:
+      - name: Green Day
+      - name: IDLES
+      - name: Jawbreaker
+      - name: Bad Religion
+      - name: The Academy Is…
+      - name: Cobra Starship
+      - name: Gym Class Heroes
+      - name: Texas Is The Reason
+      - name: The Wonder Years
+      - name: Dance Hall Crashers
+      - name: Hanson
+      - name: Inhaler
+      - name: Screeching Weasel
+      - name: Microwave
+      - name: DEHD
+      - name: The Linda Lindas
+      - name: Pegboy
+      - name: The Ataris
+      - name: Lambrini Girls
+      - name: Ovlov
+      - name: Soft Play
+      - name: Smoking Popes
+      - name: Delta Sleep
+      - name: Chase Petra
+      - name: The Effigies
+      - name: Zero Boys
+      - name: The Paradox
+      - name: Quannnic
+      - name: Weakened Friends
+      - name: Dune Rats
+      - name: Footballhead 
