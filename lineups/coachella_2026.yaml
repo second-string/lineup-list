@@ -1,0 +1,162 @@
+display_name: Coachella
+slug: coachella
+region: am
+year: 2026
+days:
+  - number: 1
+    date: 2025-04-10
+    display_name: Day 1
+    artists:
+      - name: Sabrina Carpenter
+      - name: the XX
+      - name: Nine Inch Noize
+      - name: Disclosure
+      - name: Turnstile
+      - name: Ethel Cain
+      - name: Dijon
+      - name: Teddy Swims
+      - name: KATSEYE
+      - name: Devo
+      - name: Sexyy Red
+      - name: Central Cee
+      - name: Foster the People
+      - name: Levity
+      - name: Blood Orange
+      - name: Moby
+      - name: Marlon Hoffstadt
+      - name: Lykke Li
+      - name: fakemink
+      - name: Gordo
+      - name: Creepy Nuts
+      - name: Joyce Manor
+      - name: BINI
+      - name: Kettama
+      - name: Groove Armada
+      - name: Joost
+      - name: HUGEL
+      - name: CMAT
+      - name: Slayyyter
+      - name: Prospa
+      - name: Hot Mulligan
+      - name: Hamdi
+      - name: Fleshwater
+      - name: Max Styler
+      - name: Wednesday
+      - name: Dabeull
+      - name: The Two Lips
+      - name: Ninajirachi
+      - name: Max Dean
+      - name: Luke Dean
+      - name: Cachirula & Loojan
+      - name: Jessica Brankka
+      - name: Chloé Caillet
+      - name: Rossi.
+      - name: Arodes
+      - name: NewDad
+      - name: Carolina Durante
+      - name: flowerovlove
+      - name: Febuary
+      - name: Bob Baker Marionettes
+      - name: Youna
+      - name: Sahar Z
+  - number: 2
+    date: 2025-04-11
+    display_name: Day 2
+    artists:
+      - name: Justin Bieber
+      - name: The Strokes
+      - name: GIVEON
+      - name: Addison Rae
+      - name: Labrinth
+      - name: SOMBR
+      - name: David Byrne
+      - name: Interpol
+      - name: Alex G
+      - name: Solomun
+      - name: Swae Lee
+      - name: Taemin
+      - name: PinkPantheress
+      - name: Royel Otis
+      - name: REZZ
+      - name: Fujii Kaze
+      - name: Adriatique
+      - name: Davido
+      - name: Boys Noize
+      - name: Geese
+      - name: rusowsky
+      - name: Green Velvet
+      - name: AYYBO
+      - name: Luísa Sonza
+      - name: ZULAN
+      - name: Los Hermanos Flores
+      - name: Bedouin
+      - name: Ceremony
+      - name: "54 Ultra"
+      - name: Noga Erez
+      - name: Ben Sterling
+      - name: Blondshell
+      - name: Lambrini Girls
+      - name: Ecca Vandal
+      - name: Mind Enterprises
+      - name: Freak Slug
+      - name: SOSA
+      - name: Mahmut Orhan
+      - name: Riordan
+      - name: Die Spitz
+      - name: WHATMORE
+      - name: GENESI
+      - name: Yamagucci
+  - number: 3
+    date: 2025-04-12
+    display_name: Day 3
+    artists:
+      - name: Karol G
+      - name: Young Thug
+      - name: Kaskade
+      - name: BIGBANG
+      - name: Laufey
+      - name: Major Lazer
+      - name: Iggy Pop
+      - name: FKAtwigs
+      - name: Wet Leg
+      - name: Clipse
+      - name: Subtronics
+      - name: Little Simz
+      - name: Mochakk
+      - name: Duke Dumont
+      - name: Worship
+      - name: Armin van Buuren
+      - name: Adam Beyer
+      - name: Holly Humberstone
+      - name: Gigi Perez
+      - name: The Rapture
+      - name: Suicidal Tendencies
+      - name: BUNT.
+      - name: French Police
+      - name: Black Flag
+      - name: Oklou
+      - name: Royksopp
+      - name: The Chats
+      - name: DRAIN
+      - name: Model/Actriz
+      - name: COBRAH
+      - name: Los Retros
+      - name: WhoMadeWho
+      - name: Jane Remover
+      - name: RBZ
+      - name: Glitterer
+      - name: Carlita
+      - name: Josh Baker
+      - name: MESTIZA
+      - name: "&friends"
+      - name: AZZECCA
+      - name: LE YORA
+      - name: Samia
+      - name: Tomora
+  - number: 4
+    date: 2025-04-12
+    display_name: Extras
+    artists:
+      - name: Anyma
+      - name: Radiohead
+      - name: Kid Amnesia
