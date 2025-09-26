@@ -1,0 +1,29 @@
+display_name: Decadence
+slug: decadence
+region: am
+year: 2025
+days:
+  - number: 0
+    date: 2025-12-31
+    artists:
+      - name: Disco Lines
+      - name: Dr. Fresch
+      - name: Fisher
+      - name: Gareth Emery
+      - name: Illenium
+      - name: Excision
+      - name: Jade Cicada
+      - name: Kaskade
+      - name: Knock2
+      - name: Level Up
+      - name: Loud Luxury
+      - name: Louis the Child
+      - name: Mike Posner
+      - name: Netsky
+      - name: Steve Aoki
+      - name: Subtronics
+      - name: Tape 8
+      - name: Troyboi
+      - name: Wooli
+      - name: Zedd
+      - name: Zed's Dead

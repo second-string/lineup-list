@@ -94,4 +94,5 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Sonoora", years : [ 2025 ], name : "sonoora", region : "am"},
     {display_name : "Sound Haven", years : [ 2025 ], name : "soundhaven", region : "am"},
     {display_name : "Voodoo Village", years : [ 2025 ], name : "voodoo", region : "eu"},
+    {display_name : "Decadence", years : [ 2025 ], name : "decadence", region : "am"},
 ];
