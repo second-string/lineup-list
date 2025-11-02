@@ -1,0 +1,51 @@
+display_name: Camp Flog Gnaw
+slug: cfg
+region: am
+year: 2026
+days:
+  - number: 0
+    date: 2026-11-15
+    artists:
+      - name: 2 Chainz
+      - name: A$AP Rocky
+      - name: AG Club
+      - name: Alemeda
+      - name: AzChike
+      - name: Bb trickz
+      - name: CA7RIEL & Paco Amoroso
+      - name: Chezile
+      - name: Childish Gambino
+      - name: Clairo
+      - name: Clipse
+      - name: Deb Never
+      - name: Doechii
+      - name: Domo Genesis
+      - name: Don Tolliver
+      - name: Earl Sweatshirt
+      - name: Ecca Vandal
+      - name: Fousheé
+      - name: Geezer
+      - name: GloRilla
+      - name: Kilo Kish
+      - name: La Reezy
+      - name: Larry June
+      - name: Left Brain
+      - name: Luh Tyler
+      - name: Malcolm Todd
+      - name: Men I Trust
+      - name: MIKE
+      - name: Mike G
+      - name: Navy Blue
+      - name: Paris Texas
+      - name: PARTYOF2
+      - name: Ray Vaughn
+      - name: Samara Cyn
+      - name: sombr
+      - name: T-Pain
+      - name: Teezo Touchdown
+      - name: Tems
+      - name: The Alchemist
+      - name: Thundercat
+      - name: Tyler, the Creator
+      - name: Zack Fox
+      - name: Zelooperz
