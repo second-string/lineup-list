@@ -1,10 +1,10 @@
 display_name: Camp Flog Gnaw
 slug: cfg
 region: am
-year: 2026
+year: 2025
 days:
   - number: 0
-    date: 2026-11-15
+    date: 2025-11-15
     artists:
       - name: 2 Chainz
       - name: A$AP Rocky
