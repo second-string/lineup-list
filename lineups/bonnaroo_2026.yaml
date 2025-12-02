@@ -1,0 +1,225 @@
+display_name: Bonnaroo
+slug: bonnaroo
+region: am
+year: 2026
+days:
+  - number: 1
+    date: 2026-06-11
+    display_name: Day 1
+    artists:
+      - name: SKRILLEX
+        spotify_uri: 5he5w2lnU9x7JFhnwcejqZ
+      - name: FOUR TET
+        spotify_uri: 7Eu1txygG6nJttLHbZdQOh
+      - name: VINCE STAPLES
+        spotify_uri: 68kEuyFKyqrdQQLLsmiatm
+      - name: SPIRITUAL CRAMP
+        spotify_uri: 6cpzd210jl0Bv0A8IrdRWL
+  - number: 2
+    date: 2026-06-12
+    display_name: Day 2
+    artists:
+      - name: THE STROKES
+        spotify_uri: 0epOFNiUfyON9EYx7Tpr6V
+      - name: GRIZ
+        spotify_uri: 25oLRSUjJk4YHNUsQXk7Ut
+      - name: TURNSTILE
+        spotify_uri: 2qnpHrOzdmOo1S4ox3j17x
+      - name: MT. JOY
+        spotify_uri: 69tiO1fG8VWduDl3ji2qhI
+      - name: MAJOR LAZER
+        spotify_uri: 738wLrAtLtCtFOLvQBXOXp
+      - name: JESSIE MURPH
+        spotify_uri: 2yLzlEFtIS0Q9UkyBZdQA7
+      - name: YUNGBLUD
+        spotify_uri: 6Ad91Jof8Niiw0lGLLi3NW
+      - name: GEESE
+        spotify_uri: 0WCo84qtCKfbyIf1lqQWB4
+      - name: GEESE
+        spotify_uri: 0WCo84qtCKfbyIf1lqQWB4
+      - name: CLOONEE
+        spotify_uri: 7MdlXmq2HViAJWo9cf30sR
+      - name: LIL JON
+        spotify_uri: 7sfl4Xt5KmfyDs2T3SVSMK
+      - name: BLOOD ORANGE
+        spotify_uri: 6LEeAFiJF8OuPx747e1wxR
+      - name: WET LEG
+        spotify_uri: 2TwOrUcYnAlIiKmVQkkoSZ
+      - name: HOT MULLIGAN
+        spotify_uri: 1lKZzN2d4IqiEYxyECIEHI
+      - name: BBNO$
+        spotify_uri: 41X1TR6hrK8Q2ZCpp2EqCz
+      - name: ZACK FOX
+        spotify_uri: 1UH80jhsYsFztK0anu2FNS
+      - name: SMINO
+        spotify_uri: 1ybINI1qPiFbwDXamRtwxD
+      - name: SIDEPIECE
+        spotify_uri: 5czbzNZZfWpyFgZyfT3Mkk
+      - name: RACHEL CHINOURIRI
+        spotify_uri: 4wrzxtBZw20ufDstKyTnnP
+      - name: THE DARE
+        spotify_uri: 2mqiqsaX4LzFnUP7PmHGAb
+      - name: ADVENTURE CLUB
+        spotify_uri: 5CdJjUi9f0cVgo9nFuJrFa
+      - name: NOTION
+        spotify_uri: 1uRVM0wBdtyEuU582EeKJM
+      - name: MOTHER MOTHER
+        spotify_uri: 0e86yPdC41PGRkLp2Q1Bph
+      - name: ŁASZEWO
+        spotify_uri: 6jxGLrn1I14RIeRYodOpLN
+      - name: BLUES TRAVELER
+        spotify_uri: 3pHeBYl1yujXcZqqfF1UyQ
+      - name: WOLFMOTHER
+        spotify_uri: 3yEnArbNHyTCwMRvD9SBy4
+      - name: WEDNESDAY
+        spotify_uri: 4j7DrazfBZLLD0OrVoAtEe
+      - name: THE CHATS
+        spotify_uri: 1aQ7P3HtKOQFW16ebjiks1
+      - name: LAMBRINI GIRLS
+        spotify_uri: 6VR4TJ20WGiho2xZWMuuWb
+      - name: AMBLE
+        spotify_uri: 5ZC7GPz5h9zkEfjZBUDNzI
+      - name: DANIEL ALLAN
+        spotify_uri: 5JQ1XqKJ2Art01rF4tu1Ra
+      - name: GOLDIE BOUTILIER
+        spotify_uri: 392WuM1Yb4QRI0GG4epyn5
+      - name: DORA JAR
+        spotify_uri: 4V30Q8ACPdJCcAmAYibfrH
+      - name: VILLANELLE
+        spotify_uri: 3J9QwmRJDdn9Oq1fB6mfcF
+      - name: JACKIE HOLLANDER
+        spotify_uri: 5ykY9Uweo3gl5VFpb6z6pQ
+      - name: PAWPAW ROD
+        spotify_uri: 23KIrX6iPiVOkx60F4bjNq
+  - number: 3
+    date: 2026-06-13
+    display_name: Day 3
+    artists:
+      - name: RÜFÜS DU SOL
+        spotify_uri: 5Pb27ujIyYb33zBqVysBkj
+      - name: TEDDY SWIMS
+        spotify_uri: 33qOK5uJ8AR2xuQQAhHump
+      - name: THE NEIGHBOURHOOD
+        spotify_uri: 77SW9BnxLY8rJ0RciFqkHh
+      - name: ALABAMA SHAKES
+        spotify_uri: 16GcWuvvybAoaHr0NqT8Eh
+      - name: CHASE & STATUS
+        spotify_uri: 3jNkaOXasoc7RsxdchvEVq
+      - name: SARA LANDRY
+        spotify_uri: 7eILArMiTFTQf8SEh5fFHK
+      - name: RAINBOW KITTEN SURPRISE
+        spotify_uri: 4hz8tIajF2INpgM0qzPJz2
+      - name: FREDDIE GIBBS
+        spotify_uri: 0Y4inQK6OespitzD6ijMwb
+      - name: THE ALCHEMIST
+        spotify_uri: 0eVyjRhzZKke2KFYTcDkeu
+      - name: AMYL AND THE SNIFFERS
+        spotify_uri: 3NqV2DJoAWsjl787bWaHW7
+      - name: SUB FOCUS
+        spotify_uri: 0QaSiI5TLA4N7mcsdxShDO
+      - name: GORGON CITY
+        spotify_uri: 4VNQWV2y1E97Eqo2D5UTjx
+      - name: FLIPTURN
+        spotify_uri: 7FKTg75ADVMZgY3P9ZMRtH
+      - name: PASSION PIT
+        spotify_uri: 7gjAu1qr5C2grXeQFFOGeh
+      - name: SNOW STRIPPERS
+        spotify_uri: 6TsAG8Ve1icEC8ydeHm3C8
+      - name: TASH SULTANA
+        spotify_uri: 6zVFRTB0Y1whWyH7ZNmywf
+      - name: WYATT FLORES
+        spotify_uri: 46lEQmDJLJeyltECJYJv1Y
+      - name: BOYS NOIZE
+        spotify_uri: 62k5LKMhymqlDNo2DWOvvv
+      - name: HOLLY HUMBERSTONE
+        spotify_uri: 0nnYdIpahs41QiZ9MWp5Wx
+      - name: DEATHPACT
+        spotify_uri: 09C3CKFxKEw1n1Z7kvT3jb
+      - name: SG LEWIS
+        spotify_uri: 0GG2cWaonE4JPrjcCCQ1EG
+      - name: OSEES
+        spotify_uri: 0Ynh5WKqwbdYqJUpVpfEGS
+      - name: WAYLON WYATT
+        spotify_uri: 6Ff2omMMZOd8FWNqb980Ol
+      - name: THE RUNAROUNDS
+        spotify_uri: 6G6I2kNqaE0oDRygzPRGeY
+      - name: DJ TRIXIE MATTEL
+        spotify_uri: 33hAj1SghVYxDAxZxNDcyc
+      - name: BUFFALO TRAFFIC JAM
+        spotify_uri: 22LEPYRDhoThnbpShy6fV7
+      - name: CONFIDENCE MAN
+        spotify_uri: 0RwXnFrEoI8tltFvYpJgP6
+      - name: ARCY DRIVE
+        spotify_uri: 7o1TBmx7Ube5h2Czlam84O
+      - name: MOUNTAIN GRASS UNIT
+        spotify_uri: 0FWlJ725NEZpxqxjZG3yGl
+      - name: JUELZ
+        spotify_uri: 04p1jV00pBnrmh2rKl0jnT
+      - name: THE STEWS
+        spotify_uri: 4yUYrN1PFyzwUDSzEpYYEi
+      - name: CONGRESS THE BAND
+        spotify_uri: 4LuzeYhmxPW7iKWUXmyb10
+      - name: MIDNIGHT GENERATION
+        spotify_uri: 4CKIGHCZRzNoiNDSaW5eaq
+      - name: SUNAMI
+        spotify_uri: 1pBeRGeBHNPLy95LswDViS
+      - name: NIKITA, THE WICKED
+        spotify_uri: 0Kc65Qv0ju9H2cMNnP3Tqd
+  - number: 4
+    date: 2026-06-14
+    display_name: Day 4
+    artists:
+      - name: NOAH KAHAN
+        spotify_uri: 2RQXRUsr4IW1f3mKyKsy4B
+      - name: ROLE MODEL
+        spotify_uri: 1dy5WNgIKQU6ezkpZs4y8z
+      - name: KESHA
+        spotify_uri: 6LqNN22kT3074XbTVUrhzX
+      - name: TEDESCHI TRUCKS BAND
+        spotify_uri: 2gFsmDBM0hkoZPmrO5EdyO
+      - name: CLOZEE
+        spotify_uri: 1496XxkytEk26FUJLfpVZr
+      - name: LSDREAM
+        spotify_uri: 3Hrqjumb6WHg2aAUHJHLND
+      - name: CLIPSE
+        spotify_uri: 2J257euzcjnDLipsyJH3F2
+      - name: MARIAH THE SCIENTIST
+        spotify_uri: 7HO5fOXE4gh3lzZn64tX2E
+      - name: DAILY BREAD
+        spotify_uri: 4IsiG6RpDyRq6Frd2CvddW
+      - name: MODEST MOUSE
+        spotify_uri: 1yAwtBaoHLEDWAnWR87hBT
+      - name: BIG GIGANTIC
+        spotify_uri: 7o7mC95EDbJKTcPAAs8C3r
+      - name: JAPANESE BREAKFAST
+        spotify_uri: 7MoIc5s9KXolCBH1fy9kkw
+      - name: TURNOVER
+        spotify_uri: 0gLjJuczGWhqKVMmVpIT52
+      - name: SAN HOLO
+        spotify_uri: 0jNDKefhfSbLR9sFvcPLHo
+      - name: TROMBONE SHORTY & ORLEANS AVENUE
+        spotify_uri: 37ZvFp654tY74Z1D2TLOGR
+      - name: DEL WATER GAP
+        spotify_uri: 0xPoVNPnxIIUS1vrxAYV00
+      - name: SPACEY JANE
+        spotify_uri: 6V70yeZQCoSR2M3fyW8qiA
+      - name: AUDREY HOBERT
+        spotify_uri: 4N0TAwz9vhnQtjCqS65aKS
+      - name: FCUKERS
+        spotify_uri: 3UtzOHYm3lQALkKzVD4wyO
+      - name: BLONDSHELL
+        spotify_uri: 7qrEXiLLnWkkYHhadZ1Oij
+      - name: LITTLE STRANGER
+        spotify_uri: 6nheJ1XoAkaKOLIgHzMbTq
+      - name: ALY & AJ
+        spotify_uri: 5wugb0kaq0J6nyQ5Xgd17i
+      - name: HEMLOCKE SPRINGS
+        spotify_uri: 52PdgUJOjvS6Mpmjy1SAlx
+      - name: STEPH STRINGS
+        spotify_uri: 39qxIdIb1R6se4J3X6nRPB
+      - name: A HUNDRED DRUMS
+        spotify_uri: 1dUCaUhp2RZRXrwOyUnHxQ
+      - name: GIRL TONES
+        spotify_uri: 1Tq0nryXkwLARcHDMIZbY6
+      - name: MOTIFV
+        spotify_uri: 3Q3g3xC2lDdLo3a04uK3Wp
