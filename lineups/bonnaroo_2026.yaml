@@ -8,13 +8,13 @@ days:
     display_name: Day 1
     artists:
       - name: SKRILLEX
-        spotify_uri: 5he5w2lnU9x7JFhnwcejqZ
+        spotify_uri: 5he5w2lnU9x7JFhnwcekXX
       - name: FOUR TET
         spotify_uri: 7Eu1txygG6nJttLHbZdQOh
       - name: VINCE STAPLES
         spotify_uri: 68kEuyFKyqrdQQLLsmiatm
       - name: SPIRITUAL CRAMP
-        spotify_uri: 6cpzd210jl0Bv0A8IrdRWL
+        spotify_uri: 6cpzd2aRLmkE06P4lFFMlj
   - number: 2
     date: 2026-06-12
     display_name: Day 2
@@ -33,8 +33,6 @@ days:
         spotify_uri: 2yLzlEFtIS0Q9UkyBZdQA7
       - name: YUNGBLUD
         spotify_uri: 6Ad91Jof8Niiw0lGLLi3NW
-      - name: GEESE
-        spotify_uri: 0WCo84qtCKfbyIf1lqQWB4
       - name: GEESE
         spotify_uri: 0WCo84qtCKfbyIf1lqQWB4
       - name: CLOONEE
