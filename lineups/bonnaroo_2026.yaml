@@ -163,6 +163,8 @@ days:
         spotify_uri: 1pBeRGeBHNPLy95LswDViS
       - name: NIKITA, THE WICKED
         spotify_uri: 0Kc65Qv0ju9H2cMNnP3Tqd
+      - name: '"WEIRD AL" YANKOVIC'
+        spotify_uri: 1bDWGdIC2hardyt55nlQgG
   - number: 4
     date: 2026-06-14
     display_name: Day 4
