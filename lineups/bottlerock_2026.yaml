@@ -1,0 +1,90 @@
+display_name: Bottlerock
+slug: bottlerock
+region: am
+year: 2026
+days:
+  - number: 0
+    date: 2026-05-22
+    display_name: Full Festival
+    artists:
+      - name: FOO FIGHTERS
+      - name: BAG STREET
+      - name: BOYS
+      - name: LORDE
+      - name: TEDDY SWIMS
+      - name: LCD
+      - name: SOUNDSYSTEM
+      - name: SOMBR
+      - name: LIL WAYNE
+      - name: ZEDD
+      - name: LUDACRIS
+      - name: PAPA ROACH
+      - name: MT. JOY
+      - name: SLIGHTLY STOOPID
+      - name: RILO KILEY
+      - name: AJR
+      - name: BUSTA RHYMES
+      - name: BIGXTHAPLUG
+      - name: JON BELLION
+      - name: CHAKA KHAN
+      - name: JOAN JETT
+      - name: BUSH
+      - name: TASH SULTANA
+      - name: KOOL & THE GANG
+      - name: FLIPTURN
+      - name: DEL WATER GAP
+      - name: BORNS
+      - name: MAOLI
+      - name: MEN AT WORK
+      - name: MATT MAESON
+      - name: NATASHA BEDINGFIELD
+      - name: TOM MORELLO
+      - name: REV RUN
+      - name: CUT COPY
+      - name: LARKIN POE
+      - name: BETTER THAN EZRA
+      - name: THE CALIFORNIA HONEYDROPS
+      - name: THE BETHS
+      - name: SONS OF THE EAST
+      - name: ARRESTED DEVELOPMENT
+      - name: ALMOST MONDAY
+      - name: GOOD NEIGHBOURS
+      - name: THE WARNING
+      - name: MIDNIGHT GENERATION
+      - name: PACO VERSAILLES
+      - name: CHEVY METAL
+      - name: TREACH
+      - name: BUFFALO TRAFFIC JAM
+      - name: ABSOLUTELY
+      - name: MELT
+      - name: NILÜFER YANYA
+      - name: PARIS JACKSON
+      - name: THE RETURN OF JACKIE AND JUDY
+      - name: THE HEAVY HEAVY
+      - name: CHARLOTTE LAWRENCE
+      - name: DJ PAULY D
+      - name: MEREDITH MARKS
+      - name: JESS KING
+      - name: THE PAPER KITES
+      - name: THE PARADOX
+      - name: ZINADELPHIA
+      - name: PENELOPE ROAD
+      - name: SAXSQUATCH
+      - name: NEW CONSTELLATIONS
+      - name: HANNAH COHEN
+      - name: IZZY ESCOBAR
+      - name: GIRL TONES
+      - name: FOLK BITCH TRIO
+      - name: INDY
+      - name: THE ALIVE
+      - name: MOONALICE
+      - name: THE CHIN CHINS
+      - name: NAT MYERS
+      - name: ALEC SHAW
+      - name: BETTY TAYLOR
+      - name: KHATUMU MALICK KOLY
+      - name: JAKE ZIMMA
+      - name: THE ROOKIE5
+      - name: THE SILVERADO PICKUPS
+      - name: DJ UMAMI
+      - name: BETTINA MAUREENJI
