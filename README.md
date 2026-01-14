@@ -73,7 +73,7 @@ For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `
 3. set necessary env vars (see section above)
 4. `npm i`
 5. `npm run build`
-6. `node dist/warm-cache-for-festival.js`
+6. `node dist/src/warm-cache-for-festival.js`
     * might need to run it twice if it hangs, it's kinda sketchy but has been working
     * handles pulling in artist info  for all supported festival
 7. `npm start`
@@ -85,7 +85,7 @@ For Windows, assuming using cmd.exe remove the `-n` and double quotes from the `
 3. set necessary env vars (see section above)
 4. `npm i`
 5. `npm run build`
-6. `node dist/warm-cache-for-festival.js`
+6. `node dist/src/warm-cache-for-festival.js`
     * might need to run it twice if it hangs, it's kinda sketchy but has been working
     * handles pulling in artist info  for all supported festival
 7. `npm start`
@@ -144,7 +144,7 @@ Note that is an artist name (or any other string) contains a colon (:), the valu
 1. Add a text file in the form of `[simplename]_[year].txt` or `[simplename]_[year].yaml`  in the lineups/ folder. Note that extensions are case-sensitive on some OSes.
 2. Add support for the festival within src/constants.ts following the example of the others
 3. Build ts files with `npm run build`
-4. Run `node dist/warm-cache-for-festival.js [simplename] [year]`
+4. Run `node dist/src/warm-cache-for-festival.js [simplename] [year]`
 > The following steps are optional but encouraged if you're set up to run the code locally yourself. It saves me time and will get your PR merged and deployed much faster if you can provide evidence of the below steps.
 5. Verify that for each day of the festival, the line `X == Y` in each line that prints `Received X artists from Y lineup artist`.
 > If it does not, edit the artist names right above it that are printed in the `No artist found for search term <lineup artist>`. Common fixes here are splitting two DJ artists that are on one line going B2B, removing `Live` or `(Live)` from the end of artists, or sometimes just removing an artist entirely if you manually search them on Spotify and they don't appear.
@@ -154,7 +154,7 @@ Note that is an artist name (or any other string) contains a colon (:), the valu
 
 For example:
 If you're adding a festival with a long name or name with spaces like Electric Zoo, your text file would be `electriczoo_2021.txt`. It may not have an underscore anywhere besides between name and year. For abbreviate-able festivals you can also use their shortened terms: `ezoo_2021.txt`. That would be filename and the name of the festival within the code. The option for a `display_name` in the code is where you put the pretty version, `Electric Zoo`.
-If you're running the code locally and want to test and verify once the artists and option day info is in the text file and you've added the proper support in the code, you would run `npm run build`, then `node dist/warm-cache-for-festival.js ezoo 2021`. Monitor this output for any errors, but often you can let it run in the background and take a scroll back when it's finished. It takes anywhere from 1 to 15 minutes depending on number of artists on the lineup and how many have been previously saved to your local redis cache from other lineups.
+If you're running the code locally and want to test and verify once the artists and option day info is in the text file and you've added the proper support in the code, you would run `npm run build`, then `node dist/src/warm-cache-for-festival.js ezoo 2021`. Monitor this output for any errors, but often you can let it run in the background and take a scroll back when it's finished. It takes anywhere from 1 to 15 minutes depending on number of artists on the lineup and how many have been previously saved to your local redis cache from other lineups.
 Create a PR with your changes and include any testing you've performed.
 
 ### Testing an added festival
@@ -180,10 +180,10 @@ Perform these steps if you've added a lineup and want to verify that all artists
 4. `redis-cli del "festival:[simplename]_[year]:days"`
 5. `redis-cli --scan --patern "festival:[simplename]_[year]:*"` and verify that the output is a single item ending in `:0`
 6. `redis-cli del "festival:[simplename]_[year]:0"`
-7. Rerun `node dist/warm-cache-for-festival.js [simplename] [year]` to populate days metadata
+7. Rerun `node dist/src/warm-cache-for-festival.js [simplename] [year]` to populate days metadata
 > Note: If you're getting a ton of 400s and failures running warm-cache-for-festival.js, make sure you have the spotify token set as an env variable correctly
 
 ### Updating the artist list of an existing festival
 More and more festivals are doing large shuffles of artists after their lineup is released but before the festival. If a lineup on the site is out of date, these are the only steps needed to update it.
 1. Edit the lineup text file, adding and removing any artists to match the new lineup
-2. Rerun `node dist/warm-cache-for-festival.js [simplename] [year]` to overwite metadata and fetch info for new artists
+2. Rerun `node dist/src/warm-cache-for-festival.js [simplename] [year]` to overwite metadata and fetch info for new artists
