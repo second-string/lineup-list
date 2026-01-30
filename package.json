@@ -15,6 +15,9 @@
   },
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/cookie-parser": "^1.4.2",
@@ -39,6 +42,7 @@
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.19",
     "redis": "^3.0.2",
+    "semver": "^7.6.2",
     "setlistfm-js": "^1.0.1",
     "tslint": "^6.0.0",
     "typescript": "^4.2.3",
