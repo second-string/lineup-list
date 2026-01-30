@@ -79,8 +79,8 @@ if (forceHttp) {
         creds      = {key, cert, ca};
     } else {
         console.log("Running server locally using local self-signed cert");
-        const localKey  = fs.readFileSync(__dirname + "/../lineuplist-selfsigned-key.pem", "utf-8");
-        const localCert = fs.readFileSync(__dirname + "/../lineuplist-selfsigned-cert.pem", "utf-8");
+        const localKey  = fs.readFileSync(__dirname + "/../../lineuplist-selfsigned-key.pem", "utf-8");
+        const localCert = fs.readFileSync(__dirname + "/../../lineuplist-selfsigned-cert.pem", "utf-8");
         creds           = {key : localKey, cert : localCert};
     }
 

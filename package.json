@@ -2,7 +2,7 @@
   "name": "lineup-list",
   "version": "1.0.0",
   "description": "Playlist builder for festival lineups",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
