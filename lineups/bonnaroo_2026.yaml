@@ -89,6 +89,18 @@ days:
         spotify_uri: 5ykY9Uweo3gl5VFpb6z6pQ
       - name: PAWPAW ROD
         spotify_uri: 23KIrX6iPiVOkx60F4bjNq
+      - name: EAZYBAKED
+        spotify_uri: 1ZbT8FIqEc0cktnu6mNlvv
+      - name: LUMASI
+        spotify_uri: 0y5sfSvE19x3r3nVUKYbIN
+      - name: MARY DROPPINZ
+        spotify_uri: 4tPVnr7VB15UA9TRsie3cS
+      - name: PROBCAUSE
+        spotify_uri: 1ZcfGrGrm9aHnUNVQz3sCY
+      - name: GANJA WHITE NIGHT
+        spotify_uri: 1a6oIpEh4DGgaqgWg5xwd3
+      - name: INZO
+        spotify_uri: 18Eu7uJEMPWwwt1QUdCglQ
   - number: 3
     date: 2026-06-13
     display_name: Day 3
@@ -165,6 +177,14 @@ days:
         spotify_uri: 0Kc65Qv0ju9H2cMNnP3Tqd
       - name: '"WEIRD AL" YANKOVIC'
         spotify_uri: 1bDWGdIC2hardyt55nlQgG
+      - name: BIG GIGANTIC
+        spotify_uri: 7o7mC95EDbJKTcPAAs8C3r
+      - name: CLOZEE
+        spotify_uri: 1496XxkytEk26FUJLfpVZr
+      - name: EFFIN
+        spotify_uri: 6l0u1oM2imxw0isrGcXpmH
+      - name: SMOAKLAND
+        spotify_uri: 6409kgOB4tZEkNZci6BiUs
   - number: 4
     date: 2026-06-14
     display_name: Day 4
@@ -223,3 +243,5 @@ days:
         spotify_uri: 1Tq0nryXkwLARcHDMIZbY6
       - name: MOTIFV
         spotify_uri: 3Q3g3xC2lDdLo3a04uK3Wp
+      - name: NAT MYERS
+        spotify_uri: 2QMlNryks9wyxBCsBGciTS
