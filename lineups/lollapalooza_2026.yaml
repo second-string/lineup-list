@@ -1,0 +1,179 @@
+display_name: Lollapalooza
+slug: lollapalooza
+region: am
+year: 2026
+days:
+  - number: 0
+    date: 2026-07-30
+    display_name: Full Festival
+    artists:
+      - name: CHARLI XCX
+      - name: LIL UZI VERT
+      - name: TURNSTILE
+      - name: SOMBR
+      - name: THE NEIGHBOURHOOD
+      - name: YUNGBLUD
+      - name: BEABADOOBEE
+      - name: ETHEL CAIN
+      - name: EMPIRE OF THE SUN
+      - name: MAJOR LAZER
+      - name: AESPA
+      - name: THE CHAINSMOKERS
+      - name: DISCO LINES
+      - name: NOT FOR RADIO
+      - name: LEON THOMAS
+      - name: CLIPSE
+      - name: MUNA
+      - name: ZARA LARSSON
+      - name: GEESE
+      - name: FREDDIE GIBBS
+      - name: WET LEG
+      - name: WORSHIP
+      - name: BLOOD ORANGE
+      - name: SUKI WATERHOUSE
+      - name: I-DLE
+      - name: ALISON WONDERLAND
+      - name: TATE MCRAE
+      - name: 5 SECONDS OF SUMMER
+      - name: KETTAMA
+      - name: HOT MULLIGAN
+      - name: YOASOBI
+      - name: VIAGRA BOYS
+      - name: ADO
+      - name: MUSTARD
+      - name: AUDREY HOBERT
+      - name: JADE
+      - name: SNOW STRIPPERS
+      - name: BORIS BREJCHA
+      - name: ELI BROWN
+      - name: DJ TRIXIE MATTEL
+      - name: BBNO$
+      - name: PARIS PALOMA
+      - name: OKLOU
+      - name: HORSEGIIRL
+      - name: LITTLE SIMZ
+      - name: KWN
+      - name: SIENNA SPIRO
+      - name: THE STORY SO FAR
+      - name: DUKE DUMONT
+      - name: MAX STYLER
+      - name: SPACEY JANE
+      - name: CMAT
+      - name: LORDE
+      - name: BOYS NOIZE
+      - name: FAKEMINK
+      - name: WOLF ALICE
+      - name: NETTSPEND
+      - name: SIDEPIECE
+      - name: CORTIS
+      - name: WHETHAN
+      - name: SKYE NEWMAN
+      - name: DOMBRESKY
+      - name: MONALEO
+      - name: NOTION
+      - name: AYYBO
+      - name: CAMERON WHITCOMB
+      - name: OLIVIA DEAN
+      - name: BETWEEN FRIENDS
+      - name: KHAMARI
+      - name: RØZ
+      - name: ADÉLA
+      - name: RIORDAN
+      - name: LYNY
+      - name: LOATHE
+      - name: BALU BRIGADA
+      - name: MPH
+      - name: MOTHER MOTHER
+      - name: QUADECA
+      - name: JULIA WOLF
+      - name: WUNDERHORSE
+      - name: AMBLE
+      - name: MOMMA
+      - name: FROST CHILDREN
+      - name: AMBER MARK
+      - name: NINAJIRACHI
+      - name: SLAYYYTER
+      - name: WESTEND
+      - name: KINGFISHR
+      - name: JOHN SUMMIT
+      - name: CLAIRE ROSINKRANZ
+      - name: GOLDIE BOUTILIER
+      - name: DESTIN CONRAD
+      - name: WAYLON WYATT
+      - name: 54 ULTRA
+      - name: FINN WOLFHARD
+      - name: HAUTE & FREDDY
+      - name: SB19
+      - name: INJI
+      - name: DIE SPITZ
+      - name: DEVAULT
+      - name: MARLON FUNAKI
+      - name: WATER FROM YOUR EYES
+      - name: BELLA KAY
+      - name: LUCY BEDROQUE
+      - name: LOS RETROS
+      - name: ECCA VANDAL
+      - name: HIGH VIS
+      - name: VANDELUX
+      - name: OMNOM
+      - name: BAD NERVES
+      - name: JIM LEGACY
+      - name: CHEZILE
+      - name: ASHA BANKS
+      - name: CRUZ BECKHAM
+      - name: NEW CONSTELLATIONS
+      - name: BIXBY
+      - name: THE BENDS
+      - name: PARTYOF2
+      - name: JENNIE
+      - name: AFTER
+      - name: AVELLO
+      - name: THE ARMY, THE MAVY
+      - name: JAE STEPHENS
+      - name: PEARLY DROPS WHATMORE
+      - name: RYMAN
+      - name: PALOMA MORPHY
+      - name: PORCH LIGHT
+      - name: JACKIE HOLLANDER
+      - name: EVENING ELEPHANTS
+      - name: THE SMASHING PUMPKINS
+      - name: EASY HONEY
+      - name: STELLA LEFTY
+      - name: LOVE SPELLS
+      - name: DAY WE RAN
+      - name: PENELOPE ROAD
+      - name: KNOW GOOD
+      - name: FAOUZIA
+      - name: SUNDAY (1994)
+      - name: MC4D
+      - name: ELIZABETH NICHOLS
+      - name: ELLA RED
+      - name: CHACE
+      - name: ELLA BOH
+      - name: VILLANELLE
+      - name: CALDER ALLEN
+      - name: THE BRAYMORES
+      - name: IVRI
+      - name: JUSTINE SKYE
+      - name: WILL SWINTON
+      - name: SUNSHINE
+      - name: CHALK
+      - name: SURFING FOR DAISY
+      - name: SIMON GROSSMANN
+      - name: BRADEAZY
+      - name: NAT MYERS
+      - name: INK
+      - name: PEACE CONTROL
+      - name: CASE OATS
+      - name: THE CREEKERS
+      - name: CHICAGO MADE
+      - name: NEXT OF KIN
+      - name: KLO
+      - name: VALENCIA GRACE
+      - name: SNACKTIME
+      - name: EMI GRACE
+      - name: THE XX
+      - name: BENO
+      - name: ZACK MARTINO
+      - name: KIM THEORY
+      - name: WHITNEY WHITNEY
