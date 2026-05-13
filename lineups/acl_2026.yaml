@@ -1,0 +1,140 @@
+display_name: Austin City Limits
+slug: acl
+region: am
+year: 2026
+days:
+  - number: 1
+    date: 2025-10-02
+    display_name: Both Weekends
+    artists:
+      - name: Charli XCX
+      - name: RÜFÜS DU SOL
+      - name: Twenty One Pilots
+      - name: Lorde
+      - name: The xx
+      - name: Turnstile
+      - name: Labrinth
+      - name: Lola Young
+      - name: The Chainsmokers
+      - name: Geese
+      - name: Young Miko
+      - name: Bleachers
+      - name: Sofi Tukker
+      - name: Parcels
+      - name: The War on Drugs
+      - name: Leon Thomas
+      - name: Blood Orange
+      - name: Lykke Li
+      - name: Levity
+      - name: Max McNown
+      - name: Suki Waterhouse
+      - name: Amyl and the Sniffers
+      - name: Snow Strippers
+      - name: Steve Aoki
+      - name: Audrey Hobert
+      - name: Jesse Welles
+      - name: BUNT.
+      - name: It's Murph
+      - name: Fakemink
+      - name: Saint Motel
+      - name: Fcukers
+      - name: ¥ØU$UKE ¥UK1MAT$U
+      - name: Paris Paloma
+      - name: LP
+      - name: Rusowsky
+      - name: Rodrigo y Gabriela
+      - name: Skye Newman
+      - name: Balu Brigada
+      - name: Claire Rosinkranz
+      - name: Noga Erez
+      - name: CMAT
+      - name: Arcy Drive
+      - name: Rio Kosta
+      - name: Finn Wolfhard
+      - name: Ryan Beatty
+      - name: Don West
+      - name: Temper City
+      - name: Paloma Morphy
+      - name: Sunday (1994)
+      - name: Calder Allen
+      - name: Night Tapes
+      - name: Faouzia
+  - number: 2
+    date: 2025-10-02
+    display_name: Weekend 1
+    artists:
+      - name: Skrillex
+      - name: Brandon Flowers
+      - name: Cannons
+      - name: Palace
+      - name: Stellalefty
+      - name: Marlon Funaki
+      - name: Rochelle Jordan
+      - name: underscores
+      - name: Rebecca Black
+      - name: Josh Conway
+      - name: Bo Staloch
+      - name: Molly Santana
+      - name: Hunx and His Punx
+      - name: Fancy Hagood
+      - name: New Constellations
+      - name: Britton
+      - name: Solya
+      - name: Villanelle
+      - name: Asleep at the Wheel
+      - name: DJ Cassandra
+      - name: Cure for Paranoia
+      - name: Night Traveler
+      - name: Grocery Bag
+      - name: Aaron Rowe
+      - name: Fai Laci
+      - name: Lauren Sanderson
+      - name: Emma Ogier
+      - name: Coleman Jennings
+      - name: Izzy Escobar
+      - name: Elle Coves
+      - name: Rubio
+      - name: Fightmaster
+      - name: Left Lucid
+      - name: Solomon Hicks
+      - name: The 4411
+      - name: The Moriah Sisters
+  - number: 3
+    date: 2025-10-09
+    display_name: Weekend 2
+    artists:
+      - name: Kings of Leon
+      - name: Sienna Spiro
+      - name: Houndmouth
+      - name: Bella Kay
+      - name: Natasha Bedingfield
+      - name: Łaszewo
+      - name: Kingfishr
+      - name: Ethan Regan
+      - name: Charlotte Lawrence
+      - name: Bad Nerves
+      - name: World Famous Pets
+      - name: Gabriel Jacoby
+      - name: Rum Jungle
+      - name: Kevin Atwater
+      - name: Thomas Day
+      - name: Cassandra Coleman
+      - name: S.G. Goodman
+      - name: Brigitte Calls Me Baby
+      - name: Dallas Wax
+      - name: Nat Myers
+      - name: Joe Jordan
+      - name: Chloe Qisha
+      - name: Happy Landing
+      - name: Vwillz
+      - name: Sasha Keable
+      - name: Common People
+      - name: Girlfriend
+      - name: Damaris Bojor
+      - name: Chelsea Jordan
+      - name: Marzz
+      - name: Lluvii
+      - name: Montclair
+      - name: Almost Heaven
+      - name: Leon Knight
+      - name: Presley Regier
