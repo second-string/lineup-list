@@ -1,0 +1,35 @@
+display_name: All Things Go
+slug: atg
+region: am
+year: 2026
+days:
+  - number: 1
+    date: 2026-09-25
+    display_name: Day 1
+    artists:
+      - name: Zara Larsson
+      - name: Lola Young
+      - name: Rebecca Black
+      - name: Cara Delavingne
+      - name: Blu DeTigre
+      - name: Chloe Qisha
+  - number: 2
+    date: 2026-09-26
+    display_name: Day 2
+    artists:
+      - name: Brandi Carlile
+      - name: Sienna Spiro
+      - name: CMAT
+      - name: Jensen McCrae
+      - name: Meg Stalter
+      - name: Natalie Jinju
+  - number: 3
+    date: 2026-09-27
+    display_name: Day 3
+    artists:
+      - name: MUNA
+      - name: The Beaches
+      - name: Hemlocke Springs
+      - name: Gracy Ives
+      - name: Cherry Bomb
+      - name: Carly Rae Jepsen
