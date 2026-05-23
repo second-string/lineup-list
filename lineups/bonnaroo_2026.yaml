@@ -155,8 +155,6 @@ days:
         spotify_uri: 6G6I2kNqaE0oDRygzPRGeY
       - name: DJ TRIXIE MATTEL
         spotify_uri: 33hAj1SghVYxDAxZxNDcyc
-      - name: BUFFALO TRAFFIC JAM
-        spotify_uri: 22LEPYRDhoThnbpShy6fV7
       - name: CONFIDENCE MAN
         spotify_uri: 0RwXnFrEoI8tltFvYpJgP6
       - name: ARCY DRIVE
@@ -185,6 +183,8 @@ days:
         spotify_uri: 6l0u1oM2imxw0isrGcXpmH
       - name: SMOAKLAND
         spotify_uri: 6409kgOB4tZEkNZci6BiUs
+      - name: STEPH STRINGS
+        spotify_uri: 39qxIdIb1R6se4J3X6nRPB
   - number: 4
     date: 2026-06-14
     display_name: Day 4
@@ -235,8 +235,6 @@ days:
         spotify_uri: 5wugb0kaq0J6nyQ5Xgd17i
       - name: HEMLOCKE SPRINGS
         spotify_uri: 52PdgUJOjvS6Mpmjy1SAlx
-      - name: STEPH STRINGS
-        spotify_uri: 39qxIdIb1R6se4J3X6nRPB
       - name: A HUNDRED DRUMS
         spotify_uri: 1dUCaUhp2RZRXrwOyUnHxQ
       - name: GIRL TONES
@@ -245,3 +243,7 @@ days:
         spotify_uri: 3Q3g3xC2lDdLo3a04uK3Wp
       - name: NAT MYERS
         spotify_uri: 2QMlNryks9wyxBCsBGciTS
+      - name: BUFFALO TRAFFIC JAM
+        spotify_uri: 22LEPYRDhoThnbpShy6fV7
+      - name: SOUPLESS
+        spotify_uri: 2jsNsVoGyeXCDDki5kbJc8
