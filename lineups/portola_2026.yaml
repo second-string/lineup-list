@@ -1,0 +1,77 @@
+display_name: Portola
+slug: portola
+region: am
+year: 2026
+days:
+  - number: 1
+    date: 2026-09-26
+    display_name: Day 1
+    artists:
+      - name: Robyn
+      - name: Airwolf Paradise
+      - name: Alisha
+      - name: Bassvictim
+      - name: Beltran
+      - name: Ben Sterling
+      - name: Chloé Caillet
+      - name: DJ Shadow
+      - name: Dog Blood
+      - name: Erika
+      - name: Fatboy Slim
+      - name: Fcukers
+      - name: Felly Fell
+      - name: Gelli Haha
+      - name: Groove Armada
+      - name: jigitz
+      - name: Jyoty
+      - name: KETTAMA
+      - name: Max Styler
+      - name: Melanie C
+      - name: MGNA Crrrta
+      - name: Mike D
+      - name: Nate Sib
+      - name: Nimino
+      - name: oskar med k
+      - name: Prospa
+      - name: Ranger Trucco
+      - name: Sam Alfred
+      - name: SFCowboy
+      - name: Six Sex
+      - name: Skepta
+      - name: Soulwax
+      - name: Tove Lo
+      - name: Tricky
+  - number: 2
+    date: 2026-09-27
+    display_name: Day 2
+    artists:
+      - name: Adéla
+      - name: Azzecca
+      - name: Baby J
+      - name: Ben UFO
+      - name: Brunello
+      - name: Channel Tres
+      - name: Clearcast
+      - name: Daphni
+      - name: Dean Turnley
+      - name: ear
+      - name: Four Tet
+      - name: horsegiirL
+      - name: JT
+      - name: Kelela
+      - name: Marlon Hoffstadt
+      - name: Mind Enterprises
+      - name: Mochakk
+      - name: Ninajirachi
+      - name: Overmono
+      - name: Parcels
+      - name: Riria
+      - name: SG Lewis
+      - name: Silva Bumpa
+      - name: Swedish House Mafia
+      - name: Tiësto
+      - name: Torren Foot
+      - name: underscores
+      - name: VTSS
+      - name: Zara Larsson
+      - name: ZULAN
