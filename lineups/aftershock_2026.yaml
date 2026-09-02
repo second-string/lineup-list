@@ -1,0 +1,163 @@
+display_name: Aftershock
+slug: aftershock
+region: am
+year: 2026
+days:
+  - number: 1
+    date: 2026-10-01
+    display_name: Day 1
+    artists:
+      - name: My Chemical Romance
+      - name: Sublime
+      - name: Hot Mulligan
+      - name: Mayday Parade
+      - name: We the Kings
+      - name: Lit
+      - name: Free Throw
+      - name: The Offspring
+      - name: The Used
+      - name: New Found Glory
+      - name: The Starting Line
+      - name: Hawthorne Heights
+      - name: L.S. Dunes
+      - name: Leap
+      - name: The Pretty Reckless
+      - name: Nothing More
+      - name: Theory of a Deadman
+      - name: Apocalyptica
+      - name: Finger Eleven
+      - name: Red
+      - name: The Violent Hour
+      - name: Killswitch Engage
+      - name: Sevendust
+      - name: Coal Chamber
+      - name: The Union Underground
+      - name: Ill Niño
+      - name: Ünloco
+      - name: Brujeria
+      - name: Primer 55
+      - name: Starset
+      - name: From Ashes to New
+      - name: Holding Absence
+      - name: Caskets
+      - name: The Word Alive
+      - name: Wind Walkers
+  - number: 2
+    date: 2026-10-02
+    display_name: Day 2
+    artists:
+      - name: Limp Bizkit
+      - name: Wu-Tang Clan
+      - name: Public Enemy
+      - name: Cypress Hill
+      - name: Insane Clown Posse
+      - name: P.O.D.
+      - name: Drowning Pool
+      - name: Silly Goose
+      - name: Suicideboys
+      - name: Slaughter to Prevail
+      - name: Three 6 Mafia
+      - name: Kublai Khan TX
+      - name: Drain
+      - name: Haywire 617
+      - name: Haarper
+      - name: Coheed and Cambria
+      - name: Underoath
+      - name: Alexisonfire
+      - name: Senses Fail
+      - name: Atreyu
+      - name: Finch
+      - name: Alesana
+      - name: Eyes Set to Kill
+      - name: Dethklok
+      - name: Chad Gray
+      - name: Cradle of Filth
+      - name: Blue Medusa
+      - name: Nekrogoblikon
+      - name: Psychostick
+      - name: Vianova
+      - name: Paleface Swiss
+      - name: The Black Dahlia Murder
+      - name: Spite
+      - name: Bodysnatcher
+      - name: PeelingFlesh
+      - name: Rivers of Nihil
+  - number: 3
+    date: 2026-10-03
+    display_name: Day 3
+    artists:
+      - name: Pierce the Veil
+      - name: Babymetal
+      - name: Sleeping with Sirens
+      - name: Chiodos
+      - name: Set It Off
+      - name: Blessthefall
+      - name: Ivri
+      - name: Fear, and Loathing in Las Vegas
+      - name: A Day to Remember
+      - name: The Story So Far
+      - name: Wage War
+      - name: The Wonder Years
+      - name: The Devil Wears Prada
+      - name: Escape the Fate
+      - name: Austin Carlile
+      - name: Black Label Society
+      - name: Down
+      - name: Corrosion of Conformity
+      - name: Kylesa
+      - name: Melvins
+      - name: Pentagram
+      - name: Doobie
+      - name: Circa Survive
+      - name: La Dispute
+      - name: Thursday
+      - name: Saosin
+      - name: Armor for Sleep
+      - name: Horse the Band
+      - name: Emery
+      - name: The Fall of Troy
+      - name: The Ghost Inside
+      - name: Counterparts
+      - name: After the Burial
+      - name: The Acacia Strain
+      - name: Stick to Your Guns
+      - name: Gideon
+  - number: 4
+    date: 2026-10-04
+    display_name: Day 4
+    artists:
+      - name: Tool
+      - name: Danny Elfman
+      - name: AFI
+      - name: Zakk Sabbath
+      - name: Buckethead
+      - name: Helmet
+      - name: CKY
+      - name: Queens of the Stone Age
+      - name: Stone Temple Pilots
+      - name: Highly Suspect
+      - name: Wolfmother
+      - name: Filter
+      - name: Oleander
+      - name: Toadies
+      - name: Body Count
+      - name: Suicidal Tendencies
+      - name: Cavalera
+      - name: Municipal Waste
+      - name: Soulfly
+      - name: Cro-Mags
+      - name: Codefendants
+      - name: Dance Gavin Dance
+      - name: The Home Team
+      - name: From First to Last
+      - name: Hail the Sun
+      - name: I See Stars
+      - name: Drop Dead, Gorgeous
+      - name: Emarosa
+      - name: I Set My Friends on Fire
+      - name: Sleep Theory
+      - name: President
+      - name: Jutes
+      - name: Holywatr
+      - name: The Pretty Wild
+      - name: Cenobia
