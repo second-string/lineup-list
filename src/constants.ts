@@ -80,7 +80,7 @@ export const supportedFestivals: Festival[] = [
     {display_name : "When We Were Young", years : [ 2023, 2022 ], name : "wwwy", region : "am"},
     {
         display_name : "Primavera Sound Barcelona",
-        years : [ 2026, 2025, 2024, 2023, 2022 ],
+        years : [ 2027, 2026, 2025, 2024, 2023, 2022 ],
         name : "primavera",
         region : "eu"
     },
