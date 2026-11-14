@@ -1,0 +1,181 @@
+display_name: Coachella
+slug: coachella
+region: am
+year: 2027
+days:
+  - number: 1
+    date: 2027-04-09
+    display_name: Day 1
+    artists:
+      - name: Dua Lipa
+      - name: Madonna
+      - name: Zara Larsson
+      - name: Steve Lacy
+      - name: JISOO
+      - name: Diljit Dosanjh
+      - name: Peggy Gou
+      - name: Kehlani
+      - name: Solid Grooves
+      - name: Giorgio Moroder
+      - name: Social Distortion
+      - name: Pinegrove
+      - name: Angine de Poitrine
+      - name: Leon Thomas
+      - name: Drain Gang
+      - name: Snow Strippers
+      - name: Mike D 5D
+      - name: CHRIS STASSY
+      - name: Milo J
+      - name: SG Lewis
+      - name: Kelela
+      - name: Franky Rizardo
+      - name: Fetty Wap
+      - name: Vintage Culture
+      - name: the Damned
+      - name: ATARASHII GAKKO!
+      - name: Nettspend
+      - name: American Football
+      - name: xaviersobased
+      - name: La Dispute
+      - name: Haute & Freddy
+      - name: the Hellp
+      - name: Disco Dom
+      - name: MPH
+      - name: Bella Kay
+      - name: This Is Lorelei
+      - name: the Womack Sisters
+      - name: mary in the junkyard
+      - name: Close Friends Only
+      - name: Obskür
+      - name: Jacob Lusk
+      - name: LEENALCHI
+      - name: Bea Miller
+      - name: Gang of Youths
+      - name: Love Spells
+      - name: Rafael
+      - name: Nirosta Steel
+      - name: Ragie Ban
+      - name: Eli
+      - name: Las Petunias
+      - name: Violet Grohl
+      - name: Jackie Hollander
+      - name: Jamback
+      - name: Marsolo
+      - name: NOYA
+  - number: 2
+    date: 2027-04-10
+    display_name: Day 2
+    artists:
+      - name: Tame Impala
+      - name: Phoebe Bridgers
+      - name: Weezer
+      - name: Tiësto
+      - name: Martin Garrix
+      - name: Robyn
+      - name: Role Model
+      - name: ADÉLA
+      - name: Måneskin
+      - name: Solomun
+      - name: NCT
+      - name: Enigma
+      - name: Underworld
+      - name: Charlotte de Witte
+      - name: Leon Bridges
+      - name: Cloonee
+      - name: Magdalena Bay
+      - name: Barry Can’t Swim
+      - name: Boy Harsher
+      - name: KI/KI
+      - name: Mariah the Scientist
+      - name: Bad Gyal
+      - name: Basement
+      - name: Brutalismus 3000
+      - name: Beltran
+      - name: underscores
+      - name: SB19
+      - name: Twin Tribes
+      - name: Odeal
+      - name: Bassvictim
+      - name: Los Pibes Chorros
+      - name: Tiffany Day
+      - name: no na
+      - name: Mathame
+      - name: ear
+      - name: Vandelux
+      - name: rommulas
+      - name: Apollonia
+      - name: Getdown Services
+      - name: Good Neighbours
+      - name: First Day Back
+      - name: Jimi Jules
+      - name: Twisted Teens
+      - name: Murda Beatz
+      - name: Villanelle
+      - name: Kolter
+      - name: Sidney Charles
+      - name: La Texana
+      - name: OMRI.
+      - name: Volkoder
+      - name: Zimmer90
+      - name: LuSiD
+      - name: Dream Boat
+  - number: 3
+    date: 2027-04-11
+    display_name: Day 3
+    artists:
+      - name: SZA
+      - name: Don Toliver
+      - name: DOM DOLLA
+      - name: Kygo
+      - name: Empire of the Sun
+      - name: Four Tet
+      - name: the Neighbourhood
+      - name: Becky G
+      - name: BABYMONSTER
+      - name: Amelie Lens
+      - name: Sara Landry
+      - name: Remi Wolf
+      - name: Tove Lo
+      - name: Victoria Monet
+      - name: EsDeeKid
+      - name: Caroline Polachek
+      - name: Chase & Status
+      - name: MUNA
+      - name: Boris Brejcha
+      - name: Jorja Smith
+      - name: the Avalanches
+      - name: BOLO
+      - name: Pennywise
+      - name: Freddie Gibbs
+      - name: Shygirl
+      - name: Julia Wolf
+      - name: Odd Mob
+      - name: Ayra Starr
+      - name: Lambrini Girls
+      - name: AKRIILA
+      - name: Dinner Party
+      - name: Silva Bumpa
+      - name: DJ Habibeats
+      - name: Chanel Beads
+      - name: Adam Ten
+      - name: After
+      - name: Zack Fox
+      - name: Fat Dog
+      - name: Omar+
+      - name: Genesis Owusu
+      - name: Joshua Slone
+      - name: the Mainliners
+      - name: Marten Lou
+      - name: Alex Wann
+      - name: ChaseWest
+      - name: Florence Road
+      - name: Jazzy
+      - name: TUL8TE
+      - name: Jakob Nowell and THE CASTLE
+      - name: Talón
+      - name: Klave Efectiva
+  - number: 3
+    date: 2027-04-11
+    display_name: In the Desert
+    artists:
+      - name: Daddy Yankee
