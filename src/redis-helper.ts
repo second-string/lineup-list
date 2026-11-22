@@ -496,7 +496,7 @@ export async function getSetlistTracksForArtist(
             }
 
             attempts--;
-            await helpers.sleep(1000);
+            await helpers.sleep(1000 * (3 - attempts));
         }
 
         // Gets 15 (ish, maybe more) setlist tracks for the artist from past setlist. No de-duping. Need to slice to
