@@ -1,9 +1,10 @@
 import redis from "redis";
 
-import * as constants       from "./constants";
-import * as mbHelper        from "./mb-helper";
+import * as constants from "./constants";
+import * as helpers from "./helpers"
+import * as mbHelper from "./mb-helper";
 import * as setlistFmHelper from "./setlist-fm-helper";
-import * as spotifyHelper   from "./spotify-helper";
+import * as spotifyHelper from "./spotify-helper";
 
 export async function getLineupLastUpdatedDate(redisClient: redis.RedisClient,
                                                festivalName: string,
@@ -481,15 +482,26 @@ export async function getSetlistTracksForArtist(
         console.log(`Looking for setlist tracks for the first time, or refresh is due. lastUpdated: ${
             lastUpdated ? lastUpdated.toISOString() : 'never'}`);
 
-        // This will return null if it fails to find an mbid for an artist. That's okay, the getTracksFromSetlists
-        // function will short circuit if mbid passed is null. This lets us still save an empty list of setlist tracks
-        // in redis for this artist to prevent us from trying to get setlist tracks every time a playlist is created
-        // with tracks from recent setlists.
-        const artistMbid = await mbHelper.spotifyToMbArtistId(artist.id);
+        // This will return null in id field but successful statusCode if it fails to find an mbid for an artist. That's
+        // okay, the getTracksFromSetlists function will short circuit if mbid passed is null. This lets us still save
+        // an empty list of setlist tracks in redis for this artist to prevent us from trying to get setlist tracks
+        // every time a playlist is created with tracks from recent setlists.
+        // MB API rate limits with 503, so retry a couple times if that's seen.
+        let attempts = 3;
+        let artistMbidResObj: MbIdResponse;
+        while (attempts > 0) {
+            artistMbidResObj = await mbHelper.spotifyToMbArtistId(artist.id);
+            if (artistMbidResObj?.statusCode < 500) {
+                break;
+            }
+
+            attempts--;
+            await helpers.sleep(1000);
+        }
 
         // Gets 15 (ish, maybe more) setlist tracks for the artist from past setlist. No de-duping. Need to slice to
         // tracksPerArist before showing to user, and 15 drops rapidly once searched and filtered for nulls and dupes
-        const setlistTracks: SetlistFmSong[] = await setlistFmHelper.getTracksFromSetlists(artistMbid);
+        const setlistTracks: SetlistFmSong[] = await setlistFmHelper.getTracksFromSetlists(artistMbidResObj.id);
 
         // clang-format off
         const spotifyTrackPromises: Promise<SpotifyTrack>[] = setlistTracks
