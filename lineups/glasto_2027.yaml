@@ -1,0 +1,76 @@
+display_name: Glastonbury
+slug: glasto
+region: eu
+year: 2027
+days:
+  - number: 0
+    date: 2027-06-23
+    display_name: Full Festival
+    artists:
+      - name: SAM FENDER
+      - name: HARRY STYLES
+      - name: BILLIE EILISH
+      - name: CHER
+      - name: MASSIVE ATTACK
+      - name: SOMBR
+      - name: LITTLE SIMZ
+      - name: "CHASE & STATUS"
+      - name: THE XX
+      - name: LILY ALLEN
+      - name: EZRA COLLECTIVE
+      - name: KRAFTWERK
+      - name: ADÉLA
+      - name: ANGINE DE POITRINE
+      - name: "ATARASHII GAKKO!"
+      - name: THE AVALANCHES
+      - name: BASEMENT JAXX
+      - name: BLOOD ORANGE
+      - name: BONOBO
+      - name: CHRISTINE AND THE QUEENS
+      - name: CHVRCHES
+      - name: CONFIDENCE MAN
+      - name: CROWDED HOUSE
+      - name: DE LA SOUL
+      - name: DINOSAUR JR.
+      - name: ECCA VANDAL
+      - name: ELLIE GOULDING
+      - name: FAT FREDDY'S DROP
+      - name: FKA TWIGS
+      - name: FLO
+      - name: FLORENCE ROAD
+      - name: GETDOWN SERVICES
+      - name: HOT CHIP
+      - name: JAMIE T
+      - name: JOSH BAKER
+      - name: KETTAMA
+      - name: PROSPA
+      - name: KACEY MUSGRAVES
+      - name: KEO
+      - name: KINGFISHR
+      - name: KING GIZZARD AND THE LIZARD WIZARD
+      - name: LEON BRIDGES
+      - name: LIANNE LA HAVAS
+      - name: LOLA YOUNG
+      - name: MIKE D 5D
+      - name: MOONCHILD SANELLY
+      - name: NAO
+      - name: NIA ARCHIVES
+      - name: PRIMAL SCREAM
+      - name: ROBYN
+      - name: SAINT ETIENNE
+      - name: SAMMY VIRJI
+      - name: SIENNA SPIRO
+      - name: SKYE NEWMAN
+      - name: THEE SACRED SOULS
+      - name: THE STREETS
+      - name: TEDDY SWIMS
+      - name: TEXAS
+      - name: THUNDERCAT
+      - name: TINARIWEN
+      - name: UNDERSCORES
+      - name: UNDERWORLD
+      - name: THE WAR ON DRUGS
+      - name: WESTSIDE COWBOY
+      - name: THE WOMACK SISTERS
+      - name: WUNDERHORSE
+      - name: YOUNG FATHERS
