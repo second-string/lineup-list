@@ -1,0 +1,34 @@
+display_name: Golden Plains
+slug: goldenplains
+region: ap
+year: 2027
+days:
+  - number: 0
+    date: 2027-03-06
+    display_name: Full Festival
+    artists:
+      - name: GEESE
+      - name: UNDERWORLD
+      - name: ANGINE DE POITRINE
+      - name: MISS KANINNA
+      - name: PETER GARRETT & THE ALTER EGOS
+      - name: TINARIWEN
+      - name: HAUTE & FREDDY
+      - name: MARIA ARNAL
+      - name: WESTSIDE COWBOY
+      - name: PEACH
+      - name: DOVE ELLIS
+      - name: DAINE
+      - name: IKEDA
+      - name: ORCUTT SHELLEY MILLER
+      - name: SWAPMEET
+      - name: MAURICE FULTON
+      - name: STATION MODEL VIOLENCE
+      - name: SALIMATA
+      - name: INTERMOOD
+      - name: SHOCK CORRIDOR
+      - name: IMMY OWUSU
+      - name: RYDEEN & SOVBLKPSSY
+      - name: TONGUE DISSOLVER
+      - name: NONO GIGSTA
+

@@ -1,0 +1,41 @@
+display_name: Meredith
+slug: meredith
+region: ap
+year: 2026
+days:
+  - number: 0
+    date: 2026-12-11
+    display_name: Full Festival
+    artists:
+      - name: Dijon
+      - name: underscores
+      - name: Fcukers
+      - name: The Dandy Warhols
+      - name: Hiatus Kaiyote
+      - name: DJ Seinfeld
+      - name: D Train & Mondo Freaks
+      - name: Fat Dog
+      - name: Suzanne Ciani
+      - name: Sophia Stel
+      - name: Show Me The Body
+      - name: Twisted Teens
+      - name: Marcellus Pittman
+      - name: Killing Heidi
+      - name: Spike Fuck
+      - name: Ella Thompson
+      - name: Yikes
+      - name: Docker River Band
+      - name: DJ Love
+      - name: Tara Clerkin Trio
+      - name: Jorg Kuning
+      - name: Blue Communications
+      - name: Miles Nautu
+      - name: Hana Stretton
+      - name: media puzzle
+      - name: Birdsnake
+      - name: The Bures Band
+      - name: Emelyne
+      - name: Salmon Sisters
+      - name: Nū
+      - name: Eddy Current Suppression Ring
+

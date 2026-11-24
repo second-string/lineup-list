@@ -112,4 +112,6 @@ export const supportedFestivals: Festival[] = [
     {display_name : "Decadence", years : [ 2025 ], name : "decadence", region : "am"},
     {display_name : "Camp Flog Gnaw", years : [ 2025 ], name : "cfg", region : "am"},
     {display_name : "Warped Tour Orlando", years : [ 2026 ], name : "warpedtourorlando", region : "am"},
+    {display_name : "Meredith", years : [ 2026 ], name : "meredith", region : "ap"},
+    {display_name : "Golden Plains", years : [ 2027 ], name : "goldenplains", region : "ap"},
 ];
